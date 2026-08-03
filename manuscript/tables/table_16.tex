@@ -1,0 +1,24 @@
+{
+\scriptsize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{1.3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1791\linewidth}>{\raggedright\arraybackslash}p{0.1119\linewidth}>{\raggedright\arraybackslash}p{0.0746\linewidth}>{\raggedright\arraybackslash}p{0.0672\linewidth}>{\raggedright\arraybackslash}p{0.0895\linewidth}>{\raggedright\arraybackslash}p{0.0746\linewidth}>{\raggedright\arraybackslash}p{0.0895\linewidth}>{\raggedright\arraybackslash}p{0.0746\linewidth}>{\raggedright\arraybackslash}p{0.0970\linewidth}>{\centering\arraybackslash}p{0.0820\linewidth}@{}}
+\caption{Candidate-restricted Bayesian, training-only STABL, and BLiP integration summary.}\label{tab:supp6}\\
+\toprule
+\bfseries Feature & \bfseries Omic & \bfseries SVM-L1 & \bfseries XGB & \bfseries Boruta-RF & \bfseries STABL & \bfseries Primary & \bfseries q=.10 & \bfseries OR≥ 1.20 & \bfseries practical-effect probability \\
+\midrule
+\endfirsthead
+\multicolumn{10}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+\bfseries Feature & \bfseries Omic & \bfseries SVM-L1 & \bfseries XGB & \bfseries Boruta-RF & \bfseries STABL & \bfseries Primary & \bfseries q=.10 & \bfseries OR≥ 1.20 & \bfseries practical-effect probability \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+YWHAG & Proteomics & Yes & Yes & No & Yes & Yes & Yes & Yes & 0.98175 \\
+ACHE.1 & Proteomics & Yes & No & Yes & Yes & Yes & Yes & Yes & 0.99725 \\
+PPP3CA|PPP3R1 & Proteomics & No & No & Yes & Yes & Yes & Yes & Yes & 0.99975 \\
+NEFH & Proteomics & Yes & No & Yes & Yes & Yes & Yes & Yes & 0.89275 \\
+S-methylcysteine sulfoxide & Metabolomics & Yes & No & No & Yes & Yes & Yes & No & 0.83625 \\
+\end{longtable}
+}

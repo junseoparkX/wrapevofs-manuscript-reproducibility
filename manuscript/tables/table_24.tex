@@ -1,0 +1,25 @@
+{
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1864\linewidth}>{\raggedright\arraybackslash}p{0.2187\linewidth}>{\centering\arraybackslash}p{0.0730\linewidth}>{\centering\arraybackslash}p{0.1215\linewidth}>{\centering\arraybackslash}p{0.1215\linewidth}>{\centering\arraybackslash}p{0.2188\linewidth}@{}}
+\caption{Exploratory CGGA same-size random-subset and Elastic Net comparator results.}\label{tab:supp10}\\
+\toprule
+\bfseries Method & \bfseries Comparator & \bfseries n & \bfseries AUROC & \bfseries AUPRC & \bfseries Balanced accuracy \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+\bfseries Method & \bfseries Comparator & \bfseries n & \bfseries AUROC & \bfseries AUPRC & \bfseries Balanced accuracy \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+SVM-L1 & Locked medoid & 16 & 0.656 & 0.642 & 0.597 \\
+SVM-L1 & Elastic Net & 16 & 0.635 & 0.599 & 0.661 \\
+XGBoost & Locked medoid & 19 & 0.689 & 0.669 & 0.695 \\
+XGBoost & Elastic Net & 19 & 0.640 & 0.623 & 0.617 \\
+Boruta-RF & Locked medoid & 9 & 0.694 & 0.700 & 0.652 \\
+Boruta-RF & Elastic Net & 9 & 0.612 & 0.608 & 0.607 \\
+\end{longtable}
+}

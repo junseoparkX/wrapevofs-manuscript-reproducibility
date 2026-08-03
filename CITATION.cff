@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the associated WrapEvoFS manuscript and software release."
+title: "WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints"
+version: "v9-submission"
+authors:
+  - family-names: "Park"
+    given-names: "Junseo"
+    orcid: "https://orcid.org/0009-0002-4385-6987"
+    affiliation: "University of British Columbia"
+  - family-names: "Foster"
+    given-names: "Leonard J."
+    orcid: "https://orcid.org/0000-0001-8551-4817"
+    affiliation: "University of British Columbia"
+  - family-names: "Zhong"
+    given-names: "Huan"
+    orcid: "https://orcid.org/0000-0002-7294-2254"
+    affiliation: "University of British Columbia"
+repository-code: "https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility"
+keywords:
+  - feature selection
+  - genetic algorithm
+  - development-CV regret
+  - Jaccard medoid
+  - reproducibility

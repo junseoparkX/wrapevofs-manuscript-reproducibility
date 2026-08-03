@@ -1,0 +1,25 @@
+{
+\small
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\theHtable}{suppanel.30}% unique anchor for a captionless panel table
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.2350\linewidth}>{\raggedright\arraybackslash}p{0.2350\linewidth}>{\centering\arraybackslash}p{0.2350\linewidth}>{\centering\arraybackslash}p{0.2350\linewidth}@{}}
+\toprule
+\bfseries Comparison & \bfseries Metric & \bfseries Intervals including zero & \bfseries Conditions \\
+\midrule
+\endfirsthead
+\toprule
+\bfseries Comparison & \bfseries Metric & \bfseries Intervals including zero & \bfseries Conditions \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Locked - Direct & macro auroc & 4 & 9 \\
+Locked - Direct & balanced accuracy & 8 & 9 \\
+Locked - Direct & macro f1 & 8 & 9 \\
+Locked - RFECV-only & macro auroc & 4 & 9 \\
+Locked - RFECV-only & balanced accuracy & 8 & 9 \\
+Locked - RFECV-only & macro f1 & 8 & 9 \\
+\end{longtable}
+\addtocounter{table}{-1}% captionless panel table must not advance the supplementary-table number
+}

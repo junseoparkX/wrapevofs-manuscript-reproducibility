@@ -1,0 +1,34 @@
+{
+\scriptsize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{1.3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1194\linewidth}>{\centering\arraybackslash}p{0.0630\linewidth}>{\centering\arraybackslash}p{0.0746\linewidth}>{\centering\arraybackslash}p{0.1740\linewidth}>{\centering\arraybackslash}p{0.1458\linewidth}>{\centering\arraybackslash}p{0.1857\linewidth}>{\centering\arraybackslash}p{0.0580\linewidth}>{\raggedright\arraybackslash}p{0.1194\linewidth}@{}}
+\caption{Archived legacy ADNI five-run development-CV ranking and top-three representative-run locking audit.}\label{tab:supp3}\\
+\toprule
+\bfseries Method & \bfseries Run & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Rank & \bfseries Status \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+\bfseries Method & \bfseries Run & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Rank & \bfseries Status \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+SVM-L1 & 1 & 29 & 0.563 (0.028) & 0.569 (0.033) & 0.814 (0.011) & 3 & Top 3 \\
+SVM-L1 & 2 & 29 & 0.572 (0.055) & 0.579 (0.056) & 0.817 (0.031) & 2 & Top 3, Locked \\
+SVM-L1 & 3 & 29 & 0.562 (0.053) & 0.568 (0.049) & 0.818 (0.023) & 4 & --- \\
+SVM-L1 & 4 & 29 & 0.586 (0.052) & 0.595 (0.049) & 0.808 (0.040) & 1 & Top 3 \\
+SVM-L1 & 5 & 29 & 0.560 (0.029) & 0.565 (0.035) & 0.820 (0.018) & 5 & --- \\
+XGBoost & 1 & 30 & 0.521 (0.032) & 0.520 (0.036) & 0.768 (0.008) & 3 & Top 3 \\
+XGBoost & 2 & 30 & 0.542 (0.054) & 0.545 (0.055) & 0.784 (0.034) & 1 & Top 3, Locked \\
+XGBoost & 3 & 31 & 0.517 (0.038) & 0.509 (0.043) & 0.767 (0.019) & 4 & --- \\
+XGBoost & 4 & 31 & 0.530 (0.047) & 0.534 (0.052) & 0.772 (0.015) & 2 & Top 3 \\
+XGBoost & 5 & 31 & 0.516 (0.031) & 0.513 (0.034) & 0.768 (0.027) & 5 & --- \\
+Boruta-RF & 1 & 27 & 0.574 (0.021) & 0.580 (0.026) & 0.788 (0.020) & 1 & Top 3 \\
+Boruta-RF & 2 & 27 & 0.557 (0.020) & 0.563 (0.025) & 0.791 (0.015) & 2 & Top 3 \\
+Boruta-RF & 3 & 27 & 0.551 (0.024) & 0.555 (0.025) & 0.783 (0.023) & 3 & Top 3, Locked \\
+Boruta-RF & 4 & 27 & 0.530 (0.030) & 0.533 (0.029) & 0.780 (0.025) & 5 & --- \\
+Boruta-RF & 5 & 27 & 0.548 (0.016) & 0.554 (0.024) & 0.780 (0.017) & 4 & --- \\
+\end{longtable}
+}

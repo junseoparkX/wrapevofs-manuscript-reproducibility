@@ -1,0 +1,13 @@
+name: wrapevofs-manuscript-reproducibility
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy>=1.24
+  - pandas>=2.0
+  - pillow>=10
+  - pypdf>=4
+  - python-docx>=1.1
+  - openpyxl>=3.1
+  - nbformat>=5.9
+  - nodejs>=20

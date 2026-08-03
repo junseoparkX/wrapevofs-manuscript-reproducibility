@@ -1,0 +1,86 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,bm}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{booktabs,longtable,tabularx,array,multirow}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage[left]{lineno}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+\hypersetup{pdftitle={WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints},pdfauthor={Junseo Park (ORCID 0009-0002-4385-6987), Leonard J. Foster (ORCID 0000-0001-8551-4817), Huan Zhong (ORCID 0000-0002-7294-2254)}}
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=justified,singlelinecheck=false}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.15em}{0.4em}
+\titlespacing*{\subsection}{0pt}{0.85em}{0.3em}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1em}
+\setlength{\LTpre}{0.45em}
+\setlength{\LTpost}{0.65em}
+\setlist{nosep}
+\pagestyle{plain}
+\newcounter{algorithm}
+\renewcommand{\thealgorithm}{\arabic{algorithm}}
+\crefname{algorithm}{Algorithm}{Algorithms}
+\Crefname{algorithm}{Algorithm}{Algorithms}
+\newcommand{\keywords}[1]{\par\smallskip\noindent\textbf{Keywords:} \textit{#1}}
+\AtBeginEnvironment{thebibliography}{\sloppy}
+\newcommand{\supplementarysetup}{%
+  \setcounter{section}{0}\renewcommand{\thesection}{S\arabic{section}}%
+  \setcounter{figure}{0}\renewcommand{\thefigure}{S\arabic{figure}}%
+  \setcounter{table}{0}\renewcommand{\thetable}{S\arabic{table}}%
+  \renewcommand{\theHsection}{suppsection.\arabic{section}}%
+  \renewcommand{\theHfigure}{suppfigure.\arabic{figure}}%
+  \renewcommand{\theHtable}{supptable.\arabic{table}}%
+  \renewcommand{\figurename}{Supplementary Figure}%
+  \renewcommand{\tablename}{Supplementary Table}%
+  \crefname{figure}{Supplementary Figure}{Supplementary Figures}%
+  \Crefname{figure}{Supplementary Figure}{Supplementary Figures}%
+  \crefname{table}{Supplementary Table}{Supplementary Tables}%
+  \Crefname{table}{Supplementary Table}{Supplementary Tables}%
+}
+
+\title{\LARGE\bfseries WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints}
+\author{%
+  \normalsize Junseo Park~\orcidlink{0009-0002-4385-6987}, Leonard J. Foster~\orcidlink{0000-0001-8551-4817}, Huan Zhong~\orcidlink{0000-0002-7294-2254}\\[0.25em]
+  \small University of British Columbia\\[0.2em]
+  \footnotesize
+  \href{mailto:junseoparkj@gmail.com}{junseoparkj@gmail.com}\quad
+  \href{mailto:foster@msl.ubc.ca}{foster@msl.ubc.ca}\quad
+  \href{mailto:zhdorothy5@gmail.com}{zhdorothy5@gmail.com}%
+}
+\date{}
+
+\begin{document}
+\maketitle
+\modulolinenumbers[1]
+\linenumbers
+
+\begin{abstract}
+High-dimensional feature-selection workflows are vulnerable to held-out leakage and favorable-run selection when several stochastic searches yield plausible signatures. WrapEvoFS confines preprocessing, branch-specific Direct pre-GA candidate generation, RFECV target estimation, repeated genetic search, fixed development-CV rescoring, and representative locking to development data. In the upgraded workflow, five retained run-best candidates are re-scored with the fixed development-CV locking evaluator; a prespecified empirical development-CV regret tolerance defines the regret-eligible pool, and its Jaccard medoid is selected using deterministic tie-breaking without relaxing the tolerance. The resulting locked output is fixed before one-time held-out evaluation. An untruncated shifted-linear genetic objective is recommended because it preserves rank information when penalized objectives are negative; the archived zero-truncated objective remains available for exact legacy reproduction. Retrospective strict re-locking of complete archived AMP-AD and CGGA candidate banks showed that compression was the most consistent empirical finding, whereas held-out changes were mixed and uncertain. In a limited 30-run development-only AMP-AD Rush sensitivity, the recommended objective reduced aggregate absolute target deviation from 110 to 48 and the zero-truncation all-zero-generation diagnostic from 362 to 133, with no uniform-sampling fallbacks; held-out Rush outcomes were not accessed. Agreement across five seeds is reported as stochastic or seed agreement, not participant-resampling stability or biomarker stability. Bayesian uncertainty quantification, STABL, and BLiP are retained as secondary interoperability analyses demonstrating downstream use of development-derived locked outputs. WrapEvoFS therefore provides an auditable development-only rule for stochastic feature compression under a strict empirical score-gap constraint and a reproducible hand-off to downstream analysis.
+\keywords{feature selection; stochastic compression; development-CV regret; genetic algorithm; representative locking; reproducible software}
+\end{abstract}
+
+\input{sections/main_text}
+
+\FloatBarrier
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\input{sections/supplementary}
+
+\end{document}
