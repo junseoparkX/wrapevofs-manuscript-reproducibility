@@ -1,0 +1,28 @@
+{
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1446\linewidth}>{\raggedright\arraybackslash}p{0.1567\linewidth}>{\centering\arraybackslash}p{0.1506\linewidth}>{\centering\arraybackslash}p{0.1265\linewidth}>{\centering\arraybackslash}p{0.1687\linewidth}>{\centering\arraybackslash}p{0.1928\linewidth}@{}}
+\caption{AMP-AD ordinal outcome sensitivity using existing pooled leave-one-center-out predictions.}\label{tab:supp13}\\
+\toprule
+\bfseries Branch & \bfseries Cap & \bfseries Mean features & \bfseries QWK & \bfseries Ordinal MAE & \bfseries Severe-error rate \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+\bfseries Branch & \bfseries Cap & \bfseries Mean features & \bfseries QWK & \bfseries Ordinal MAE & \bfseries Severe-error rate \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+XGBoost & Small & 21.8 & 0.598 & 0.412 & 0.042 \\
+XGBoost & Reference & 20.5 & 0.521 & 0.463 & 0.072 \\
+XGBoost & High & 33.0 & 0.585 & 0.429 & 0.049 \\
+SVM-L1 & Small & 33.8 & 0.537 & 0.452 & 0.042 \\
+SVM-L1 & Reference & 22.8 & 0.555 & 0.427 & 0.055 \\
+SVM-L1 & High & 36.2 & 0.499 & 0.459 & 0.057 \\
+Boruta-RF & Small & 20.8 & 0.559 & 0.448 & 0.049 \\
+Boruta-RF & Reference & 25.2 & 0.598 & 0.423 & 0.049 \\
+Boruta-RF & High & 47.0 & 0.573 & 0.444 & 0.042 \\
+\end{longtable}
+}

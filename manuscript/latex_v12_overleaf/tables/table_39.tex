@@ -1,0 +1,22 @@
+\begin{table}[p]
+\centering
+\caption{Implementation correspondence for the formal regret-constrained locking properties.}
+\label{tab:supp17}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Property or assumption} & \textbf{Package mechanism} & \textbf{Verification evidence} \\
+\midrule
+Nonempty bank and feature sets & Candidate validation rejects empty banks, empty masks, duplicate feature names, and features outside the canonical universe. & Empty-bank, empty-mask, and universe-validation tests. \\
+Finite larger-is-better scores & Scores and fold scores must be finite, and regret locking accepts only the explicit \path{larger_is_better} orientation. & Nonfinite-score and lower-orientation misuse tests. \\
+Propositions 1--2 & The best score is a maximum; eligibility uses exact $R_r\leq\delta$; every selection path is restricted to the eligible indices; a postcondition verifies the selected regret. & Singleton, hidden-epsilon boundary, and generated-bank strict-feasibility tests. \\
+Propositions 3--4 & $E_\delta$ is constructed directly from the configured threshold, including zero tolerance and the full-bank limit. & Unique-best and tied-best zero-tolerance tests; all-candidate-eligible test. \\
+Proposition 5 & A common ordered universe defines uint8 masks; the unchanged authoritative SHA-256 helper defines stable identifiers; audit rows and metadata are canonically ordered. & Cross-process hash, feature-order canonicalization, serialization/reload, and repeated-audit tests. \\
+Proposition 6 & Scientific ties depend on mask-derived content, not input-row order. Source-run ID labels provenance only after an exact duplicate feature set wins. & Exhaustive record-permutation and generated-bank permutation tests. \\
+Duplicate-mask policy & Duplicate masks are not deduplicated and their multiplicity contributes to eligible-pool means; duplicate multiplicity and all source-run provenance are serialized. & Duplicate-mask and identical-mask/identical-score tests. \\
+Best-run-SE-scaled sensitivity boundary & AMP-AD development-fold score vectors were not archived, so this threshold was not estimated from means or standard deviations. & Unavailable-input audit; no numerical reconstruction was attempted. \\
+Candidate-mask availability boundary & ADNI retained only the locked mask, so all-run and regret-constrained medoids cannot be reconstructed. & Archived-artifact inventory; unavailable results remain explicitly missing. \\
+Proposition 7 and claim boundary & Separate highest-score, unrestricted medoid, original top-$k$ (legacy-compatible), and regret-constrained modes retain their distinct feasible sets and objectives. & Definition-level proof and strategy-specific unit tests; predictive or external-validity claims are not machine-testable. \\
+\bottomrule
+\end{tabularx}
+\end{table}

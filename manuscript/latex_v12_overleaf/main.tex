@@ -1,0 +1,36 @@
+\documentclass[10pt,letterpaper]{article}
+\input{manuscript_preamble}
+
+\hypersetup{pdftitle={WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints},pdfauthor={Junseo Park (ORCID 0009-0002-4385-6987), Leonard J. Foster (ORCID 0000-0001-8551-4817), Huan Zhong (ORCID 0000-0002-7294-2254)}}
+
+\title{\LARGE\bfseries WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints}
+\author{%
+  \normalsize Junseo Park~\orcidlink{0009-0002-4385-6987}, Leonard J. Foster~\orcidlink{0000-0001-8551-4817}, Huan Zhong~\orcidlink{0000-0002-7294-2254}\textsuperscript{\dagger}\\[0.2em]
+  \small\textit{for the Alzheimer's Disease Neuroimaging Initiative}\textsuperscript{*}\\[0.25em]
+  \small University of British Columbia\\[0.2em]
+  \footnotesize
+  \href{mailto:junseoparkj@gmail.com}{junseoparkj@gmail.com}\quad
+  \href{mailto:foster@msl.ubc.ca}{foster@msl.ubc.ca}\quad
+  \href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}\\[0.2em]
+  \footnotesize \textsuperscript{\dagger}Correspondence to Huan Zhong (\href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}).\\[0.15em]
+  \scriptsize \textsuperscript{*}A complete listing of ADNI investigators is available at \url{https://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf}.%
+}
+\date{}
+
+\begin{document}
+\maketitle
+\modulolinenumbers[1]
+\linenumbers
+
+\begin{abstract}
+Stochastic feature selection can yield several plausible signatures, creating risks of favorable-run selection and held-out leakage. WrapEvoFS separates development-only search and locking from one-time held-out evaluation. Its updated genetic objective retains negative penalized scores and therefore preserves ordering that zero truncation can erase. Five retained candidates are rescored by a fixed development-CV evaluator; only candidates within a prespecified empirical score-gap tolerance of the best are eligible, and their Jaccard medoid is locked using deterministic tie-breaking. In 120 development-only AMP-AD searches across 24 center--branch--cap conditions, aggregate absolute target deviation decreased from 216 under the original configuration to 137 under the updated configuration, while all-zero-generation diagnostics decreased from 673 to 333. All updated selections satisfied the 0.01 empirical regret tolerance. After the protocol and 24 locks were frozen, one-time evaluation in the corresponding held-out centers gave pooled updated-minus-RFECV-only macro-AUROC differences from $-0.040$ to $+0.048$; four of six 95\% intervals included zero. Same-split CGGA benchmarking and a reduced-budget saved-bank nested sensitivity were likewise heterogeneous. WrapEvoFS therefore provides an auditable rule for representative stochastic feature compression under a strict empirical development-score constraint; it does not establish predictive superiority, external validity, or biomarker stability.
+\keywords{feature selection; stochastic compression; development-CV regret; genetic algorithm; representative locking; reproducible software}
+\end{abstract}
+
+\input{sections/main_text}
+
+\FloatBarrier
+\bibliographystyle{naturemag}
+\bibliography{references}
+
+\end{document}

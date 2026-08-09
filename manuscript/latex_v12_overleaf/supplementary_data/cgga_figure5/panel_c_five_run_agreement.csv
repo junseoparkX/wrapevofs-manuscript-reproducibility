@@ -1,0 +1,7 @@
+method,method_label,condition,condition_label,mean_feature_count,mean_pairwise_jaccard,nogueira_agreement
+svm_l1,SVM-L1,no_penalty,No target-size guidance,19.0,0.4666159109090143,0.1439849624060147
+svm_l1,SVM-L1,penalty,Target-size guided,15.2,0.4317513150465095,0.0817350579839428
+xgboost,XGBoost,no_penalty,No target-size guidance,35.6,0.369310595065312,-0.0184972865550716
+xgboost,XGBoost,penalty,Target-size guided,20.0,0.2175382741072968,-0.0359090909090908
+boruta_rf,Boruta-RF,no_penalty,No target-size guidance,11.6,0.473482905982906,0.0703634669151908
+boruta_rf,Boruta-RF,penalty,Target-size guided,9.0,0.3946253746253746,0.1919191919191918

@@ -1,0 +1,2 @@
+run_i,run_j,stable_mask_hash_i,stable_mask_hash_j,jaccard
+1,1,39fe096360feb8fd44cd24a90442c468351d8bb3ac8e41ca9f9d87b42492db6d,39fe096360feb8fd44cd24a90442c468351d8bb3ac8e41ca9f9d87b42492db6d,1.0

@@ -1,0 +1,328 @@
+\FloatBarrier
+\section{Introduction}
+
+High-dimensional biomedical tables often contain far more predictors than participants, making fitted models and selected signatures sensitive to preprocessing decisions, finite samples, and stochastic search paths \citep{ref01,ref02,ref03}. Feature selection can make a model easier to inspect and deploy, but an apparently compact signature is not credible if held-out outcomes informed preprocessing, hyperparameters, a stochastic seed, or the reported feature set \citep{ref06,ref07,ref08,ref38}. Favorable-run selection is a particularly quiet form of leakage: several stochastic runs are generated, but only the run with the most favorable downstream evaluation is reported.
+
+RFECV provides an auditable nested elimination path and can supply a target feature count, whereas genetic search can explore nonnested subsets but introduces run-to-run variability \citep{ref12,ref13,ref15,ref16}. Stability selection and ensemble feature selection use resampling or aggregation to address selection variability \citep{ref09,ref40}; WrapEvoFS instead locks one representative member of a finite stochastic candidate bank after enforcing an explicit empirical score-gap constraint. Choosing only the highest development-CV run preserves the best observed score but ignores whether the selected set is representative. Conversely, an unrestricted medoid may favor agreement at an unacceptably large development-score loss. The operational problem is therefore to select one representative stochastic output while making its empirical development-score gap explicit and bounded.
+
+Audit of the original WrapEvoFS analyses identified a concrete objective-flattening mechanism. The original size-penalized genetic fitness was truncated at zero; when penalized scores were negative, distinct chromosomes could become indistinguishable. In the most severe archived AMP-AD condition, the RFECV target was 3, the locked set contained 84 features, four of five run-best fitnesses were zero, and the best population fitness was zero in 245 of 250 saved generations. The original algorithm remains available as a legacy-compatible mode, but this failure motivated an updated untruncated objective that preserves penalized-objective ordering.
+
+The updated workflow has two central methodological contributions. First, it uses the untruncated objective for scientific ranking and run-best updating, applying a nonnegative shift only when proportional parent-sampling weights are required. Second, regret-constrained medoid locking first retains candidates within a prespecified empirical development-CV score-gap tolerance and then selects the most representative eligible candidate. On first read, the rule is deliberately simple: generate several candidates, retain those within the score tolerance, select the eligible-pool medoid, and lock it before held-out evaluation (\Cref{fig:workflow}). Deterministic tie-breaking and machine-readable audit artifacts make this hand-off reproducible without turning the hash or provenance record into a scientific score.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=180mm]{figures/figure_1.pdf}
+\caption{Updated WrapEvoFS workflow and leakage boundary. a) Supplied matrices are assigned to predefined development and held-out partitions; development-only model selection blocks held-out feedback until locking. b) Configured preprocessing produces branch-specific Direct candidates, RFECV supplies a soft target, and five target-guided genetic searches generate retained candidates. Fixed development-CV rescoring defines empirical regret and the strict regret-eligible pool. Eligible-pool Jaccard similarity identifies the medoid, which becomes the locked output before final held-out evaluation. The blue boundary denotes held-out access after locking, and the lower trace denotes machine-readable audit artifacts.}
+\label{fig:workflow}
+\end{figure}
+\FloatBarrier
+
+The empirical goal is auditable compression and standardized stochastic-run selection, not predictive superiority. We first verify the updated mechanism without held-out access, examine locking behavior and sensitivity, and then report a one-time post-freeze AMP-AD evaluation together with archived demonstrations, a coherent CGGA benchmark, and a supplementary current-configuration radiomics analysis. Bayesian uncertainty quantification, STABL, and BLiP remain secondary interoperability analyses rather than evidence of biomarker validation.
+
+\FloatBarrier
+\section{Results}
+
+The evidence follows the software-update logic: audit of the original objective, development-only verification of the updated configuration, strict locking analysis, sensitivity and seed agreement, protocol freezing, and one-time held-out evaluation. No held-out outcome was accessed for the 120-run comparison, cross-lock analysis, tolerance sensitivity, decision-path audit, or protocol freeze.
+
+\subsection{Audit-identified flattening and updated-configuration verification}
+
+Eighteen of 36 original AMP-AD configurations triggered at least one zero-truncation warning; none of six original CGGA configurations did. The most severe condition was AMP-AD Rush/SVM-L1/Small: target \(k^*=3\), locked count 84, absolute deviation 81, four of five zero-valued run-best fitnesses, and 245 all-zero generations. This is a concrete loss-of-ordering mechanism rather than a generic statement that genetic search is variable (Supplementary Fig.~S17; \Cref{tab:main3}).
+
+\input{tables/table_04.tex}
+
+The matched development-only comparison comprised 120 completed GPU GA runs in 24 Small/Reference center--branch--cap conditions (\Cref{fig:updated-verification}; Supplementary Fig.~S18; Supplementary Tables~S16 and S18). Aggregate absolute target deviation decreased from 216 to 137; the updated configuration was better in 12 conditions, unchanged in 6, and worse in 6. The prespecified Rush/SVM-L1/Small stress condition accounted for 56 of the 79 reduced deviation units. Excluding it, deviation remained lower at 135 versus 112. All-zero generations decreased from 673 to 333 overall and from 428 to 267 after excluding the stress condition. Thus the strongest correction occurred where flattening was most severe, while the diagnostic also remained lower across the other 23 conditions.
+
+All 24 updated locked selections satisfied the prespecified absolute empirical regret tolerance of 0.01; the maximum selected regret was 0.00835 (\Cref{fig:updated-verification}c). Updated-minus-original fixed locking-score differences had mean \(+0.00098\), median \(+0.00096\), and range \(-0.01319\) to \(+0.02389\). Actual updated-mode uniform parent-sampling fallbacks were zero. These results verify aggregate target-fidelity and score-gap behavior for a configuration in which both candidate generation and locking changed; they do not isolate a causal effect of either component.
+
+The 120-run comparison was intentionally development-only: it establishes that the documented flattening diagnostic was reduced in aggregate and that the strict lock respected its configured score-gap budget. Held-out outcomes were accessed only later, after the evaluation protocol and all 24 selected masks were frozen. Before reporting that one-time evaluation, we isolate the locking rule and its sensitivity within retained candidate banks.
+
+\begin{figure}[tbp]
+\centering
+\includegraphics[width=180mm]{figures/figure_2.pdf}
+\caption{Development-only verification of the updated WrapEvoFS configuration. a) Condition-level original-versus-updated absolute target deviation and b) all-zero-generation diagnostics across 24 center--branch--cap conditions and 120 full GPU GA runs. Gray and blue denote ordinary original and updated observations; orange denotes the prespecified Rush/SVM-L1/Small stress condition. Aggregate target deviation was 216 versus 137 overall and 135 versus 112 after excluding the stress condition; corresponding all-zero-generation totals were 673 versus 333 and 428 versus 267. c) Updated-minus-original fixed development-CV locking-score difference versus updated selected empirical regret; marker shape identifies branch and the dashed line marks the 0.01 bound. d) Eligible-pool size and final selection-decision stage; numerical labels are condition counts. No held-out outcomes were accessed.}
+\label{fig:updated-verification}
+\end{figure}
+\FloatBarrier
+
+\subsection{Strict locking behavior within retained candidate banks}
+
+The existing-artifact 2 by 2 cross-lock analysis separated candidate-bank and locking-rule effects (Supplementary Table~S19). Within all 24 original-objective banks, regret-constrained locking changed 10 selected masks, reduced mean selected regret from 0.00261 to 0.00060 and maximum regret from 0.02111 to 0.00729, while total target deviation changed from 216 to 227. Recovery of all 30 Rush run-best feature lists completed the 24 updated-objective banks. Within those banks, the current rule changed 8 masks, reduced mean regret from 0.00351 to 0.00108 and maximum regret from 0.01525 to 0.00835, while target deviation changed from 135 to 137. The lock therefore improves and bounds configured score-gap behavior, but does not itself optimize target fidelity.
+
+At \(\delta=0.01\), 2 of the 24 updated conditions had singleton eligible pools, 6 had two candidates, and 16 had at least three (\Cref{fig:updated-verification}d; Supplementary Table~S20). Unique Jaccard medoids determined 13 selections, higher locking score resolved 9, and singleton selection resolved 2; feature count and stable hash were not reached. Two-candidate pools necessarily tie on their mutual mean Jaccard, explaining part of the score-tie path. No exact duplicate masks occurred in the 48 complete original and updated banks, and deduplication therefore changed no empirical selection. All six recovered Rush selections matched both their archived summaries and the frozen one-time evaluation.
+
+Across 36 archived AMP-AD banks, retrospective regret-constrained re-locking compressed the corresponding Direct sets by a median 74.1\% (range 15.8\%--80.0\%); median empirical score gap was 0 and the maximum was 0.0091. Across six CGGA banks, median compression was 57.9\% (range 34.3\%--70.0\%), median gap was 0.00065, and maximum gap was 0.00355 (Supplementary Fig.~S15; Supplementary Table~S15; \Cref{tab:main2}). ADNI re-locking was unavailable because all five masks were not archived.
+
+\input{tables/table_03.tex}
+
+\subsection{Tolerance sensitivity and seed agreement}
+
+Increasing absolute tolerance enlarged the strict eligible pool in AMP-AD and CGGA (Supplementary Fig.~S16). In these archived banks, \(\delta=0\) produced singleton pools and zero selected gap. At \(\delta=0.01\), mean pool sizes were 2.64 and 2.50; at \(\delta=0.02\), they were 4.19 and 3.83. Singleton-pool mean Jaccard is undefined and remains missing, not perfect agreement. All 168 absolute-tolerance selections met their declared threshold without pool expansion. The 0.01 value is therefore a prespecified practical operating point, not a uniquely optimal or held-out-tuned constant.
+
+Complete five-mask matrices supported seed-agreement summaries for AMP-AD and CGGA. Under retrospective regret-constrained locking, median selected mean Jaccard was 0.204 and 0.424, respectively; median Nogueira coefficients were negative and 0.076. These five-run summaries quantify stochastic agreement on fixed development samples. They do not estimate participant-resampling stability, biological reproducibility, or uniqueness of an optimum.
+
+\subsection{Held-out demonstrations and post-freeze evaluation}
+
+The archived analyses show how the original workflow behaved across a fixed multiclass split, multicenter leave-one-center-out evaluation, and a binary high-dimensional gene-expression task. The updated AMP-AD analysis adds a distinct post-freeze evaluation: held-out outcomes were loaded only after all masks, scores, parameters, and the protocol hash were fixed. This temporal ordering prevents held-out-guided reselection but is not prospective clinical validation.
+
+\subsubsection{ADNI multiclass multi-omics demonstration}
+
+The ADNI analysis provides a fixed multiclass development/held-out split under the original configuration (\Cref{fig:adni}; Supplementary Tables~S3 and S4). The primary empirical message is substantial compression---44\%--70\% relative to the Direct signatures---with heterogeneous and uncertain held-out effects. All nine primary paired 95\% intervals included zero (Supplementary Fig.~S1). Class-specific held-out diagnostics and signature composition and overlap are provided in Supplementary Figs.~S2 and S3. The analysis therefore demonstrates compact locked hand-offs without establishing predictive improvement. AMP-AD follows as a more demanding multicenter setting in which each held-out center induces a distinct distribution shift.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=180mm]{figures/figure_3.png}
+\caption{ADNI archived original-configuration demonstration. a) Direct and locked feature counts versus held-out macro one-vs-rest AUROC. b) Paired locked-minus-Direct differences with 95\% bootstrap intervals; all nine primary intervals include zero. c) Five development-CV candidates, the original top-three pool, and the locked medoid. Open and filled markers denote Direct and locked signatures, respectively; colors identify branches.}
+\label{fig:adni}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{AMP-AD multicenter multi-omics demonstration}
+
+AMP-AD uses four fixed leave-one-center-out evaluations, so every center serves once as held-out data while development occurs on the other centers (\Cref{fig:ampad}a; Supplementary Tables~S12--S14). Paired held-out contrasts and cross-center recurrence and modality composition are reported in Supplementary Figs.~S12 and S13, respectively. The archived original-configuration analysis shows the RFECV-derived targets and locked feature counts across 36 conditions (\Cref{fig:ampad}b) and pooled held-out macro one-vs-rest AUROC versus signature size (\Cref{fig:ampad}c). Its Rush/SVM-L1/Small failure motivated the development-only update in \Cref{fig:updated-verification}.
+
+After the 24 updated Small/Reference locks and protocol SHA-256 were frozen, each signature was evaluated once in its corresponding held-out center without reselection or parameter changes (Supplementary Fig.~S21; Supplementary Table~S22). Pooled updated-minus-RFECV-only macro-AUROC differences ranged from $-0.0404$ to $+0.0480$; four of six 95\% intervals included zero (Supplementary Fig.~S21b). Against the archived original lock, differences ranged from $-0.0311$ to $+0.0176$ and five of six intervals included zero (Supplementary Fig.~S21c). The two non-zero-crossing intervals favored different methods, so the result is heterogeneous rather than evidence of uniform superiority.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=180mm]{figures/figure_4.png}
+\caption{AMP-AD archived original-configuration multicenter demonstration. a) Four fixed leave-one-center-out evaluations. b) RFECV-derived target count versus locked feature count across 36 conditions; the stress condition that motivated the update is labeled. c) Pooled held-out macro one-vs-rest AUROC versus mean feature count with 95\% intervals.}
+\label{fig:ampad}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{CGGA binary gene-expression demonstration}
+
+The CGGA analysis uses a fixed 214-sample development and 92-sample held-out split with 24,326 aligned predictors (\Cref{fig:cgga}; Supplementary Tables~S7--S10). The archived original-configuration signatures reduced Direct feature counts by 54\%--73\% (\Cref{fig:cgga}a), with complete held-out metric panels provided in Supplementary Fig.~S7. All nine paired locked-medoid-minus-RFECV-only intervals for AUROC, AUPRC, and balanced accuracy included zero (\Cref{fig:cgga}b), while five-run Jaccard and chance-corrected agreement varied by branch and target-size guidance (\Cref{fig:cgga}c; Supplementary Fig.~S8). The original-configuration mechanism and target-guidance ablation are reported in Supplementary Fig.~S19. These seed summaries do not estimate participant-resampling or biomarker stability.
+
+A coherent post hoc benchmark applied the same fixed 500-tree random forest to RFECV-only, size-matched Elastic Net, highest-development-CV, archived top-three-medoid, unrestricted full-bank-medoid, and current regret-medoid signatures (Supplementary Fig.~S22; Supplementary Table~S23). Current-lock AUROCs were 0.652, 0.645, and 0.694 for SVM-L1, XGBoost, and Boruta-RF, respectively; all 15 paired AUROC intervals against the five comparators included zero. Thus the benchmark standardizes comparison conditions but does not support predictive superiority.
+
+A separate post hoc sensitivity re-locked the five saved candidate banks from the historically excluded reduced-budget nested CGGA analysis without rerunning the GA or accessing the original 92-sample held-out partition (Supplementary Fig.~S23; Supplementary Table~S24). The current rule changed the selected run in all five outer folds and satisfied zero empirical regret in each. OOF AUROC decreased from 0.692 under the archived top-three lock to 0.667 under the current lock, with overlapping bootstrap intervals. This adverse result directly illustrates that empirical regret feasibility does not guarantee improved generalization.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=170mm]{figures/figure_5.pdf}
+\caption{CGGA archived original-configuration compression, incremental effects, and seed agreement. a) Direct and locked-medoid feature counts versus held-out AUROC with 95\% bootstrap intervals; arrows show 54\%--73\% feature reduction. b) Paired locked-medoid-minus-RFECV-only differences in AUROC, AUPRC, and balanced accuracy from 2,000 common class-stratified resamples (seed 42); all nine intervals include zero. c) Mean pairwise Jaccard and chance-corrected Nogueira agreement across five saved GA runs without target-size guidance (open) and with guidance (filled). Feature selection and locking were confined to the 214-sample development partition; the fixed 92-sample held-out partition was evaluated only after locking.}
+\label{fig:cgga}
+\end{figure}
+
+\subsection{Supplementary updated-configuration radiomics demonstration}
+
+A private T1ce radiomics cohort provided a supplementary internal test of the updated configuration in a distinct feature modality. The 197 MGMT-linked participants were frozen into one stratified 137/60 development/held-out split and analyzed in a 1,781-feature space and a 1,346-feature label-independent perturbation-filtered space (Supplementary Fig.~S20a). The same participants and split yielded 30 completed GA runs across two feature spaces, three branches, and five seeds (Supplementary Fig.~S20b). All six locked signatures had zero empirical development-CV regret at absolute \(\delta=0.01\); five eligible pools were singletons and one contained two candidates. Locked counts ranged from 5 to 50 features, corresponding to 10.0\%--81.0\% compression relative to Direct sets (median 75.6\%; Supplementary Table~S21).
+
+Five-seed agreement varied by branch and feature space (Supplementary Fig.~S20c; Supplementary Table~S21). The paired held-out locked-minus-Direct AUROC estimates ranged from \(-0.007\) to 0.069, and every 95\% interval included zero (Supplementary Fig.~S20d; Supplementary Table~S21). Cross-space Jaccard similarity between the full-space and perturbation-filtered locked signatures was 0.049--0.273, while the paired perturbation-filtered-minus-full locked AUROC intervals also included zero (Supplementary Table~S21). This analysis strengthens modality breadth and verifies the strict score-gap hand-off in a completed updated workflow, but it is not an independent external validation: both feature spaces reuse the same participants, the automatic tumor-core regions were not manually adjudicated, and participant-level imaging data are private.
+
+\subsection{Secondary held-out trade-offs and interoperability}
+
+Held-out differences were not used to choose the updated rule. The archived AMP-AD and CGGA demonstrations remain in \Cref{fig:ampad,fig:cgga}; the new AMP-AD post-freeze evaluation, coherent CGGA benchmark, and saved-bank nested sensitivity are additive analyses in Supplementary Figs.~S21--S23 and Supplementary Tables~S22--S24. Secondary tuned-model and computational summaries are reported in Supplementary Figs.~S9 and S10 and Supplementary Table~S10. Exploratory random-subset and Elastic Net comparisons are shown in Supplementary Fig.~S11. Directions varied by branch and comparator, and uncertainty intervals generally crossed zero. Existing ADNI paired analyses likewise showed mixed effects.
+
+The ADNI-derived locked outputs also supported full and restricted Bayesian analyses (Supplementary Figs.~S4 and S6; Supplementary Tables~S5 and S6), training-only STABL (Supplementary Fig.~S5), and integrated BLiP decisions (Supplementary Fig.~S14; Supplementary Table~S11). These analyses demonstrate a reproducible downstream hand-off without reopening held-out-informed candidate choice. Agreement among methods is not independent replication because each analysis reuses the same development boundary.
+
+\subsection{Controlled candidate-bank locking simulation}
+
+A prespecified CPU-only simulation isolated the locking layer under known hidden utility without fitting a classifier or rerunning any GA (Supplementary Fig.~S24; Supplementary Table~S25). The complete workload comprised 4,995,000 synthetic candidate banks across 513 scenarios. In the primary $R=5$, $\delta=0.01$ design (1,620,000 banks), regret-constrained medoid locking had no configured empirical-regret violation and mean empirical regret 0.00130, while its mean full-bank Jaccard was 0.446 versus 0.424 for highest-score selection. Mean hidden-oracle regret was 0.00259 for the current rule, compared with 0.00222 for highest score, 0.00254 for the legacy top-three medoid, and 0.00234 for the unrestricted full-bank medoid; the simulation therefore did not show uniform oracle superiority.
+
+The current rule combined lower oracle regret with higher full-bank Jaccard than highest-score selection in 91 of 162 primary scenarios. Relative behavior depended on the prespecified mechanism: current-minus-highest oracle regret became negative at overall score-noise ratios 1, 2, and 4, whereas misleading low-noise consensus favored highest-score selection. In a matched sensitivity subset, the relative difference versus highest score became increasingly favorable from $R=10$ through $R=100$; increasing $\delta$ enlarged the eligible pool and increased representativeness at the cost of a larger empirical score gap. Hidden utility in this controlled experiment is not AUROC. These results confirm configured feasibility and characterize the intended trade-off rather than establishing predictive superiority, generalization, or biomarker stability.
+
+\FloatBarrier
+\section{Discussion}
+
+WrapEvoFS makes two distinct methodological contributions. The updated untruncated genetic objective preserves penalized-objective ordering that zero truncation can erase. Regret-constrained representative locking then imposes an explicit empirical development-CV score-gap constraint before selecting the eligible-pool medoid. Together, these mechanisms separate stochastic candidate generation, scientific feasibility, representative selection, and one-time held-out evaluation.
+
+The controlled locking-layer simulation supported this deliberately bounded interpretation (Supplementary Fig.~S24; Supplementary Table~S25). The current rule respected its configured empirical-regret constraint in every simulated bank and increased representativeness relative to highest-score selection, but hidden-oracle performance depended on score noise, candidate-bank size, and whether candidate consensus was aligned with utility. Its unfavorable primary mean relative to highest-score selection was concentrated in low-noise and misleading-consensus settings, whereas noisier scores and larger candidate banks increased its relative advantage. The method is therefore a feasibility-constrained compromise, not a universally optimal selector.
+
+The 120-run AMP-AD comparison provides development-only evidence for the updated configuration. Aggregate target deviation and all-zero-generation diagnostics were lower, and every selected candidate respected the 0.01 score-gap budget. The Rush/SVM-L1/Small condition accounted for 70.9\% of the total target-deviation reduction and 52.6\% of the all-zero-generation reduction, yet both diagnostics remained lower after its exclusion. Effects were heterogeneous: 6 of 24 target-deviation comparisons worsened, and the median non-stress improvement was 0. Recovery of all Rush run-best sets completed the cross-lock audit; regret-constrained locking reduced score gaps across the updated banks but changed total target deviation from 135 to 137. RFECV therefore remains a soft target rather than a cardinality constraint.
+
+Compression was the most consistent result across the archived ADNI, AMP-AD, and CGGA demonstrations and the supplementary radiomics analysis. Held-out changes were less consistent. The one-time updated AMP-AD evaluation produced both favorable and unfavorable contrasts, the coherent CGGA benchmark had no non-zero-crossing paired AUROC interval, and the reduced-budget nested re-locking sensitivity lowered OOF AUROC. These observations support auditable compression and standardized hand-off, not predictive superiority, equivalence, non-inferiority, or prospective external validation.
+
+Five saved seeds provide limited evidence about stochastic agreement. Mean Jaccard and Nogueira summaries reveal dispersion across run-best masks, but do not estimate participant-resampling stability, biological reproducibility, or uniqueness of an optimum. This differs from resampling-based stability-selection and ensemble feature-selection frameworks \citep{ref09,ref40}. A medoid standardizes the candidate passed downstream; it does not transform a seed-dependent set into a stable biomarker signature. More seeds and participant-level resampling would be required for stronger stability claims.
+
+Metric alignment also matters. The archived RFECV, GA, and locking stages optimize different development metrics, so the original workflow is a staged heuristic. The unified-metric software option supports future compatible analyses, but does not imply that RFECV's nested path and a GA's nonnested search solve the same mathematical problem. Each stage and metric therefore remain visible in the audit record.
+
+Bayesian inference, STABL, and BLiP add useful but secondary views. They show that development-derived locked outputs can define reproducible candidate sets for posterior inference, resampling-oriented selection, and expected-FDR decisions. Their overlap is not independent validation because the analyses reuse the same development data and screening boundary.
+
+The study has important boundaries. Evaluations use fixed partitions or four fixed held-out centers; preprocessing and Direct screening were fitted on each full development partition rather than nested within locking-score folds, a design that can bias cross-validation estimates even for data-dependent unsupervised preprocessing \citep{ref39}; repeated fold reuse makes locking scores adaptive internal selection scores; and five seeds are sparse. The verified analysis begins from supplied matrices rather than raw-assay processing. The private radiomics analysis additionally lacks scanner/site covariates, pilot-level perturbation measurements for independent recomputation, repeat segmentations, and manual ROI adjudication; its two feature spaces share participants and therefore quantify feature-definition sensitivity rather than external replication. AMP-AD fold vectors and ADNI candidate masks remain incomplete for some retrospective sensitivities. The AMP-AD evaluation was temporally post-freeze but remains an internal four-center analysis, and the nested CGGA sensitivity used a reduced historical search budget. Independent external end-to-end evaluation, broader seed and participant resampling, and raw-data provenance audits remain future work.
+
+In summary, WrapEvoFS offers an auditable development-only rule for selecting one representative subset from a stochastic candidate bank under a strict empirical score-gap constraint. The exact guarantee is feasibility within the supplied candidate bank; it is not a guarantee of expected predictive risk, unbiased generalization, external validity, biomarker stability, clinical utility, or global optimality.
+
+\FloatBarrier
+\section{Methods}
+
+\subsection{Overall analytical workflow and leakage boundary}
+
+\Cref{fig:workflow} separates development-only selection from one-time held-out evaluation. Starting from supplied matrices, fitted preprocessing and Direct candidate generation precede RFECV target estimation. Within each Direct branch, five target-guided genetic searches generate five retained run-best subsets. Every retained subset undergoes fixed development-CV rescoring by the locking evaluator. The prespecified tolerance defines the regret-eligible pool, and its Jaccard medoid becomes the locked feature set under deterministic tie-breaking. Held-out labels, predictions, and metrics are not arguments to the locking API and cannot determine the strategy, tolerance, objective, penalty, metric, tie rule, or selected run. The final estimator is fitted on all available development data and applied once to held-out data; held-out outcomes trigger neither feature reselection nor refitting.
+
+Complete pseudocode for development-only search, fixed candidate rescoring, strict regret eligibility, deterministic representative locking, and audit export is provided under ``Complete WrapEvoFS algorithm'' in the Supplementary Methods.
+
+\subsection{RFECV target and primary estimands}
+
+For branch \(m\), Direct denotes the branch-specific pre-GA screening procedure (SVM-L1, XGBoost, or Boruta-RF) \citep{ref10,ref11,ref13}, and its candidate set is \(\mathcal C_m\) with size \(p_m\). RFECV evaluates its nested elimination path using development folds and chooses the smallest count attaining the largest mean score among counts allowed by the configured cap:
+
+\begin{equation}
+k_m^{\ast}=\min\!\arg\max_{k\in\mathcal K_m^{\mathrm{elig}}}\overline S_{R,m}(k).
+\label{eq:rfecv-target}
+\end{equation}
+
+For selected set \(F\), compression relative to the Direct set is
+
+\begin{equation}
+C(F)=1-\frac{|F|}{p_m}.
+\label{eq:compression}
+\end{equation}
+
+All locking metrics are oriented so that larger values are better. For retained candidate \(r\), let \(L_r\) be its fixed development-CV locking score and \(L_{\mathrm{best}}=\max_rL_r\). Empirical development-CV regret is
+
+\begin{equation}
+R_r=L_{\mathrm{best}}-L_r.
+\label{eq:regret}
+\end{equation}
+
+Run-to-run agreement is summarized by mean pairwise Jaccard, selected-candidate mean Jaccard, and the chance-corrected Nogueira coefficient only when a complete run-by-feature matrix exists \citep{ref36}. Because each condition has five stochastic seeds on one fixed development sample, these are seed- or stochastic-agreement measures, not participant-resampling or biomarker stability. Held-out performance differences are secondary and are computed only after locking:
+
+\begin{equation}
+\Delta_{\mathrm{heldout}}=M(F^{\mathrm{lock}})-M(\mathcal C_m).
+\label{eq:heldout-delta}
+\end{equation}
+
+\subsection{Legacy-compatible and updated genetic objectives}
+
+A nonempty binary chromosome \(\mathbf z\in\{0,1\}^{p_m}\) represents feature set \(F_m(\mathbf z)\). Let \(\overline S_{G,m}(\mathbf z)\) be its mean development-fold base score and \(\lambda\) the penalty per feature of deviation from \(k_m^{\ast}\). Both modes compute
+
+\begin{equation}
+Q_m(\mathbf z)=\overline S_{G,m}(\mathbf z)-\lambda\left||F_m(\mathbf z)|-k_m^{\ast}\right|.
+\label{eq:raw-objective}
+\end{equation}
+
+The legacy-compatible mode ranks chromosomes by
+
+\begin{equation}
+\Phi_m^{\mathrm{legacy}}(\mathbf z)=\max\{0,Q_m(\mathbf z)\}.
+\label{eq:legacy-fitness}
+\end{equation}
+
+The updated mode uses \(Q_m\) directly for reporting, ranking, elite selection, and run-best updating. For proportional parent sampling only, nonnegative weights are obtained without changing objective order:
+
+\begin{equation}
+w_i=Q_i-\min_{j:Q_j\ \mathrm{finite}}Q_j+\epsilon,
+\label{eq:shifted-weight}
+\end{equation}
+
+where \(\epsilon=10^{-12}\). Uniform sampling is recorded when no objective is finite, the objective range is at most \(\epsilon\), or the weight total is invalid or effectively zero. Empty chromosomes are prohibited. The package records zero-truncation, target-deviation, sampling-fallback, objective-diversity, and mask-diversity diagnostics.
+
+\subsection{Regret-constrained medoid locking}
+
+For nonnegative absolute tolerance \(\delta\), the strict eligible pool is
+
+\begin{equation}
+E_\delta=\{r:R_r\leq\delta\}.
+\label{eq:eligible-pool}
+\end{equation}
+
+It is never expanded with a candidate outside the declared threshold. Because a highest-scoring candidate has zero regret, \(E_\delta\) is nonempty. If \(|E_\delta|=1\), its sole candidate is selected. Otherwise, each eligible candidate's mean Jaccard similarity is
+
+\begin{equation}
+\overline J_r=\frac{1}{|E_\delta|-1}\sum_{\substack{s\in E_\delta\\s\ne r}}
+\frac{|F_r\cap F_s|}{|F_r\cup F_s|},
+\label{eq:eligible-medoid}
+\end{equation}
+
+and the candidate maximizing \(\overline J_r\) is the eligible-pool Jaccard medoid. Nonsingleton ties are resolved by larger mean Jaccard, larger locking score, smaller feature count, and then the lexicographically smaller stable hash of the canonical feature mask. The hash is a deterministic ordering device, not a probabilistic or scientific score. Exact duplicate masks retain their multiplicity as voting candidates; source-run provenance is used only after scientific feature-set selection.
+
+Selection is restricted to \(E_\delta\), so the output always satisfies \(R_{\widehat r}\leq\delta\). At \(\delta=0\), all and only highest-scoring candidates are eligible; tied maxima still undergo medoid selection. If \(\delta\geq\max_rR_r\), the rule becomes the full-bank medoid. These guarantees concern the configured empirical development-CV score gap, not expected predictive risk, generalization error, or statistical uncertainty. Complete propositions, proofs, duplicate-policy details, and implementation correspondence are given in the Supplementary Methods and Supplementary Table~S17.
+
+With \(R\) retained candidates, \(E\) eligible candidates, canonical-universe size \(p\), and average selected-set size \(s\), the current dense-mask, sparse-Jaccard implementation has expected time \(O(Rp+E^2s+R\log R)\) and memory \(O(Rp+E^2)\). For the present \(R=5\) design, at most 10 unordered eligible pairs are compared; this use case does not establish large-bank scalability. Detailed representation-specific derivations are in the Supplementary Methods.
+
+The operating updated configuration uses absolute \(\delta=0.01\), treated as a prespecified metric-scale practical margin rather than a held-out-tuned constant. Development-only sensitivity evaluates 0, 0.005, 0.01, 0.02, and a best-run-SE-scaled threshold where fold vectors exist. The scaled sensitivity is not the conventional paired one-standard-error rule and stops when required fold vectors are absent.
+
+\subsection{Controlled candidate-bank locking simulation}
+
+The frozen simulation protocol evaluated highest-score selection, the legacy top-three Jaccard medoid, the unrestricted full-bank Jaccard medoid, and the current regret-constrained medoid under hidden synthetic utility. The primary design crossed three candidate topologies, three heterogeneity levels, three proxy strengths, and six score-noise ratios at $R=5$ and $\delta=0.01$, with 10,000 independently indexed banks per scenario. Prespecified sensitivities varied $R$, $\delta$, score-noise distribution, and duplicate rate, yielding 513 scenarios and 4,995,000 banks in total. Primary summaries weight the 162 scenarios equally rather than treating their grid as a population prior. Oracle-regret failure was defined as hidden-utility regret greater than 0.02. The simulation used no participant-level data, classifier fitting, RFECV, Direct selection, or GA. Complete utility, candidate-generation, tie-path, execution-integrity, and claim-boundary details are provided in the Supplementary Methods, Supplementary Fig.~S24, and Supplementary Table~S25.
+
+\subsection{Development-only comparison of original and updated configurations}
+
+The comparison covered four AMP-AD held-out-center development partitions (Emory, Mayo, Mount Sinai, and Rush), three Direct branches, and the Small and Reference caps, with five seeds per condition (24 conditions; 120 full GPU GA runs). Conditions at the High cap were not rerun. The matched original configuration used the archived zero-truncated objective and original top-three Jaccard medoid. The updated configuration used \(\lambda=0.015\), the untruncated objective for ranking, elitism, and run-best updating, shifted weights only for parent sampling, fixed five-fold development-CV macro one-vs-rest AUROC rescoring, and the regret-constrained medoid with \(\delta=0.01\). Candidate generation and locking both differ, so this is a configuration-level comparison rather than an isolated causal experiment. Held-out-center labels, predictions, metrics, and outcomes were not loaded or evaluated.
+
+\subsection{One-time post-freeze AMP-AD held-out evaluation}
+
+After all 24 updated masks, locking scores, \(\delta=0.01\), \(\lambda=0.015\), metric orientation, preprocessing boundary, final-estimator specification, bootstrap plan, and source hashes were written to a SHA-256-identified protocol, a guarded evaluation stage loaded the corresponding held-out center for each condition exactly once. Each frozen signature was fitted on its full development partition using a random forest with 150 trees, maximum depth 12, minimum leaf size 2, bootstrap sampling, and the frozen run-derived seed; no result triggered reselection, refitting, or a configuration change. Macro one-vs-rest AUROC was primary, with macro AUPRC, balanced accuracy, macro F1, and accuracy secondary. Comparisons with archived RFECV-only and original locked predictions used 2,000 common bootstrap resamples stratified by held-out center and true class (seed 42). The four held-out centers represent four distribution shifts; the 24 feature-selection conditions are not treated as 24 independent cohorts.
+
+\subsection{CGGA coherent benchmark and saved-bank nested sensitivity}
+
+The coherent benchmark reconstructed the archived fixed 214/92 split from the raw CGGA source and required participant IDs, labels, and all values in the archived compact matrices to match exactly. Existing development-derived RFECV-only, size-matched Elastic Net, highest-CV, legacy top-three-medoid, unrestricted-medoid, and current-regret-medoid signatures were then evaluated using the same 500-tree random forest (maximum depth 12, minimum leaf size 2, bootstrap sampling, balanced class weights, random state 42). AUROC intervals and paired current-lock contrasts used 2,000 common class-stratified resamples (seed 42). No GA, RFECV, Direct selection, or feature-definition step was rerun.
+
+For the nested sensitivity, only the five saved candidate banks from the historically excluded reduced-budget CGGA analysis were re-locked under the current \(\delta=0.01\) rule. The archived outer-fold preprocessing, feature universes, candidate masks, and fixed candidate scores were retained; a 500-tree random forest was refitted within each archived outer training fold using the newly selected saved candidate. This analysis uses 214 development participants, five outer folds, and a historical GA budget of 20 individuals and 12 generations rather than the main 50-by-50 budget. It is a post hoc internal sensitivity, not a replacement primary analysis; the original 92-sample held-out partition was not accessed.
+
+\subsection{Software implementation, modes, and artifacts}
+
+WrapEvoFS v0.2.0 targets Python 3.10--3.12 through the \texttt{WrapEvoPipeline} API and \texttt{wrapevofs} command-line interface. YAML configuration controls preprocessing, Direct selection, RFECV, genetic search, locking, scoring, random seeds, checkpoint/resume behavior, and artifact output. The legacy-compatible configuration pairs \path{top_k_jaccard_medoid} with \path{legacy_zero_truncated_linear}; the updated configuration pairs \path{regret_constrained_medoid} with \path{untruncated_shifted_linear}. Archived numerical results are never silently replaced.
+
+Machine-readable outputs record candidate and fold scores where available, regrets, strict eligibility, overlap, selected masks, seeds, tie paths, configuration and input fingerprints, and GA diagnostics. Checkpoint continuation uses an atomically replaced, pickle-free state and rejects incompatible package, schema, configuration, input, feature-order, population, or backend state. Exhaustive schema fields, SHA-256 byte encoding, checkpoint mismatch rules, and serialization details remain in the Supplementary Methods and repository documentation.
+
+\subsection{Empirical datasets and analysis boundary}
+
+The four fixed empirical designs are summarized in \Cref{tab:main1}, with preprocessing boundaries and archived original settings detailed in Supplementary Tables~S1 and S2. The ADNI-derived multiclass analysis contains 532 development and 133 held-out participants with 7,411 processed predictors \citep{ref20,ref21}. AMP-AD contains 527 participants and 13,136 supplied frontal-proteomic and metabolomic predictors from the AMP-AD Diverse Cohorts Study in four fixed leave-one-center-out evaluations \citep{ref37}. The CGGA MGMT-methylation analysis contains 214 development and 92 held-out samples with 24,326 aligned gene-expression predictors \citep{ref23}. The private radiomics analysis contains 137 development and 60 held-out participants with 1,781 full-space features and a 1,346-feature perturbation-filtered sensitivity space. These are internal demonstrations beginning from supplied matrices; independent external validation was not performed.
+
+Data used in the ADNI-derived analysis were obtained from the Alzheimer's Disease Neuroimaging Initiative database (\url{https://adni.loni.usc.edu}). ADNI was launched in 2003 as a public--private partnership led by Principal Investigator Michael W. Weiner, MD; its goals include validating biomarkers for clinical trials, increasing cohort diversity, and providing data concerning the diagnosis and progression of Alzheimer's disease to the scientific community.
+
+\input{tables/table_02.tex}
+
+For the private radiomics analysis, MGMT linkage occurred after image selection, conversion, automatic tumor-core segmentation, pipeline freezing, radiomic extraction with PyRadiomics \citep{ref43}, and label-independent feature filtering. The Image Biomarker Standardisation Initiative provides the reference framework for standardized radiomic feature definitions \citep{ref42}; the available provenance does not independently establish full IBSI compliance for every upstream setting. Among 326 source participants, 262 were T1ce eligible, 259 completed radiomic extraction, and 197 had unique validated MGMT linkage (117 unmethylated and 80 methylated). A stratified 70:30 split with random state 42 yielded 137 development participants (81/56) and 60 held-out participants (36/24). The perturbation-filtered space was frozen in a separate deterministic 15-participant pilot using original, 1-mm-eroded, and 1-mm-dilated masks, consistent with perturbation-based assessment of radiomic-feature robustness \citep{ref41}; retained features required prespecified ICC(2,1) \(\geq0.85\) and median relative range \(\leq0.25\), without outcome labels.
+
+Within each feature space, SVM-L1, XGBoost, and Boruta-RF Direct screening and RFECV target estimation used development data only. Five GA searches used seeds 42--46, 50 individuals, 50 generations, five-fold ROC-AUROC scoring, the untruncated shifted-linear objective, and \(\lambda=0.015\). The five run-best sets were rescored by fixed five-fold development-CV ROC AUROC and locked with absolute \(\delta=0.01\), strict eligible-only pooling, and canonical deterministic tie-breaking. All six locks were completed before a 500-tree random forest was fitted on the full development partition and evaluated once on held-out data. AUROC and AUPRC intervals and paired AUROC differences used 2,000 class-stratified bootstrap resamples with seed 42. The two feature spaces share participants, split, and outcomes; their contrast is a feature-definition sensitivity analysis, not external validation.
+
+The retrospective reanalysis used available five-run masks and saved locking scores. CGGA fold scores were recomputed with the archived five-fold ROC-AUROC evaluator, seeds, and fixed random-forest settings, enabling best-run-SE-scaled sensitivity. AMP-AD retained five masks and means but not fold vectors; ADNI retained candidate scores and the locked mask but not all five masks or fold vectors. Unavailable analyses remain explicitly missing rather than reconstructed.
+
+Preprocessing and label-dependent Direct screening were fitted once on each full development partition rather than refitted inside every locking-score fold. RFECV, GA evaluation, and locking reused configured development folds during adaptive selection; the locking evaluator used fixed stratified five-fold construction with random state 42. Candidate evaluators used run-derived estimator seeds, so seed agreement may reflect search and estimator randomness. Development-CV scores are therefore adaptive internal selection scores rather than unbiased generalization estimates.
+
+\subsection{Stage-metric audit and secondary analyses}
+
+Archived configurations used mixed stage metrics: ADNI and AMP-AD combined weighted multiclass AUROC, balanced accuracy, and the locking metric; CGGA combined RFECV AUROC, GA accuracy, and locking AUROC. These original workflows are staged heuristics, not unified optimizers. The new binary radiomics analysis aligned RFECV, GA, and locking on ROC AUROC under the updated configuration. A future \texttt{scoring.unified\_metric: macro\_ovr\_auroc} option maps to binary ROC AUROC or multiclass macro one-vs-rest AUROC when compatible; it does not retroactively alter archived runs.
+
+Held-out results were joined only after each development-only rule was fixed. A held-out estimate for a newly selected rule was reused only when its selected run exactly matched an archived evaluated run; otherwise it remains unavailable. The CGGA paired locked-medoid-minus-RFECV-only contrasts used 2,000 common class-stratified bootstrap resamples (seed 42) from the frozen aligned held-out predictions. These post hoc intervals did not affect candidate generation, locking, or the choice of \(\delta\); no held-out value compared locking strategies during selection.
+
+Bayesian uncertainty quantification, training-only STABL, and BLiP are secondary interoperability analyses \citep{ref25,ref30,ref32,ref33,ref34}. They show that development-derived locked outputs can define a downstream candidate set for posterior inference, resampling-oriented selection, and expected-FDR decisions. Detailed priors, diagnostics, stability paths, posterior summaries, and BLiP sensitivities are provided in the Supplementary Information. Cross-method overlap is not interpreted as biomarker validation.
+
+\subsection{Ethics and consent}
+
+This study performed secondary methodological analyses of existing data and involved no new participant recruitment, intervention, or recontact. ADNI protocols were approved by the institutional review board or research ethics board at each participating site, and written informed consent was obtained from participants or their authorized representatives. The CGGA source collection was approved by the Beijing Tiantan Hospital Institutional Review Board, was conducted in accordance with the Declaration of Helsinki, and obtained written informed consent; the CGGA resource identifies collection protocol KY2013-017-01. The AMP-AD analysis used de-identified post-mortem multi-omics data from the AMP-AD Diverse Cohorts Study contributed by Emory University, Mayo Clinic, Mount Sinai, and Rush University and accessed as supplied analysis matrices. The source study reports approval by the institutional review board at each respective institution and consent from all participants or next of kin \citep{ref37}; the supplied matrices did not retain a single cross-cohort protocol identifier, and none is asserted here.
+
+The private radiomics workflow used an existing PHI-bearing clinical DICOM export and clinical MGMT records. Direct identifiers were confined to restricted linkage and processing records, whereas the supervised analysis matrices were pseudonymized and participant-level data are not redistributed. \textbf{Submission requirement:} the available radiomics provenance does not identify the reviewing research ethics board, approval or waiver number, or consent basis. These source-institution details must be confirmed and inserted before journal submission; no exemption or consent waiver is asserted in the present draft.
+
+\subsection{Use of generative AI}
+
+OpenAI's ChatGPT was used for coding assistance and grammar editing. The authors reviewed and verified all resulting changes and take full responsibility for the submitted work.
+
+\FloatBarrier
+\section{Data availability}
+
+Participant-level data are not redistributed and must be obtained through the applicable ADNI, AMP-AD, CGGA, private-radiomics, and source-provider access procedures. The AMP-AD frontal-proteomic and metabolomic source data are available through the AD Knowledge Portal, a platform for data, analyses, and tools generated by the AMP-AD Target Discovery Program and other NIA-supported programs; access requirements are described at \url{https://adknowledgeportal.synapse.org/DataAccess}. The relevant AMP-AD Diverse Cohorts Study is Synapse study \texttt{syn51732482}; for access to the study content used here, see \url{https://doi.org/10.7303/9618093}. The software release candidate contains no participant-level or provider-controlled matrix. For the private radiomics analysis, only non-identifying aggregate run, locking, stability, and held-out summary tables are included; participant-level matrices, identifiers, images, masks, and held-out prediction rows are excluded. Nonrestricted audit CSVs, configurations, scripts, figure source tables, and provenance records are prepared in the manuscript reproducibility repository at \url{https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility}. The repository remains private during manuscript revision; access can be provided for peer review, and public availability will be reported only after repository visibility is changed and verified. The verified empirical starting boundary is the supplied analysis matrices.
+
+\FloatBarrier
+\section{Code availability}
+
+The software repository is documented at \url{https://github.com/junseoparkX/wrapevofs-package}. The v0.2.0 source, wheel, and source distribution have been prepared and validated for peer review, and package-owned software is licensed under BSD-3-Clause. The repository remains private during manuscript revision. No public release or tag, PyPI publication, archival deposit, or DOI is claimed until those actions are completed and verified.
+
+\FloatBarrier
+\section{Acknowledgements}
+
+We thank Selina Parmar for providing the CGGA data and Ruihan Xu for providing the ADNI-derived and AMP-AD data used in this study.
+
+Data used in preparation of this article were obtained from the Alzheimer's Disease Neuroimaging Initiative (ADNI) database. The investigators within ADNI contributed to the design and implementation of ADNI and/or provided data but did not participate in the analysis or writing of this report. Data collection and sharing for ADNI is funded by the National Institute on Aging (National Institutes of Health Grant U19AG024904); the grantee organization is the Northern California Institute for Research and Education. ADNI has also received support from the National Institute of Biomedical Imaging and Bioengineering, the Canadian Institutes of Health Research, and private-sector contributions facilitated by the Foundation for the National Institutes of Health.
+
+The results published here are in whole or in part based on data obtained from the AD Knowledge Portal. The data available through the portal would not be possible without the participation of research volunteers and the contributions of collaborating researchers. Data generation for the AMP-AD Diverse Cohorts Study was supported by National Institutes of Health grants U01AG046139, U01AG046170, U01AG061357, U01AG061356, U01AG061359, and R01AG067025.
+
+\FloatBarrier
+\section{Funding}
+
+The WrapEvoFS software development and analyses reported in this Article received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors. Funding acknowledged above supported collection and sharing of source-cohort data rather than the present software methodology study.
+
+\FloatBarrier
+\section{Author contributions}
+
+J.P. performed conceptualization, methodology, software development, validation, formal analysis, investigation, data curation, visualization, and writing of the original draft, and contributed to review and editing. L.J.F. provided supervision and contributed to review and editing. H.Z. provided supervision and project administration, contributed to review and editing, and serves as corresponding author. All named authors reviewed and approved the manuscript and take responsibility for the work.
+
+\FloatBarrier
+\section{Competing interests}
+
+The authors declare no competing interests.
+
+\FloatBarrier

@@ -1,0 +1,17 @@
+\begin{table}[tbp]
+\centering
+\caption{Failure diagnostics and metric alignment}
+\label{tab:main3}
+\footnotesize
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.20\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\bfseries Audit item & \bfseries Scope & \bfseries Result & \bfseries Interpretation \\
+\midrule
+Zero-truncation flattening & AMP-AD Rush/SVM-L1/Small & $k^*=3$; locked $n=84$; deviation 81; 4/5 zero run-best fitness values; 245/250 all-zero generations & Concrete failure mode of the original objective; motivates the updated untruncated mode \\
+Original-objective warnings & 36 archived AMP-AD configurations & 18/36 configurations warned; 694 all-zero generations in the complete archived audit & Archived outputs are preserved but warning status is explicit; this scope differs from the 24 matched conditions in Figure~2 \\
+Metric alignment & ADNI, AMP-AD, CGGA archived configurations & 45/45 configurations used mixed RFECV, GA, and locking objectives & Archived workflow is a staged heuristic, not a unified optimizer \\
+\bottomrule
+\end{tabularx}
+\end{table}

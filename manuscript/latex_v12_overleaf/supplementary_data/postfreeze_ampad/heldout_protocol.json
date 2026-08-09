@@ -1,0 +1,79 @@
+{
+  "branches": [
+    "svm_l1",
+    "xgboost",
+    "boruta_rf"
+  ],
+  "candidate_conditions": 24,
+  "caps": [
+    "low",
+    "reference"
+  ],
+  "centers": [
+    "emory",
+    "mayo",
+    "mount_sinai",
+    "rush"
+  ],
+  "claim_boundary": "This is a one-time post-freeze evaluation on four held-out centers. It is not prospective clinical validation; the four centers, not the 24 method/cap conditions, are the independent distribution shifts.",
+  "comparators": [
+    "archived original-configuration RFECV-only",
+    "archived original-configuration legacy locked medoid"
+  ],
+  "final_estimator": {
+    "bootstrap": true,
+    "max_depth": 12,
+    "min_samples_leaf": 2,
+    "n_estimators": 150,
+    "n_jobs": 1,
+    "random_state": "42 + 700 + selected_run_id",
+    "type": "sklearn.ensemble.RandomForestClassifier"
+  },
+  "frozen_inventory_sha256": "061f475ed90bdc36e55c7a56a64003ae23a5998d0af350ede89be46cd76889d3",
+  "heldout_paths_registered_but_not_read": [
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_emory/AMPAD_bScore_3class_multimodal_heldout_emory_X_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_emory/AMPAD_bScore_3class_multimodal_heldout_emory_y_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_emory/AMPAD_bScore_3class_multimodal_heldout_emory_sample_metadata_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mayo/AMPAD_bScore_3class_multimodal_heldout_mayo_X_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mayo/AMPAD_bScore_3class_multimodal_heldout_mayo_y_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mayo/AMPAD_bScore_3class_multimodal_heldout_mayo_sample_metadata_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mount_sinai/AMPAD_bScore_3class_multimodal_heldout_mount_sinai_X_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mount_sinai/AMPAD_bScore_3class_multimodal_heldout_mount_sinai_y_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_mount_sinai/AMPAD_bScore_3class_multimodal_heldout_mount_sinai_sample_metadata_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_rush/AMPAD_bScore_3class_multimodal_heldout_rush_X_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_rush/AMPAD_bScore_3class_multimodal_heldout_rush_y_test.csv",
+    "outputs/AMPAD_bScore_3class_raw_to_wrapevofs/data/processed/folds/heldout_rush/AMPAD_bScore_3class_multimodal_heldout_rush_sample_metadata_test.csv"
+  ],
+  "outcomes": {
+    "primary": "macro one-vs-rest AUROC",
+    "reporting": "report every condition and pooled branch-cap result irrespective of direction",
+    "secondary": [
+      "macro AUPRC",
+      "balanced accuracy",
+      "macro F1",
+      "accuracy"
+    ]
+  },
+  "protocol_version": "ampad-post-freeze-heldout-1.0",
+  "registered_before_heldout_access": true,
+  "selection": {
+    "absolute_regret_tolerance": 0.01,
+    "duplicate_policy": "retain multiplicity as voting candidates; preserve source-run provenance",
+    "locking_metric": "macro_ovr_auroc",
+    "locking_rule": "regret_constrained_medoid",
+    "metric_orientation": "larger_is_better",
+    "size_penalty_lambda": 0.015,
+    "tie_break": [
+      "mean_jaccard",
+      "higher_locking_score",
+      "smaller_feature_count",
+      "stable_mask_hash"
+    ]
+  },
+  "uncertainty": {
+    "interval": "percentile 95% CI",
+    "method": "paired participant bootstrap within held-out center",
+    "replicates": 2000,
+    "seed": 42
+  }
+}

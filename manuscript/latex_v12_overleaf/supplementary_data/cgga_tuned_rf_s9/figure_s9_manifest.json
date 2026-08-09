@@ -1,0 +1,17 @@
+{
+  "figure": "Supplementary Figure S9",
+  "builder": "scripts/build_cgga_s9_clean.py",
+  "presentation_only_change": true,
+  "scientific_recomputation": false,
+  "removed_element": "redundant in-figure selected-settings block",
+  "source_sha256": {
+    "supplementary_data\\cgga_tuned_rf_s9\\nested_cv_auroc.csv": "38136f1c7733baa8ab48a1f6097e501559d87c6964feaf7cbdea245b93ff4589",
+    "supplementary_data\\cgga_tuned_rf_s9\\heldout_intervals.csv": "806012298413eb5869088a370dd0648aafa31979ffd8255b24832e4d1d9b6dfa",
+    "supplementary_data\\cgga_tuned_rf_s9\\primary_feature_importance.csv": "0d2ab4142921f33e2523494f279e49e35d02718bbab45e47f734f49929864367"
+  },
+  "output_sha256": {
+    "pdf": "ec2bb544d1a1caacf9361dfb2502a308edd3ccd73f825ce8b2ca924048f391e8",
+    "svg": "dd4dd720d0a8b732f3cb3937444ff119d78bbc4e8aa775147075647611b43fc3",
+    "png": "3f0cef8cb0a24dcb03b64943bb1fcbc79ed6dc578240ede13794a9fa2c663c07"
+  }
+}

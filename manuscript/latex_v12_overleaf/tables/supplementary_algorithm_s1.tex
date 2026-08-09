@@ -1,0 +1,38 @@
+\noindent\textbf{Complete development-only WrapEvoFS search and regret-constrained representative locking.}\par\smallskip
+{\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\theHtable}{suppalgorithm.\thealgorithm}
+\begin{longtable}{@{}>{\centering\arraybackslash}p{0.055\linewidth}>{\raggedright\arraybackslash}p{0.895\linewidth}@{}}
+\toprule
+ & \textbf{Input.} Development data $(X_D,y_D)$; Direct candidates $\mathcal C_m$; RFECV configuration; GA mode and seeds; locking metric; tolerance mode and $\delta$. \\
+ & \textbf{Output.} RFECV target $k_m^*$; locked set $F_m^{\mathrm{lock}}$; complete audit $A_m$. \\
+\addlinespace[2pt]
+1 & Fit preprocessing and Direct selection on development data only. \\
+2 & Evaluate the eligible RFECV path and select $k_m^*$; resolve score ties toward the smaller count. \\
+3 & Construct fixed stratified development folds for GA evaluation. \\
+4 & \textbf{For each} independent run $r=1,\ldots,R$: \\
+5 & \hspace*{1.35em}Initialize a population of nonempty binary chromosomes. \\
+6 & \hspace*{1.35em}\textbf{For each} generation $g=1,\ldots,G$: \\
+7 & \hspace*{2.70em}Compute base score, target deviation, penalty, raw objective, and zero-truncated fitness for every chromosome. \\
+8 & \hspace*{2.70em}\textbf{If updated mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
+9 & \hspace*{2.70em}\textbf{If legacy-compatible mode:} reproduce zero-truncated ranking and update behavior. \\
+10 & \hspace*{2.70em}Retain elites; compute shifted sampling weights only for parent sampling in updated mode. \\
+11 & \hspace*{2.70em}\textbf{If} weights are invalid or effectively equal, use uniform sampling and record the fallback. \\
+12 & \hspace*{2.70em}Apply crossover and mutation; repair any empty child by activating one feature. \\
+13 & \hspace*{2.70em}Export generation diagnostics and warnings for zero truncation, deviation, fallback, and mask collapse. \\
+14 & \hspace*{1.35em}\textbf{End for} generation; retain one run-best candidate. \\
+15 & \textbf{End for} run. \\
+\addlinespace[2pt]
+16 & Re-score every retained run-best candidate with the fixed development-CV locking evaluator to obtain $L_r$ and fold scores. \\
+17 & Encode every candidate in the common ordered feature universe, compute its stable SHA-256 mask hash, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
+18 & Form $E_\delta=\{r:R_r\leq\delta\}$ (or the prespecified relative or best-run-SE-scaled analogue); never add a candidate outside the threshold. \\
+19 & \textbf{If} $|E_\delta|=1$, select its sole candidate. \\
+20 & \textbf{Otherwise,} compute pairwise Jaccard similarity and each candidate's mean Jaccard within $E_\delta$. \\
+21 & Select the medoid by larger mean Jaccard, larger $L_r$, smaller feature count, and lexicographically smaller stable mask hash; use source-run ID only as post-selection provenance among exact duplicate masks. \\
+22 & Assert that the selected candidate is in $E_\delta$ and satisfies the exact declared threshold; export canonical masks and hashes, duplicate multiplicity and provenance, scores, fold scores, regrets, eligibility, Jaccard values, tie path, seeds, version, and configuration hash. \\
+23 & \textbf{Return} $(F_m^{\mathrm{lock}},k_m^*,A_m)$. Held-out data are not inputs and are used only for one-time evaluation after the feature set, settings, and final model-development procedure are locked. \\
+\bottomrule
+\end{longtable}
+\addtocounter{table}{-1}
+}

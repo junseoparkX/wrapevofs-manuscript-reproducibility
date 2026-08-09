@@ -1,0 +1,40 @@
+{
+  "schema": "AMPAD-remaining90-authoritative-lock-freeze-v1",
+  "operation": "reapply_current_package_lock_to_existing_development_fold_scores",
+  "models_fitted": 0,
+  "held_out_inputs_used": false,
+  "runs": 90,
+  "conditions": 18,
+  "all_archived_stable_identifiers_match": true,
+  "all_empirical_candidate_permutations_invariant": true,
+  "empirical_candidate_permutations_tested": 2160,
+  "all_bundle_and_authoritative_feature_sets_match": false,
+  "bundle_and_authoritative_source_run_differences": 1,
+  "maximum_selected_absolute_regret": 0.00834728281765218,
+  "locking": {
+    "strategy": "regret_constrained_medoid",
+    "tolerance_mode": "absolute",
+    "regret_tolerance": 0.01,
+    "metric_orientation": "larger_is_better",
+    "tie_break_path": "mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash",
+    "stable_mask_hash_algorithm": "sha256(uint8_canonical_mask_bytes)",
+    "duplicate_mask_policy": "retain_multiplicity_as_voting_candidates"
+  },
+  "inputs": {
+    "config": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\bundle\\WrapEvoFS_AMPAD_Remaining_90_Recommended_Runs\\configs\\ampad_remaining90.yaml",
+    "config_sha256": "15f5999e4690ea71d9e84b9a347842820d941d9f5bee57cc93dad392a1fed9b5",
+    "frozen_scores": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\development_freeze_bundle_rule_diagnostic\\fold_locking_scores.csv",
+    "frozen_scores_sha256": "4541d11dc946e1551420fad5cb0c8d412d4d4c5b3093faba4709cee7745b7244",
+    "bundle_condition_inventory": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\development_freeze_bundle_rule_diagnostic\\recommended_18_condition_inventory.csv",
+    "bundle_condition_inventory_sha256": "a7b86363ef8bb3c50c8b56fa00ce28b93ca33223553efa40fe3f9533a69431df",
+    "package_src": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\release_candidate_20260803_105542\\publish_clone\\src"
+  },
+  "artifacts": {
+    "candidate_locking_audit.csv": "5bf03d0867a22b951c84607ece9b5d48c1c227ea0c85b6a61f3be4ddd878f7a9",
+    "eligible_pairwise_jaccard.csv": "a505b11c1a719680b6fc0baf1dca901ec43a2732cee54642c18e124bc4d32abb",
+    "recommended_18_condition_inventory.csv": "1a883a14df618a79fac1615416391de25add1b5f3c4495aa9525b872c0b1bae3",
+    "bundle_vs_authoritative_selection_comparison.csv": "c3c6d5e67679e16ea63a6bcfca2f754ca06e0326df7b3c85c45af39fc847a595",
+    "stable_identifier_verification.csv": "f547f60702aaa783b8bad3482d4bf5cc43a2c7a978741be1a26cff2a18fdff6e",
+    "empirical_permutation_invariance.csv": "1af4cea3cc71aac934f32a71cb1669f5517bb655631464f936e7b4e302d91f24"
+  }
+}

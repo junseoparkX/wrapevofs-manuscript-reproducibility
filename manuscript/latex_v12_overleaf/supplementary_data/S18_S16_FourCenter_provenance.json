@@ -1,0 +1,68 @@
+{
+  "schema": "WrapEvoFS-v10-S18-S16-four-center-v1",
+  "analysis_scope": "development-only AMP-AD comparison of original and updated configurations across four center-specific development partitions",
+  "presentation_builder_only": true,
+  "ga_rerun_performed_by_builder": false,
+  "rfecv_or_direct_rerun_performed_by_builder": false,
+  "held_out_evaluation_performed_by_builder": false,
+  "held_out_inputs_used": false,
+  "conditions": 24,
+  "full_ga_runs": 120,
+  "caps": [
+    "Small-cap",
+    "Reference-cap"
+  ],
+  "high_cap_rerun": false,
+  "display_terminology": {
+    "legacy_source_fields": "original configuration",
+    "recommended_source_fields": "updated configuration"
+  },
+  "verified_aggregates": {
+    "absolute_target_deviation": {
+      "legacy": 216,
+      "recommended": 137
+    },
+    "condition_direction": {
+      "improved": 12,
+      "unchanged": 6,
+      "worsened": 6
+    },
+    "zero_run_best": {
+      "legacy": 4,
+      "recommended": 0
+    },
+    "all_zero_generations": {
+      "legacy": 673,
+      "recommended": 333
+    },
+    "uniform_sampling_fallbacks": 0,
+    "maximum_selected_empirical_regret": 0.0083472828176521,
+    "mean_score_difference": 0.000975173955213593,
+    "median_score_difference": 0.0009636741654703035,
+    "score_difference_range": [
+      -0.0131871204257471,
+      0.023894424844382867
+    ]
+  },
+  "finite_precision_disclosure": {
+    "condition": "Mount Sinai/SVM-L1/Reference-cap",
+    "authoritative_package_selected_run": 5,
+    "older_bundle_helper_selected_run": 3,
+    "both_feature_counts": 17,
+    "authoritative_selected_regret": 0.003702196570253058,
+    "target_count_summaries_changed": false
+  },
+  "authoritative_lock_manifest": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\manuscript\\latex_v11_overleaf\\supplementary_data\\recommended_mode_120_run\\authoritative_lock\\LOCK_FREEZE_MANIFEST.json",
+  "authoritative_lock_manifest_sha256": "29903c8be5d8bb5965012b50068158ea3108d79b628f64c585aa0ee18f916ee1",
+  "authoritative_lock_all_empirical_permutations_invariant": true,
+  "source_table": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\manuscript\\latex_v11_overleaf\\supplementary_data\\recommended_mode_120_run\\summary\\proposed_table_s16_24_conditions.csv",
+  "source_table_sha256": "4db70b1a7e2bf0cc8e1399ccfbc258af1c217f4fd4c7f6538c6e1a0d444b5b49",
+  "outputs": {
+    "figure_s18.svg": "51b15efda38de3c2a52c288bdd0771318e8a809ff0a8e844ac6a500d30e45e34",
+    "figure_s18.pdf": "b5ba5171e024f94b1e4058a51cd40b8222c5df63d9f7704d02e27cb2b5b0b4fd",
+    "figure_s18.png": "804a3231689dc794f1ef7cf10a38e1556df47d2fc54a77ec3be6d652f380f1d6",
+    "Table_S16_AMPAD_FourCenter_Objective_Sensitivity.csv": "4db70b1a7e2bf0cc8e1399ccfbc258af1c217f4fd4c7f6538c6e1a0d444b5b49",
+    "Table_S16_AMPAD_FourCenter_Objective_Sensitivity.md": "619996db0fc6b9b953408bd1ca9dfdea1e0c4754ee9363d46d3bf937f2a504c1",
+    "table_38.tex": "578ad9aac0c349cf886a252c54527fbe325d9f0a7462e206babcb356d4606c2c"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "analysis_id": "wrapevofs_locking_rule_simulation_cpu_4995000",
+  "protocol_sha256": "6bb91ec337c331aa4b69646f5166831503405d2721a40d16be75718179418d6f",
+  "authoritative_package_version": "0.2.0",
+  "authoritative_package_git_commit": "63a608351abfb9521437c0dceef869b42ddfa292",
+  "source_files": {
+    "scenario_rule_summary.csv": {
+      "drive_id": "1jnE7wWw_8tB34mOxYc1_YHfn098dRL4d",
+      "size_bytes": 9192513
+    },
+    "paired_current_minus_comparator.csv": {
+      "drive_id": "1HsWi-XYdfPPnDUo2l8eCtUpqk_tXi-0N",
+      "size_bytes": 1605264
+    },
+    "RUN_COMPLETION_MANIFEST.json": {
+      "drive_id": "1Kk0Ypj2tGR42teZVc6s6Qmik2qHtfAhe"
+    },
+    "FINAL_INTEGRITY_AUDIT.json": {
+      "drive_id": "1sJIJZh2Ss3NGVPngG-ihjzl56Ela2U2C"
+    }
+  },
+  "scientific_workload": {
+    "primary_banks": 1620000,
+    "sensitivity_banks": 3375000,
+    "total_banks": 4995000,
+    "scenario_count": 513,
+    "ga_runs": 0
+  },
+  "extraction": "Figure S24 and Table S25 source CSVs are equal-scenario aggregates extracted from the two authoritative completed-run summary CSVs. No candidate bank, GA, model fit, or empirical analysis was rerun.",
+  "execution_note": "The frozen protocol listed engineering chunk sizes of 1000 or larger. The R=100 sensitivity used chunks of 250 to limit memory. Randomness was keyed to scenario and replicate identifiers and was chunk independent; all checksum and deterministic-regeneration audits passed.",
+  "claim_boundary": "Hidden synthetic utility is not AUROC. The simulation evaluates candidate-bank locking only and does not establish predictive superiority, unbiased generalization, external validity, participant-resampling stability, biomarker stability, or clinical utility."
+}

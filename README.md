@@ -1,32 +1,35 @@
 # WrapEvoFS manuscript reproducibility
 
-This repository contains the submission-stage WrapEvoFS manuscript, its complete LuaLaTeX/Overleaf source, aggregate audit tables, figure-generation code, formal regret-locking proofs, and revision validation records.
+This private peer-review repository contains the submission-stage WrapEvoFS manuscript, complete LuaLaTeX/Overleaf source, aggregate audit tables, figure-generation code, formal regret-locking proofs, and validation records.
 
-The companion software package is maintained separately at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package). Package-owned software is licensed under BSD-3-Clause. This repository does not duplicate the package source.
+The companion software package is maintained separately at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package). Package-owned software is licensed under BSD-3-Clause; this repository does not duplicate the package source.
 
-## Repository contents
+## Current submission package
 
-- `manuscript/`: authoritative V9 manuscript source, 5 main figures, 18 supplementary figures, 39 table source files, bibliography, supplementary data, formal locking proofs, and the compiled 43-page PDF.
-- `audits/`: frozen aggregate compression, regret, locking, metric-alignment, and penalty-flattening source tables used by the revision.
-- `analysis/regret_revision/`: scripts and frozen plot-source CSVs used to produce the revision figures.
-- `reports/`: manuscript consistency, figure, methods, and submission-readiness review records.
+- [`manuscript/latex_v12_overleaf/main.pdf`](manuscript/latex_v12_overleaf/main.pdf): 16-page main article.
+- [`manuscript/latex_v12_overleaf/supplementary_information.pdf`](manuscript/latex_v12_overleaf/supplementary_information.pdf): 42-page Supplementary Information.
+- `manuscript/latex_v12_overleaf/figures/`: five main figures and Supplementary Figures S1--S24, including editable/vector assets where available.
+- `manuscript/latex_v12_overleaf/tables/`: main and Supplementary LaTeX table sources through Supplementary Table S25.
+- `manuscript/latex_v12_overleaf/regret_locking_formalization/`: propositions, proofs, complexity analysis, implementation crosswalk, and property-test report.
+- `manuscript/latex_v12_overleaf/supplementary_data/`: non-identifying aggregate source tables and provenance records used by the current displays.
+- `manuscript/latex_v12_overleaf/scripts/`: deterministic presentation, validation, inventory, and submission-archive builders.
 
-The authoritative compiled PDF is `manuscript/main.pdf` (SHA-256 `ede82ba2e668f77dcef7bd4c3d052eb06c29d376b5b72514d3ad8e807d288eda`). It identifies WrapEvoFS v0.2.0 as the peer-review submission release.
+The current PDFs are SHA-256 pinned in [`manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md`](manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md). The final display-citation audit, changed-file inventory, and figure-source manifests are retained beside the manuscript.
 
 ## Scientific boundary
 
-The formal locking guarantee is limited to the configured empirical development-CV score gap within the supplied candidate bank. It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, participant-resampling stability, or statistical certainty.
+The formal locking guarantee is limited to the configured empirical development-CV score gap within the supplied candidate bank. It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, participant-resampling stability, statistical certainty, or clinical utility.
 
-No GA, feature-selection experiment, held-out evaluation, Bayesian analysis, STABL, BLiP, bootstrap analysis, or empirical manuscript analysis was rerun to construct this repository. Existing empirical numerical results were preserved.
+Repository preparation did not rerun GA, RFECV, Direct selection, Bayesian analysis, STABL, BLiP, or any empirical feature-selection experiment. The current supplementary addenda use the explicitly documented frozen signatures, saved candidate banks, saved aggregate outputs, and authorized post-freeze evaluations described in the validation reports.
 
 ## Data boundary
 
-Participant-level ADNI, AMP-AD, and CGGA data and provider-controlled materials are not included. The aggregate CSVs are audit and plot-source tables, not participant-level matrices. See [DATA_BOUNDARIES.md](DATA_BOUNDARIES.md).
+Participant-level ADNI, AMP-AD, CGGA, and private-radiomics data are not redistributed. Provider-controlled files, credentials, raw predictions, model binaries, checkpoints, DICOM images, masks, and private archives are excluded. See [`DATA_BOUNDARIES.md`](DATA_BOUNDARIES.md).
 
 ## Reproduction
 
-See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for manuscript compilation and the distinction between figure regeneration from frozen aggregate tables and analyses that require controlled source inputs.
+See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for independent main/Supplementary builds and the distinction between reproducible aggregate rendering and controlled-input analyses.
 
-## License status
+## Release status
 
-The BSD-3-Clause license in the companion package applies only to package-owned software. No separate public license for the manuscript text, figures, tables, or aggregate research artifacts is asserted here; see [LICENSE_STATUS.md](LICENSE_STATUS.md).
+This repository is intended for controlled manuscript review until the authors approve public release and complete the remaining ethics, declaration, ADNI DPC, and repository-access checks documented in `manuscript/latex_v12_overleaf/AUTHOR_CONFIRMATION_REQUIRED.md` and `manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md`.

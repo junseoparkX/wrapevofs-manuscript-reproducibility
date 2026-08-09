@@ -1,0 +1,29 @@
+{
+  "background_grid": false,
+  "figure_hashes": {
+    "figure_s21": {
+      "pdf": "860634b0d65cb368333c544658c6d58f6a7797616e8a8e44a7335f547f417cd4",
+      "png": "63f71182afb98e739f1dba537201d9e3343247d0539a507e9943a0d8396a4e25",
+      "svg": "4d12ad05b4a5b5b871b8686216f18eb75056f4119888779f060e1d23dfa6848a"
+    },
+    "figure_s22": {
+      "pdf": "309d824398e51f43707363a725c39b44c9391de4a68d2d56f9a5ca303ab9347a",
+      "png": "f69a2b377ba006c15a7a008fe1c2a29fc75c5f5d7f02f6d71cc5379c747d2516",
+      "svg": "4f6b0697c7c334ab10c86eb6aeed67ea062ab541f6225374e9b3f688c81ba084"
+    },
+    "figure_s23": {
+      "pdf": "e74e884523233cb8df2919cb741dc68f04c526e651c79884ea90cc416751f63e",
+      "png": "bb3516e1aa70dca0725bca04e712cbf9cd9f613388968b3f0a6bcb41bf0de12a",
+      "svg": "492d05152ae4f77eab7d64d6105943d42dae21a40b8c5adb2e17f61c583117d5"
+    }
+  },
+  "panel_label_policy": "bold panel letters only",
+  "simulation_included": false,
+  "source_outputs": [
+    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\ampad_updated_one_time_heldout_20260808",
+    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_coherent_benchmark_20260808\\outputs",
+    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_nested_relock_20260808\\outputs",
+    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_nested_validation\\outputs\\primary"
+  ],
+  "target_width_mm": 170
+}

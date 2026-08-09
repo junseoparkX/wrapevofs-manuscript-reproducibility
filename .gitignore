@@ -18,11 +18,18 @@ __pycache__/
 # Local scratch and controlled inputs
 tmp/
 .tmp/
+_codex_tmp/
 data/
 inputs/
 outputs/
 runs/
+qa_*/
+release_candidate_*/
 *.zip
+*.joblib
+*.npy
+*.npz
+*.parquet
 
 # OS/editor
 .DS_Store

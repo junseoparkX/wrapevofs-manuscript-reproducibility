@@ -1,36 +1,45 @@
 # Reproducibility guide
 
-## Build the manuscript
+## Build the submission PDFs
 
-The manuscript is designed for LuaLaTeX and Overleaf. From `manuscript/`:
-
-```bash
-latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex
-```
-
-The verified build has 43 pages. It contains no unresolved references or citations and no reported overfull or underfull boxes.
-
-## Regenerate figures from frozen aggregate tables
-
-Create a Python environment and install the plotting requirements:
+The manuscript is designed for LuaLaTeX and Overleaf. From `manuscript/latex_v12_overleaf/`:
 
 ```bash
-python -m venv .venv
-python -m pip install -r requirements.txt
-python analysis/regret_revision/generate_revision_figures.py
-python analysis/regret_revision/generate_supplementary_revision_figures.py
+latexmk -g -pdf -interaction=nonstopmode -halt-on-error main.tex
+latexmk -g -pdf -interaction=nonstopmode -halt-on-error supplementary_information.tex
 ```
 
-These scripts consume the checked-in aggregate audit and plot-source CSVs. They do not run GA, RFECV, Direct selection, held-out evaluation, Bayesian analysis, STABL, BLiP, bootstrap resampling, or feature-selection experiments.
+The verified outputs contain 16 main-article pages and 42 Supplementary pages. A clean extraction of the submission source independently rebuilt both entry points with no unresolved references, overfull/underfull boxes, duplicate destinations, or oversized-float warnings.
 
-## Controlled-input analysis script
+## Validate frozen results and figure presentation
 
-`analysis/regret_revision/build_revision_analyses.py` is retained for provenance, but complete execution requires the separately controlled ADNI, AMP-AD, and CGGA source artifacts and a sibling checkout of the companion package. Those controlled inputs are intentionally absent. Do not interpret failure to reproduce the raw-to-aggregate stage without them as an invitation to fabricate, impute, or replace missing artifacts.
+From `manuscript/latex_v12_overleaf/` with the Python requirements installed:
 
-## Companion package validation
+```bash
+python scripts/validate_final_qa_frozen_values.py
+python scripts/validate_main_panel_labels.py
+python scripts/validate_cgga_figure5_provenance.py
+python scripts/validate_radiomics_integration.py
+python scripts/validate_locking_simulation_s24_integration.py
+```
 
-The software implementation and tests live at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package). Version 0.2.0 is validated separately across its configured Python CI matrix. The manuscript repository does not vendor package code.
+The validators check frozen numerical invariants, within-figure panel-label consistency, source-table mappings, radiomics integration boundaries, and the controlled locking-layer simulation integration. They do not rerun GA or empirical feature selection.
 
-## Frozen-results rule
+## Rebuild presentation assets
 
-The CSV files under `audits/` and `analysis/regret_revision/` are authoritative frozen outputs for the manuscript revision. Repository preparation must not alter their empirical numerical values.
+Relevant deterministic builders are kept in `manuscript/latex_v12_overleaf/scripts/`. Each script documents its frozen aggregate inputs and output scope. In particular:
+
+- `build_v12_main_figure2.py` rebuilds the updated-mechanism verification figure;
+- `build_cgga_figure5.py` rebuilds the current CGGA main figure;
+- `build_cgga_s9_clean.py` rebuilds Supplementary Figure S9;
+- `prepare_170mm_figure_assets.py` creates the continued-page S8 and S19 assets;
+- `build_postfreeze_results.py` rebuilds Supplementary Figures S21--S23;
+- `render_locking_simulation_s24.ps1` renders Supplementary Figure S24.
+
+These are presentation or frozen-summary routes. Their presence does not imply that restricted raw-to-result workflows are publicly executable.
+
+## Controlled-input boundary
+
+Participant-level ADNI, AMP-AD, CGGA, and private-radiomics inputs remain controlled or provider supplied. Complete raw-to-aggregate reproduction may require authorized data access, source-specific preprocessing, and separately retained run artifacts. Missing controlled inputs must not be fabricated, imputed, or replaced.
+
+The companion software implementation and tests live at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package).

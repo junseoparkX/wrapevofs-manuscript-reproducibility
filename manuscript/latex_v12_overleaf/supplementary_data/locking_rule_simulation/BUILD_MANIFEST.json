@@ -1,0 +1,22 @@
+{
+  "protocol_sha256": "6bb91ec337c331aa4b69646f5166831503405d2721a40d16be75718179418d6f",
+  "builder": "scripts/build_locking_simulation_s24.py",
+  "source_sha256": {
+    "figure_s24_panel_a.csv": "03c59af4e944cf0899f62edfbdb24244229f4d892b17dfeae2bb6c1de6ed9b8c",
+    "figure_s24_panel_b.csv": "5ebb405370a993083b0a77b48a33ba0133b8ae5fa9c84796bdd14d6d3ba2fc37",
+    "figure_s24_panel_c.csv": "19f35f157824413e95114b14bb87b6485c4ec9788ad96771e1572d5c315688c6",
+    "table_s25_decision_paths.csv": "85eac7b919ce337f5f691d7f7f9cd3fae00c68a3adffb351d810aa3ca5683b01",
+    "table_s25_primary_summary.csv": "3350187cfd0b5fd2741540c76611073d09b3b41741112e3977d83439c03d4572",
+    "table_s25_regret_audit.csv": "0db08c626fc680c352e83266831930512f42db23aca72f1e5d57618ddcffbce2"
+  },
+  "figure_s24_svg_sha256": "be6969e153bb04caf641d530b4495898f65396c3172db388d1fcb4cf60042e31",
+  "table_47_sha256": "786fa3c09f3bb5300c324b31fa8b9b12625f85c0a21caf1d60e48c30528aba79",
+  "figure_width_mm": 170,
+  "figure_height_mm": 67,
+  "grid": false,
+  "panels": [
+    "a",
+    "b",
+    "c"
+  ]
+}
