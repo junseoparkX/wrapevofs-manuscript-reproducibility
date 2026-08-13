@@ -1,0 +1,55 @@
+view,branch,stage,feature_count
+full_1781,svm_l1,Input,1781
+full_1781,svm_l1,Direct,214
+full_1781,svm_l1,RFECV target,8
+full_1781,svm_l1,Locked,50
+full_1781,svm_l1,GA seed 42,62
+full_1781,svm_l1,GA seed 43,50
+full_1781,svm_l1,GA seed 44,60
+full_1781,svm_l1,GA seed 45,59
+full_1781,svm_l1,GA seed 46,55
+full_1781,xgboost,Input,1781
+full_1781,xgboost,Direct,100
+full_1781,xgboost,RFECV target,16
+full_1781,xgboost,Locked,24
+full_1781,xgboost,GA seed 42,24
+full_1781,xgboost,GA seed 43,17
+full_1781,xgboost,GA seed 44,22
+full_1781,xgboost,GA seed 45,20
+full_1781,xgboost,GA seed 46,20
+full_1781,boruta_rf,Input,1781
+full_1781,boruta_rf,Direct,10
+full_1781,boruta_rf,RFECV target,10
+full_1781,boruta_rf,Locked,9
+full_1781,boruta_rf,GA seed 42,10
+full_1781,boruta_rf,GA seed 43,10
+full_1781,boruta_rf,GA seed 44,10
+full_1781,boruta_rf,GA seed 45,9
+full_1781,boruta_rf,GA seed 46,9
+stable_1346,svm_l1,Input,1346
+stable_1346,svm_l1,Direct,201
+stable_1346,svm_l1,RFECV target,3
+stable_1346,svm_l1,Locked,50
+stable_1346,svm_l1,GA seed 42,51
+stable_1346,svm_l1,GA seed 43,50
+stable_1346,svm_l1,GA seed 44,52
+stable_1346,svm_l1,GA seed 45,46
+stable_1346,svm_l1,GA seed 46,52
+stable_1346,xgboost,Input,1346
+stable_1346,xgboost,Direct,100
+stable_1346,xgboost,RFECV target,6
+stable_1346,xgboost,Locked,19
+stable_1346,xgboost,GA seed 42,19
+stable_1346,xgboost,GA seed 43,21
+stable_1346,xgboost,GA seed 44,17
+stable_1346,xgboost,GA seed 45,18
+stable_1346,xgboost,GA seed 46,22
+stable_1346,boruta_rf,Input,1346
+stable_1346,boruta_rf,Direct,6
+stable_1346,boruta_rf,RFECV target,6
+stable_1346,boruta_rf,Locked,5
+stable_1346,boruta_rf,GA seed 42,6
+stable_1346,boruta_rf,GA seed 43,6
+stable_1346,boruta_rf,GA seed 44,5
+stable_1346,boruta_rf,GA seed 45,5
+stable_1346,boruta_rf,GA seed 46,4

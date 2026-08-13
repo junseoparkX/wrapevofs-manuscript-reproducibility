@@ -1,0 +1,9 @@
+﻿{
+    "renderer":  "Chrome headless plus Poppler pdftoppm",
+    "figure_width_mm":  170,
+    "figure_height_mm":  67,
+    "svg_sha256":  "e6e4a313c757cd6c6048e5131a3f7d72952919560385e1d45bf27de80f2b37c9",
+    "pdf_sha256":  "e5057d9b27e28fa9d1f9c5c4e4d3d78f75e4966c123327d1d6ce0dc438a041e7",
+    "png_sha256":  "4d025f5e4586032e0230f7f6367a90bcb936d47617af9e23a191374b4c9fe6de",
+    "png_dpi":  300
+}

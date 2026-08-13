@@ -1,0 +1,9 @@
+{
+  "output": "figures/figure_4.svg",
+  "output_sha256": "a456f2f0efc6830fde9872819577c060c7758586ee8b48e0f34bef97b7434bc1",
+  "removed_empty_annotation_boxes": 1,
+  "removed_grid_line_groups": 63,
+  "scientific_values_changed": false,
+  "source": "figures/figure_4_source.svg",
+  "source_sha256": "21853939a11c3577baa39b6a3709c81c9946cb157c25de5137216a982f4d0adc"
+}

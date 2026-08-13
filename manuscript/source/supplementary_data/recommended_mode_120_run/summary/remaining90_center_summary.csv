@@ -1,0 +1,4 @@
+center,conditions,legacy_locked_absolute_target_deviation,recommended_locked_absolute_target_deviation,legacy_zero_run_best_count,recommended_zero_run_best_count,legacy_all_zero_generations,recommended_all_zero_generations,recommended_actual_uniform_fallbacks,recommended_runtime_seconds,mean_locking_score_difference
+emory,6,22,15,0,0,78,44,0,47791.054941244,1.5602043842895725e-05
+mayo,6,40,40,0,0,132,91,0,46781.83592053,0.0009847550356381445
+mount_sinai,6,44,34,0,0,101,65,0,46427.093212698994,0.004039693491924549

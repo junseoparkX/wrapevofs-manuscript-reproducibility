@@ -1,0 +1,28 @@
+{
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\theHtable}{suppanel.32}% unique anchor for a captionless panel table
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1880\linewidth}>{\raggedright\arraybackslash}p{0.1880\linewidth}>{\centering\arraybackslash}p{0.1880\linewidth}>{\centering\arraybackslash}p{0.1880\linewidth}>{\centering\arraybackslash}p{0.1880\linewidth}@{}}
+\toprule
+\bfseries Branch & \bfseries Cap & \bfseries Mean pairwise Jaccard & \bfseries Minimum & \bfseries Maximum \\
+\midrule
+\endfirsthead
+\toprule
+\bfseries Branch & \bfseries Cap & \bfseries Mean pairwise Jaccard & \bfseries Minimum & \bfseries Maximum \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+XGBoost & Small & 0.057 & 0.047 & 0.075 \\
+XGBoost & Reference & 0.043 & 0.024 & 0.053 \\
+XGBoost & High & 0.040 & 0.028 & 0.052 \\
+SVM-L1 & Small & 0.042 & 0.000 & 0.087 \\
+SVM-L1 & Reference & 0.077 & 0.039 & 0.188 \\
+SVM-L1 & High & 0.080 & 0.013 & 0.143 \\
+Boruta-RF & Small & 0.086 & 0.023 & 0.143 \\
+Boruta-RF & Reference & 0.084 & 0.040 & 0.143 \\
+Boruta-RF & High & 0.157 & 0.094 & 0.218 \\
+\end{longtable}
+\addtocounter{table}{-1}% captionless panel table must not advance the supplementary-table number
+}

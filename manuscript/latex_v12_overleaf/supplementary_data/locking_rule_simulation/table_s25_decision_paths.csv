@@ -1,8 +1,0 @@
-decision_metric,mean_probability
-singleton,0.282974074074
-unique_jaccard,0.455474074074
-higher_locking_score,0.25145617284
-smaller_feature_count,0.00000246913580247
-stable_mask_hash,0.00359938271605
-exact_duplicate_provenance,0.00649382716049
-hash_stage_probability,0.0100932098765

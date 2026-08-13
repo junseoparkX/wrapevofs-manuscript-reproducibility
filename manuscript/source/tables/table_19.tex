@@ -1,0 +1,23 @@
+{
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\theHtable}{suppanel.19}% unique anchor for a captionless panel table
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.3034\linewidth}>{\centering\arraybackslash}p{0.0648\linewidth}>{\centering\arraybackslash}p{0.1840\linewidth}>{\centering\arraybackslash}p{0.1840\linewidth}>{\centering\arraybackslash}p{0.2039\linewidth}@{}}
+\toprule
+\bfseries Analysis & \bfseries n & \bfseries Balanced accuracy\newline (95\% CI) & \bfseries Macro F1\newline (95\% CI) & \bfseries Macro OvR AUROC\newline (95\% CI) \\
+\midrule
+\endfirsthead
+\toprule
+\bfseries Analysis & \bfseries n & \bfseries Balanced accuracy\newline (95\% CI) & \bfseries Macro F1\newline (95\% CI) & \bfseries Macro OvR AUROC\newline (95\% CI) \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Full-feature Bayesian reference (Supplementary Fig.~S23) & 7411 & 0.485 [CI not reported] & 0.433 [CI not reported] & 0.780 [CI not reported] \\
+Restricted Laplace Bayesian model & 81 & 0.548 [0.468, 0.628] & 0.551 [0.461, 0.638] & 0.803 [0.744, 0.856] \\
+Candidate-union random forest & 81 & 0.572 [0.495, 0.649] & 0.574 [0.478, 0.659] & 0.788 [0.734, 0.840] \\
+STABL random forest & 8 & 0.468 [0.395, 0.545] & 0.465 [0.383, 0.545] & 0.706 [0.639, 0.768] \\
+\end{longtable}
+\addtocounter{table}{-1}% captionless panel table must not advance the supplementary-table number
+}

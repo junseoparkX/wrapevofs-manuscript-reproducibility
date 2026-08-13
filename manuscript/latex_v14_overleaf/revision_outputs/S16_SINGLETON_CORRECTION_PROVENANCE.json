@@ -1,7 +1,0 @@
-{
-  "held_out_inputs_used": false,
-  "operation": "definition-consistent singleton presentation correction",
-  "singleton_rows_set_to_na": 65,
-  "source_sha256": "604711208d792a736e440818658d745516e7bb5926651d3d823e4ac6723cce16",
-  "status": "PASS"
-}

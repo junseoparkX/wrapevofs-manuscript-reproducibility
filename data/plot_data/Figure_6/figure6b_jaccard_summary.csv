@@ -1,7 +1,0 @@
-method,method_label,condition,wrapper_n_features,rfecv_target_k,size_penalty_lambda,run_feature_count_mean,run_feature_count_sd,run_feature_count_min,run_feature_count_max,pairwise_jaccard_mean,pairwise_jaccard_sd
-boruta_rf,Boruta-RF,no_penalty,26,14,0.0,11.6,1.51657508881031,10,14,0.473482905982906,0.1064286290238485
-boruta_rf,Boruta-RF,penalty,26,9,0.015,9.0,0.0,9,9,0.3946253746253746,0.1258959434337155
-svm_l1,SVM-L1,no_penalty,35,15,0.0,19.0,2.7386127875258306,16,23,0.4666159109090143,0.0726325310901413
-svm_l1,SVM-L1,penalty,35,15,0.015,15.2,0.4472135954999579,15,16,0.4317513150465095,0.0881133288796422
-xgboost,XGBoost,no_penalty,70,20,0.0,35.6,2.4083189157584592,33,39,0.369310595065312,0.0466933660691569
-xgboost,XGBoost,penalty,70,20,0.015,20.0,0.7071067811865476,19,21,0.2175382741072968,0.0487166402904004

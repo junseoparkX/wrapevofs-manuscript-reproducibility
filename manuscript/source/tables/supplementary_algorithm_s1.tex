@@ -1,0 +1,42 @@
+\noindent\textbf{Complete development-only WrapEvoFS search and regret-constrained representative locking.}\par\smallskip
+{\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\theHtable}{suppalgorithm.\thealgorithm}
+\begin{longtable}{@{}>{\centering\arraybackslash}p{0.055\linewidth}>{\raggedright\arraybackslash}p{0.895\linewidth}@{}}
+\toprule
+ & \textbf{Input.} Development data $(X_D,y_D)$; Direct candidates $\mathcal C_m$; RFECV configuration; GA mode and base seed $\xi_0$; population size $N$; generations $G$; runs $R$; elite count $e$; crossover probability $p_c$; per-bit mutation probability $p_\mu$; initial off-ratio $\rho_0$; locking metric and seed; tolerance mode and $\delta$. \\
+ & \textbf{Output.} RFECV target $k_m^*$; locked set $F_m^{\mathrm{lock}}$; complete audit $A_m$. \\
+\addlinespace[2pt]
+1 & Fit preprocessing and Direct selection on development data only. \\
+2 & Evaluate the eligible RFECV path and select $k_m^*$; resolve score ties toward the smaller count. \\
+3 & Construct fixed stratified development folds for GA evaluation. Use zero-based indices $(r,g,i,\ell)$ in the seed definitions below. \\
+4 & \textbf{For each} independent run $r=0,\ldots,R-1$, initialize the genetic-operator generator with seed $\xi_0+r$. \\
+5 & \hspace*{1.35em}\textbf{For each} of $N$ initial chromosomes, set exactly $\lfloor\rho_0p_m\rfloor$ entries to zero and the remainder to one, uniformly shuffle their positions, and activate one uniformly sampled feature if an empty mask would otherwise result. \\
+6 & \hspace*{1.35em}\textbf{For each} generation $g=0,\ldots,G-1$: \\
+7 & \hspace*{2.70em}\textbf{For each} chromosome at population-list index $i$, compute its $K_G$ fold scores with random-forest seed $\xi_{rgi\ell}=\xi_0+10000r+100g+1009i+\ell$ in fold $\ell$. \\
+8 & \hspace*{2.70em}Compute the mean base score, target deviation, penalty, raw objective, and zero-truncated legacy fitness. \\
+9 & \hspace*{2.70em}\textbf{If updated mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
+10 & \hspace*{2.70em}\textbf{If legacy-compatible mode:} reproduce zero-truncated ranking and update behavior. \\
+11 & \hspace*{2.70em}Copy the first $e$ ranked chromosomes unchanged to the next generation. \\
+12 & \hspace*{2.70em}For the remaining $N-e$ positions, compute shifted proportional weights in updated mode (zero-truncated nonnegative weights in legacy mode) and normalize them to parent probabilities. \\
+13 & \hspace*{2.70em}\textbf{If} weights are nonfinite, effectively equal, or have invalid or effectively zero total, set all parent probabilities to $1/N$ and record the fallback. \\
+14 & \hspace*{2.70em}Sample $N-e$ parent indices independently with replacement and pair the sampled parents in list order. \\
+15 & \hspace*{2.70em}For each pair, perform one-point crossover with probability $p_c$; when $p_m>2$, sample the cut uniformly from $\{1,\ldots,p_m-2\}$, otherwise copy both parents. \\
+16 & \hspace*{2.70em}Independently flip every child bit with probability $p_\mu$; if a child is empty, activate one uniformly sampled feature. \\
+17 & \hspace*{2.70em}Form the next size-$N$ population from the $e$ elites followed by mutated children; export generation diagnostics and warnings for zero truncation, deviation, sampling fallback, and mask collapse. \\
+18 & \hspace*{1.35em}\textbf{End for} generation; retain one run-best candidate. \\
+19 & \textbf{End for} run. \\
+\addlinespace[2pt]
+20 & Construct one fixed stratified locking-fold partition and re-score every retained run-best candidate with the same locking metric, fold partition, and random-forest hyperparameters, using its recorded run-specific estimator seed, to obtain $L_r$ and fold scores. \\
+21 & Encode every candidate in the common ordered feature universe, compute its stable SHA-256 mask hash, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
+22 & Form $E_\delta=\{r:R_r\leq\delta\}$ (or the prespecified relative or best-run-SE-scaled analogue); never add a candidate outside the threshold. \\
+23 & \textbf{If} $|E_\delta|=1$, select its sole candidate. \\
+24 & \textbf{Otherwise,} compute pairwise Jaccard similarity and each candidate's mean Jaccard within $E_\delta$. \\
+25 & Select the medoid by larger mean Jaccard, larger $L_r$, smaller feature count, and lexicographically smaller stable mask hash; use source-run ID only as post-selection provenance among exact duplicate masks. \\
+26 & Assert that the selected candidate is in $E_\delta$ and satisfies the exact declared threshold; export canonical masks and hashes, duplicate multiplicity and provenance, scores, fold scores, regrets, eligibility, Jaccard values, tie path, seeds, version, and configuration hash. \\
+27 & \textbf{Return} $(F_m^{\mathrm{lock}},k_m^*,A_m)$. Held-out data are not inputs and are used only for one-time evaluation after the feature set, settings, and final model-development procedure are locked. \\
+\bottomrule
+\end{longtable}
+\addtocounter{table}{-1}
+}

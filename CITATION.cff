@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use these materials, please cite the associated WrapEvoFS manuscript and software release."
 title: "WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints"
-version: "v12-submission"
+version: "submission"
 authors:
   - family-names: "Park"
     given-names: "Junseo"

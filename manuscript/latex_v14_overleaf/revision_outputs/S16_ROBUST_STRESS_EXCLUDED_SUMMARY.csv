@@ -1,5 +1,0 @@
-scope,metric,conditions,original_total,updated_total,absolute_reduction,percent_reduction,median_condition_improvement,updated_better,unchanged,updated_worse
-all_24_conditions,absolute_target_deviation,24,216.0,137.0,79.0,36.574074074074076,0.5,12,6,6
-all_24_conditions,all_zero_generations,24,673.0,333.0,340.0,50.52005943536404,3.0,14,10,0
-excluding_rush_svm_l1_small,absolute_target_deviation,23,135.0,112.0,23.0,17.037037037037038,0.0,11,6,6
-excluding_rush_svm_l1_small,all_zero_generations,23,428.0,267.0,161.0,37.61682242990654,2.0,13,10,0

@@ -1,35 +1,48 @@
 # WrapEvoFS manuscript reproducibility
 
-This private peer-review repository contains the submission-stage WrapEvoFS manuscript, complete LuaLaTeX/Overleaf source, aggregate audit tables, figure-generation code, formal regret-locking proofs, and validation records.
+This repository contains the current submission manuscript, Supplementary Information, aggregate source data, deterministic figure builders, formal locking-rule documentation, and validation records for **WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints**.
 
-The companion software package is maintained separately at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package). Package-owned software is licensed under BSD-3-Clause; this repository does not duplicate the package source.
+The companion Python package is maintained separately at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package).
 
-## Current submission package
+## Manuscript
 
-- [`manuscript/latex_v14_overleaf/main.pdf`](manuscript/latex_v14_overleaf/main.pdf): 19-page main article.
-- [`manuscript/latex_v14_overleaf/supplementary_information.pdf`](manuscript/latex_v14_overleaf/supplementary_information.pdf): 46-page Supplementary Information.
-- `manuscript/latex_v14_overleaf/figures/`: six main figures and Supplementary Figures S1--S27, including editable/vector assets where available.
-- `manuscript/latex_v14_overleaf/tables/`: main and Supplementary LaTeX table sources through Supplementary Table S26.
-- `manuscript/latex_v14_overleaf/regret_locking_formalization/`: propositions, proofs, complexity analysis, implementation crosswalk, and property-test report.
-- `manuscript/latex_v14_overleaf/supplementary_data/`: non-identifying aggregate source tables and provenance records used by the current displays.
-- `manuscript/latex_v14_overleaf/scripts/`: deterministic presentation, validation, inventory, and submission-archive builders.
+- [Main article](manuscript/source/main.pdf) — 19 pages, six main figures, and three main tables.
+- [Supplementary Information](manuscript/source/supplementary_information.pdf) — 46 pages, Supplementary Figures S1–S27, and Supplementary Tables S1–S26.
+- [LaTeX source](manuscript/source/) — independently compilable main and Supplementary entry points.
+- [Validation report](manuscript/source/documentation/validation/VALIDATION_REPORT.md) — build, numerical, citation, and visual-QA checks.
+- [Display map](manuscript/source/documentation/DISPLAY_MAP.md) and [figure-source manifest](manuscript/source/documentation/FIGURE_SOURCE_DATA_MANIFEST.csv) — claim-to-display and display-to-source mappings.
 
-The current PDFs and the fully nested TCGA integration are documented in [`manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md`](manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md). The final display-citation audit, changed-file inventory, and figure-source manifests are retained beside the manuscript.
+## Repository structure
 
-## Scientific boundary
+```text
+manuscript/source/
+├── main.tex, supplementary_information.tex
+├── main.pdf, supplementary_information.pdf
+├── sections/                 manuscript text
+├── figures/                  publication assets
+├── tables/                   LaTeX table sources
+├── scripts/                  deterministic builders and validators
+├── supplementary_data/       non-identifying aggregate source data
+├── revision_outputs/         aggregate audit outputs used by displays
+├── documentation/            analysis, validation, and submission records
+└── regret_locking_formalization/
+                              propositions, proofs, complexity, and tests
+```
 
-The formal locking guarantee is limited to the configured empirical development-CV score gap within the supplied candidate bank. It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, participant-resampling stability, statistical certainty, or clinical utility.
+Historical manuscript states are retained in Git history rather than duplicated in the current tree.
 
-V14 incorporates the completed fully nested TCGA experiment as a distinct, documented analysis. Archived ADNI, AMP-AD, CGGA, radiomics, Bayesian, STABL, BLiP, and locking-simulation results were not regenerated during the V14 editorial and figure-integration pass. Their supplementary addenda use the explicitly documented frozen signatures, saved candidate banks, saved aggregate outputs, and authorized post-freeze evaluations described in the validation reports.
+## Reproducibility scope
 
-## Data boundary
+The repository supports independent manuscript compilation, regeneration of figures backed by included aggregate sources, and verification of the locking-rule and presentation audits. Participant-level ADNI, AMP-AD, CGGA, TCGA, and private-radiomics inputs are not redistributed. Raw-to-result reproduction for controlled datasets requires authorized data access and the source-specific preprocessing described in the manuscript.
 
-Participant-level ADNI, AMP-AD, CGGA, and private-radiomics data are not redistributed. Provider-controlled files, credentials, raw predictions, model binaries, checkpoints, DICOM images, masks, and private archives are excluded. See [`DATA_BOUNDARIES.md`](DATA_BOUNDARIES.md).
+The formal locking guarantee is limited to the configured empirical development-CV score gap within the supplied candidate bank. It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, statistical certainty, or clinical utility.
 
-## Reproduction
+See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for build and validation commands and [DATA_BOUNDARIES.md](DATA_BOUNDARIES.md) for the data-access boundary.
 
-See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for independent main/Supplementary builds and the distinction between reproducible aggregate rendering and controlled-input analyses.
+## Review status
 
-## Release status
+This repository is maintained for controlled manuscript review. Before journal submission, the authors must complete the private-radiomics ethics wording, ADNI Data and Publications Committee review, and final all-author sign-off documented in the [author-confirmation checklist](manuscript/source/documentation/submission/AUTHOR_CONFIRMATION_REQUIRED.md).
 
-This repository is intended for controlled manuscript review until the authors approve public release and complete the remaining ethics, declaration, ADNI DPC, and repository-access checks documented in `manuscript/latex_v14_overleaf/AUTHOR_CONFIRMATION_REQUIRED.md` and `manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md`.
+## Citation and licensing
+
+Citation metadata are provided in [CITATION.cff](CITATION.cff). The companion software is distributed under BSD-3-Clause. Manuscript text, figures, tables, and aggregate research artifacts are not covered by the software license; see [LICENSE_STATUS.md](LICENSE_STATUS.md).

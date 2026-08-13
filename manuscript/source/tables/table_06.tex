@@ -1,0 +1,22 @@
+{
+\footnotesize
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1880\linewidth}>{\centering\arraybackslash}p{0.1880\linewidth}>{\centering\arraybackslash}p{0.1880\linewidth}>{\raggedright\arraybackslash}p{0.1880\linewidth}>{\raggedright\arraybackslash}p{0.1880\linewidth}@{}}
+\caption{Archived original RFECV, GA, and top-three locking settings across the three demonstrations.}\label{tab:supp26}\\
+\toprule
+\bfseries Dataset & \bfseries RFECV score / eligible cap & \bfseries GA score; runs × population × generations & \bfseries Target guidance & \bfseries Locking \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+\bfseries Dataset & \bfseries RFECV score / eligible cap & \bfseries GA score; runs × population × generations & \bfseries Target guidance & \bfseries Locking \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+ADNI & 5-fold weighted OvR AUROC; cap 30 per branch & 5-fold balanced accuracy; 5 × 50 × 50 & λ = 0.015 & Development-CV balanced accuracy; legacy top-three medoid \\
+CGGA & 5-fold AUROC; caps 15/20/10 & 5-fold accuracy; 5 × 50 × 50 & λ = 0.015 guided; λ = 0 without guidance & Development-CV AUROC; legacy top-three medoid \\
+AMP-AD & 5-fold weighted OvR AUROC; XGBoost/SVM 10/20/40, Boruta-RF 13/25/50 & 5-fold balanced accuracy; 5 × 50 × 50 & λ = 0.015 & Mean 5-fold macro OvR AUROC; legacy top-three medoid \\
+\end{longtable}
+}

@@ -1,0 +1,101 @@
+% Standalone insertion fragment: regret-constrained locking propositions.
+\subsection{Formal properties of regret-constrained medoid locking}
+
+Let the finite nonempty retained candidate bank be a multiset indexed by
+$r\in\mathcal R$. Candidate $r$ has a nonempty feature set $F_r$ and finite
+larger-is-better locking score $L_r$. All candidates use one common ordered
+canonical universe $U=(u_1,\ldots,u_p)$ with unique feature names. The
+canonical mask is $z_{rj}=\mathbf 1\{u_j\in F_r\}$, and its stable identifier is
+$H_r=\operatorname{SHA256}(\operatorname{uint8}(z_r).\operatorname{tobytes}())$.
+We assume $\delta\geq0$, well-defined Jaccard similarity, deterministic
+canonical encoding, and engineering-level SHA-256 collision resistance. Define
+\[
+L_{\mathrm{best}}=\max_{r\in\mathcal R}L_r,\qquad
+R_r=L_{\mathrm{best}}-L_r,\qquad
+E_\delta=\{r\in\mathcal R:R_r\leq\delta\}.
+\]
+For $|E_\delta|>1$ define
+\[
+\overline J_r=\frac{1}{|E_\delta|-1}
+\sum_{\substack{s\in E_\delta\\s\ne r}}
+\frac{|F_r\cap F_s|}{|F_r\cup F_s|}.
+\]
+Selection is restricted to $E_\delta$ and ordered by larger $\overline J_r$,
+larger $L_r$, smaller $|F_r|$, and lexicographically smaller $H_r$. A singleton
+is selected directly and has undefined mean Jaccard. Duplicate masks are
+retained as multiple voting candidates; exact duplicates remaining tied after
+the hash represent one scientific feature set. A source run ID is then retained
+only as a provenance label, not as a scientific tie-break.
+
+\paragraph{Proposition 1 (nonempty eligibility).}
+For every finite nonempty bank and $\delta\geq0$, $E_\delta$ is nonempty.
+\emph{Proof.} At least one $r^*$ attains $L_{\mathrm{best}}$, giving
+$R_{r^*}=0\leq\delta$ and hence $r^*\in E_\delta$. \emph{QED.}
+
+\paragraph{Proposition 2 (strict empirical regret feasibility).}
+The selected record $\widehat r$ belongs to $E_\delta$ and satisfies
+$R_{\widehat r}\leq\delta$.
+\emph{Proof.} A singleton rule returns the sole eligible record. For a
+nonsingleton, the medoid optimization and every score, size, hash, and
+duplicate-provenance tie path are restricted to $E_\delta$. No path can admit
+an ineligible record. Thus $\widehat r\in E_\delta$, which is equivalent to the
+stated inequality. \emph{QED.}
+
+\paragraph{Proposition 3 (zero tolerance).}
+$E_0=\{r:L_r=L_{\mathrm{best}}\}$. A unique score maximizer is selected; if
+several candidates attain $L_{\mathrm{best}}$, the rule selects the Jaccard
+medoid of the complete zero-regret tied pool under the canonical tie-break.
+\emph{Proof.} Since $R_r\geq0$, $R_r\leq0$ iff $R_r=0$ iff
+$L_r=L_{\mathrm{best}}$. The singleton or nonsingleton conclusion follows.
+Therefore $\delta=0$ does not always produce a singleton. \emph{QED.}
+
+\paragraph{Proposition 4 (all-candidate limit).}
+If $\delta\geq\max_rR_r$, every candidate is eligible and the method is the
+full-bank Jaccard medoid under the same tie-break.
+\emph{Proof.} The condition gives $R_r\leq\delta$ for all $r$, hence
+$E_\delta=\mathcal R$. Substitute this equality into the medoid definition.
+\emph{QED.}
+
+\paragraph{Proposition 5 (determinism).}
+Given identical canonical masks, scores, source provenance, tolerance,
+larger-is-better orientation, and configuration, the selected feature set and
+canonical audit are deterministic.
+\emph{Proof.} Maxima, regrets, exact eligibility, Jaccard values, and means are
+deterministic functions of the inputs. Canonical masks and SHA-256 digests are
+deterministic byte transformations. The tie key totally orders distinct masks
+under the collision-resistance assumption; exact duplicates have the same
+scientific output and a deterministic post-selection provenance label. Audit
+rows and configuration fields are canonically ordered. \emph{QED.}
+
+The digest is a stable ordering device, not a probabilistic scientific score.
+Collision resistance is an engineering assumption and is not the source of
+the regret bound, which follows from restricting selection to $E_\delta$.
+
+\paragraph{Proposition 6 (candidate-order permutation invariance).}
+Permuting candidate input records, without changing their content, provenance,
+or multiplicity, does not alter the selected feature set or canonical audit.
+\emph{Proof.} The permutation preserves the score multiset, regrets,
+$E_\delta$, and every eligible-pool Jaccard sum. The remaining tie key depends
+only on content-derived quantities. Exact duplicate records yield the same
+feature set, provenance normalization is independent of row order, and
+canonical serialization restores the same audit order. \emph{QED.}
+
+Candidate content drives scientific selection, source-run provenance is kept
+for traceability, and input-row order is discarded. Because duplicates remain
+voting records, multiplicity is part of the bank: adding or removing a
+duplicate can change the medoid, whereas permuting it cannot.
+
+\paragraph{Proposition 7 (distinction from alternative rules).}
+The highest-score rule guarantees zero empirical regret but does not optimize
+representativeness. The unrestricted medoid optimizes full-bank mean Jaccard
+but can incur regret as large as $\max_rR_r$. A legacy top-$k$ medoid uses a
+rank cutoff, whose metric-scale score gap is unrestricted. Regret-constrained
+locking first imposes $R_r\leq\delta$ and then optimizes eligible-pool
+representativeness. These are candidate-bank statements, not claims of
+globally optimal feature selection.
+
+\paragraph{Claim boundary.}
+$R_r$ is an empirical development-CV score gap, not expected predictive risk,
+generalization error, or statistical uncertainty. The propositions do not
+establish predictive superiority, unbiased generalization, external validity,
+participant-resampling or biomarker stability, or clinical utility.

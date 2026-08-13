@@ -1,8 +1,0 @@
-| Branch | Cap | RFECV target | Legacy locked n | Recommended locked n | Legacy absolute deviation | Recommended absolute deviation | Legacy zero run-best n/5 | Recommended zero run-best n/5 | Legacy all-zero generations | Recommended all-zero generations | Legacy locking score | Recommended locking score | Score difference | Legacy selected mean Jaccard | Recommended selected mean Jaccard | Strict eligible run IDs | Fallback reason |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| SVM-L1 | Small-cap | 3 | 84 | 28 | 81 | 25 | 4/5 | 0/5 | 245 | 66 | 0.8701 | 0.8602 | -0.0100 | 0.5484 | 0.1561 | [3,4,5] | none |
-| SVM-L1 | Reference-cap | 18 | 30 | 26 | 12 | 8 | 0/5 | 0/5 | 45 | 28 | 0.8827 | 0.8735 | -0.0092 | 0.1514 | NA | [5] | none |
-| XGBoost | Small-cap | 7 | 23 | 21 | 16 | 14 | 0/5 | 0/5 | 59 | 30 | 0.8652 | 0.8622 | -0.0030 | 0.1472 | 0.0833 | [3,4] | none |
-| XGBoost | Reference-cap | 20 | 20 | 21 | 0 | 1 | 0/5 | 0/5 | 13 | 9 | 0.8595 | 0.8631 | 0.0036 | 0.1429 | 0.1676 | [1,3,4] | none |
-| Boruta-RF | Small-cap | 12 | 13 | 12 | 1 | 0 | 0/5 | 0/5 | 0 | 0 | 0.8766 | 0.8782 | 0.0017 | 0.2232 | 0.2982 | [1,3,5] | none |
-| Boruta-RF | Reference-cap | 23 | 23 | 23 | 0 | 0 | 0/5 | 0/5 | 0 | 0 | 0.8756 | 0.8856 | 0.0100 | 0.3734 | NA | [2] | none |

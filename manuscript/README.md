@@ -1,5 +1,5 @@
-# Manuscript source
+# Manuscript
 
-`latex_v14_overleaf/` is the authoritative submission-stage WrapEvoFS manuscript package. It contains independent `main.tex` and `supplementary_information.tex` entry points, compiled PDFs, figures, tables, aggregate source data, validation scripts, and revision records.
+[`source/`](source/) is the sole authoritative manuscript tree. It contains the current LaTeX entry points, compiled PDFs, publication figures, tables, aggregate source data, deterministic builders, formal locking documentation, and validation records.
 
-V12 remains preserved as the preceding GitHub snapshot. V14 adds the completed fully nested TCGA analysis, Figure 6 and its supplementary audits, the harmonized figure palette and ordering pass, and the final conservative scientific refinement. Historical revision context remains in the repository-level `reports/` directory and in the versioned change and validation reports.
+Earlier manuscript states are available through Git history and are intentionally not duplicated in the working tree.

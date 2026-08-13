@@ -1,7 +1,0 @@
-branch,cap,candidate_count,unique_feature_sets,duplicate_candidates_beyond_first,archived_selected_run_id,current_selected_run_id,frozen_evaluation_selected_run_id,selection_matches_archived,selection_matches_frozen_evaluation,eligible_pool_size,selected_absolute_regret,selected_stable_mask_hash,tie_break_path
-svm_l1,low,5,5,0,4,4,4,True,True,3,0.0,a74423d59cee6f4066d646882b1c34f11fa4e6f920fa1ff4853303556400b208,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash
-svm_l1,reference,5,5,0,5,5,5,True,True,1,0.0,e00d4731b584254175488db3156d21bf75562a95157aef6eda13a8440ce2e459,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash
-xgboost,low,5,5,0,4,4,4,True,True,2,0.0,e56855f504d166754418e11e9dbcf44ea4bdaa50d3cc7d688772ee77a24b9d89,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash
-xgboost,reference,5,5,0,3,3,3,True,True,3,0.0,3ca4a4efe2d5caa58e49a72fb7976d14bc95770ffcd588bbdc3c93b65cc5906a,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash
-boruta_rf,low,5,5,0,1,1,1,True,True,3,0.0,eeeda5d0514b93a2df98b8ce34f67962908cb1e6748035ef7d308864f41ff08e,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash
-boruta_rf,reference,5,5,0,2,2,2,True,True,1,0.0,e67a505e27f8148626019d1b23730e6aeff429c501df8953a73d19d0c8f8023d,mean_jaccard > higher_locking_score > smaller_feature_count > stable_mask_hash

@@ -1,7 +1,0 @@
-view,branch,input_feature_count,direct_feature_count,rfecv_target_k,locked_feature_count,locked_seed,locked_development_cv_score,held_out_used_for_locking
-full_1781,svm_l1,1781,214,8,50,43,0.6108511586452764,False
-full_1781,xgboost,1781,100,16,24,42,0.7253119429590018,False
-full_1781,boruta_rf,1781,10,10,9,46,0.7646613190730839,False
-stable_1346,svm_l1,1346,201,3,50,43,0.5597147950089126,False
-stable_1346,xgboost,1346,100,6,19,42,0.6636697860962567,False
-stable_1346,boruta_rf,1346,6,6,5,44,0.7120933600713013,False
