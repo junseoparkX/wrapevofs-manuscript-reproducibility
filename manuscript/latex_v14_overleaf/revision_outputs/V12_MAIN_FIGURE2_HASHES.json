@@ -1,0 +1,12 @@
+{
+  "conditions": 24,
+  "figure": "Figure 2",
+  "hashes": {
+    "pdf": "b260515a142cc6b75a8c6e54407ef3993828b55d500e3a19511e3dc7e028be2f",
+    "png": "f1b952ca0e33feb5c00a3948edbbdcbf2173645ec3c3be96bd2d5a4445c998f7",
+    "svg": "39d5d086d3a2aa3bdda30ae9f6282077f2dea603d0598ec7240a98925506f916"
+  },
+  "held_out_inputs_used": false,
+  "maximum_selected_regret": 0.0083473,
+  "width_mm": 180
+}

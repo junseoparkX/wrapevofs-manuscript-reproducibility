@@ -1,0 +1,14 @@
+{
+  "direct_selection_rerun": false,
+  "ga_rerun": false,
+  "held_out_inputs_used": false,
+  "inputs": {
+    "locking_rule_sensitivity.csv": "604711208d792a736e440818658d745516e7bb5926651d3d823e4ac6723cce16",
+    "manuscript\\latex_v12_overleaf\\supplementary_data\\Table_S16_AMPAD_FourCenter_Objective_Sensitivity.csv": "4db70b1a7e2bf0cc8e1399ccfbc258af1c217f4fd4c7f6538c6e1a0d444b5b49",
+    "manuscript\\latex_v12_overleaf\\supplementary_data\\recommended_mode_120_run\\authoritative_lock\\candidate_locking_audit.csv": "5bf03d0867a22b951c84607ece9b5d48c1c227ea0c85b6a61f3be4ddd878f7a9"
+  },
+  "operation": "existing-artifact-only V11 reviewer analyses",
+  "rfecv_rerun": false,
+  "rush_updated_recovery": "All 30 Rush run-best feature lists were recovered from the authoritative Drive source folder. The reconstructed sorted-union universe is used only for deterministic mask encoding; no Rush selection reached the stable-hash tie stage, and all current selections match the frozen evaluation.",
+  "stable_hash_rule": "authoritative package _stable_mask_hash; not redesigned"
+}

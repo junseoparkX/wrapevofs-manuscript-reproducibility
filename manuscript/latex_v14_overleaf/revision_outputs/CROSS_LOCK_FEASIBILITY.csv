@@ -1,0 +1,5 @@
+candidate_bank,locking_rule,status,conditions,reason
+original_objective,original_top_three,complete_from_saved_candidates,24,"saved masks, features, and fixed development-CV locking scores available"
+original_objective,regret_constrained,complete_from_saved_candidates,24,"saved masks, features, and fixed development-CV locking scores available"
+updated_objective,original_top_three,complete_from_saved_candidates,24,"saved masks, features, and fixed development-CV locking scores available"
+updated_objective,regret_constrained,complete_from_saved_candidates,24,"saved masks, features, and fixed development-CV locking scores available"

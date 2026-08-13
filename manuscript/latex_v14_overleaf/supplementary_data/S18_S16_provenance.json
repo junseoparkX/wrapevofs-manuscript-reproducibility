@@ -1,0 +1,33 @@
+{
+  "analysis_scope": "development-only AMP-AD Rush objective sensitivity",
+  "ga_rerun_performed_by_builder": false,
+  "held_out_rush_outcomes_accessed": false,
+  "conditions": 6,
+  "full_ga_runs": 30,
+  "strict_locking": {
+    "absolute_regret_tolerance": 0.01,
+    "minimum_pool_size": 1,
+    "fallback": "none",
+    "singleton_mean_jaccard": "NA"
+  },
+  "verified_aggregates": {
+    "absolute_target_deviation": {
+      "legacy": 110,
+      "recommended": 48
+    },
+    "zero_run_best": {
+      "legacy": 4,
+      "recommended": 0
+    },
+    "all_zero_generations": {
+      "legacy": 362,
+      "recommended": 133
+    },
+    "uniform_sampling_fallbacks": 0,
+    "mean_score_difference": -0.0011393547505512136,
+    "score_difference_range": [
+      -0.009963842883709662,
+      0.010040242406793798
+    ]
+  }
+}

@@ -6,21 +6,21 @@ The companion software package is maintained separately at [junseoparkX/wrapevof
 
 ## Current submission package
 
-- [`manuscript/latex_v12_overleaf/main.pdf`](manuscript/latex_v12_overleaf/main.pdf): 16-page main article.
-- [`manuscript/latex_v12_overleaf/supplementary_information.pdf`](manuscript/latex_v12_overleaf/supplementary_information.pdf): 42-page Supplementary Information.
-- `manuscript/latex_v12_overleaf/figures/`: five main figures and Supplementary Figures S1--S24, including editable/vector assets where available.
-- `manuscript/latex_v12_overleaf/tables/`: main and Supplementary LaTeX table sources through Supplementary Table S25.
-- `manuscript/latex_v12_overleaf/regret_locking_formalization/`: propositions, proofs, complexity analysis, implementation crosswalk, and property-test report.
-- `manuscript/latex_v12_overleaf/supplementary_data/`: non-identifying aggregate source tables and provenance records used by the current displays.
-- `manuscript/latex_v12_overleaf/scripts/`: deterministic presentation, validation, inventory, and submission-archive builders.
+- [`manuscript/latex_v14_overleaf/main.pdf`](manuscript/latex_v14_overleaf/main.pdf): 19-page main article.
+- [`manuscript/latex_v14_overleaf/supplementary_information.pdf`](manuscript/latex_v14_overleaf/supplementary_information.pdf): 46-page Supplementary Information.
+- `manuscript/latex_v14_overleaf/figures/`: six main figures and Supplementary Figures S1--S27, including editable/vector assets where available.
+- `manuscript/latex_v14_overleaf/tables/`: main and Supplementary LaTeX table sources through Supplementary Table S26.
+- `manuscript/latex_v14_overleaf/regret_locking_formalization/`: propositions, proofs, complexity analysis, implementation crosswalk, and property-test report.
+- `manuscript/latex_v14_overleaf/supplementary_data/`: non-identifying aggregate source tables and provenance records used by the current displays.
+- `manuscript/latex_v14_overleaf/scripts/`: deterministic presentation, validation, inventory, and submission-archive builders.
 
-The current PDFs are SHA-256 pinned in [`manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md`](manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md). The final display-citation audit, changed-file inventory, and figure-source manifests are retained beside the manuscript.
+The current PDFs and the fully nested TCGA integration are documented in [`manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md`](manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md). The final display-citation audit, changed-file inventory, and figure-source manifests are retained beside the manuscript.
 
 ## Scientific boundary
 
 The formal locking guarantee is limited to the configured empirical development-CV score gap within the supplied candidate bank. It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, participant-resampling stability, statistical certainty, or clinical utility.
 
-Repository preparation did not rerun GA, RFECV, Direct selection, Bayesian analysis, STABL, BLiP, or any empirical feature-selection experiment. The current supplementary addenda use the explicitly documented frozen signatures, saved candidate banks, saved aggregate outputs, and authorized post-freeze evaluations described in the validation reports.
+V14 incorporates the completed fully nested TCGA experiment as a distinct, documented analysis. Archived ADNI, AMP-AD, CGGA, radiomics, Bayesian, STABL, BLiP, and locking-simulation results were not regenerated during the V14 editorial and figure-integration pass. Their supplementary addenda use the explicitly documented frozen signatures, saved candidate banks, saved aggregate outputs, and authorized post-freeze evaluations described in the validation reports.
 
 ## Data boundary
 
@@ -32,4 +32,4 @@ See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for independent main/Supplementar
 
 ## Release status
 
-This repository is intended for controlled manuscript review until the authors approve public release and complete the remaining ethics, declaration, ADNI DPC, and repository-access checks documented in `manuscript/latex_v12_overleaf/AUTHOR_CONFIRMATION_REQUIRED.md` and `manuscript/latex_v12_overleaf/V12_VALIDATION_REPORT.md`.
+This repository is intended for controlled manuscript review until the authors approve public release and complete the remaining ethics, declaration, ADNI DPC, and repository-access checks documented in `manuscript/latex_v14_overleaf/AUTHOR_CONFIRMATION_REQUIRED.md` and `manuscript/latex_v14_overleaf/V14_VALIDATION_REPORT.md`.

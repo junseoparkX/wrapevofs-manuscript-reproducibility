@@ -1,0 +1,8 @@
+summary_field,category,count,percentage_of_24
+pool_category,3+,16,66.66666666666667
+pool_category,2,6,25.0
+pool_category,1,2,8.333333333333334
+decision_stage,unique_jaccard,13,54.166666666666664
+decision_stage,higher_score,9,37.5
+decision_stage,singleton_direct,2,8.333333333333334
+status,complete_canonical_mask_audit,24,100.0

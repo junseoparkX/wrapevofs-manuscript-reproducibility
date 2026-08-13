@@ -1,0 +1,22 @@
+{
+\small
+\renewcommand{\arraystretch}{1.08}
+\setlength{\tabcolsep}{2.2pt}
+\renewcommand{\theHtable}{suppanel.31}% unique anchor for a captionless panel table
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1747\linewidth}>{\raggedright\arraybackslash}p{0.3917\linewidth}>{\raggedright\arraybackslash}p{0.3736\linewidth}@{}}
+\toprule
+\bfseries Cap & \bfseries Absolute deviation, features & \bfseries Target attainment, n/12 \\
+\midrule
+\endfirsthead
+\toprule
+\bfseries Cap & \bfseries Absolute deviation, features & \bfseries Target attainment, n/12 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Small & Mean 15.50; median 11.0 [3.75, 16.0] & Exact 0; <=1: 1; <=3: 3 \\
+Reference & Mean 2.50; median 1.0 [0, 3.0] & Exact 6; <=1: 6; <=3: 10 \\
+High & Mean 0.75; median 0 [0, 1.0] & Exact 8; <=1: 11; <=3: 11 \\
+\end{longtable}
+\addtocounter{table}{-1}% captionless panel table must not advance the supplementary-table number
+}

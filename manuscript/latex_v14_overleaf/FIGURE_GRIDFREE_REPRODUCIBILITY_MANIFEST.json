@@ -1,0 +1,367 @@
+{
+  "scope": "WrapEvoFS LaTeX V12 figure presentation and native grid-free rebuilds",
+  "operation": "presentation-only grid removal for archived assets plus native aggregate-data rebuilds",
+  "scientific_recomputation": false,
+  "figure_1": "audited; no plot-grid change; a) and b) label fonts normalized to the same 37.5-px size without scientific or geometric changes",
+  "figures": {
+    "figure_2.png": {
+      "source": "outputs/V6_manuscript_assets_20260731/figures/main/Figure_2_ADNI_paired_differences_V6.png",
+      "source_sha256": "ccfcfa62d68e085c660ae0169309ff972422cddccce43ea3efcaccec7c36b26c",
+      "output_sha256": "65762100331d70284ec4148c4c7359f748029cf0f3f34d83fabed1cd7cc2ba45",
+      "horizontal_grid_rows": 26,
+      "vertical_grid_columns": 73,
+      "pixels_whitened": 183822,
+      "removed_annotations": []
+    },
+    "figure_3.png": {
+      "source": "outputs/AMPAD_Figure3_publication_assets_20260731/figures/main/Figure_3_AMPAD_budget_calibration.png",
+      "source_sha256": "bb0f82da80ae8c68f51d44cffdd7677d778a156e1477eebbecbfd85216e1bf63",
+      "output_sha256": "11f9125d0633ef2067cc18453b795d0dc8e4bb792d5c2d975205330f9aea47af",
+      "horizontal_grid_rows": 65,
+      "vertical_grid_columns": 77,
+      "pixels_whitened": 454762,
+      "removed_annotations": [
+        {
+          "box_px": [
+            381,
+            1364,
+            2449,
+            1541
+          ],
+          "reason": "caption-duplicated LOCO sentence"
+        }
+      ]
+    },
+    "figure_4.png": {
+      "source": "manuscript/figures/main/Figure_5/Figure_5_CGGA_locked_heldout_evaluation.png",
+      "source_sha256": "cb4db1b6ea1e732c068aa25d1243a26fc357b3fea29f10885a7ce864341b7eaa",
+      "output_sha256": "6adb77df7f5dc205fb761c3d7dbbfb2d533e2de4c3263ce7e006a1f955ef145a",
+      "horizontal_grid_rows": 35,
+      "vertical_grid_columns": 8,
+      "pixels_whitened": 115134,
+      "removed_annotations": [
+        {
+          "box_px": [
+            1365,
+            425,
+            1767,
+            514
+          ],
+          "reason": "random-state subtitle documented in Methods"
+        },
+        {
+          "box_px": [
+            2932,
+            942,
+            3835,
+            1010
+          ],
+          "reason": "caption-duplicated held-out sentence"
+        }
+      ]
+    },
+    "figure_5.png": {
+      "source": "supplementary_data/cgga_figure5",
+      "source_sha256_manifest": "supplementary_data/cgga_figure5/figure5_manifest.json",
+      "builder": "scripts/build_cgga_figure5.py",
+      "output_sha256": "1f1b27f5d15b2ba2e10f0955470f909279ecfea8c23f9b4bb03c89227273af2c",
+      "native_width_mm": 170,
+      "background_grid": false,
+      "panel_labels": ["a)", "b)", "c)"],
+      "removed_annotations": [
+        {
+          "reason": "redundant cohort/workflow schematic replaced by quantitative CGGA evidence"
+        }
+      ]
+    },
+    "figure_s1.png": {
+      "source": "analysis/candidate_priority_1_4/figures/Supplementary_Figure_S1_abcd_heldout_performance_and_paired_differences.png",
+      "source_sha256": "94870c2a4153086b95fa0c054b947a40faaf7348a31727b255ee277225bee94e",
+      "output_sha256": "6311b5046b5dd2a265f3ac0b7c10e98343a8781910f1f6bbd358578714b90f76",
+      "horizontal_grid_rows": 17,
+      "vertical_grid_columns": 57,
+      "pixels_whitened": 186512,
+      "removed_annotations": [
+        {
+          "box_px": [
+            1145,
+            1779,
+            2871,
+            2036
+          ],
+          "reason": "caption-duplicated bootstrap subtitle"
+        }
+      ]
+    },
+    "figure_s2.png": {
+      "source": "manuscript/figures/supplementary/archival_figure_s2_multiclass_diagnostics_170mm.png",
+      "source_sha256": "6dec9686defe4a0a9a03ccc58fdae9848b478c4f96a9b45eab2803d4c66f4d27",
+      "output_sha256": "74a93b38d6635b2d18db37a945ae81dde1a03266f1d372f9038c72cf9da225f5",
+      "horizontal_grid_rows": 29,
+      "vertical_grid_columns": 46,
+      "pixels_whitened": 55354,
+      "removed_annotations": []
+    },
+    "figure_s3.png": {
+      "source": "manuscript/figures/supplementary/archival_figure_s3_signature_composition_170mm.png",
+      "source_sha256": "7ec1c46ce3ca0505360b6c4a7f4fe707c7d7fb2e6488c8c900b2501659575580",
+      "output_sha256": "490ecf79b46e56347e9794bc2b0f514aad995be77bee73fe425fb77e7352508e",
+      "horizontal_grid_rows": 15,
+      "vertical_grid_columns": 48,
+      "pixels_whitened": 82604,
+      "removed_annotations": []
+    },
+    "figure_s4.png": {
+      "source": "outputs/V4_manuscript_assets_20260731/figures/supplementary/Supplementary_Figure_S4_full_Bayesian_reference.png",
+      "source_sha256": "214e47e207008273fd2eb81ab07617edcd16c3c3dcc102adcada1fc2e4ffea38",
+      "output_sha256": "0ae9cdd21dd71708085e6f3437db94c55f381a4d013be80cc02bb8136e95ea03",
+      "horizontal_grid_rows": 33,
+      "vertical_grid_columns": 26,
+      "pixels_whitened": 164489,
+      "removed_annotations": []
+    },
+    "figure_s5.png": {
+      "source": "manuscript/figures/supplementary/archival_S5_authoritative.png",
+      "source_sha256": "39b968dd566dde1b7709f013a71e276f5aba65d3df1288a02b83b40e71af484f",
+      "output_sha256": "39418b4a47dfe40300e1300bf65386e195bfd9c9ec0a0b46099148132220820d",
+      "horizontal_grid_rows": 35,
+      "vertical_grid_columns": 0,
+      "pixels_whitened": 134291,
+      "removed_annotations": []
+    },
+    "figure_s6.png": {
+      "source": "manuscript/figures/supplementary/archival_S6_authoritative.png",
+      "source_sha256": "91a350920923aae7bb323531975b82caa7fdd145181a4b95d7c7521ff3f6e1dc",
+      "output_sha256": "0b113950b2bbffc55afe9104228d11768e07388b84ebc7b03a6d71e62d603295",
+      "horizontal_grid_rows": 24,
+      "vertical_grid_columns": 45,
+      "pixels_whitened": 174374,
+      "removed_annotations": []
+    },
+    "figure_s7.png": {
+      "source": "manuscript/figures/supplementary/Supplementary_Figure_S7_complete_metric_comparison.png",
+      "source_sha256": "45f2635c8b0d38866201f8cc6c44bc386f5a1e63eb252285d1876c1abce0b788",
+      "output_sha256": "ff1cfc6e1dc4e98d0e832f05b51e0be36bcbc40bab6858bfc4eb084112bfde64",
+      "horizontal_grid_rows": 0,
+      "vertical_grid_columns": 53,
+      "pixels_whitened": 157638,
+      "removed_annotations": []
+    },
+    "figure_s8.png": {
+      "source": "manuscript/figures/supplementary/Supplementary_Figure_S8_run_level_stability.png",
+      "source_sha256": "e296cb6938d45f007d416436d17641bbc725d6b9fb1dd9a3ab65b0cc89112f2e",
+      "output_sha256": "4e0d86e42c40b816f0b5e9c1972e4b1de83ce6806db4ec1d315459800e695881",
+      "horizontal_grid_rows": 16,
+      "vertical_grid_columns": 0,
+      "pixels_whitened": 104038,
+      "removed_annotations": []
+    },
+    "figure_s9": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_cgga_s9_clean.py",
+      "builder_sha256": "8e8ff0724e0a7d8bc89580f54305e2c278548126dbf910de6275382c47721d4a",
+      "sources": {
+        "nested_cv_auroc.csv": "38136f1c7733baa8ab48a1f6097e501559d87c6964feaf7cbdea245b93ff4589",
+        "heldout_intervals.csv": "806012298413eb5869088a370dd0648aafa31979ffd8255b24832e4d1d9b6dfa",
+        "primary_feature_importance.csv": "0d2ab4142921f33e2523494f279e49e35d02718bbab45e47f734f49929864367"
+      },
+      "outputs": {
+        "png": "3f0cef8cb0a24dcb03b64943bb1fcbc79ed6dc578240ede13794a9fa2c663c07",
+        "svg": "dd4dd720d0a8b732f3cb3937444ff119d78bbc4e8aa775147075647611b43fc3",
+        "pdf": "ec2bb544d1a1caacf9361dfb2502a308edd3ccd73f825ce8b2ca924048f391e8"
+      },
+      "plot_grid": "disabled in the builder",
+      "panel_labels": "bold a)-c) only",
+      "target_width_mm": 170,
+      "removed_annotations": [
+        {
+          "reason": "redundant selected-settings block removed from panel c; values remain in machine-readable source tables"
+        }
+      ]
+    },
+    "figure_s10.png": {
+      "source": "manuscript/figures/supplementary/Supplementary_Figure_S10_computational_characterization.png",
+      "source_sha256": "2f50b12f673da9a7042c46c933d9ce455750b5f4b891def401161378e456d299",
+      "output_sha256": "5ec272f428acab22c6e793184da779de366e6642b59b513505e61592757a4671",
+      "horizontal_grid_rows": 13,
+      "vertical_grid_columns": 22,
+      "pixels_whitened": 83524,
+      "removed_annotations": [
+        {
+          "box_px": [
+            2811,
+            2199,
+            3956,
+            2420
+          ],
+          "reason": "memory sentence moved to caption/table audit"
+        }
+      ]
+    },
+    "figure_s11.png": {
+      "source": "manuscript/figures/supplementary/Supplementary_Figure_S11_CGGA_size_matched_comparators.png",
+      "source_sha256": "7c75020a986991c9768345472c0aedd8c1fcb1cfea6b43117f44722dc5295e2c",
+      "output_sha256": "c87583bf0b8ae2d43aa2a6b88b65c63294a851cce42b843c296ad06ff80b943f",
+      "horizontal_grid_rows": 8,
+      "vertical_grid_columns": 2,
+      "pixels_whitened": 43832,
+      "removed_annotations": []
+    },
+    "figure_s12.png": {
+      "source": "outputs/AMPAD_Figure3_publication_assets_20260731/figures/supplementary/Supplementary_Figure_S12_AMPAD_paired_performance_differences.png",
+      "source_sha256": "e9b4dc3b3d674eedae26540da3ee94518d19d0939dcddf7fd96227bd01ddfdd8",
+      "output_sha256": "4a75a05e3d8dc9596a8e7e80cb9d61a288d22fba2be0097ae31042e66e36452b",
+      "horizontal_grid_rows": 0,
+      "vertical_grid_columns": 44,
+      "pixels_whitened": 136547,
+      "removed_annotations": []
+    },
+    "figure_s13.png": {
+      "source": "outputs/AMPAD_Figure3_publication_assets_20260731/figures/supplementary/Supplementary_Figure_S13_AMPAD_stability_and_modality.png",
+      "source_sha256": "721d66e208f64e4b721d5c7664159ed1393a0b492efa577f982305778b441df6",
+      "output_sha256": "8a3cca454de3158a4335fd0f25ad514c83be3313c09de3ab3977ad3cb717e17f",
+      "horizontal_grid_rows": 0,
+      "vertical_grid_columns": 40,
+      "pixels_whitened": 125896,
+      "removed_annotations": []
+    },
+    "figure_s14.png": {
+      "source": "manuscript/figures/main/Figure_4/Figure_4_candidate_restricted_interoperability.png",
+      "source_sha256": "9ce1811589cd88186084528fb43a12e0effdebbaec9e624f8f2dd6c9bff0cb50",
+      "output_sha256": "3a93f7087acd3c3b66b71232b34a521ece8f6440395956a7a18e8fec3f46fc97",
+      "horizontal_grid_rows": 0,
+      "vertical_grid_columns": 45,
+      "pixels_whitened": 64238,
+      "removed_annotations": []
+    },
+    "figure_s15.png": {
+      "source": "analysis/regret_revision/supplementary_figures/figure_s15.png",
+      "source_sha256": "fe68c39ddfb0d0ec704fc5488aa70526e24b6f4cfc404ca9def1914c4fd7d9d9",
+      "output_sha256": "bbed9db5e2c11cae5bef145506a38da3c4416b36cc139c478e51d3cc88808668",
+      "horizontal_grid_rows": 4,
+      "vertical_grid_columns": 8,
+      "pixels_whitened": 42974,
+      "removed_annotations": []
+    },
+    "figure_s16.png": {
+      "source": "analysis/regret_revision/supplementary_figures/figure_s16.png",
+      "source_sha256": "0ea373da9c68918f99070b6e6bee30dba42c783dfe2b7d977977bd2a86f15a17",
+      "output_sha256": "0bcdc4d97c57d76dacefdc8b01fc230fcac1b7be72ba558deedc6f0f9b69dd15",
+      "horizontal_grid_rows": 4,
+      "vertical_grid_columns": 12,
+      "pixels_whitened": 47111,
+      "removed_annotations": []
+    },
+    "figure_s17.png": {
+      "source": "analysis/regret_revision/supplementary_figures/figure_s17.png",
+      "source_sha256": "3fb4c1e1b152c27adec4ed717bb341850aa96969388d51f813b17f531b5c806a",
+      "output_sha256": "c9ebda3e7ffd5edf42ae777800df98d281f5f0b7edabdf3260e1b24c7583fd28",
+      "horizontal_grid_rows": 4,
+      "vertical_grid_columns": 12,
+      "pixels_whitened": 46267,
+      "removed_annotations": []
+    },
+    "figure_s18": {
+      "builder": "manuscript/latex_v10_overleaf/supplementary_data/recommended_mode_120_run/scripts/build_ampad_four_center_objective_sensitivity_s18.py",
+      "builder_sha256": "94a7ab79da6ddb5be362012ef0ef9abebe0404ab330f42989383eb724c105c14",
+      "source": "manuscript/latex_v10_overleaf/supplementary_data/recommended_mode_120_run/summary/proposed_table_s16_24_conditions.csv",
+      "source_sha256": "4db70b1a7e2bf0cc8e1399ccfbc258af1c217f4fd4c7f6538c6e1a0d444b5b49",
+      "outputs": {
+        "png": "6ef74bda2c3758ba0fa8448fb8e44c7c69e1ca52f7b8487ca33c80dded469599",
+        "svg": "f0774545708e67061173a135f493de897eab126984a2573131ca5500adc346ad",
+        "pdf": "3ead7c1a84624a5038bbcc30783b220ae56de2e76973027b8d01e4240e422f1f"
+      },
+      "plot_grid": "disabled in the builder",
+      "removed_annotations": [
+        "caption-duplicated overall summary sentence"
+      ]
+    },
+    "figure_s20": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_radiomics_s20.py",
+      "builder_sha256": "ae257123c84ff2f4de865b0d19a57d1d1c1ea9141b2a808f6ca32886db5f6a11",
+      "source": "manuscript/latex_v12_overleaf/supplementary_data/private_radiomics/radiomics_condition_summary.csv",
+      "source_sha256": "905a67ac80fc5142f6362b51047f68041e249f56e574526538be5fe929aef8ad",
+      "outputs": {
+        "png": "df79b7108539090b4779e96f187f76a91de7ee4f5d13b6a61ab639094118eea2",
+        "svg": "82710701bee0ab4f03c3ec8047526d6202074df6e42fc8807c47d44628daaf4e",
+        "pdf": "0247d0fc7edcb7d5d981c534b2f1bef183e1c949ccba29f71ab3dd861cf44ae2"
+      },
+      "plot_grid": "disabled in the builder",
+      "panel_labels": "bold a)-d) only",
+      "target_width_mm": 170,
+      "removed_annotations": []
+    },
+    "figure_s21": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_postfreeze_results.py",
+      "builder_sha256": "71f7a0d42e4eecd1ae667368d4a6928dfd602b727ee88706974ba950f76ccdee",
+      "sources": {
+        "condition_metrics.csv": "bd942ba891dc89a46a78387f00222f3a3ee47a4d4d12f948ddf1e9afbea7a358",
+        "paired_condition_contrasts.csv": "1bd326a9da80b03d8ff3aa7a5ec172d37bc0d9f35d249a9d80c41368acd06911"
+      },
+      "outputs": {
+        "png": "63f71182afb98e739f1dba537201d9e3343247d0539a507e9943a0d8396a4e25",
+        "svg": "4d12ad05b4a5b5b871b8686216f18eb75056f4119888779f060e1d23dfa6848a",
+        "pdf": "860634b0d65cb368333c544658c6d58f6a7797616e8a8e44a7335f547f417cd4"
+      },
+      "plot_grid": "disabled in the builder",
+      "panel_labels": "bold a)-c) only",
+      "target_width_mm": 170,
+      "layout_validation": "interpanel y-label intrusion assertion passed",
+      "removed_annotations": []
+    },
+    "figure_s22": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_postfreeze_results.py",
+      "builder_sha256": "71f7a0d42e4eecd1ae667368d4a6928dfd602b727ee88706974ba950f76ccdee",
+      "sources": {
+        "benchmark_metrics.csv": "58f576f848fc5698bf0afce882cba200743adb5920c1a3136454a429837199de",
+        "benchmark_intervals.csv": "c21a0aee1623c855e1868eae1b342407bb26672f1b674a5b294de1d5f0da96c4",
+        "paired_regret_medoid_contrasts.csv": "c31e95b9ed96f2a77cbfe7f70e6d28b2421b5ecd8f1d0933db12536b500fdb3c"
+      },
+      "outputs": {
+        "png": "f69a2b377ba006c15a7a008fe1c2a29fc75c5f5d7f02f6d71cc5379c747d2516",
+        "svg": "4f6b0697c7c334ab10c86eb6aeed67ea062ab541f6225374e9b3f688c81ba084",
+        "pdf": "309d824398e51f43707363a725c39b44c9391de4a68d2d56f9a5ca303ab9347a"
+      },
+      "plot_grid": "disabled in the builder",
+      "panel_labels": "bold a)-c) only",
+      "target_width_mm": 170,
+      "layout_validation": "interpanel y-label intrusion assertion passed",
+      "removed_annotations": []
+    },
+    "figure_s23": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_postfreeze_results.py",
+      "builder_sha256": "71f7a0d42e4eecd1ae667368d4a6928dfd602b727ee88706974ba950f76ccdee",
+      "sources": {
+        "fold_selection_comparison.csv": "4f74c0cf740796fafa93fe232102d5c18911237b5d1ceb7bd6157e56c9520514",
+        "summary.json": "467a119933ced5f2c862ae60048930766503ac8a1f9f97a11899312db52bac74"
+      },
+      "outputs": {
+        "png": "bb3516e1aa70dca0725bca04e712cbf9cd9f613388968b3f0a6bcb41bf0de12a",
+        "svg": "492d05152ae4f77eab7d64d6105943d42dae21a40b8c5adb2e17f61c583117d5",
+        "pdf": "e74e884523233cb8df2919cb741dc68f04c526e651c79884ea90cc416751f63e"
+      },
+      "plot_grid": "disabled in the builder",
+      "panel_labels": "bold a)-c) only",
+      "target_width_mm": 170,
+      "layout_validation": "interpanel y-label intrusion assertion passed",
+      "removed_annotations": []
+    },
+    "figure_s24": {
+      "builder": "manuscript/latex_v12_overleaf/scripts/build_locking_simulation_s24.py",
+      "builder_sha256": "0dacb139fd38674d494bc8b77dca4ca0d5055c0df262524b47967152353f37b6",
+      "sources": {
+        "figure_s24_panel_a.csv": "03c59af4e944cf0899f62edfbdb24244229f4d892b17dfeae2bb6c1de6ed9b8c",
+        "figure_s24_panel_b.csv": "5ebb405370a993083b0a77b48a33ba0133b8ae5fa9c84796bdd14d6d3ba2fc37",
+        "figure_s24_panel_c.csv": "19f35f157824413e95114b14bb87b6485c4ec9788ad96771e1572d5c315688c6"
+      },
+      "outputs": {
+        "png": "4ac37dabc18bfce4db96415d1a3e6a77238bfea0fdea4abbf4721b3d0d161e83",
+        "svg": "be6969e153bb04caf641d530b4495898f65396c3172db388d1fcb4cf60042e31",
+        "pdf": "3c76ef792f2a806e3d64a1fbd2d0c74ac58a5c53457d0eeac9b05c4a8769873b"
+      },
+      "plot_grid": "absent by construction",
+      "panel_labels": "bold a)-c) only",
+      "target_width_mm": 170,
+      "removed_annotations": []
+    }
+  }
+}

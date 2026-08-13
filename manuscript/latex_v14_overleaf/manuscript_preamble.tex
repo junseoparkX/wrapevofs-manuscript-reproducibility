@@ -1,0 +1,63 @@
+\usepackage[left=18mm,right=18mm,top=22mm,bottom=22mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath,bm}
+\usepackage{unicode-math}
+\setmathfont{TeX Gyre Termes Math}
+\usepackage{booktabs,longtable,tabularx,array,multirow}
+\usepackage{caption}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage{etoolbox}
+\usepackage{enumitem}
+\usepackage[left]{lineno}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
+\usepackage[nameinlink]{cleveref}
+
+\captionsetup{font=small,labelfont=bf,labelsep=period,justification=justified,singlelinecheck=false}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.15em}{0.4em}
+\titlespacing*{\subsection}{0pt}{0.85em}{0.3em}
+\titlespacing*{\subsubsection}{0pt}{0.65em}{0.25em}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.2em}
+\setlength{\emergencystretch}{1em}
+\setlength{\LTpre}{0.45em}
+\setlength{\LTpost}{0.65em}
+\setlist{nosep}
+\pagestyle{plain}
+\newcounter{algorithm}
+\renewcommand{\thealgorithm}{\arabic{algorithm}}
+\crefname{algorithm}{Algorithm}{Algorithms}
+\Crefname{algorithm}{Algorithm}{Algorithms}
+\crefname{figure}{Fig.}{Figs.}
+\Crefname{figure}{Figure}{Figures}
+\crefname{table}{Table}{Tables}
+\Crefname{table}{Table}{Tables}
+\newcommand{\keywords}[1]{\par\smallskip\noindent\textbf{Keywords:} \textit{#1}}
+\AtBeginEnvironment{thebibliography}{\sloppy}
+
+\newcommand{\supplementarysetup}{%
+  \setcounter{section}{0}\renewcommand{\thesection}{S\arabic{section}}%
+  \setcounter{figure}{0}\renewcommand{\thefigure}{S\arabic{figure}}%
+  \setcounter{table}{0}\renewcommand{\thetable}{S\arabic{table}}%
+  \setcounter{algorithm}{0}\renewcommand{\thealgorithm}{S\arabic{algorithm}}%
+  \renewcommand{\theHsection}{suppsection.\arabic{section}}%
+  \renewcommand{\theHfigure}{suppfigure.\arabic{figure}}%
+  \renewcommand{\theHtable}{supptable.\arabic{table}}%
+  \renewcommand{\figurename}{Supplementary Figure}%
+  \renewcommand{\tablename}{Supplementary Table}%
+  \crefname{figure}{Supplementary Fig.}{Supplementary Figs.}%
+  \Crefname{figure}{Supplementary Figure}{Supplementary Figures}%
+  \crefname{table}{Supplementary Table}{Supplementary Tables}%
+  \Crefname{table}{Supplementary Table}{Supplementary Tables}%
+  \crefname{algorithm}{Supplementary Algorithm}{Supplementary Algorithms}%
+  \Crefname{algorithm}{Supplementary Algorithm}{Supplementary Algorithms}%
+}

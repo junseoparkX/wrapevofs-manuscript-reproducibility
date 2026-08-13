@@ -1,0 +1,42 @@
+{
+  "operation": "terminology-only SVG relabel plus existing deterministic grid-free transform",
+  "scientific_values_changed": false,
+  "source": "outputs/AMPAD_Figure3_publication_assets_20260731/figures/main/Figure_3_AMPAD_budget_calibration.svg",
+  "source_sha256": "529acb80b3eea1e4c6068608e27ac2157556c6f7c69d95aec0f3c01fde5ddc50",
+  "changes": [
+    {
+      "old": "MAE |locked - target|: Low 15.5; Reference 2.5; High 0.8",
+      "new": "MAE |locked - target|: Small 15.5; Reference 2.5; High 0.8"
+    },
+    {
+      "old": "SVM-L1 / Rush / Low",
+      "new": "SVM-L1 / Rush / Small"
+    },
+    {
+      "old": "Low",
+      "new": "Small"
+    },
+    {
+      "old": "Low",
+      "new": "Small"
+    }
+  ],
+  "grid_audit": {
+    "horizontal_grid_rows": 59,
+    "vertical_grid_columns": 67,
+    "pixels_whitened": 424902
+  },
+  "annotation_masks": [
+    {
+      "box_px": [
+        382,
+        1364,
+        2450,
+        1541
+      ],
+      "reason": "caption-duplicated LOCO sentence"
+    }
+  ],
+  "output": "figures/figure_3.png",
+  "output_sha256": "be7c3ecb26457d0542660dc86e32da6fa1ead460972dc0b65db45755a9abb691"
+}
