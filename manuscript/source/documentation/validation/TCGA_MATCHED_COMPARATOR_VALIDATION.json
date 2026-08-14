@@ -1,0 +1,10 @@
+{
+  "protocol_sha256": "c9c808d591918779961a7f236f6beb588c640e1b8932a8b030428f3d988a4ff1",
+  "status": "pass",
+  "expected_conditions": 30,
+  "verified_conditions": 30,
+  "errors": [],
+  "manifest_sha256": "6d59a4c15ae89b1fd02a3905171706d7397a6f4eda4dd943e99f7ab1e680bddc",
+  "validated_at": "2026-08-13T19:31:10.612970+00:00",
+  "smoke": false
+}

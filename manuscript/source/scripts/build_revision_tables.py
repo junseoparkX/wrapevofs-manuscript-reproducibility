@@ -38,7 +38,7 @@ def build_robust_summary() -> str:
     return r"""\begin{table}[p]
 \centering
 \caption{Robust development-only summary of the 24-condition AMP-AD original-versus-updated configuration comparison.}
-\label{tab:supp18}
+\label{tab:supp2}
 \scriptsize
 \setlength{\tabcolsep}{2.8pt}
 \renewcommand{\arraystretch}{1.08}
@@ -77,7 +77,7 @@ def build_cross_lock() -> str:
     return r"""\begin{table}[p]
 \centering
 \caption{Existing-artifact 2 by 2 candidate-bank and locking-rule comparison for matched AMP-AD development conditions.}
-\label{tab:supp19}
+\label{tab:supp3}
 \scriptsize
 \setlength{\tabcolsep}{2.6pt}
 \renewcommand{\arraystretch}{1.08}
@@ -99,7 +99,7 @@ def build_tie_duplicate() -> str:
     return r"""\begin{table}[p]
 \centering
 \caption{Eligible-pool decision paths and duplicate-mask sensitivity for the 24 updated AMP-AD development-only conditions at absolute $\delta=0.01$.}
-\label{tab:supp20}
+\label{tab:supp4}
 \scriptsize
 \setlength{\tabcolsep}{4.2pt}
 \renewcommand{\arraystretch}{1.08}

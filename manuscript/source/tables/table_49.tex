@@ -1,0 +1,27 @@
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.41\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}}
+\caption{Private radiomics upstream construction, extraction, and validation provenance.}\label{tab:supp28}\\
+\toprule
+Stage & Frozen implementation & Validation and analysis boundary \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\footnotesize\itshape Supplementary Table S27 (continued)}\\
+\toprule
+Stage & Frozen implementation & Validation and analysis boundary \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+DICOM preflight & Header-only grouping by patient, study, series, and instance identity; T1ce eligibility required at least 20 slices, complete geometry, high-confidence sequence classification, and prespecified position and spacing tolerances, with preference for a three-dimensional acquisition. & MGMT was not used for patient, pilot, session, or series selection. The source comprised 326 participants; 262 were T1ce eligible. \\
+Conversion & \texttt{dcm2niix} v1.0.20260724; read-only source access; pseudonymous NIfTI output with header and extension scrubbing; source-checksum comparison before resume or skip. & Three eligible participants were excluded only after repeated non-unique or unreadable-series conversion failure. No conversion exclusion used MGMT or tumor-mask appearance. \\
+Automatic regions & RaidionicsRADS v1.3.2 and RaidionicsSeg v1.5.2; frozen brain- and tumor-model manifests; automatic tumor-core candidate region, label 1. & Empty masks, geometry mismatch, nonfinite voxels, out-of-bounds masks, and execution failure were hard failures. Review flags were retained rather than used as morphology-based exclusions. Regions were not manually corrected or expert adjudicated. \\
+Radiomics & PyRadiomics v3.0.1, SimpleITK v2.2.1; normalization scale 100; 1-mm isotropic B-spline image resampling; nearest-neighbor mask resampling; bin width 25; geometry tolerance $10^{-5}$; minimum 3 dimensions and 64 voxels; pre-crop true; pad distance 5. & All final predictor values were finite. Available provenance supports fixed settings but does not independently establish complete IBSI compliance for every upstream transform. \\
+Feature families & First-order, shape, GLCM, GLRLM, GLSZM, GLDM, and NGTDM across Original, Wavelet, Laplacian-of-Gaussian (1--5 mm), Gradient, Square, SquareRoot, Logarithm, and Exponential images. & The full analysis boundary contained 1,781 predictors. PyRadiomics diagnostics were excluded from predictors. \\
+Stability pilot & Deterministic 15-participant pilot; original, 1-mm-eroded, and 1-mm-dilated tumor-core regions; retain ICC(2,1) $\geq0.85$ and median relative range $\leq0.25$. & The 1,346-feature subset was frozen without MGMT access and applied unchanged; it is a segmentation-perturbation robustness subset, not an outcome-selected signature. \\
+Cohort linkage & 259 participants completed original radiomics; 197 had unique validated MGMT linkage (80 methylated, 117 unmethylated); 62 remained unlinked. & MGMT was joined after all upstream choices were frozen. Unlinked outcomes were not inferred. The supervised experiment used only the 197 linked participants. \\
+Automated validation & All 262 eligible participants accounted for; 259 included and 3 explicitly excluded; image--mask geometry, finite-value, privacy, checksum/resume, schema, and patient-uniqueness checks; 26 automated tests passed. & Sixty-five included masks retained review flags and 49 acquisitions had maximum spacing at least 3 mm. Automatic QC is not clinical contour validation; patient-level QC covariates and images are not redistributed. \\
+\end{longtable}
+\endgroup

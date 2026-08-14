@@ -1,7 +1,7 @@
 # Property test report
 
 Date: 2026-08-03
-Package: `C:\Users\junse\Documents\research\gbm_package`
+Package: companion repository `junseoparkX/wrapevofs-package`
 Scope: locking/configuration behavior only; no empirical feature-selection analysis was executed.
 
 ## Result

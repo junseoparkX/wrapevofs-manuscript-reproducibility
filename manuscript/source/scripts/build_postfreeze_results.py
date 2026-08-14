@@ -1,7 +1,7 @@
 """Build supplementary post-freeze AMP-AD and CGGA figures and tables.
 
 The approved main Figures 4 and 5 are deliberately outside this builder. New
-post-freeze analyses are additive Supplementary Figures S21--S23.
+post-freeze analyses are additive and their printed numbers follow main-text citation order.
 """
 
 from __future__ import annotations
@@ -244,7 +244,7 @@ def build_tables() -> None:
     table44 = """\\begin{table}[p]
 \\centering
 \\caption{AMP-AD one-time post-freeze held-out evaluation of the 24 updated conditions}
-\\label{tab:supp22}
+\\label{tab:supp7}
 \\scriptsize
 \\begin{tabular}{llccc}
 \\toprule
@@ -274,7 +274,7 @@ Point estimates in the fourth and fifth columns are pooled four-center macro-AUR
     table45 = """\\begin{table}[p]
 \\centering
 \\caption{CGGA coherent same-split, same-estimator benchmark}
-\\label{tab:supp23}
+\\label{tab:supp17}
 \\scriptsize
 \\begin{tabular}{llrccc}
 \\toprule
@@ -301,7 +301,7 @@ All signatures use the same fixed 214/92 split and the same 500-tree random fore
     table46 = """\\begin{table}[p]
 \\centering
 \\caption{CGGA saved nested-bank re-locking under the current regret-constrained rule}
-\\label{tab:supp24}
+\\label{tab:supp18}
 \\scriptsize
 \\begin{tabular}{rrrrrrrr}
 \\toprule

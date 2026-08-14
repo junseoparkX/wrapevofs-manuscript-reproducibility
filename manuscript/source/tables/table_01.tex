@@ -16,9 +16,9 @@
 5 & \hspace*{1.35em}Initialize a population of nonempty binary chromosomes. \\
 6 & \hspace*{1.35em}\textbf{For each} generation $g=1,\ldots,G$: \\
 7 & \hspace*{2.70em}Compute base score, target deviation, penalty, raw objective, and zero-truncated fitness for every chromosome. \\
-8 & \hspace*{2.70em}\textbf{If updated mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
+8 & \hspace*{2.70em}\textbf{If corrected-objective mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
 9 & \hspace*{2.70em}\textbf{If legacy-compatible mode:} reproduce zero-truncated ranking and update behavior. \\
-10 & \hspace*{2.70em}Retain elites; compute shifted sampling weights only for parent sampling in updated mode. \\
+10 & \hspace*{2.70em}Retain elites; compute shifted sampling weights only for parent sampling in corrected-objective mode. \\
 11 & \hspace*{2.70em}\textbf{If} weights are invalid or effectively equal, use uniform sampling and record the fallback. \\
 12 & \hspace*{2.70em}Apply crossover and mutation; repair any empty child by activating one feature. \\
 13 & \hspace*{2.70em}Export generation diagnostics and warnings for zero truncation, deviation, fallback, and mask collapse. \\

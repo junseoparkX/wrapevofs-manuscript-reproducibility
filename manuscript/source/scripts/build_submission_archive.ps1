@@ -12,7 +12,7 @@ if (-not $output.StartsWith($expectedParent + [System.IO.Path]::DirectorySeparat
     throw "Refusing to write outside the manuscript directory: $output"
 }
 
-$excludedDirectories = @('.tex-cache', '.tmp', 'tmp', '__pycache__', 'qa_postfreeze')
+$excludedDirectories = @('.tex-cache', '.texlive-cache', '.tmp', 'tmp', '__pycache__', 'qa_postfreeze')
 $excludedSuffixes = @(
     '.aux', '.bbl', '.blg', '.fdb_latexmk', '.fls', '.log', '.out',
     '.synctex.gz', '.pyc'

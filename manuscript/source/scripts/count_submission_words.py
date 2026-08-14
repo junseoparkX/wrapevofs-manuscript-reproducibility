@@ -11,7 +11,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def words(value: str) -> list[str]:
     value = re.sub(
-        r"\\(?:citep|Cref|cref|ref|label|url|path|texttt|textbf|emph|keywords)\{([^{}]*)\}",
+        r"\\(?:citep|cite|Cref|cref|ref|label)\{[^{}]*\}",
+        " ",
+        value,
+    )
+    value = re.sub(
+        r"\\(?:url|path|texttt|textbf|emph|keywords)\{([^{}]*)\}",
         r" \1 ",
         value,
     )
@@ -35,12 +40,22 @@ def prose_slice(start_heading: str, end_heading: str | None) -> str:
     value = body[start:end]
     value = re.sub(r"(?m)%.*$", " ", value)
     value = re.sub(r"\\begin\{figure\}.*?\\end\{figure\}", " ", value, flags=re.S)
+    value = re.sub(
+        r"\\begin\{(?:equation|equation\*|align|align\*|gather|gather\*)\}.*?"
+        r"\\end\{(?:equation|equation\*|align|align\*|gather|gather\*)\}",
+        " ",
+        value,
+        flags=re.S,
+    )
+    value = re.sub(r"\$(?:\\.|[^$])*\$", " ", value)
     value = re.sub(r"\\input\{tables/[^{}]+\}", " ", value)
     return value
 
 assert abstract and title
 print(f"title_words={len(words(title.group(1)))}")
-print(f"abstract_words={len(words(abstract.group(1))) - len(words(re.search(r'\\keywords\{(.*?)\}', abstract.group(1), re.S).group(1)))}")
+keyword_match = re.search(r"\\keywords\{(.*?)\}", abstract.group(1), re.S)
+keyword_words = len(words(keyword_match.group(1))) if keyword_match else 0
+print(f"abstract_words={len(words(abstract.group(1))) - keyword_words}")
 ird = " ".join(
     [
         prose_slice(r"\section{Introduction}", r"\section{Results}"),

@@ -1,0 +1,13 @@
+branch,cap,comparator,metric,updated_minus_comparator,ci_low,ci_high
+svm_l1,low,archived_rfecv_only,macro_auroc,-0.009759184449798,-0.0349859950245358,0.0142391014138979
+svm_l1,reference,archived_rfecv_only,macro_auroc,-0.0084077600123286,-0.0286537444257526,0.0119111539012294
+xgboost,low,archived_rfecv_only,macro_auroc,0.0480168833226919,0.0252674326099074,0.0703654298211053
+xgboost,reference,archived_rfecv_only,macro_auroc,-0.0207212845529042,-0.0435590232161808,0.0012695146445245
+boruta_rf,low,archived_rfecv_only,macro_auroc,-0.0404020587214355,-0.0621323197063538,-0.0194855082773285
+boruta_rf,reference,archived_rfecv_only,macro_auroc,0.002459810662853,-0.0145334414718427,0.0191307821248393
+svm_l1,low,archived_locked_medoid,macro_auroc,-0.0311220463422603,-0.0548279255310836,-0.0055031411735886
+svm_l1,reference,archived_locked_medoid,macro_auroc,0.0124925308523198,-0.0092552953410124,0.035057593970353
+xgboost,low,archived_locked_medoid,macro_auroc,0.0176364125265704,-0.0026417760261272,0.038407662721216
+xgboost,reference,archived_locked_medoid,macro_auroc,0.015082096440746,-0.0073097489271204,0.0371983119133553
+boruta_rf,low,archived_locked_medoid,macro_auroc,-0.011634201708004,-0.033372098877253,0.0129695399389457
+boruta_rf,reference,archived_locked_medoid,macro_auroc,0.0145615183404034,-0.0032803387737337,0.0327822139411868

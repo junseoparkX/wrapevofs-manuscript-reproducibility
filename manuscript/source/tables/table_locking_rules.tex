@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\caption{Decision rules for selecting one feature set from a finite stochastic candidate bank.}
+\label{tab:locking-rule-distinction}
+\footnotesize
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+\bfseries Rule & \bfseries Admissible pool & \bfseries Primary decision & \bfseries Empirical-regret guarantee & \bfseries Representativeness target \\
+\midrule
+Highest-locking-score candidate & Full bank & Maximize locking score & Zero & Not explicitly optimized \\
+Legacy top-three medoid & Three highest-ranked candidates & Maximize mean Jaccard within the rank-restricted pool & No metric-scale bound & Rank-restricted pool \\
+Unrestricted full-bank medoid & Full bank & Maximize mean Jaccard within the full bank & No nontrivial bound & Full candidate bank \\
+Regret-constrained medoid & $E_{\delta}=\{r:R_r=L_{\mathrm{best}}-L_r\leq\delta\}$ & Maximize mean Jaccard within $E_{\delta}$ & $R_{\mathrm{selected}}\leq\delta$ & Strict regret-eligible pool \\
+\bottomrule
+\end{tabularx}
+\end{table}

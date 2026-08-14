@@ -1,0 +1,32 @@
+{
+  "protocol_sha256": "c9c808d591918779961a7f236f6beb588c640e1b8932a8b030428f3d988a4ff1",
+  "validation_manifest_sha256": "6d59a4c15ae89b1fd02a3905171706d7397a6f4eda4dd943e99f7ab1e680bddc",
+  "output_sha256": {
+    "figure_3_strengthened.pdf": "3780f5ad88cfe25e9a2091e17866bc03efadcac7babd2ed16c22cb686fe87db3",
+    "figure_3_strengthened.png": "10284fd762ccf8b1c351b04c8e3baf136d83c8849d664fbd5a222462da1901d5",
+    "figure_3_strengthened.svg": "da8688cb9c00158516afc2fdafde4357afdabe307706ea13bab13074109c6d03",
+    "figure_4_strengthened.pdf": "cbe08dbe0f88d86c1c83d57f9379a2e23295a2d944f080b89af86849a87b964f",
+    "figure_4_strengthened.png": "310909ce3aa3c79dc592c704f50a1b545fe4a42c27641e202ba42ef766892bf2",
+    "figure_4_strengthened.svg": "4a620474fa97047ee33f977421b673b763edb98e44f7ae5d461e1e2439fc1c0f",
+    "figure_5_strengthened.pdf": "4962e2cc4ace6164ebe79cae6ec2cdddda2bc866c215b27449f72c3c0e67bfc8",
+    "figure_5_strengthened.png": "6bbeb98790b059e26eba6d65f2b1413a52ebaf3841eba4a57e79a073019e9f44",
+    "figure_5_strengthened.svg": "20341ebe3b76c72e4d26c70bee664958a8dbafb42cb5fbceebeefb465bd06cf7",
+    "figure_s_matched_comparator_strengthened.pdf": "514bf3894cf3930719b869c263cf16d218f55214dc65fb7c0e150bd3fe78d72d",
+    "figure_s_matched_comparator_strengthened.png": "25f2ec550a0619f5142cd19e56370db1b5bef50ec64757b67c8dd58da8e0402a",
+    "figure_s_matched_comparator_strengthened.svg": "ac0e9ca485dc312e4c5953bc8badc1284354f55cf215df14e639872db46a46e7"
+  },
+  "excluded_participant_level_source_sha256": {
+    "outer_predictions.csv": "f44dfcc3c341366deddd707ac52a7751737eb96e7119ea8b2344fcfb3e8e2dae"
+  },
+  "source_sha256": {
+    "fold_metrics.csv": "6ef194b6e9c0f69ea30665b64b30f0768b8ec681edc6112dfb49ff43fcc31005",
+    "mean_feature_counts.csv": "f83b6deb701d314f8f556ddd0670d563746c83a610c8360705ff4e626cfcd2fb",
+    "oof_metrics.csv": "8c5c108999726e403519a9c8d405f658e75197ad51a9c44869d7170c1573141a",
+    "outer_fold_feature_frequency.csv": "2f0621ac8063debe110c11aa1cce20b8665995207eb9b702e773e6d10ad7107a",
+    "paired_regret_medoid_minus_comparator.csv": "01deef25c3db69379a27d1f500222b30e34277910125c0a0e410d1fc86a4f302",
+    "random_bank_oof_metric_summary.csv": "99be4c217ca02a11e9c49773dfd214bb9056736b4d7846521e28a640e1d81b4e",
+    "random_bank_paired_difference_summary.csv": "7be70636bacbfce0056557a8f1decbfdbaa034f558118fcaace6fb161f57af5a",
+    "random_bank_summary.csv": "50d544fa08835fdca88ad309b8a1d49f0aecfe16c9c7a6fe6e6aee546bb2ff88",
+    "runtime_and_fit_counts.csv": "5bfe86b5bcf0727336b47d2cd4b1a961bbfe504be232fc763e86e0bdb0c737c5"
+  }
+}

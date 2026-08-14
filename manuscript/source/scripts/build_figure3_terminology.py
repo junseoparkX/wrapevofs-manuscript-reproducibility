@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
@@ -22,9 +23,7 @@ SOURCE = (
     / "main"
     / "Figure_3_AMPAD_budget_calibration.svg"
 )
-NODE = Path(
-    r"C:\Users\junse\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
-)
+NODE = shutil.which("node") or "node"
 RENDERER = ROOT / "analysis" / "render_svg_assets.cjs"
 
 sys.path.insert(0, str(ROOT))
@@ -76,7 +75,7 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
-    subprocess.run([str(NODE), str(RENDERER), str(render_manifest)], check=True, cwd=ROOT)
+    subprocess.run([NODE, str(RENDERER), str(render_manifest)], check=True, cwd=ROOT)
 
     image = Image.open(pregrid).convert("RGB")
     image, grid_audit = remove_grid_strokes(image)

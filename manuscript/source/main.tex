@@ -1,12 +1,12 @@
 ﻿\documentclass[10pt,letterpaper]{article}
 \input{manuscript_preamble}
 
-\hypersetup{pdftitle={WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints},pdfauthor={Junseo Park (ORCID 0009-0002-4385-6987), Leonard J. Foster (ORCID 0000-0001-8551-4817), Huan Zhong (ORCID 0000-0002-7294-2254)}}
+\hypersetup{pdftitle={WrapEvoFS enables auditable feature compression with regret-constrained representative locking},pdfauthor={Junseo Park (ORCID 0009-0002-4385-6987), Leonard J. Foster (ORCID 0000-0001-8551-4817), Huan Zhong (ORCID 0000-0002-7294-2254)}}
 
-\title{\LARGE\bfseries WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints}
+\title{\LARGE\bfseries WrapEvoFS enables auditable feature compression with regret-constrained representative locking}
 \author{%
-  \normalsize Junseo Park~\orcidlink{0009-0002-4385-6987}\textsuperscript{1}, Leonard J. Foster~\orcidlink{0000-0001-8551-4817}\textsuperscript{2}, Huan Zhong~\orcidlink{0000-0002-7294-2254}\textsuperscript{2,\dagger}\\[0.2em]
-  \small\textit{for the Alzheimer's Disease Neuroimaging Initiative}\textsuperscript{*}\\[0.25em]
+  \normalsize Junseo Park~\orcidlink{0009-0002-4385-6987}\textsuperscript{1}, Leonard J. Foster~\orcidlink{0000-0001-8551-4817}\textsuperscript{2}, Huan Zhong~\orcidlink{0000-0002-7294-2254}\textsuperscript{2,*}\\[0.2em]
+  \small\textit{for the Alzheimer's Disease Neuroimaging Initiative}\textsuperscript{\ddagger}\\[0.25em]
   \small \textsuperscript{1}Department of Computer Science, University of British Columbia, Vancouver, BC, Canada\\[0.15em]
   \small \textsuperscript{2}Department of Biochemistry \& Molecular Biology, Michael Smith Laboratories, Life Sciences Institute,\\[-0.05em]
   \small University of British Columbia, Vancouver, BC, Canada\\[0.25em]
@@ -14,8 +14,8 @@
   \href{mailto:junseoparkj@gmail.com}{junseoparkj@gmail.com}\quad
   \href{mailto:foster@msl.ubc.ca}{foster@msl.ubc.ca}\quad
   \href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}\\[0.2em]
-  \footnotesize \textsuperscript{\dagger}Correspondence to Huan Zhong (\href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}).\\[0.15em]
-  \scriptsize \textsuperscript{*}A complete listing of ADNI investigators is available at \url{https://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf}.%
+  \footnotesize \textsuperscript{*}Correspondence to Huan Zhong (\href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}).\\[0.15em]
+  \scriptsize \textsuperscript{\ddagger}A complete listing of ADNI investigators is available at \url{https://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf}.%
 }
 \date{}
 
@@ -25,14 +25,19 @@
 \linenumbers
 
 \begin{abstract}
-We introduce a regret-constrained representative locking rule for selecting one candidate from stochastic feature-selection runs. WrapEvoFS separates development-only search and locking from one-time held-out evaluation, preserves penalized-objective ordering through an untruncated genetic objective, and restricts selection to candidates within a prespecified empirical development-CV score gap before choosing their Jaccard medoid with deterministic tie-breaking. In a development-only AMP-AD comparison, aggregate absolute target deviation decreased from 216 to 137, and all 24 regret-constrained medoids satisfied the 0.01 tolerance. One-time post-freeze evaluation in the corresponding held-out centers showed heterogeneous effects. In a separate fully nested TCGA GBM/LGG analysis, all 30 selections satisfied the 0.01 constraint; 11 differed from the highest-score candidate, with a median eligible-pool representativeness gain of 0.0429. Similar selected-set sizes nevertheless concealed marked feature-identity sensitivity across outer partitions. WrapEvoFS therefore provides an auditable finite-bank rule for representative stochastic feature compression under a strict empirical development-score constraint.
-\keywords{feature selection; stochastic compression; development-CV regret; genetic algorithm; representative locking; reproducible software}
+Stochastic feature-selection pipelines can return signatures from the same data, yet choosing one run is often heuristic. We introduce WrapEvoFS, which first restricts selection to candidates within a prespecified empirical score gap and then locks the most representative eligible feature set. A corrected genetic objective also prevents zero truncation from erasing penalized-score ordering. In a fully nested four-class cancer analysis, all 30 locked signatures met the 0.01 score-gap tolerance, and 11 representative selections differed from the highest-locking-score candidate. Matched selector analyses showed branch-dependent trade-offs: WrapEvoFS had higher estimates than equally sized Elastic Net and stability rankings in one branch, similar estimates in another, and lower point estimates in the third, while native comparator supports were larger. A one-time post-freeze multicenter evaluation showed heterogeneous effects without reselection or retuning. Here, we show that stochastic feature compression can be made deterministic and empirically regret-bounded while exposing performance--compression and participant-partition sensitivity.
 \end{abstract}
 
 \input{sections/main_text}
 
 \FloatBarrier
+\begingroup
+\small
+\setlength{\bibsep}{0pt plus 0.3ex}
 \bibliographystyle{naturemag}
 \bibliography{references}
+\endgroup
+
+\input{sections/end_matter}
 
 \end{document}

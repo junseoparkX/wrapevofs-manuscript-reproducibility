@@ -9,7 +9,7 @@
 \toprule
 \bfseries Audit item & \bfseries Scope & \bfseries Result & \bfseries Interpretation \\
 \midrule
-Zero-truncation flattening & AMP-AD Rush/SVM-L1/Small & $k^*=3$; locked $n=84$; deviation 81; 4/5 zero run-best fitness values; 245/250 all-zero generations & Concrete failure mode of the original objective; motivates the updated untruncated mode \\
+Zero-truncation flattening & AMP-AD Rush/SVM-L1/Small & $k^*=3$; locked $n=84$; deviation 81; 4/5 zero run-best fitness values; 245/250 all-zero generations & Concrete failure mode of the original objective; motivates the corrected untruncated mode \\
 Original-objective warnings & 36 archived AMP-AD configurations & 18/36 configurations warned; 694 all-zero generations in the complete archived audit & Archived outputs are preserved but warning status is explicit; this scope differs from the 24 matched conditions in Figure~2 \\
 Metric alignment & ADNI, AMP-AD, CGGA archived configurations & 45/45 configurations used mixed RFECV, GA, and locking objectives & Archived workflow is a staged heuristic, not a unified optimizer \\
 \bottomrule

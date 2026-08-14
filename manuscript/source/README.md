@@ -22,7 +22,13 @@ This directory is the authoritative, submission-facing WrapEvoFS manuscript pack
 ## Navigation
 
 - `documentation/validation/VALIDATION_REPORT.md`: current build and scientific-integrity checks.
+- `CHANGELOG.md`: submission-facing scientific and editorial decisions.
+- `documentation/analyses/TCGA_MATCHED_COMPARATOR_RESULTS.md`: exact interpretation of the checksum-frozen selector-layer benchmark.
+- `documentation/submission/NATURE_COMMUNICATIONS_ALIGNMENT.md`: journal-format alignment and outstanding submission actions.
+- `documentation/validation/TCGA_SCNV_PROVENANCE_AUDIT.md`: label-blind audit of the supplied 5,000-feature cleaned SCNV boundary.
+- `documentation/validation/PRIVATE_RADIOMICS_UPSTREAM_PROVENANCE.md`: mapping from the DICOM-to-radiomics handoff to the manuscript's upstream construction boundary.
 - `documentation/DISPLAY_MAP.md`: main and Supplementary display roles.
+- `documentation/validation/SUPPLEMENTARY_STRENGTHENED_RENUMBERING.json`: editorial-only first-citation renumbering map.
 - `documentation/FIGURE_SOURCE_DATA_MANIFEST.csv`: figure-to-source mapping.
 - `documentation/submission/AUTHOR_CONFIRMATION_REQUIRED.md`: remaining non-computational submission actions.
 

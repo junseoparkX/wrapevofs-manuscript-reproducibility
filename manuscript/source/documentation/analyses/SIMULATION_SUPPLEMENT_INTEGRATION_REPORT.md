@@ -13,7 +13,7 @@ The completed CPU-only candidate-bank locking simulation is integrated as Supple
 - Authoritative summary inputs: `scenario_rule_summary.csv` (Drive ID `1jnE7wWw_8tB34mOxYc1_YHfn098dRL4d`) and `paired_current_minus_comparator.csv` (Drive ID `1HsWi-XYdfPPnDUo2l8eCtUpqk_tXi-0N`).
 - No simulation bank, GA, classifier, RFECV, Direct selector, held-out evaluation, bootstrap analysis, or empirical feature-selection experiment was rerun for manuscript integration.
 - The $R=100$ sensitivity used an engineering chunk size of 250 although the protocol's listed engineering sizes began at 1,000. Randomness was keyed to scenario and replicate identifiers, all integrity checks passed, and no scientific parameter changed. This is documented rather than concealed.
-- Raw checkpoints retain `duplicate_multiplicity`, but the frozen scenario-summary CSV does not aggregate the selected mask's exact multiplicity distribution. The manuscript therefore reports the duplicate-handling policy and duplicate-rate sensitivity design but makes no numerical claim about that unaggregated distribution; no rerun is required for the presented S27/S22 claims.
+- Raw checkpoints retain `duplicate_multiplicity`, but the frozen scenario-summary CSV does not aggregate the selected mask's exact multiplicity distribution. The manuscript therefore reports the duplicate-handling policy and duplicate-rate sensitivity design but makes no numerical claim about that unaggregated distribution; no rerun is required for the presented S28/S23 claims.
 
 ## Supplementary Figure S27
 

@@ -1,4 +1,4 @@
-"""Build Supplementary Figure S27 (SVG) and Table S22 from frozen summaries.
+"""Build Supplementary Figure S28 (SVG) and Table S23 from frozen summaries.
 
 Only compact, equal-scenario aggregates from the completed 4,995,000-bank run
 are read. This standard-library builder performs no simulation, candidate
@@ -246,7 +246,7 @@ def build_table() -> str:
     latex = """\\begin{table}[p]
 \\centering
 \\caption{Controlled synthetic candidate-bank locking simulation under the primary $R=5$ and $\\delta=0.01$ design.}
-\\label{tab:supp25}
+\\label{tab:supp23}
 \\scriptsize
 \\textit{Panel A. Equal-scenario primary operating characteristics}\\par\\smallskip
 \\setlength{\\tabcolsep}{3.2pt}

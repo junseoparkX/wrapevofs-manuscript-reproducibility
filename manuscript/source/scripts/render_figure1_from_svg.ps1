@@ -7,8 +7,11 @@ $pdf = Join-Path $root 'figures\figure_1.pdf'
 $pngStem = Join-Path $root 'figures\figure_1'
 $png = Join-Path $root 'figures\figure_1.png'
 $profile = Join-Path $root '.tmp\chrome_figure1_profile'
-$chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
-$pdftoppm = 'C:\Users\junse\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin\pdftoppm.exe'
+$chrome = (Get-Command chrome.exe -ErrorAction SilentlyContinue).Source
+if (-not $chrome) {
+    $chrome = Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'
+}
+$pdftoppm = (Get-Command pdftoppm -ErrorAction Stop).Source
 
 foreach ($path in @($svg, $wrapper, $chrome, $pdftoppm)) {
     if (-not (Test-Path -LiteralPath $path)) {

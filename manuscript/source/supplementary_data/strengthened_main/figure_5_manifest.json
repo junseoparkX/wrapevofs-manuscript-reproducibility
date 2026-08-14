@@ -1,0 +1,14 @@
+{
+  "builder": "manuscript/source/scripts/build_strengthened_postfreeze_figure.py",
+  "source_sha256": {
+    "condition_metrics.csv": "bd942ba891dc89a46a78387f00222f3a3ee47a4d4d12f948ddf1e9afbea7a358",
+    "paired_condition_contrasts.csv": "1bd326a9da80b03d8ff3aa7a5ec172d37bc0d9f35d249a9d80c41368acd06911"
+  },
+  "output_sha256": {
+    "pdf": "4962e2cc4ace6164ebe79cae6ec2cdddda2bc866c215b27449f72c3c0e67bfc8",
+    "svg": "20341ebe3b76c72e4d26c70bee664958a8dbafb42cb5fbceebeefb465bd06cf7",
+    "png": "6bbeb98790b059e26eba6d65f2b1413a52ebaf3841eba4a57e79a073019e9f44"
+  },
+  "width_mm": 170,
+  "scientific_note": "Frozen masks and existing post-freeze estimates only; no refitting."
+}

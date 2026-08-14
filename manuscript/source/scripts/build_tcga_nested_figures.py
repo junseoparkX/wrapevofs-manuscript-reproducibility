@@ -319,7 +319,7 @@ def figure_6(candidates: pd.DataFrame, banks: pd.DataFrame, agreement: pd.DataFr
     ax.axvline(DELTA, color=MID, linestyle="--", linewidth=0.8)
     ax.axhline(0, color=LIGHT, linewidth=0.75)
     ax.set(xlabel="Selected regret", ylabel="Mean-Jaccard gain", xlim=(-0.0005, 0.0106), ylim=(-0.006, max(0.094, banks["representativeness_gain"].max() * 1.10)))
-    retained_handle = mpl.lines.Line2D([], [], marker="o", linestyle="none", markersize=4.5, markerfacecolor="white", markeredgecolor=DARK, label="Highest retained")
+    retained_handle = mpl.lines.Line2D([], [], marker="o", linestyle="none", markersize=4.5, markerfacecolor="white", markeredgecolor=DARK, label="Highest-score candidate")
     changed_handle = mpl.lines.Line2D([], [], marker="D", linestyle="none", markersize=4.8, markerfacecolor=DARK, markeredgecolor=DARK, label="Medoid changed")
     ax.legend(
         handles=[retained_handle, changed_handle],
@@ -366,7 +366,7 @@ def figure_6(candidates: pd.DataFrame, banks: pd.DataFrame, agreement: pd.DataFr
     panel_label(ax, "d)", x=-0.10, y=1.055)
     clean_axis(ax)
     fig.legend(handles=branch_handles(), frameon=False, ncol=3, loc="lower center", bbox_to_anchor=(0.5, 0.012), handletextpad=0.35, columnspacing=1.0)
-    save_figure(fig, output / "candidate_figure_6_tcga_locking_geometry", manifest)
+    save_figure(fig, output / "figure_4_strengthened", manifest)
 
 
 def supplementary_locking_audit(candidates: pd.DataFrame, output: Path, manifest: list[dict]) -> None:

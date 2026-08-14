@@ -3,7 +3,7 @@
 \renewcommand{\arraystretch}{1.08}
 \setlength{\tabcolsep}{1.3pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1106\linewidth}>{\raggedright\arraybackslash}p{0.1162\linewidth}>{\raggedright\arraybackslash}p{0.1714\linewidth}>{\centering\arraybackslash}p{0.0609\linewidth}>{\centering\arraybackslash}p{0.0553\linewidth}>{\centering\arraybackslash}p{0.1162\linewidth}>{\centering\arraybackslash}p{0.0940\linewidth}>{\centering\arraybackslash}p{0.1106\linewidth}>{\raggedright\arraybackslash}p{0.1048\linewidth}@{}}
-\caption{CGGA archived-candidate sensitivity comparing the original top-three locking pool with alternative retrospective rules.}\label{tab:supp12}\\
+\caption{CGGA archived-candidate sensitivity comparing the original top-three locking pool with alternative retrospective rules.}\label{tab:supp13}\\
 \toprule
 \bfseries Method & \bfseries Condition & \bfseries Rule & \bfseries Run & \bfseries n & \bfseries Dev-CV AUROC & \bfseries CV regret & \bfseries Mean Jaccard & \bfseries Matches recorded \\
 \midrule
@@ -34,4 +34,5 @@ Boruta-RF & Guided & Highest dev-CV & 5 & 9 & 0.815 & 0.000 & - & Yes \\
 Boruta-RF & Guided & Top-three medoid & 5 & 9 & 0.815 & 0.000 & 0.442 & Yes \\
 Boruta-RF & Guided & All-five medoid & 2 & 9 & 0.799 & 0.016 & 0.452 & No \\
 \end{longtable}
+{\footnotesize\noindent\textit{Note.} All displayed rules used only the five saved development-run candidates. The highest-development-CV rule ignores overlap; the unrestricted full-bank medoid expands the pool from the three candidates used by the legacy top-three medoid to all five. For every row, CV regret is the highest saved development-CV macro-AUROC minus the score of the candidate selected by that displayed rule. Detailed condition-level records are supplied as a machine-readable companion.\par}
 }

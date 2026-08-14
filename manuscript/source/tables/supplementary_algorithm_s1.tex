@@ -16,10 +16,10 @@
 6 & \hspace*{1.35em}\textbf{For each} generation $g=0,\ldots,G-1$: \\
 7 & \hspace*{2.70em}\textbf{For each} chromosome at population-list index $i$, compute its $K_G$ fold scores with random-forest seed $\xi_{rgi\ell}=\xi_0+10000r+100g+1009i+\ell$ in fold $\ell$. \\
 8 & \hspace*{2.70em}Compute the mean base score, target deviation, penalty, raw objective, and zero-truncated legacy fitness. \\
-9 & \hspace*{2.70em}\textbf{If updated mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
+9 & \hspace*{2.70em}\textbf{If corrected-objective mode:} rank and update run best by raw objective, base score, smaller deviation, smaller count, and stable mask hash. \\
 10 & \hspace*{2.70em}\textbf{If legacy-compatible mode:} reproduce zero-truncated ranking and update behavior. \\
 11 & \hspace*{2.70em}Copy the first $e$ ranked chromosomes unchanged to the next generation. \\
-12 & \hspace*{2.70em}For the remaining $N-e$ positions, compute shifted proportional weights in updated mode (zero-truncated nonnegative weights in legacy mode) and normalize them to parent probabilities. \\
+12 & \hspace*{2.70em}For the remaining $N-e$ positions, compute shifted proportional weights in corrected-objective mode (zero-truncated nonnegative weights in legacy-compatible mode) and normalize them to parent probabilities. \\
 13 & \hspace*{2.70em}\textbf{If} weights are nonfinite, effectively equal, or have invalid or effectively zero total, set all parent probabilities to $1/N$ and record the fallback. \\
 14 & \hspace*{2.70em}Sample $N-e$ parent indices independently with replacement and pair the sampled parents in list order. \\
 15 & \hspace*{2.70em}For each pair, perform one-point crossover with probability $p_c$; when $p_m>2$, sample the cut uniformly from $\{1,\ldots,p_m-2\}$, otherwise copy both parents. \\
@@ -30,7 +30,7 @@
 \addlinespace[2pt]
 20 & Construct one fixed stratified locking-fold partition and re-score every retained run-best candidate with the same locking metric, fold partition, and random-forest hyperparameters, using its recorded run-specific estimator seed, to obtain $L_r$ and fold scores. \\
 21 & Encode every candidate in the common ordered feature universe, compute its stable SHA-256 mask hash, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
-22 & Form $E_\delta=\{r:R_r\leq\delta\}$ (or the prespecified relative or best-run-SE-scaled analogue); never add a candidate outside the threshold. \\
+22 & For the primary absolute rule, form $E_\delta=\{r:R_r\leq\delta\}$. Prespecified relative and best-run-SE-scaled modes form their corresponding sensitivity pools under their own declared thresholds. Never add a candidate outside the active threshold. \\
 23 & \textbf{If} $|E_\delta|=1$, select its sole candidate. \\
 24 & \textbf{Otherwise,} compute pairwise Jaccard similarity and each candidate's mean Jaccard within $E_\delta$. \\
 25 & Select the medoid by larger mean Jaccard, larger $L_r$, smaller feature count, and lexicographically smaller stable mask hash; use source-run ID only as post-selection provenance among exact duplicate masks. \\

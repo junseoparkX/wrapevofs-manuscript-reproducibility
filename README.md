@@ -1,13 +1,13 @@
 # WrapEvoFS manuscript reproducibility
 
-This repository contains the current submission manuscript, Supplementary Information, aggregate source data, deterministic figure builders, formal locking-rule documentation, and validation records for **WrapEvoFS: Auditable Stochastic Feature Compression under Development-CV Regret Constraints**.
+This repository contains the submission manuscript, Supplementary Information, aggregate source data, deterministic figure builders, formal locking-rule documentation, and validation records for **WrapEvoFS enables auditable feature compression with regret-constrained representative locking**.
 
 The companion Python package is maintained separately at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package).
 
 ## Manuscript
 
-- [Main article](manuscript/source/main.pdf) — 19 pages, six main figures, and three main tables.
-- [Supplementary Information](manuscript/source/supplementary_information.pdf) — 46 pages, Supplementary Figures S1–S27, and Supplementary Tables S1–S26.
+- [Main article](manuscript/source/main.pdf) — 16 pages, five main figures, and two main tables.
+- [Supplementary Information](manuscript/source/supplementary_information.pdf) — 48 pages, Supplementary Figures S1–S28, and Supplementary Tables S1–S28.
 - [LaTeX source](manuscript/source/) — independently compilable main and Supplementary entry points.
 - [Validation report](manuscript/source/documentation/validation/VALIDATION_REPORT.md) — build, numerical, citation, and visual-QA checks.
 - [Display map](manuscript/source/documentation/DISPLAY_MAP.md) and [figure-source manifest](manuscript/source/documentation/FIGURE_SOURCE_DATA_MANIFEST.csv) — claim-to-display and display-to-source mappings.
@@ -39,9 +39,9 @@ The formal locking guarantee is limited to the configured empirical development-
 
 See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for build and validation commands and [DATA_BOUNDARIES.md](DATA_BOUNDARIES.md) for the data-access boundary.
 
-## Review status
+## Submission status
 
-This repository is maintained for controlled manuscript review. Before journal submission, the authors must complete the private-radiomics ethics wording, ADNI Data and Publications Committee review, and final all-author sign-off documented in the [author-confirmation checklist](manuscript/source/documentation/submission/AUTHOR_CONFIRMATION_REQUIRED.md).
+The computational manuscript package is complete. External submission actions that cannot be inferred from the analysis artifacts, including final ethics wording, data-provider publication review, archive identifiers, and author approval, are tracked in the [author-confirmation checklist](manuscript/source/documentation/submission/AUTHOR_CONFIRMATION_REQUIRED.md).
 
 ## Citation and licensing
 

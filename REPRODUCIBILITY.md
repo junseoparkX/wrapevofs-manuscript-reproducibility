@@ -9,7 +9,7 @@ latexmk -g -lualatex -interaction=nonstopmode -halt-on-error main.tex
 latexmk -g -lualatex -interaction=nonstopmode -halt-on-error supplementary_information.tex
 ```
 
-The verified outputs contain 19 main-article pages and 46 Supplementary pages. The current build has no unresolved citations or references and no overfull or underfull boxes.
+The verified outputs contain 16 main-article pages and 48 Supplementary pages. The current build has no unresolved citations or references and no overfull or underfull boxes.
 
 ## Validate frozen results and presentation
 
@@ -21,9 +21,10 @@ python scripts/validate_main_panel_labels.py
 python scripts/validate_cgga_figure5_provenance.py
 python scripts/validate_radiomics_integration.py
 python scripts/validate_locking_simulation_integration.py
+python scripts/validate_display_citations.py
 ```
 
-These validators check frozen numerical invariants, panel-label consistency, source-table mappings, radiomics integration boundaries, and the controlled locking-layer simulation. The fully nested TCGA audit is documented in `documentation/validation/VALIDATION_REPORT.md` and supported by the aggregate records under `supplementary_data/tcga_nested_v1_v2/`.
+These validators check frozen numerical invariants, panel-label consistency, source-table mappings, radiomics integration boundaries, the controlled locking-layer simulation, and display-citation coverage. The fully nested TCGA and matched-selector audits are documented in `documentation/validation/VALIDATION_REPORT.md` and supported by aggregate records under `supplementary_data/tcga_nested_v1_v2/` and `supplementary_data/tcga_matched_comparator/`.
 
 ## Rebuild presentation assets
 

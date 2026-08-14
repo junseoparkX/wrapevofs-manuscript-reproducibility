@@ -14,6 +14,9 @@ __pycache__/
 *.log
 *.out
 *.synctex.gz
+.texcache/
+.tex-cache/
+.texconfig/
 
 # Local scratch and controlled inputs
 tmp/

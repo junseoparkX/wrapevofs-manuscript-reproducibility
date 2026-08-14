@@ -1,7 +1,7 @@
 \begin{table}[H]
 \centering
 \caption{Controlled synthetic candidate-bank locking simulation under the primary $R=5$ and $\delta=0.01$ design.}
-\label{tab:supp22}
+\label{tab:supp23}
 \scriptsize
 \textit{Panel A. Equal-scenario primary operating characteristics}\par\smallskip
 \setlength{\tabcolsep}{3.2pt}
@@ -10,7 +10,7 @@
 Rule & Oracle regret & Group recovery & Exact recovery & Full-bank Jaccard & Score optimism & Failure (\%) \\
 \midrule
 Highest score & 0.0022 & 0.851 & 0.749 & 0.424 & 0.0143 & 0.145 \\
-Legacy top-3 medoid & 0.0025 & 0.847 & 0.755 & 0.460 & 0.0073 & 0.032 \\
+Legacy top-three medoid & 0.0025 & 0.847 & 0.755 & 0.460 & 0.0073 & 0.032 \\
 Full-bank medoid & 0.0023 & 0.851 & 0.771 & 0.475 & 0.0006 & 0.014 \\
 Regret-constrained medoid & 0.0026 & 0.846 & 0.751 & 0.446 & 0.0133 & 0.128 \\
 \bottomrule
@@ -24,14 +24,14 @@ Regret-constrained medoid & 0.0026 & 0.846 & 0.751 & 0.446 & 0.0133 & 0.128 \\
 Rule & Mean regret & Scenario means $>0.01$ & Maximum scenario q95 & Individual guarantee audit \\
 \midrule
 Highest score & 0.0000 & 0 / 162 & 0.0000 & 0 by definition \\
-Legacy top-3 medoid & 0.0073 & 46 / 162 & 0.0783 & Not constrained \\
+Legacy top-three medoid & 0.0073 & 46 / 162 & 0.0783 & Not constrained \\
 Full-bank medoid & 0.0138 & 67 / 162 & 0.1226 & Not constrained \\
 Regret-constrained medoid & 0.0013 & 0 / 162 & 0.0091 & 0 / 4,995,000 \\
 \bottomrule
 \end{tabular}
 
 \medskip
-\textit{Panel C. Current-rule primary decision paths}\par\smallskip
+\textit{Panel C. Regret-constrained-medoid primary decision paths}\par\smallskip
 \begin{tabular}{lr}
 \toprule
 Decision stage & Probability (\%) \\

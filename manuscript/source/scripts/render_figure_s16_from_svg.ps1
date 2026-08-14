@@ -4,8 +4,11 @@ $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $wrapper = (Resolve-Path (Join-Path $PSScriptRoot 'figure_s16_render_wrapper.html')).Path
 $output = Join-Path $root 'figures\figure_s16.pdf'
 $pngStem = Join-Path $root 'figures\figure_s16'
-$chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
-$pdftoppm = 'C:\Users\junse\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin\pdftoppm.exe'
+$chrome = (Get-Command chrome.exe -ErrorAction SilentlyContinue).Source
+if (-not $chrome) {
+    $chrome = Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'
+}
+$pdftoppm = (Get-Command pdftoppm -ErrorAction Stop).Source
 
 foreach ($path in @($chrome, $pdftoppm)) {
     if (-not (Test-Path -LiteralPath $path)) {

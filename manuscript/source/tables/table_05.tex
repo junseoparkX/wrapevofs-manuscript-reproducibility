@@ -3,7 +3,7 @@
 \renewcommand{\arraystretch}{1.08}
 \setlength{\tabcolsep}{2.2pt}
 \begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.2350\linewidth}>{\centering\arraybackslash}p{0.2350\linewidth}>{\centering\arraybackslash}p{0.2350\linewidth}>{\raggedright\arraybackslash}p{0.2350\linewidth}@{}}
-\caption{Dataset preprocessing and application boundaries.}\label{tab:supp25}\\
+\caption{Dataset preprocessing and application boundaries.}\label{tab:supp26}\\
 \toprule
 \bfseries Dataset & \bfseries Supplied matrix / preprocessing boundary & \bfseries Development-only fitted operations & \bfseries Held-out application \\
 \midrule
@@ -18,7 +18,7 @@
 ADNI & 7,464 raw predictors; fixed 80:20 split & >20\% missingness filter; minimum-positive/2 imputation; log2; zero-variance filter & Development-derived feature rules and imputations applied unchanged \\
 CGGA & 24,326 aligned expression predictors; fixed 70:30 split & >20\% missingness filter and minimum-positive/2 logic were encoded in the source notebook; no feature/cell changes were required for the supplied matrices & Locked 92-participant partition accessed after model locking \\
 AMP-AD & 13,136 supplied predictors; four fixed LOCO folds & >20\% missingness filter; median imputation; zero-variance filter within each development fold & Fitted transformations applied unchanged to each held-out center \\
-TCGA GBM/LGG & 491 participants; 25,118 supplied RNA-seq and SCNV predictors; two stratified five-fold outer-CV repeats & All preprocessing, Direct screening, RFECV, five GA runs, fixed candidate rescoring, and regret-constrained medoid locking fitted within each outer-training partition & Each outer-test fold was scored once after locking and was unavailable to every selection step \\
+TCGA GBM/LGG & 491 participants; 20,118 supplied RNA-seq predictors and 5,000 provider-filtered SCNV predictors; the SCNV boundary used label-independent variance filtering; two stratified five-fold outer-CV repeats & All study-fitted preprocessing, Direct screening, RFECV, five GA runs, fixed candidate rescoring, and regret-constrained medoid locking fitted within each outer-training partition & Each outer-test fold was scored once after locking and was unavailable to every selection step \\
 Private radiomics & 197 participants; fixed 70:30 split; 1,781 full-space and 1,346 perturbation-filtered predictors & Numeric validation and zero imputation; Direct screening, RFECV, five GA runs, and strict locking on development only & Six signatures locked before one evaluation on the 60-participant held-out partition \\
 \end{longtable}
 }

@@ -8,8 +8,11 @@ $pngStem = Join-Path $root 'figures\figure_s24'
 $png = Join-Path $root 'figures\figure_s24.png'
 $manifestPath = Join-Path $root 'supplementary_data\locking_rule_simulation\RENDER_MANIFEST.json'
 $profile = Join-Path $root '.tmp\chrome_figure_s24_profile'
-$chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
-$pdftoppm = 'C:\Users\junse\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin\pdftoppm.exe'
+$chrome = (Get-Command chrome.exe -ErrorAction SilentlyContinue).Source
+if (-not $chrome) {
+    $chrome = Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'
+}
+$pdftoppm = (Get-Command pdftoppm -ErrorAction Stop).Source
 
 foreach ($path in @($svg, $chrome, $pdftoppm)) {
     if (-not (Test-Path -LiteralPath $path)) {

@@ -10,9 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {
     "Figure 1": (ROOT / "figures" / "figure_1.svg", "ab"),
     "Figure 2": (ROOT / "figures" / "figure_2.svg", "abcd"),
-    "Figure 3": (ROOT / "figures" / "figure_3_panel_label_source.svg", "abc"),
-    "Figure 4": (ROOT / "figures" / "figure_4.svg", "abc"),
-    "Figure 5": (ROOT / "figures" / "figure_5.svg", "abc"),
+    "Figure 3": (ROOT / "figures" / "figure_3_strengthened.svg", "abcd"),
+    "Figure 4": (ROOT / "figures" / "figure_4_strengthened.svg", "abcd"),
+    "Figure 5": (ROOT / "figures" / "figure_5_strengthened.svg", "ab"),
 }
 
 

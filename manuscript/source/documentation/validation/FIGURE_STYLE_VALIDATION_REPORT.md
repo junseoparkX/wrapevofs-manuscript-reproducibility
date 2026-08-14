@@ -20,7 +20,7 @@ This pass changed presentation and document organization only. It did not rerun 
 ## Supplementary order
 
 - Figures are printed as S1--S27 in first main-text citation order.
-- Tables are printed as S1--S26 in first main-text citation order.
+- Tables are printed as S1--S27 in first main-text citation order; the added S27 is an upstream private-radiomics provenance table rather than a figure or empirical-result change.
 - Continuation pages remain attached to S13 and S16 and do not consume new numbers.
 - A previously forced S5 figure placement was normalized so it no longer preceded S1--S4.
 - Table floats were made non-floating at their ordered insertion points so they no longer moved behind later `longtable` items.
@@ -29,7 +29,7 @@ This pass changed presentation and document organization only. It did not rerun 
 ## Build and render QA
 
 - `main.tex`: PASS under LuaLaTeX, 19 pages.
-- `supplementary_information.tex`: PASS under LuaLaTeX, 46 pages.
+- `supplementary_information.tex`: PASS under LuaLaTeX, 47 pages.
 - Undefined references/citations: none.
 - Overfull/underfull boxes: none.
 - Every page of both PDFs was rendered to PNG contact sheets and visually inspected. No clipped panel labels, overlapping axes, displaced continuation labels, reversed figure order, reversed table order, or unintended blank pages were observed.
@@ -39,8 +39,8 @@ This pass changed presentation and document organization only. It did not rerun 
 - Figure 1 PDF: `eb5b604c5c6aa53f92cab46381edbc408101cc9488afc092bb1cf5daf4c9767c`
 - Figure 1 PNG: `db0cfa30cc67377e1fed49d224f2b839eb19900addeeff00dd5945bf9ccc6bb1`
 - Figure 1 SVG: `ba6a648daa73675e9f5d7418c81a5fd7a5209d8d7bb77aee7a328a34ebbe35fb`
-- Final main PDF: `d89262ba52a55b1a512bd9ef83798e3ea5ef088755f31f4bd2189e5abb56b9f1`
-- Final Supplementary PDF: `32117b8ef1f776dad7693b423502046b073308f23a4683db7915b8c466b4af32`
+- Final main PDF: `0416277e2d2c3fdfebcc62702abe150c44e2759ea18390a7d82f9b8d1cd8f0bc`
+- Final Supplementary PDF: `da7a7e857475d9aaf68bc11b0f1e27ad03fc403a27679382c23d0f7bfd81a92e`
 
 ## Claim boundary
 

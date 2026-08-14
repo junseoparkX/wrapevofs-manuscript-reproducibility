@@ -8,12 +8,12 @@
     "locking-simulation sensitivity axes match the frozen design",
     "protocol and workload provenance are internally consistent",
     "locking-simulation PDF/SVG/PNG hashes, 170-mm canvas, and grid-free style pass",
-    "Results, Discussion, and Methods citations plus S27/S22 labels pass",
-    "source-data manifest includes Supplementary Figure S27"
+    "Results and Methods citations plus S28/S23 labels pass",
+    "source-data manifest includes Supplementary Figure S28"
   ],
   "manuscript_outputs": {
-    "main_pdf_sha256": "ff6200885e8ca2e89c6ebee96a769dc7dfeec26ff08ec6c1563b04820eb9267f",
-    "supplementary_pdf_sha256": "7689dbd1a84ebdb312dba910056f93853ae358791c588f25ba687613497fda85"
+    "main_pdf_sha256": "93dc1e1cb1eee2abeca450a243104403d3454687d57cf74413efc9d1fa7a8768",
+    "supplementary_pdf_sha256": "bdec38d8f69782ff789360d2bf2702e91499d1a764fc187ead2b93ba7299f5c0"
   },
   "claim_boundary": "Hidden synthetic utility is not AUROC. The simulation evaluates candidate-bank locking only and does not establish predictive superiority, unbiased generalization, external validity, participant-resampling stability, biomarker stability, or clinical utility."
 }

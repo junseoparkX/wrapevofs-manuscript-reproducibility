@@ -115,24 +115,24 @@ def main() -> None:
     main_text = (ROOT / "sections" / "main_text.tex").read_text(encoding="utf-8")
     supplementary = (ROOT / "sections" / "supplementary.tex").read_text(encoding="utf-8")
     table = (ROOT / "tables" / "table_47.tex").read_text(encoding="utf-8")
-    if main_text.count("Supplementary Fig.~S27") < 3:
-        raise AssertionError("Figure S27 is not cited in Results, Discussion, and Methods")
-    if main_text.count("Supplementary Table~S22") < 3:
-        raise AssertionError("Table S22 is not cited in Results, Discussion, and Methods")
-    if supplementary.count("\\label{fig:supp27}") != 1:
-        raise AssertionError("Supplementary Figure S27 label is missing or duplicated")
-    if table.count("\\label{tab:supp22}") != 1 or "q95 denotes" not in table:
-        raise AssertionError("Supplementary Table S22 label or q95 definition failed")
+    if main_text.count("Supplementary Fig.~S28") < 2:
+        raise AssertionError("Figure S28 is not cited in Results and Methods")
+    if main_text.count("Supplementary Table~S23") < 2:
+        raise AssertionError("Table S23 is not cited in Results and Methods")
+    if supplementary.count("\\label{fig:supp28}") != 1:
+        raise AssertionError("Supplementary Figure S28 label is missing or duplicated")
+    if table.count("\\label{tab:supp23}") != 1 or "q95 denotes" not in table:
+        raise AssertionError("Supplementary Table S23 label or q95 definition failed")
     if "—" in main_text or "—" in supplementary or "—" in table:
         raise AssertionError("An em dash was introduced in the integrated manuscript text")
-    checks.append("Results, Discussion, and Methods citations plus S27/S22 labels pass")
+    checks.append("Results and Methods citations plus S28/S23 labels pass")
 
     source_manifest = (
         ROOT / "documentation" / "FIGURE_SOURCE_DATA_MANIFEST.csv"
     ).read_text(encoding="utf-8")
-    if "Supplementary Figure S27" not in source_manifest or "figure_s24.pdf" not in source_manifest:
+    if "Supplementary Figure S28" not in source_manifest or "figure_s24.pdf" not in source_manifest:
         raise AssertionError("Locking-simulation asset is absent from the source-data manifest")
-    checks.append("source-data manifest includes Supplementary Figure S27")
+    checks.append("source-data manifest includes Supplementary Figure S28")
 
     report = {
         "status": "PASS",
