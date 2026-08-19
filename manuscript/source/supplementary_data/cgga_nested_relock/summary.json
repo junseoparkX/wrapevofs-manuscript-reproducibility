@@ -30,7 +30,7 @@
     "auroc": 0.6673076923076924,
     "balanced_accuracy": 0.6488636363636364
   },
-  "package_source": "C:\\Users\\junse\\Documents\\research\\gbm_package\\src",
+  "package_source": "https://github.com/junseoparkX/wrapevofs-package/tree/v0.2.0/src",
   "participants": 214,
   "scope": "Post hoc development-only nested sensitivity; reduced archived GA budget; original 92-participant held-out cohort not accessed.",
   "selection_changes": 5,

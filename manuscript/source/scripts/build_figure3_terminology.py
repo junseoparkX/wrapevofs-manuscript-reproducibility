@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -23,7 +24,10 @@ SOURCE = (
     / "main"
     / "Figure_3_AMPAD_budget_calibration.svg"
 )
-NODE = shutil.which("node") or "node"
+NODE_EXECUTABLE = os.environ.get("NODE_EXECUTABLE") or shutil.which("node")
+if NODE_EXECUTABLE is None:
+    raise RuntimeError("Node.js was not found; set NODE_EXECUTABLE or add node to PATH.")
+NODE = Path(NODE_EXECUTABLE)
 RENDERER = ROOT / "analysis" / "render_svg_assets.cjs"
 
 sys.path.insert(0, str(ROOT))
@@ -75,7 +79,7 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
-    subprocess.run([NODE, str(RENDERER), str(render_manifest)], check=True, cwd=ROOT)
+    subprocess.run([str(NODE), str(RENDERER), str(render_manifest)], check=True, cwd=ROOT)
 
     image = Image.open(pregrid).convert("RGB")
     image, grid_audit = remove_grid_strokes(image)

@@ -20,10 +20,10 @@
   "panel_label_policy": "bold panel letters only",
   "simulation_included": false,
   "source_outputs": [
-    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\ampad_updated_one_time_heldout_20260808",
-    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_coherent_benchmark_20260808\\outputs",
-    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_nested_relock_20260808\\outputs",
-    "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\cgga_nested_validation\\outputs\\primary"
+    "archive://ampad_updated_one_time_heldout_20260808",
+    "archive://cgga_coherent_benchmark_20260808/outputs",
+    "archive://cgga_nested_relock_20260808/outputs",
+    "archive://cgga_nested_validation/outputs/primary"
   ],
   "target_width_mm": 170
 }

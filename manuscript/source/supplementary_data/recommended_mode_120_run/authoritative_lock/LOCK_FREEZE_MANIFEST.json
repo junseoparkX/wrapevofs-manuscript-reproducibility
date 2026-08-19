@@ -21,13 +21,13 @@
     "duplicate_mask_policy": "retain_multiplicity_as_voting_candidates"
   },
   "inputs": {
-    "config": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\bundle\\WrapEvoFS_AMPAD_Remaining_90_Recommended_Runs\\configs\\ampad_remaining90.yaml",
+    "config": "archive://remaining90_completed_20260806/bundle/WrapEvoFS_AMPAD_Remaining_90_Recommended_Runs/configs/ampad_remaining90.yaml",
     "config_sha256": "15f5999e4690ea71d9e84b9a347842820d941d9f5bee57cc93dad392a1fed9b5",
-    "frozen_scores": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\development_freeze_bundle_rule_diagnostic\\fold_locking_scores.csv",
+    "frozen_scores": "archive://remaining90_completed_20260806/development_freeze_bundle_rule_diagnostic/fold_locking_scores.csv",
     "frozen_scores_sha256": "4541d11dc946e1551420fad5cb0c8d412d4d4c5b3093faba4709cee7745b7244",
-    "bundle_condition_inventory": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\remaining90_completed_20260806\\development_freeze_bundle_rule_diagnostic\\recommended_18_condition_inventory.csv",
+    "bundle_condition_inventory": "archive://remaining90_completed_20260806/development_freeze_bundle_rule_diagnostic/recommended_18_condition_inventory.csv",
     "bundle_condition_inventory_sha256": "a7b86363ef8bb3c50c8b56fa00ce28b93ca33223553efa40fe3f9533a69431df",
-    "package_src": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\release_candidate_20260803_105542\\publish_clone\\src"
+    "package_src": "https://github.com/junseoparkX/wrapevofs-package/tree/v0.2.0/src"
   },
   "artifacts": {
     "candidate_locking_audit.csv": "5bf03d0867a22b951c84607ece9b5d48c1c227ea0c85b6a61f3be4ddd878f7a9",

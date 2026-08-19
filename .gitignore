@@ -17,6 +17,8 @@ __pycache__/
 .texcache/
 .tex-cache/
 .texconfig/
+.texlive-cache/
+.texmfvar/
 
 # Local scratch and controlled inputs
 tmp/
@@ -28,11 +30,17 @@ outputs/
 runs/
 qa_*/
 release_candidate_*/
+.codex*/
 *.zip
 *.joblib
 *.npy
 *.npz
 *.parquet
+
+# Restricted or prediction-level records
+**/outer_predictions.csv
+**/participant_predictions.csv
+manuscript/source/documentation/submission/
 
 # OS/editor
 .DS_Store

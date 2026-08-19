@@ -2,7 +2,7 @@
 
 ## Authoritative manuscript tree
 
-Root: `manuscript/source`
+Root at the time of integration: the authoritative manuscript source now published under `manuscript/source/`.
 
 | File | Change |
 |---|---|
@@ -34,7 +34,7 @@ Directory: `regret_locking_formalization/`
 
 ## Package tree
 
-Root: companion repository `junseoparkX/wrapevofs-package`
+Repository: [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package), release v0.2.0.
 
 | File | Necessary change |
 |---|---|

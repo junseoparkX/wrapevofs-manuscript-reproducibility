@@ -715,8 +715,12 @@ def corrected_s16() -> None:
         & sensitivity["tolerance_mode"].eq("absolute")
     ].copy()
     absolute["regret_tolerance"] = pd.to_numeric(absolute["regret_tolerance"])
+    # Figure S4 is the prespecified AMP-AD/CGGA tolerance comparison. ADNI is
+    # retained in the complete corrected source table but reported separately
+    # in Table S8 because all three pools remain singleton through delta=0.01.
+    plot_absolute = absolute.loc[absolute["dataset"].isin(["AMP-AD", "CGGA"])]
     summary = (
-        absolute.groupby(["dataset", "regret_tolerance"], as_index=False)
+        plot_absolute.groupby(["dataset", "regret_tolerance"], as_index=False)
         .agg(
             pool_size=("eligible_pool_size", "mean"),
             selected_regret=("absolute_regret", "mean"),

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate display numbering and main-text citation coverage."""
+"""Validate V16 display numbering and main-text citation coverage."""
 
 from __future__ import annotations
 

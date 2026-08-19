@@ -1,11 +1,7 @@
 \usepackage[left=18mm,right=18mm,top=22mm,bottom=22mm]{geometry}
-\usepackage{fontspec}
-\setmainfont{TeX Gyre Termes}
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{amsmath,bm}
-\usepackage{unicode-math}
-\setmathfont{TeX Gyre Termes Math}
 \usepackage{booktabs,longtable,tabularx,array,multirow}
 \usepackage{caption}
 \usepackage{float}
@@ -16,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage[left]{lineno}
 \usepackage{titlesec}
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{orcidlink}
 \usepackage[nameinlink]{cleveref}
@@ -43,7 +40,78 @@
 \crefname{table}{Table}{Tables}
 \Crefname{table}{Table}{Tables}
 \newcommand{\keywords}[1]{\par\smallskip\noindent\textbf{Keywords:} \textit{#1}}
+\newcommand{\supplementarytablesection}[1]{\par\noindent{\footnotesize\bfseries #1}\par\smallskip}
 \AtBeginEnvironment{thebibliography}{\sloppy}
+
+\newcommand{\WrapEvoFSTitleText}{WrapEvoFS enables auditable feature compression with regret-constrained representative locking}
+\newcommand{\WrapEvoFSTitlePage}[2]{%
+  \hypersetup{pageanchor=false}%
+  \begin{titlepage}
+  \thispagestyle{empty}
+  \begin{center}
+  \color{black}
+  \vspace*{0.35em}
+  \ifstrempty{#1}{}{%
+    {\fontsize{15}{18}\selectfont\sffamily\bfseries #1\par}
+    \vspace{1.2em}}
+  \begin{minipage}{0.90\textwidth}
+  \centering
+  {\fontsize{20}{24}\selectfont\sffamily\bfseries \WrapEvoFSTitleText\par}
+  \end{minipage}\par
+  \vspace{1.8em}
+  {\fontsize{11}{15}\selectfont
+    Junseo Park~\orcidlink{0009-0002-4385-6987}\textsuperscript{1,2},
+    Leonard J. Foster~\orcidlink{0000-0001-8551-4817}\textsuperscript{2,3},\\[0.12em]
+    Mostafa Fatehi Hassanabad\textsuperscript{4,5},
+    Emma Schmidt\textsuperscript{4,5},\\[0.12em]
+    Huan Zhong~\orcidlink{0000-0002-7294-2254}\textsuperscript{2,3,*}\par}
+  \vspace{0.45em}
+  {\small\itshape for the Alzheimer's Disease Neuroimaging Initiative\textsuperscript{\ddagger}\par}
+  \vspace{1.2em}
+  \rule{0.90\textwidth}{0.55pt}
+  \vspace{0.95em}
+  \begin{minipage}{0.90\textwidth}
+  \footnotesize\setlength{\parindent}{0pt}
+  {\small\sffamily\bfseries\textls[25]{Affiliations}}\par\smallskip
+  \begin{tabularx}{\textwidth}{@{}>{\raggedleft\arraybackslash}p{1.3em}@{\hspace{0.35em}}X@{}}
+  \textsuperscript{1} & Department of Computer Science, University of British Columbia, Vancouver, BC, Canada\\
+  \textsuperscript{2} & Michael Smith Laboratories, University of British Columbia, Vancouver, BC, Canada\\
+  \textsuperscript{3} & Department of Biochemistry \& Molecular Biology, Faculty of Medicine, University of British Columbia, Vancouver, BC, Canada\\
+  \textsuperscript{4} & Division of Neurosurgery, Department of Surgery, Faculty of Medicine, University of British Columbia, Vancouver, BC, Canada\\
+  \textsuperscript{5} & Vancouver General Hospital, Vancouver Coastal Health, Vancouver, BC, Canada
+  \end{tabularx}
+  \end{minipage}
+  \vspace{0.95em}
+  \begin{minipage}{0.90\textwidth}
+  {\footnotesize\setlength{\parindent}{0pt}
+  {\small\sffamily\bfseries\textls[25]{Author email addresses}}\par\smallskip
+  \begin{tabularx}{\textwidth}{@{}lX@{\hspace{1.2em}}lX@{}}
+  Junseo Park & \href{mailto:junseoparkj@gmail.com}{junseoparkj@gmail.com} & Leonard J. Foster & \href{mailto:foster@msl.ubc.ca}{foster@msl.ubc.ca}\\
+  Mostafa Fatehi Hassanabad & \href{mailto:mostafa.fatehi@vch.ca}{mostafa.fatehi@vch.ca} & Emma Schmidt & \href{mailto:emma8s@student.ubc.ca}{emma8s@student.ubc.ca}\\
+  Huan Zhong & \href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca} & &
+  \end{tabularx}\par
+  \medskip
+  {\small\sffamily\bfseries\textls[25]{Correspondence}}\par\smallskip
+  \textsuperscript{*}Huan Zhong (\href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca})\par
+  \medskip
+  {\scriptsize\textsuperscript{\ddagger}Data used in preparation of this article were obtained from the
+  Alzheimer's Disease Neuroimaging Initiative (ADNI) database
+  (\href{https://adni.loni.usc.edu/}{adni.loni.usc.edu}). The investigators within ADNI contributed to the design
+  and implementation of ADNI and/or provided data but did not participate in the analysis or writing of this report.
+  The complete investigator list is available in the
+  \href{https://adni.loni.usc.edu/wp-content/uploads/how_to_apply/ADNI_Acknowledgement_List.pdf}{ADNI acknowledgement list}.\par}}
+  \end{minipage}
+  \ifstrempty{#2}{}{%
+    \vspace{1em}
+    \begin{minipage}{0.90\textwidth}
+    {\small\setlength{\parindent}{0pt}{\sffamily\bfseries\textls[25]{Contents}}\par\smallskip #2\par}
+    \end{minipage}}
+  \vspace{0.9em}
+  \vfill
+  \end{center}
+  \end{titlepage}
+  \hypersetup{pageanchor=true}%
+}
 
 \newcommand{\supplementarysetup}{%
   \setcounter{section}{0}\renewcommand{\thesection}{S\arabic{section}}%

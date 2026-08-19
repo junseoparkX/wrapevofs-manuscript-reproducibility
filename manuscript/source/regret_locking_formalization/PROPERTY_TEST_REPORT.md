@@ -1,7 +1,7 @@
 # Property test report
 
 Date: 2026-08-03
-Package: companion repository `junseoparkX/wrapevofs-package`
+Package: `wrapevofs` v0.2.0 ([public repository](https://github.com/junseoparkX/wrapevofs-package)).
 Scope: locking/configuration behavior only; no empirical feature-selection analysis was executed.
 
 ## Result

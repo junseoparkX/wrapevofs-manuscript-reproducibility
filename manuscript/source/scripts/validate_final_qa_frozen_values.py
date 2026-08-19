@@ -20,7 +20,7 @@ def main() -> None:
     main_text = ROOT / "sections" / "main_text.tex"
     require_text(
         main_text,
-        "120 completed GPU GA runs",
+        "120 completed GA runs",
         "24 Small/Reference",
         "decreased from 216 to 137",
         "deviation remained lower at 135 versus 112",

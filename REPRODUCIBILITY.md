@@ -1,5 +1,21 @@
 # Reproducibility guide
 
+## Environment
+
+Create a clean Python environment from the repository root:
+
+```bash
+python -m venv .venv
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+The associated software release can be installed independently with:
+
+```bash
+python -m pip install wrapevofs==0.2.0
+```
+
 ## Build the manuscript
 
 The manuscript uses LuaLaTeX. From `manuscript/source/`:
@@ -9,39 +25,53 @@ latexmk -g -lualatex -interaction=nonstopmode -halt-on-error main.tex
 latexmk -g -lualatex -interaction=nonstopmode -halt-on-error supplementary_information.tex
 ```
 
-The verified outputs contain 16 main-article pages and 48 Supplementary pages. The current build has no unresolved citations or references and no overfull or underfull boxes.
+The verified outputs contain 18 main-article pages and 51 Supplementary pages.
+The final logs contain no unresolved citations or references and no overfull or
+underfull boxes.
 
 ## Validate frozen results and presentation
 
-Install the Python dependencies from the repository root, then run from `manuscript/source/`:
+Run the following commands from `manuscript/source/`:
 
 ```bash
+python scripts/validate_figure1_freeze.py
 python scripts/validate_final_qa_frozen_values.py
 python scripts/validate_main_panel_labels.py
 python scripts/validate_cgga_figure5_provenance.py
 python scripts/validate_radiomics_integration.py
 python scripts/validate_locking_simulation_integration.py
-python scripts/validate_display_citations.py
+python scripts/validate_submission_pdfs.py main.pdf supplementary_information.pdf
 ```
 
-These validators check frozen numerical invariants, panel-label consistency, source-table mappings, radiomics integration boundaries, the controlled locking-layer simulation, and display-citation coverage. The fully nested TCGA and matched-selector audits are documented in `documentation/validation/VALIDATION_REPORT.md` and supported by aggregate records under `supplementary_data/tcga_nested_v1_v2/` and `supplementary_data/tcga_matched_comparator/`.
+These checks cover frozen numerical invariants, canonical panel labels,
+figure-source provenance, VGH radiomics integration boundaries, the controlled
+locking-layer simulation, PDF page boundaries, blank pages, and Supplementary
+display numbering. Detailed outcomes are recorded in
+`manuscript/source/documentation/validation/VALIDATION_REPORT.md`.
 
 ## Rebuild presentation assets
 
-Deterministic builders are stored in `manuscript/source/scripts/`. Principal entry points include:
+Deterministic builders are stored in `manuscript/source/scripts/`. Principal
+entry points include:
 
-- `build_main_figure2.py` — updated-configuration mechanism verification;
-- `build_cgga_figure5.py` — CGGA compression, incremental effects, and agreement;
-- `build_tcga_nested_figures.py` — fully nested TCGA main and supplementary displays;
-- `build_postfreeze_results.py` — post-freeze AMP-AD result figures;
-- `build_radiomics_s20.py` — aggregate private-radiomics display;
-- `build_locking_simulation.py` — controlled locking-layer simulation display;
-- `build_submission_archive.ps1` — clean manuscript-source archive.
+- `build_main_figure2.py`: corrected-objective and locking verification;
+- `build_tcga_nested_figures.py`: fully nested TCGA displays;
+- `build_strengthened_postfreeze_figure.py`: post-freeze AMP-AD held-out display;
+- `build_cgga_figure5.py`: CGGA compression and agreement display;
+- `build_radiomics_s20.py`: aggregate VGH radiomics display;
+- `build_locking_simulation.py`: controlled locking-layer simulation display.
 
-Each builder documents its inputs and output scope. Figure generation from included aggregate tables is distinct from rerunning GA, RFECV, Direct selection, model fitting, or held-out evaluation.
+Each builder documents its aggregate inputs and output scope. Rebuilding a
+display from included source tables is distinct from rerunning GA, RFECV, Direct
+selection, model fitting, or held-out evaluation.
 
 ## Controlled-input boundary
 
-Participant-level and provider-controlled inputs, raw predictions, model objects, and run checkpoints are excluded. Complete raw-to-aggregate reproduction may require authorized source access, source-specific preprocessing, and separately retained run artifacts. Missing controlled inputs must not be fabricated or replaced.
+Participant-level and provider-controlled inputs, identifiers, imaging data,
+prediction-level records, model objects, and run checkpoints are excluded.
+Complete raw-to-aggregate reproduction requires the relevant data-use approval,
+source-specific preprocessing, and separately retained run artifacts. Missing
+controlled inputs must not be fabricated or substituted.
 
-The companion software implementation and tests are maintained at [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package).
+The maintained implementation and executable package tests are in the
+[companion software repository](https://github.com/junseoparkX/wrapevofs-package).

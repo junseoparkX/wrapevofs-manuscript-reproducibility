@@ -1,25 +1,24 @@
-# Submission-ready manuscript package
+# Manuscript change log
 
-This tree is the single authoritative manuscript source. Historical drafts remain available through Git history and are not duplicated in the repository.
+## Current submission release
 
-## Scientific content
+- Reframed the manuscript around the regret-constrained representative locking rule and its auditable finite-bank guarantee.
+- Integrated the corrected untruncated genetic objective and development-only multicentre sensitivity analysis.
+- Added the two-repeat, five-fold fully nested TCGA GBM/LGG experiment and checksum-frozen matched-selector analyses.
+- Added the one-time post-freeze AMP-AD held-out evaluation and complete ADNI five-mask retrospective re-locking audit.
+- Retained the archived ADNI, AMP-AD, and CGGA analyses with explicit legacy-rule identification.
+- Added the VGH brain-tumour radiomics sensitivity analysis and confirmed ethics wording for UBC approval H20-02354.
+- Added formal propositions, proofs, complexity analysis, deterministic tie-breaking, duplicate-mask policy, and implementation correspondence.
+- Standardized the main and Supplementary display sequence, panel labels, typography, figure geometry, captions, and source-data mapping.
+- Updated the five-author byline, affiliations, contributions, data availability, software release, and submission declarations.
 
-- Formalizes regret-constrained representative locking, including deterministic tie-breaking, exact empirical-regret guarantees, duplicate handling, proofs, complexity, and implementation correspondence.
-- Incorporates the corrected genetic objective and complete development-only audit without altering archived empirical results.
-- Includes the fully nested TCGA GBM/LGG analysis, its candidate-bank geometry and partition-sensitivity audit, and a checksum-frozen matched-selector sensitivity.
-- Includes the one-time post-freeze AMP-AD evaluation, archived ADNI and CGGA analyses, private-radiomics internal analysis, and controlled locking-layer simulation.
-- Preserves explicit boundaries between empirical development-CV regret, predictive risk, generalization, stability, and statistical uncertainty.
+## Reproducibility and validation
 
-## Editorial and presentation changes
+- The main article and Supplementary Information compile independently with LuaLaTeX.
+- All main and Supplementary displays are cited and sequentially numbered.
+- Frozen numerical invariants, locking decisions, figure-source mappings, and PDF page boundaries are covered by deterministic validators.
+- Participant-level and provider-controlled data, prediction-level records, model objects, and run checkpoints are excluded from the public repository.
+- Historical source states remain available through Git history instead of duplicated version directories.
 
-- Uses a Nature Communications-oriented title, abstract, section order, declarations, and display count.
-- Orders Supplementary Figures S1–S28 and Supplementary Tables S1–S28 by first citation.
-- Harmonizes publication figures with consistent panel labels, 170-mm layouts where applicable, muted colors, and grid-free plotting.
-- Separates analysis, validation, submission, source-data, and formalization records into documented directories.
-
-## Validation
-
-- Main article: 16 pages, five figures, and two tables.
-- Supplementary Information: 48 pages, 28 figures, and 28 tables.
-- LaTeX references, citations, display numbering, frozen numerical values, figure labels, and Figure 1 checksum have been validated.
-- Remaining ethics, data-provider review, archive, checklist, and author-approval tasks are external submission actions and are tracked separately.
+No archived empirical value, selected feature set, candidate bank, or finalized
+stable-hash rule was altered by the editorial and repository-curation changes.

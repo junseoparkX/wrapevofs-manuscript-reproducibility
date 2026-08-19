@@ -261,7 +261,7 @@ def main() -> None:
             metadata = {
                 "Creator": "WrapEvoFS build_radiomics_s20.py",
                 "Date": None,
-                "Title": "Supplementary Figure S20 private radiomics",
+                "Title": "Supplementary Figure S20 VGH brain-tumour radiomics",
             }
         else:
             metadata = {"Software": "WrapEvoFS build_radiomics_s20.py"}

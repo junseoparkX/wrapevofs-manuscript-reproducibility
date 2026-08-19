@@ -28,4 +28,4 @@ Date: 2026-08-08
 
 ## Remaining non-computational submission items
 
-Private-radiomics REB/IRB approval or exemption wording and consent/waiver basis, all-author declaration approval, and ADNI DPC upload/review remain outside machine verification.
+Private-radiomics ethics provenance is now documented as UBC approval H20-02354, a retrospective consent waiver, anonymization, and permission for secondary analysis. All-author declaration approval and ADNI DPC upload/review remain outside machine verification.

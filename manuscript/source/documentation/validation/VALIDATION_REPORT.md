@@ -1,74 +1,59 @@
 # Submission validation report
 
-## Build and visual QA
+## Build and submission counts
 
-- `main.tex`: PASS under LuaLaTeX; 16 pages.
-- `supplementary_information.tex`: PASS under LuaLaTeX; 48 pages.
-- Main PDF SHA-256: `93dc1e1cb1eee2abeca450a243104403d3454687d57cf74413efc9d1fa7a8768`.
-- Supplementary PDF SHA-256: `bdec38d8f69782ff789360d2bf2702e91499d1a764fc187ead2b93ba7299f5c0`.
-- Undefined references or citations: none.
-- Overfull or underfull boxes: none in the final logs.
-- Main figures: five; main tables: two.
-- Supplementary figures: S1--S28 in first-citation order. Multi-page Figures S5, S16, and S17 show a continuation notice on the first page and the complete numbered caption only after all panels on the second page.
-- Supplementary tables: S1--S28.
-- Submission counter: title 9 words; Abstract 150 words; Introduction, Results, and Discussion 2,090 words; Methods 3,206 words.
-- All 16 main pages and all 48 Supplementary pages were rendered to PNG and inspected. The Supplementary title, both Algorithm S1 pages, first-citation-ordered TCGA figures and tables, multi-page Figures S5/S16/S17, post-freeze AMP-AD display, and terminal provenance table were additionally inspected at page resolution. No clipping, overlap, unreadable label, blank page, or unintended grid was found.
-- The `S2 Supplementary Figures` heading and Supplementary Figure S1 are fixed to the same page; the preceding Supplementary Methods end cleanly on the prior page.
-- Algorithm S1 retains coherent run, generation, chromosome, conditional, and termination indentation across its page break.
-- Every main Figure 1--5 and Table 1--2 is cited in the main text. Every Supplementary Figure S1--S28 and Table S1--S28 is cited, and compiled counters are strictly sequential without missing or duplicated labels.
-- The corrected TCGA common-seed audit records 180 final method fits and 17,676 participant--method outer-prediction records; the earlier erroneous phrase "420 expected outer-prediction rows" was removed.
-- Figures 3--5 and S8 use 170-mm publication assets. Panel-label validators pass with equal bold labels within each figure.
+- `main.tex`: PASS under LuaLaTeX; 18 pages.
+- `supplementary_information.tex`: PASS under LuaLaTeX; 51 pages.
+- Main PDF SHA-256: `c0b2f1b63471bf79d69cb7ae3db8600af54a3de909390f8790c61bc90c656640`.
+- Supplementary PDF SHA-256: `b823ef0878d88426de9497ec95aff4d6cc0672214953a6fba6021ee1e9248b31`.
+- Final logs contain no undefined references, undefined citations, duplicate labels, missing figures, missing characters, overfull boxes, or fatal LaTeX errors. The only logged font notice is a benign 0.5-point substitution for the small ORCID icon glyphs.
+- Deterministic submission counts: title 9 words; Abstract 150 words; Introduction, Results, and Discussion 2,134 words; Methods 2,928 words; five main figures and two main tables.
+
+## Display, citation, and visual QA
+
+- Every main Figure 1--5 and Table 1--2 is cited in the main text.
+- Supplementary Figures S1--S28 and Supplementary Tables S1--S28 are numbered sequentially and cited.
+- Supplementary Figure S1 begins on the same page as the `S2 Supplementary Figures` heading.
+- Supplementary Figures S1 and S3 use the same bold lowercase `a)`, `b)`, `c)` panel-label convention as the remaining figures; both were regenerated from their source builder rather than edited as raster images.
+- Multi-page Figures S5, S16, and S17 retain their continuation notices and show the complete caption after all panels.
+- Every multi-section Supplementary Table title precedes its section headings. Page-break guards keep each subsection heading with its first table rows; the continuation identifier for Supplementary Table S21 is correct.
+- Supplementary Table S6 is the TCGA selector-layer table; the AMP-AD cohort note follows Supplementary Table S12.
+- The full-feature Bayesian reference in Supplementary Table S21 cites Supplementary Fig. S24.
+- The main and Supplementary title pages use one restrained, shared, format-neutral academic submission hierarchy for title, authors, affiliations, correspondence, contact information, and the ADNI corporate-author note. The Supplementary title page also gives a compact contents inventory.
+- All 18 main pages and all 51 Supplementary pages were rendered to PNG. The revised title pages and full-document contact sheets were visually inspected; no clipping, overlap, unreadable labels, orphaned subtable headings, missing panels, detached captions, unintended grids, or blank pages were found.
+- Automated PDF-boundary validation found no blank page and no text glyph outside a page boundary. All Supplementary Figure S1--S28 and Supplementary Table S1--S28 labels were recovered from the rendered PDF. The machine-readable report is `submission_pdf_layout_qa.json`.
+- All 28 Supplementary Figure captions were reviewed for a short standalone title, complete panel coverage, and definition of displayed symbols, intervals, or reference lines where applicable. The S1 and S3 captions were expanded to define their panel encodings without changing any result.
+- Main-panel label validation passes for Figures 1--5; equal bold panel labels are used within each figure.
+- Main Table 1 remains wholly on one page. Inter-row spacing and controlled line breaks separate the TCGA GBM/LGG and CGGA MGMT entries without expanding the table to another page.
+- The main and Supplementary title pages use a centered sans-serif title, centered byline, one black divider, and black metadata headings. No `ARTICLE` or other imitated journal-production label is used.
+- The ADNI consortium byline note now includes the official data-source and investigator-role statement plus a direct external link to the complete ADNI acknowledgement list. Both ADNI links are encoded as PDF `/URI` actions, not internal document jumps; the browser window or tab used for an external URI remains controlled by the reader's PDF viewer.
+- All multipart Supplementary Table section headings use one shared style: lowercase `a.`, `b.`, `c.`, and `d.` (or `e.` where required), footnote-sized bold type, and common spacing. Rendered checks of Tables S8--S12 and S23 confirm the same visual size across first and subsequent sections.
 - Figure 1 SHA-256 freeze validation passes.
+- The final five-author byline, affiliations 1--5, five email addresses, correspondence line, and Author contributions were rendered and visually inspected in both PDFs. Mohammad Sadegh Mashayekhi was removed from the byline, metadata, email list, and contribution statement at the author's direction. No clipping, overlap, or detached affiliation line was found.
+- The rendered contribution statement records DICOM and clinical-metadata provision and ethics-information verification by M.F.H. and E.S., and DICOM de-identification and radiomics-data generation by J.P.
 
-## New TCGA selector-layer extension
-
-- Frozen protocol SHA-256: `c9c808d591918779961a7f236f6beb588c640e1b8932a8b030428f3d988a4ff1`.
-- Validation status: PASS; 30 expected and 30 verified conditions; zero errors.
-- Validation manifest SHA-256: `6d59a4c15ae89b1fd02a3905171706d7397a6f4eda4dd943e99f7ab1e680bddc`.
-- Exact verified TCGA outer partitions, post-Direct universes, and common-seed parent predictions were reused.
-- Direct, RFECV, GA search, candidate rescoring, and locking were not rerun or altered.
-- Feature lists and hashes were serialized before outer-test values or outcomes were opened. Every new final estimator used the parent condition's common seed.
-- The result set includes multinomial Elastic Net, subsampling stability selection, native and matched-cardinality signatures, and five random banks per condition.
-- The extension is explicitly interpreted as a retrospective selector-layer sensitivity conditional on post-Direct universes, not a standalone full-pipeline, external, or compute-equivalent benchmark.
-
-## Numerical cross-checks
-
-- Existing TCGA locking audit remains unchanged: 30 banks, 150 candidates, maximum selected empirical regret 0.00978447, and 11 medoid changes with positive representativeness gain.
-- Main Figure 3 and Supplementary Figure S8 are generated from validated aggregate CSVs under `supplementary_data/tcga_matched_comparator/`.
-- WrapEvoFS repeated-OOF macro one-vs-rest AUROC is 0.8265, 0.8270, and 0.8277 for SVM-L1, XGBoost, and Boruta-RF.
-- Matched-cardinality WrapEvoFS-minus-Elastic-Net effects are +0.0176 [0.0008, 0.0341], -0.0017 [-0.0146, 0.0111], and -0.0109 [-0.0236, 0.0024].
-- Matched-cardinality WrapEvoFS-minus-stability effects are +0.0261 [0.0082, 0.0434], -0.0015 [-0.0136, 0.0105], and -0.0128 [-0.0260, 0.0012].
-- Mean WrapEvoFS-minus-random-bank effects are -0.0018, +0.0102, and -0.0043 across the three branches.
-- These values agree between source CSVs, Figure 3, Supplementary Figure S8, Supplementary Table S6, Abstract-level direction statements, Results, Methods, and the analysis report.
-
-## Existing scientific-integrity checks
+## Scientific and implementation checks
 
 - Frozen-value and decision-path validation: PASS.
-- Locking-simulation protocol, 4,995,000-bank strict-regret audit, rendered hashes, and integration: PASS.
-- Private-radiomics aggregate, checksum, privacy, split, and empirical-regret invariants: PASS.
-- TCGA cleaned-SCNV provenance remains documented as provider-confirmed label-independent variance filtering with a label-blind 4,999/5,000 reconstruction and an exact variance tie at the cutoff.
-- Figure source-data manifest parses as CSV and every listed display output exists.
-- No em dash character occurs in the manuscript TeX sources.
+- Controlled locking simulation: PASS for the frozen protocol and all 4,995,000 banks; configured empirical-regret violations: zero.
+- VGH brain-tumour radiomics integration invariants: PASS.
+- The VGH brain-tumour radiomics cohort is identified under University of British Columbia approval H20-02354 (``Brain Tumor Image Analysis''; principal investigator Stephen Yip), with anonymized data, a waiver of consent for the retrospective study, and permission for secondary analysis.
+- CPU/GPU labels were removed from Results, Methods, general captions, and non-runtime summary tables because they do not affect interpretation. The exact cuML/scikit-learn backend distinction is retained once in Supplementary Table S24 because it is needed for computational reproducibility.
+- Existing TCGA locking audit remains unchanged: 30 banks, 150 candidates, maximum selected empirical regret 0.00978447, and 11 medoid changes with positive representativeness gain.
+- The TCGA selector-layer extension remains protocol-frozen at SHA-256 `c9c808d591918779961a7f236f6beb588c640e1b8932a8b030428f3d988a4ff1`; all 30 expected conditions and output checksums passed.
+- Direct, RFECV, GA search, candidate rescoring, locking, held-out evaluation, Bayesian analysis, STABL, BLiP, and empirical feature selection were not rerun for this editorial revision.
+- The finalized canonical stable-hash rule and duplicate-mask policy are unchanged.
+- TCGA SCNV provenance is documented as provider-confirmed label-independent variance filtering, supported by a label-blind 4,999/5,000 reconstruction and an exact variance tie at the cutoff.
+- ADNI re-locking uses the recovered complete five-mask banks. At absolute delta 0.01, each branch has a singleton eligible pool and zero selected empirical regret; no GA or held-out evaluation was rerun.
 
-## Claim audit
+## Claim boundary
 
-- The mathematical guarantee remains limited to configured empirical development-CV regret within a finite candidate bank.
-- The new comparison is reported as branch-dependent performance--compression evidence. It is not called predictive equivalence, universal GA benefit, external validity, biomarker stability, or global feature-selection optimality.
-- Native supports, matched-cardinality sensitivities, and random banks are distinguished explicitly.
-- Random controls are described as matching five-candidate bank size and locking-evaluation budget, not total GA compute.
-- Similar signature cardinality with different feature identity is retained as a substantive participant-partition finding.
+- The mathematical guarantee concerns only configured empirical development-CV regret within a finite candidate bank.
+- The selector comparison is branch-dependent performance--compression evidence, not predictive equivalence, universal GA benefit, external validity, biomarker stability, or global feature-selection optimality.
+- Native supports, matched-cardinality sensitivities, and random banks remain explicitly distinguished.
+- No pooled cross-dataset performance figure or meta-analysis was created because the five datasets use materially different validation designs.
+- Absolute delta 0.01 is reported as a fixed, metric-scale operating tolerance, not a universal, uniquely optimal, or clinically acceptable threshold.
 
-## Remaining external submission actions
+## Validation scope
 
-The following were intentionally not inferred or completed here: private-radiomics research-ethics-board and consent/waiver wording; verified reviewer-accessible public code release and archive identifier; ADNI publication review; and Nature Source Data/reporting/ML/software checklists. These are external submission requirements, not computational manuscript defects.
-
-## Final editorial QA refresh (2026-08-13)
-
-- Final main PDF: 16 pages.
-- Final Supplementary PDF: 48 pages.
-- Table 1 contains all five datasets on one page with its header; Table 2 appears in Section 2.2 and interrupts no sentence.
-- All 16 main pages and all 48 Supplementary pages were visually inspected after rendering. No clipping, overlap, orphaned table row, unintended blank page, missing panel, or detached final caption was found.
-- Automated citation/display, main-panel, frozen-value, and Figure 1 freeze validations passed.
-- The final logs contained no undefined references, undefined citations, duplicate labels, missing figures, overfull or underfull boxes, or fatal LaTeX errors.
-- Authoritative final main PDF SHA-256: `93dc1e1cb1eee2abeca450a243104403d3454687d57cf74413efc9d1fa7a8768`.
-- Authoritative final Supplementary PDF SHA-256: `bdec38d8f69782ff789360d2bf2702e91499d1a764fc187ead2b93ba7299f5c0`.
+This report covers the reproducibility repository, manuscript source, rendered PDFs, and machine-readable audit outputs. Journal-portal review steps and publisher-specific reporting forms are managed separately and are not represented as repository validation results.

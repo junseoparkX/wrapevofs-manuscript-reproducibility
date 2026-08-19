@@ -1,6 +1,7 @@
 # Manuscript source
 
-This directory is the authoritative, submission-facing WrapEvoFS manuscript package.
+This directory is the authoritative, submission-facing WrapEvoFS manuscript
+package.
 
 ## Entry points
 
@@ -13,24 +14,20 @@ This directory is the authoritative, submission-facing WrapEvoFS manuscript pack
 
 - `figures/`: current main and Supplementary publication assets.
 - `tables/`: main and Supplementary LaTeX table sources.
-- `scripts/`: deterministic figure builders, validators, and archive tooling.
+- `scripts/`: deterministic figure builders and validators.
 - `supplementary_data/`: non-identifying aggregate inputs and provenance records.
 - `revision_outputs/`: aggregate audit outputs used by manuscript displays.
-- `regret_locking_formalization/`: mathematical propositions, proofs, complexity analysis, implementation correspondence, and property-test documentation.
-- `documentation/`: analysis reports, validation records, and submission checklists, separated from the build source.
+- `regret_locking_formalization/`: propositions, proofs, complexity analysis, implementation correspondence, and property-test documentation.
+- `documentation/`: analysis reports and validation records separated from the build source.
 
 ## Navigation
 
 - `documentation/validation/VALIDATION_REPORT.md`: current build and scientific-integrity checks.
-- `CHANGELOG.md`: submission-facing scientific and editorial decisions.
-- `documentation/analyses/TCGA_MATCHED_COMPARATOR_RESULTS.md`: exact interpretation of the checksum-frozen selector-layer benchmark.
-- `documentation/submission/NATURE_COMMUNICATIONS_ALIGNMENT.md`: journal-format alignment and outstanding submission actions.
-- `documentation/validation/TCGA_SCNV_PROVENANCE_AUDIT.md`: label-blind audit of the supplied 5,000-feature cleaned SCNV boundary.
-- `documentation/validation/PRIVATE_RADIOMICS_UPSTREAM_PROVENANCE.md`: mapping from the DICOM-to-radiomics handoff to the manuscript's upstream construction boundary.
-- `documentation/DISPLAY_MAP.md`: main and Supplementary display roles.
-- `documentation/validation/SUPPLEMENTARY_STRENGTHENED_RENUMBERING.json`: editorial-only first-citation renumbering map.
+- `documentation/analyses/TCGA_MATCHED_COMPARATOR_RESULTS.md`: checksum-frozen selector-layer benchmark interpretation.
+- `documentation/validation/TCGA_SCNV_PROVENANCE_AUDIT.md`: label-blind audit of the supplied 5,000-feature SCNV boundary.
+- `documentation/validation/PRIVATE_RADIOMICS_UPSTREAM_PROVENANCE.md`: non-identifying VGH DICOM-to-radiomics construction boundary.
+- `documentation/DISPLAY_MAP.md`: roles of the main and Supplementary displays.
 - `documentation/FIGURE_SOURCE_DATA_MANIFEST.csv`: figure-to-source mapping.
-- `documentation/submission/AUTHOR_CONFIRMATION_REQUIRED.md`: remaining non-computational submission actions.
 
 ## Build
 
@@ -39,4 +36,6 @@ latexmk -g -lualatex -interaction=nonstopmode -halt-on-error main.tex
 latexmk -g -lualatex -interaction=nonstopmode -halt-on-error supplementary_information.tex
 ```
 
-The formal locking guarantee concerns only empirical development-CV score-gap feasibility within a supplied candidate bank. It is not a claim of predictive superiority, external validity, biomarker stability, or unbiased generalization.
+The locking guarantee concerns empirical development-score feasibility within a
+supplied finite candidate bank. Full definitions and claim boundaries are given
+in the manuscript and Supplementary Methods.

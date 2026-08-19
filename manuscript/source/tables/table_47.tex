@@ -3,7 +3,7 @@
 \caption{Controlled synthetic candidate-bank locking simulation under the primary $R=5$ and $\delta=0.01$ design.}
 \label{tab:supp23}
 \scriptsize
-\textit{Panel A. Equal-scenario primary operating characteristics}\par\smallskip
+\supplementarytablesection{a. Equal-scenario primary operating characteristics}
 \setlength{\tabcolsep}{3.2pt}
 \begin{tabular}{lrrrrrr}
 \toprule
@@ -17,7 +17,7 @@ Regret-constrained medoid & 0.0026 & 0.846 & 0.751 & 0.446 & 0.0133 & 0.128 \\
 \end{tabular}
 
 \medskip
-\textit{Panel B. Primary empirical-regret audit}\par\smallskip
+\supplementarytablesection{b. Primary empirical-regret audit}
 \setlength{\tabcolsep}{4.0pt}
 \begin{tabular}{lrrrp{31mm}}
 \toprule
@@ -31,7 +31,7 @@ Regret-constrained medoid & 0.0013 & 0 / 162 & 0.0091 & 0 / 4,995,000 \\
 \end{tabular}
 
 \medskip
-\textit{Panel C. Regret-constrained-medoid primary decision paths}\par\smallskip
+\supplementarytablesection{c. Regret-constrained-medoid primary decision paths}
 \begin{tabular}{lr}
 \toprule
 Decision stage & Probability (\%) \\
@@ -47,6 +47,6 @@ Hash stage reached (inclusive) & 1.009 \\
 \end{tabular}
 
 \begin{minipage}{0.98\linewidth}\scriptsize\vspace{0.35em}
-Primary entries are equal-scenario means across 162 prespecified scenarios with 10,000 banks each (1,620,000 banks); the complete sensitivity workload comprised 4,995,000 banks across 513 scenarios. Hidden oracle utility $T$ is not AUROC. Lower values are preferable for oracle regret and score optimism; higher values are preferable for recovery and Jaccard. Failure denotes oracle regret $>0.02$; q95 denotes the within-scenario 95th percentile. The regret-constrained medoid had no configured empirical-regret violation in the complete workload. Highest-score selection has zero empirical regret by definition, whereas the two medoid comparators have no metric-scale regret constraint. Panel C probabilities are mutually exclusive except for the inclusive hash-stage row. Exact duplicate masks retained their multiplicity as voting candidates. No GA, classifier, or participant-level dataset was simulated or fitted.
+Primary entries are equal-scenario means across 162 prespecified scenarios with 10,000 banks each (1,620,000 banks); the complete sensitivity workload comprised 4,995,000 banks across 513 scenarios. Hidden oracle utility $T$ is not AUROC. Lower values are preferable for oracle regret and score optimism; higher values are preferable for recovery and Jaccard. Failure denotes oracle regret $>0.02$; q95 denotes the within-scenario 95th percentile. The regret-constrained medoid had no configured empirical-regret violation in the complete workload. Highest-score selection has zero empirical regret by definition, whereas the two medoid comparators have no metric-scale regret constraint. Section c probabilities are mutually exclusive except for the inclusive hash-stage row. Exact duplicate masks retained their multiplicity as voting candidates. No GA, classifier, or participant-level dataset was simulated or fitted.
 \end{minipage}
 \end{table}

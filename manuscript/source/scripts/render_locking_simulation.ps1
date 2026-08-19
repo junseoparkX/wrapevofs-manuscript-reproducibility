@@ -8,11 +8,33 @@ $pngStem = Join-Path $root 'figures\figure_s24'
 $png = Join-Path $root 'figures\figure_s24.png'
 $manifestPath = Join-Path $root 'supplementary_data\locking_rule_simulation\RENDER_MANIFEST.json'
 $profile = Join-Path $root '.tmp\chrome_figure_s24_profile'
-$chrome = (Get-Command chrome.exe -ErrorAction SilentlyContinue).Source
-if (-not $chrome) {
-    $chrome = Join-Path $env:ProgramFiles 'Google\Chrome\Application\chrome.exe'
+function Resolve-Renderer {
+    param(
+        [string]$Override,
+        [string[]]$Commands,
+        [string[]]$Fallbacks
+    )
+    if ($Override) {
+        if (-not (Test-Path -LiteralPath $Override)) {
+            throw "Configured renderer not found: $Override"
+        }
+        return (Resolve-Path -LiteralPath $Override).Path
+    }
+    foreach ($name in $Commands) {
+        $command = Get-Command $name -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($command) { return $command.Source }
+    }
+    foreach ($path in $Fallbacks) {
+        if (Test-Path -LiteralPath $path) { return $path }
+    }
+    throw "Required renderer was not found. Configure the corresponding executable environment variable."
 }
-$pdftoppm = (Get-Command pdftoppm -ErrorAction Stop).Source
+
+$chrome = Resolve-Renderer -Override $env:CHROME_EXECUTABLE -Commands @('google-chrome', 'chromium', 'chrome', 'msedge') -Fallbacks @(
+    'C:\Program Files\Google\Chrome\Application\chrome.exe',
+    'C:\Program Files\Microsoft\Edge\Application\msedge.exe'
+)
+$pdftoppm = Resolve-Renderer -Override $env:PDFTOPPM_EXECUTABLE -Commands @('pdftoppm') -Fallbacks @()
 
 foreach ($path in @($svg, $chrome, $pdftoppm)) {
     if (-not (Test-Path -LiteralPath $path)) {

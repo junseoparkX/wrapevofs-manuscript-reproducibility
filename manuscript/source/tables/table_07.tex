@@ -2,33 +2,34 @@
 \scriptsize
 \renewcommand{\arraystretch}{1.08}
 \setlength{\tabcolsep}{1.3pt}
-\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1194\linewidth}>{\centering\arraybackslash}p{0.0630\linewidth}>{\centering\arraybackslash}p{0.0746\linewidth}>{\centering\arraybackslash}p{0.1740\linewidth}>{\centering\arraybackslash}p{0.1458\linewidth}>{\centering\arraybackslash}p{0.1857\linewidth}>{\centering\arraybackslash}p{0.0580\linewidth}>{\raggedright\arraybackslash}p{0.1194\linewidth}@{}}
-\caption{Archived original ADNI five-run development-CV ranking and top-three representative-run locking audit.}\label{tab:supp8}\\
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.102\linewidth}>{\centering\arraybackslash}p{0.047\linewidth}>{\centering\arraybackslash}p{0.043\linewidth}>{\centering\arraybackslash}p{0.132\linewidth}>{\centering\arraybackslash}p{0.116\linewidth}>{\centering\arraybackslash}p{0.146\linewidth}>{\centering\arraybackslash}p{0.058\linewidth}>{\centering\arraybackslash}p{0.071\linewidth}>{\raggedright\arraybackslash}p{0.176\linewidth}@{}}
+\caption{Archived ADNI locking audit and agreement summary. Section a reports the five run-level development-CV candidates under legacy and regret-constrained locking; section b reports the selected-run agreement summary. The larger-is-better locking score is mean balanced accuracy, and absolute regret is measured from the branch maximum. At $\delta=0.01$, each branch had one eligible candidate, marked $\delta$-selected.}\label{tab:supp8}\\
+\multicolumn{9}{l}{\footnotesize\bfseries a. Five-run locking audit}\\[0.3em]
 \toprule
-\bfseries Method & \bfseries Run & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Rank & \bfseries Status \\
+\bfseries Method & \bfseries GA rank & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Lock rank & \bfseries Abs. regret & \bfseries Status \\
 \midrule
 \endfirsthead
-\multicolumn{8}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\multicolumn{9}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
 \toprule
-\bfseries Method & \bfseries Run & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Rank & \bfseries Status \\
+\bfseries Method & \bfseries GA rank & \bfseries n & \bfseries Balanced accuracy & \bfseries Macro F1 & \bfseries Weighted OvR AUROC & \bfseries Lock rank & \bfseries Abs. regret & \bfseries Status \\
 \midrule
 \endhead
 \bottomrule
 \endfoot
-SVM-L1 & 1 & 29 & 0.563 (0.028) & 0.569 (0.033) & 0.814 (0.011) & 3 & Top 3 \\
-SVM-L1 & 2 & 29 & 0.572 (0.055) & 0.579 (0.056) & 0.817 (0.031) & 2 & Top 3, Locked \\
-SVM-L1 & 3 & 29 & 0.562 (0.053) & 0.568 (0.049) & 0.818 (0.023) & 4 & --- \\
-SVM-L1 & 4 & 29 & 0.586 (0.052) & 0.595 (0.049) & 0.808 (0.040) & 1 & Top 3 \\
-SVM-L1 & 5 & 29 & 0.560 (0.029) & 0.565 (0.035) & 0.820 (0.018) & 5 & --- \\
-XGBoost & 1 & 30 & 0.521 (0.032) & 0.520 (0.036) & 0.768 (0.008) & 3 & Top 3 \\
-XGBoost & 2 & 30 & 0.542 (0.054) & 0.545 (0.055) & 0.784 (0.034) & 1 & Top 3, Locked \\
-XGBoost & 3 & 31 & 0.517 (0.038) & 0.509 (0.043) & 0.767 (0.019) & 4 & --- \\
-XGBoost & 4 & 31 & 0.530 (0.047) & 0.534 (0.052) & 0.772 (0.015) & 2 & Top 3 \\
-XGBoost & 5 & 31 & 0.516 (0.031) & 0.513 (0.034) & 0.768 (0.027) & 5 & --- \\
-Boruta-RF & 1 & 27 & 0.574 (0.021) & 0.580 (0.026) & 0.788 (0.020) & 1 & Top 3 \\
-Boruta-RF & 2 & 27 & 0.557 (0.020) & 0.563 (0.025) & 0.791 (0.015) & 2 & Top 3 \\
-Boruta-RF & 3 & 27 & 0.551 (0.024) & 0.555 (0.025) & 0.783 (0.023) & 3 & Top 3, Locked \\
-Boruta-RF & 4 & 27 & 0.530 (0.030) & 0.533 (0.029) & 0.780 (0.025) & 5 & --- \\
-Boruta-RF & 5 & 27 & 0.548 (0.016) & 0.554 (0.024) & 0.780 (0.017) & 4 & --- \\
+SVM-L1 & 1 & 29 & 0.563 (0.028) & 0.569 (0.033) & 0.814 (0.011) & 3 & 0.02365 & Legacy top 3 \\
+SVM-L1 & 2 & 29 & 0.572 (0.055) & 0.579 (0.056) & 0.817 (0.031) & 2 & 0.01401 & Legacy selected \\
+SVM-L1 & 3 & 29 & 0.562 (0.053) & 0.568 (0.049) & 0.818 (0.023) & 4 & 0.02463 & --- \\
+SVM-L1 & 4 & 29 & 0.586 (0.052) & 0.595 (0.049) & 0.808 (0.040) & 1 & 0 & Legacy top 3; $\delta$-selected \\
+SVM-L1 & 5 & 29 & 0.560 (0.029) & 0.565 (0.035) & 0.820 (0.018) & 5 & 0.02596 & --- \\
+XGBoost & 1 & 30 & 0.521 (0.032) & 0.520 (0.036) & 0.768 (0.008) & 3 & 0.02168 & Legacy top 3 \\
+XGBoost & 2 & 30 & 0.542 (0.054) & 0.545 (0.055) & 0.784 (0.034) & 1 & 0 & Legacy and $\delta$-selected \\
+XGBoost & 3 & 31 & 0.517 (0.038) & 0.509 (0.043) & 0.767 (0.019) & 4 & 0.02570 & --- \\
+XGBoost & 4 & 31 & 0.530 (0.047) & 0.534 (0.052) & 0.772 (0.015) & 2 & 0.01232 & Legacy top 3 \\
+XGBoost & 5 & 31 & 0.516 (0.031) & 0.513 (0.034) & 0.768 (0.027) & 5 & 0.02618 & --- \\
+Boruta-RF & 1 & 27 & 0.574 (0.021) & 0.580 (0.026) & 0.788 (0.020) & 1 & 0 & Legacy top 3; $\delta$-selected \\
+Boruta-RF & 2 & 27 & 0.557 (0.020) & 0.563 (0.025) & 0.791 (0.015) & 2 & 0.01713 & Legacy top 3 \\
+Boruta-RF & 3 & 27 & 0.551 (0.024) & 0.555 (0.025) & 0.783 (0.023) & 3 & 0.02252 & Legacy selected \\
+Boruta-RF & 4 & 27 & 0.530 (0.030) & 0.533 (0.029) & 0.780 (0.025) & 5 & 0.04439 & --- \\
+Boruta-RF & 5 & 27 & 0.548 (0.016) & 0.554 (0.024) & 0.780 (0.017) & 4 & 0.02553 & --- \\
 \end{longtable}
 }

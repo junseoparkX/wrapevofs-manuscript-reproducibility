@@ -5,7 +5,7 @@
 \scriptsize
 \setlength{\tabcolsep}{2.6pt}
 \renewcommand{\arraystretch}{1.03}
-\textit{A. Aggregate target fidelity and flattening diagnostics}\par\smallskip
+\supplementarytablesection{a. Aggregate target fidelity and flattening diagnostics}
 \begin{tabular}{lrrrr}
 \toprule
 Group & \multicolumn{2}{c}{Absolute target deviation} & \multicolumn{2}{c}{All-zero generations} \\
@@ -25,7 +25,7 @@ Overall & 216 & 137 & 673 & 333 \\
 \bottomrule
 \end{tabular}\par
 \vspace{0.75em}
-\textit{B. Complete condition-level target and flattening results}\par\smallskip
+\supplementarytablesection{b. Complete condition-level target and flattening results}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{lllrrrrrrrrrr}
 \toprule
@@ -71,7 +71,7 @@ Rush & Boruta-RF & Reference & 23 & 23 & 23 & 0 & 0 & 0/5 & 0/5 & 0 & 0 & 0.0000
 \scriptsize
 \setlength{\tabcolsep}{3.0pt}
 \renewcommand{\arraystretch}{1.04}
-\textit{C. Fixed development-CV locking score, eligibility, and agreement}\par\smallskip
+\supplementarytablesection{c. Fixed development-CV locking score, eligibility, and agreement}
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{lllrrrrrr}
 \toprule
@@ -109,5 +109,5 @@ Rush & Boruta-RF & Reference & 0.8756 & 0.8856 & 0.0100 & 1 & 0.0000 & NA \\
 \bottomrule
 \end{tabular}}
 \vspace{0.55em}
-\parbox{0.98\linewidth}{\scriptsize\textit{Note.} Orig., original configuration; Upd., corrected-objective configuration. The original configuration used the zero-truncated objective and legacy top-three medoid. Corrected-objective values were obtained from 120 newly executed full GPU GA runs (five seeds per condition) at the Small and Reference caps using the untruncated objective and regret-constrained medoid; High-cap conditions were not rerun. The all-zero column is the zero-truncation diagnostic evaluated along each untruncated search history. Uniform parent-sampling fallbacks were zero. Final locking used fixed development-CV scores, absolute regret tolerance 0.01, strict eligible-only pools, and no fallback expansion. Because both candidate generation and locking differ, between-column differences are configuration-level comparisons rather than isolated causal effects of either component. The two Rush singleton pools have undefined mean Jaccard (NA); all 18 newly completed pools contained two to five candidates. Held-out outcomes were not accessed or evaluated. Mean Jaccard was reduced in canonical mask-hash order. In Mount Sinai/SVM-L1/Reference, runs 3 and 5 had the same exact peer-Jaccard multiset but differed by one IEEE-754 unit in the last place under historical versus canonical reduction order; the authoritative package selected run 5 (17 features; regret 0.0037), whereas the older helper selected run 3 (17 features; regret 0). Both were eligible, and target-count summaries were unchanged.}
+\parbox{0.98\linewidth}{\scriptsize\textit{Note.} Orig., original configuration; Upd., corrected-objective configuration. The original configuration used the zero-truncated objective and legacy top-three medoid. Corrected-objective values were obtained from 120 newly executed full GA runs (five seeds per condition) at the Small and Reference caps using the untruncated objective and regret-constrained medoid; High-cap conditions were not rerun. The all-zero column is the zero-truncation diagnostic evaluated along each untruncated search history. Uniform parent-sampling fallbacks were zero. Final locking used fixed development-CV scores, absolute regret tolerance 0.01, strict eligible-only pools, and no fallback expansion. Because both candidate generation and locking differ, between-column differences are configuration-level comparisons rather than isolated causal effects of either component. The two Rush singleton pools have undefined mean Jaccard (NA); all 18 newly completed pools contained two to five candidates. Held-out outcomes were not accessed or evaluated. Mean Jaccard was reduced in canonical mask-hash order. In Mount Sinai/SVM-L1/Reference, runs 3 and 5 had the same exact peer-Jaccard multiset but differed by one IEEE-754 unit in the last place under historical versus canonical reduction order; the authoritative package selected run 5 (17 features; regret 0.0037), whereas the older helper selected run 3 (17 features; regret 0). Both were eligible, and target-count summaries were unchanged.}
 \end{table}

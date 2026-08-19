@@ -1,4 +1,4 @@
-"""Reorder current Supplementary displays by first main-text citation.
+"""Reorder strengthened-V16 Supplementary displays by first main-text citation.
 
 This is an editorial-only transformation. It moves complete figure/table
 blocks and updates their printed labels and citations simultaneously. It does
@@ -24,7 +24,7 @@ TABLE_ORDER = [1, 2, 3, 4, 5, 28, 11, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18
 FIGURE_MAP = {old: new for new, old in enumerate(FIGURE_ORDER, 1)}
 TABLE_MAP = {old: new for new, old in enumerate(TABLE_ORDER, 1)}
 
-# Historical table fragments and the first renumbering map identify every
+# Historical table fragments and the first V16 renumbering map identify every
 # fragment's current printed table without relying on visual table content.
 HISTORICAL_GROUPS = {
     1: range(5, 6), 2: range(6, 7), 3: range(7, 9), 4: range(9, 13),

@@ -1,4 +1,4 @@
-# Private radiomics aggregate source data
+# VGH brain-tumour radiomics aggregate source data
 
 This directory contains only non-identifying aggregate artifacts supporting Supplementary Figure S20 and Supplementary Table S21.
 

@@ -36,7 +36,7 @@ matplotlib.rcParams.update(
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
         "svg.fonttype": "none",
-        "svg.hashsalt": "WrapEvoFS-strengthened-postfreeze",
+        "svg.hashsalt": "WrapEvoFS-strengthened-postfreeze-v16",
     }
 )
 

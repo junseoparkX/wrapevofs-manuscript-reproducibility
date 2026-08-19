@@ -28,7 +28,7 @@ Printed Supplementary figure numbers follow first citation order in the main tex
 | Supplementary Figure S17 | CGGA mechanism and seed-agreement ablation | `figures/figure_s19_ab.png`, `figures/figure_s19_cd.png` |
 | Supplementary Figure S18 | CGGA coherent same-split benchmark | `figures/figure_s22.pdf` |
 | Supplementary Figure S19 | CGGA saved nested-bank sensitivity | `figures/figure_s23.pdf` |
-| Supplementary Figure S20 | Private radiomics internal demonstration | `figures/figure_s20.pdf` |
+| Supplementary Figure S20 | VGH brain-tumour radiomics internal demonstration | `figures/figure_s20.pdf` |
 | Supplementary Figure S21 | Tuned-random-forest sensitivity | `figures/figure_s9.pdf` |
 | Supplementary Figure S22 | CGGA runtime characterization | `figures/figure_s10.png` |
 | Supplementary Figure S23 | Exploratory random-subset and Elastic Net comparisons | `figures/figure_s11.png` |

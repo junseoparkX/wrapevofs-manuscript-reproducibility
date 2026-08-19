@@ -4,7 +4,7 @@ Date: 2026-08-03
 
 ## Outcome
 
-The absolute regret-constrained medoid is formally specified, proved, documented, implemented with exact eligibility, and tested against the stated assumptions. The authoritative manuscript was updated and recompiled without changing an empirical result or a figure.
+The absolute regret-constrained medoid is now formally specified, proved, documented, implemented with exact eligibility, and tested against the stated assumptions. The authoritative `latex_v9_overleaf` manuscript was updated and recompiled without changing an empirical result or a figure.
 
 ## Mathematically proved properties
 

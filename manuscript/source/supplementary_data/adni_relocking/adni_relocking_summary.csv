@@ -1,0 +1,4 @@
+branch,branch_label,candidate_count,candidate_universe_size,best_locking_score,eligible_ga_ranks_delta_0_01,eligible_pool_size,regret_selected_ga_rank,regret_selected_source_run_id,regret_selected_locking_score,regret_selected_absolute_regret,legacy_selected_ga_rank,legacy_selected_source_run_id,legacy_selected_locking_score,legacy_selected_absolute_regret,same_feature_set_as_legacy,selected_vs_legacy_jaccard,all_120_input_permutations_invariant
+boruta_rf,Boruta-RF,5,48,0.5739475055076559,1,1,1,1,0.5739475055076559,0.0,3,2,0.5514317163565284,0.022515789151127508,False,0.38461538461538464,True
+svm_l1,SVM-L1,5,63,0.5864126048712515,4,1,4,1,0.5864126048712515,0.0,2,2,0.5724029023653083,0.014009702505943133,False,0.3488372093023256,True
+xgboost,XGBoost,5,100,0.5422992890850035,2,1,2,2,0.5422992890850035,0.0,2,2,0.5422992890850035,0.0,True,1.0,True

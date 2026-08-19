@@ -1,4 +1,4 @@
-# Private radiomics upstream provenance mapping
+# VGH brain-tumour radiomics upstream provenance mapping
 
 ## Source reviewed
 

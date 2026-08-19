@@ -1,4 +1,4 @@
-# Private radiomics analysis and integration report
+# VGH brain-tumour radiomics analysis and integration report
 
 ## Decision and importance
 
@@ -37,7 +37,7 @@ The strong result is the auditable, strictly feasible hand-off and compression, 
 ## Manuscript integration
 
 - Added one concise Results subsection and one Methods description in the main text.
-- Added the private cohort as the fourth row of the main dataset table.
+- Added the VGH brain-tumour radiomics cohort as the fourth row of the main dataset table.
 - Added Supplementary Methods boundaries.
 - Added grid-free 170-mm Supplementary Figure S20 with bold a)–d) panel labels.
 - Added Supplementary Table S21 containing locking, agreement, and held-out summaries.
