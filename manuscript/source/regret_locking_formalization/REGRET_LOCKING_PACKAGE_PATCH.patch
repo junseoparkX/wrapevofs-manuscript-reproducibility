@@ -17,7 +17,7 @@ index fbcd6a8..110413b 100644
 +- Added versioned locking and GA audit artifacts, configuration hashes, and aggregated warnings.
 +- Added compatible unified metric support and mixed-development-metric warnings.
 +- Added CLI and Python API options, regression tests, a synthetic one-command example, and schema documentation.
-+- Documented that the repository is private during revision and that an approved license is still required.
++- Documented repository visibility and the current BSD 3-Clause software license.
 +
  ## 0.1.0 - 2026-07-04
  
