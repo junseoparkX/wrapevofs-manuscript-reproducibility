@@ -6,7 +6,7 @@ Printed Supplementary figure numbers follow first citation order in the main tex
 |---|---|---|
 | Figure 1 | Updated workflow and leakage boundary | `figures/figure_1.pdf` |
 | Figure 2 | Development-only updated-configuration target fidelity, flattening, regret, and decision-path verification | `figures/figure_2.pdf` |
-| Figure 3 | Fully nested TCGA selector-layer performance--compression benchmark | `figures/figure_3_strengthened.pdf` |
+| Figure 3 | Fully nested TCGA selector-layer performance and compression benchmark | `figures/figure_3_strengthened.pdf` |
 | Figure 4 | Fully nested TCGA locking geometry and participant-partition sensitivity | `figures/figure_4_strengthened.pdf` |
 | Figure 5 | One-time post-freeze AMP-AD held-out evaluation | `figures/figure_5_strengthened.pdf` |
 | Supplementary Figure S1 | Original-objective flattening diagnostics | `figures/figure_s17.png` |

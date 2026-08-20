@@ -4,10 +4,10 @@
 
 - `main.tex`: PASS under LuaLaTeX; 18 pages.
 - `supplementary_information.tex`: PASS under LuaLaTeX; 51 pages.
-- Main PDF SHA-256: `3ba0547aae36ca47ea409a38d7e1bb390a7436d9794700bd6033a0fec02b6152`.
-- Supplementary PDF SHA-256: `b823ef0878d88426de9497ec95aff4d6cc0672214953a6fba6021ee1e9248b31`.
+- Main PDF SHA-256: `fae646880acde48d0bc09e0e81c94085e0befc92b0f8ffbae377491e7af45e20`.
+- Supplementary PDF SHA-256: `e78d506d290a39a51e4b3ab8a790512aa48745d98039dd4a42dc0bd8ea00e701`.
 - Final logs contain no undefined references, undefined citations, duplicate labels, missing figures, missing characters, overfull boxes, or fatal LaTeX errors. The only logged font notice is a benign 0.5-point substitution for the small ORCID icon glyphs.
-- Deterministic submission counts: title 9 words; Abstract 150 words; Introduction, Results, and Discussion 2,134 words; Methods 2,928 words; five main figures and two main tables.
+- Deterministic submission counts: title 9 words; Abstract 150 words; Introduction, Results, and Discussion 2,149 words; Methods 3,042 words; five main figures and two main tables.
 
 ## Display, citation, and visual QA
 
@@ -21,7 +21,7 @@
 - The full-feature Bayesian reference in Supplementary Table S21 cites Supplementary Fig. S24.
 - The main and Supplementary title pages use one restrained, shared, format-neutral academic submission hierarchy for title, authors, affiliations, correspondence, contact information, and the ADNI corporate-author note. The Supplementary title page also gives a compact contents inventory.
 - All 18 main pages and all 51 Supplementary pages were rendered to PNG. The revised title pages and full-document contact sheets were visually inspected; no clipping, overlap, unreadable labels, orphaned subtable headings, missing panels, detached captions, unintended grids, or blank pages were found.
-- Automated PDF-boundary validation found no blank page and no text glyph outside a page boundary. All Supplementary Figure S1--S28 and Supplementary Table S1--S28 labels were recovered from the rendered PDF. The machine-readable report is `submission_pdf_layout_qa.json`.
+- Automated PDF-boundary validation found no blank page and no text glyph outside a page boundary. All Supplementary Figure S1--S28 and Supplementary Table S1--S28 labels were recovered from the rendered PDF. The machine-readable report is `PDF_VALIDATION_REPORT.json`.
 - All 28 Supplementary Figure captions were reviewed for a short standalone title, complete panel coverage, and definition of displayed symbols, intervals, or reference lines where applicable. The S1 and S3 captions were expanded to define their panel encodings without changing any result.
 - Main-panel label validation passes for Figures 1--5; equal bold panel labels are used within each figure.
 - Main Table 1 remains wholly on one page. Inter-row spacing and controlled line breaks separate the TCGA GBM/LGG and CGGA MGMT entries without expanding the table to another page.
@@ -49,11 +49,11 @@
 ## Claim boundary
 
 - The mathematical guarantee concerns only configured empirical development-CV regret within a finite candidate bank.
-- The selector comparison is branch-dependent performance--compression evidence, not predictive equivalence, universal GA benefit, external validity, biomarker stability, or global feature-selection optimality.
+- The selector comparison provides branch-dependent performance and compression evidence, with its interpretation bounded by the study design.
 - Native supports, matched-cardinality sensitivities, and random banks remain explicitly distinguished.
 - No pooled cross-dataset performance figure or meta-analysis was created because the five datasets use materially different validation designs.
 - Absolute delta 0.01 is reported as a fixed, metric-scale operating tolerance, not a universal, uniquely optimal, or clinically acceptable threshold.
 
 ## Validation scope
 
-This report covers the reproducibility repository, manuscript source, rendered PDFs, and machine-readable audit outputs. Journal-portal review steps and publisher-specific reporting forms are managed separately and are not represented as repository validation results.
+This report covers the reproducibility repository, manuscript source, rendered PDFs, machine-readable audit outputs, and display-indexed Source Data workbook.

@@ -2,7 +2,7 @@
 
 ## Authoritative manuscript tree
 
-Root at the time of integration: the authoritative manuscript source now published under `manuscript/source/`.
+Root: `C:\Users\junse\Documents\research\WrapEvoFS_manuscript_reproducibility\manuscript\latex_v9_overleaf`
 
 | File | Change |
 |---|---|
@@ -34,7 +34,7 @@ Directory: `regret_locking_formalization/`
 
 ## Package tree
 
-Repository: [junseoparkX/wrapevofs-package](https://github.com/junseoparkX/wrapevofs-package), release v0.2.0.
+Root: `C:\Users\junse\Documents\research\gbm_package`
 
 | File | Necessary change |
 |---|---|

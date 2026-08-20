@@ -12,7 +12,13 @@ if (-not $output.StartsWith($expectedParent + [System.IO.Path]::DirectorySeparat
     throw "Refusing to write outside the manuscript directory: $output"
 }
 
-$excludedDirectories = @('.tex-cache', '.texlive-cache', '.tmp', 'tmp', '__pycache__', 'qa_postfreeze')
+$excludedDirectories = @('.tex-cache', '.texcache', '.texlive-cache', '.tmp', 'tmp', '__pycache__', 'qa_postfreeze')
+$excludedFileNames = @(
+    'ADNI_DPC_SUBMISSION_PACKET.md',
+    'REVIEWER_CODE_ACCESS_CHECKLIST.md',
+    'NATURE_COMMUNICATIONS_ALIGNMENT.md',
+    'PDF_VALIDATION_REPORT.json'
+)
 $excludedSuffixes = @(
     '.aux', '.bbl', '.blg', '.fdb_latexmk', '.fls', '.log', '.out',
     '.synctex.gz', '.pyc'
@@ -39,7 +45,8 @@ $files = Get-ChildItem -LiteralPath $source -File -Recurse -Force | Where-Object
         }
     }
     $buildLogExcluded = $_.Name -like 'build-*.log'
-    -not ($directoryExcluded -or $suffixExcluded -or $buildLogExcluded)
+    $fileExcluded = $excludedFileNames -contains $_.Name
+    -not ($directoryExcluded -or $suffixExcluded -or $buildLogExcluded -or $fileExcluded)
 } | Sort-Object FullName
 
 $stream = [System.IO.File]::Open($temporary, [System.IO.FileMode]::CreateNew)

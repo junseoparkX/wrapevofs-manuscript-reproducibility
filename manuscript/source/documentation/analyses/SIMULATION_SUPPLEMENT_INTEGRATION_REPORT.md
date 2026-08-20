@@ -4,7 +4,7 @@ Date: 2026-08-09
 
 ## Outcome
 
-The completed CPU-only candidate-bank locking simulation is integrated as Supplementary Figure S27 and Supplementary Table S22 and is cited in the main Results, Discussion, and Methods. The simulation is kept supplementary because it isolates locking-layer behavior rather than empirical predictive performance.
+The completed CPU-only candidate-bank locking simulation is integrated as Supplementary Figure S28 and Supplementary Table S23 and is cited in the main Results, Discussion, and Methods. The simulation is kept supplementary because it isolates locking-layer behavior rather than empirical predictive performance.
 
 ## Scientific source and execution boundary
 
@@ -15,7 +15,7 @@ The completed CPU-only candidate-bank locking simulation is integrated as Supple
 - The $R=100$ sensitivity used an engineering chunk size of 250 although the protocol's listed engineering sizes began at 1,000. Randomness was keyed to scenario and replicate identifiers, all integrity checks passed, and no scientific parameter changed. This is documented rather than concealed.
 - Raw checkpoints retain `duplicate_multiplicity`, but the frozen scenario-summary CSV does not aggregate the selected mask's exact multiplicity distribution. The manuscript therefore reports the duplicate-handling policy and duplicate-rate sensitivity design but makes no numerical claim about that unaggregated distribution; no rerun is required for the presented S28/S23 claims.
 
-## Supplementary Figure S27
+## Supplementary Figure S28
 
 The deterministic 170-by-67-mm, grid-free figure contains three equal-height panels with bold a)--c) labels:
 
@@ -25,7 +25,7 @@ The deterministic 170-by-67-mm, grid-free figure contains three equal-height pan
 
 The output is available as PDF, SVG, and 300-dpi PNG. The figure is generated from three compact frozen aggregate CSVs by `scripts/build_locking_simulation.py`; browser/Poppler rendering is recorded separately. It is placed on Supplementary page 28 and has no clipped axis, legend, label, or caption.
 
-## Supplementary Table S22
+## Supplementary Table S23
 
 The table contains:
 

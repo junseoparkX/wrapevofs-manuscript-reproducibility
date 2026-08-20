@@ -28,7 +28,7 @@ def words(value: str) -> list[str]:
 main = (ROOT / "main.tex").read_text(encoding="utf-8")
 body = (ROOT / "sections" / "main_text.tex").read_text(encoding="utf-8")
 abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", main, re.S)
-title = re.search(r"\\title\{(.*?)\}", main, re.S)
+title = re.search(r"pdftitle=\{(.*?)\}", main, re.S)
 captions = re.findall(r"\\caption\{(.*?)\}\s*\\label", body, re.S)
 
 
@@ -50,6 +50,10 @@ def prose_slice(start_heading: str, end_heading: str | None) -> str:
     value = re.sub(r"\$(?:\\.|[^$])*\$", " ", value)
     value = re.sub(r"\\input\{tables/[^{}]+\}", " ", value)
     return value
+
+if title is None:
+    preamble = (ROOT / "manuscript_preamble.tex").read_text(encoding="utf-8")
+    title = re.search(r"\\newcommand\{\\WrapEvoFSTitle\}\{(.*?)\}", preamble, re.S)
 
 assert abstract and title
 print(f"title_words={len(words(title.group(1)))}")

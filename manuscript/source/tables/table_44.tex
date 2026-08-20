@@ -3,9 +3,9 @@
 \caption{AMP-AD one-time post-freeze held-out evaluation of the 24 corrected-objective conditions}
 \label{tab:supp7}
 \scriptsize
-\begin{tabular}{llccc}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.11\linewidth}>{\centering\arraybackslash}p{0.14\linewidth}>{\centering\arraybackslash}X>{\centering\arraybackslash}X@{}}
 \toprule
-Branch & Cap & Mean center AUROC & Corrected objective $-$ RFECV-only & Corrected objective $-$ legacy top-three \\
+Branch & Cap & Mean center AUROC & Medoid $-$ RFECV-only & Medoid $-$ legacy top-three \\
 \midrule
 SVM-L1 & Small & 0.747 & -0.010 [-0.035, +0.014] & -0.031 [-0.055, -0.006] \\
 SVM-L1 & Reference & 0.776 & -0.008 [-0.029, +0.012] & +0.012 [-0.009, +0.035] \\
@@ -14,8 +14,8 @@ XGBoost & Reference & 0.782 & -0.021 [-0.044, +0.001] & +0.015 [-0.007, +0.037] 
 Boruta-RF & Small & 0.779 & -0.040 [-0.062, -0.019] & -0.012 [-0.033, +0.013] \\
 Boruta-RF & Reference & 0.793 & +0.002 [-0.015, +0.019] & +0.015 [-0.003, +0.033] \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \begin{minipage}{0.98\linewidth}\scriptsize\vspace{0.3em}
-Point estimates in the fourth and fifth columns are pooled four-center macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). The 24 development locks and protocol hash were frozen before held-out labels or outcomes were loaded. The evaluation was performed once and did not trigger reselection, refitting, or parameter changes. This is post-freeze cross-center evaluation, not prospective clinical or independent external validation.
+Point estimates in the fourth and fifth columns are pooled four-center macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). The 24 development locks and protocol hash were frozen before held-out labels or outcomes were loaded. The evaluation was performed once and did not trigger reselection or retuning. This is post-freeze cross-center evaluation, not prospective clinical or independent external validation.
 \end{minipage}
 \end{table}

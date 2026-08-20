@@ -40,7 +40,9 @@ release_candidate_*/
 # Restricted or prediction-level records
 **/outer_predictions.csv
 **/participant_predictions.csv
-manuscript/source/documentation/submission/
+manuscript/source/documentation/submission/*
+!manuscript/source/documentation/submission/NATURE_COMMUNICATIONS_ALIGNMENT.md
+!manuscript/source/documentation/submission/WrapEvoFS_Source_Data.xlsx
 
 # OS/editor
 .DS_Store

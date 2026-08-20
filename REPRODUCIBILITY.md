@@ -55,7 +55,7 @@ Deterministic builders are stored in `manuscript/source/scripts/`. Principal
 entry points include:
 
 - `build_main_figure2.py`: corrected-objective and locking verification;
-- `build_tcga_nested_figures.py`: fully nested TCGA displays;
+- `build_tcga_matched_comparator_figures.py`: fully nested TCGA benchmark and locking-geometry displays;
 - `build_strengthened_postfreeze_figure.py`: post-freeze AMP-AD held-out display;
 - `build_cgga_figure5.py`: CGGA compression and agreement display;
 - `build_radiomics_s20.py`: aggregate VGH radiomics display;

@@ -100,7 +100,7 @@ After hashes exist, deterministic tie-breaking costs $O(E)$ with a best-key scan
 \begin{figure}[p]
 \centering
 \makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s18.pdf}}
-\caption{Complete development-only original-versus-corrected-objective AMP-AD comparison across 24 center--branch--cap conditions and 120 full GA runs. a) Absolute target deviation. b) All-zero-generation diagnostic. c) Aggregates by center and branch. Overall values were 216 versus 137 and 673 versus 333, respectively; detailed robust summaries are in \cref{tab:supp2}. Held-out outcomes were not accessed.}
+\caption{Complete development-only original-versus-corrected-objective AMP-AD comparison across 24 combinations of center, branch, and cap and 120 full GA runs. a) Absolute target deviation. b) All-zero-generation diagnostic. c) Aggregates by center and branch. Overall values were 216 versus 137 and 673 versus 333, respectively; detailed robust summaries are in \cref{tab:supp2}. Held-out outcomes were not accessed.}
 \label{fig:supp2}
 \end{figure}
 
@@ -155,7 +155,7 @@ After hashes exist, deterministic tie-breaking costs $O(E)$ with a best-key scan
 \begin{figure}[p]
 \centering
 \makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s21.pdf}}
-\caption{AMP-AD one-time post-freeze held-out evaluation of the corrected objective with regret-constrained medoid locking. a) Macro one-vs-rest AUROC for 24 frozen center--branch--cap signatures; colors identify branches, open circles denote the Small cap, and filled squares denote the Reference cap. b) Pooled regret-constrained-medoid-minus-RFECV-only and c) regret-constrained-medoid-minus-legacy-top-three-medoid macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). All masks, parameters, and the protocol hash were frozen before held-out outcomes were loaded; evaluation triggered no reselection or parameter changes. Four of six intervals in b) and five of six in c) include zero.}
+\caption{AMP-AD one-time post-freeze held-out evaluation of the corrected objective with regret-constrained medoid locking. a) Macro one-vs-rest AUROC for 24 frozen signatures across combinations of center, branch, and cap; colors identify branches, open circles denote the Small cap, and filled squares denote the Reference cap. b) Pooled regret-constrained-medoid-minus-RFECV-only and c) regret-constrained-medoid-minus-legacy-top-three-medoid macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). All masks, parameters, and the protocol hash were frozen before held-out outcomes were loaded; evaluation triggered no reselection or parameter changes. Four of six intervals in b) and five of six in c) include zero.}
 \label{fig:supp9}
 \end{figure}
 

@@ -18,6 +18,7 @@ and [PyPI](https://pypi.org/project/wrapevofs/0.2.0/).
 
 - [Main article](manuscript/source/main.pdf): 18 pages, five main figures, and two main tables.
 - [Supplementary Information](manuscript/source/supplementary_information.pdf): 51 pages, Supplementary Figures S1--S28, and Supplementary Tables S1--S28.
+- [Source Data](manuscript/source/documentation/submission/WrapEvoFS_Source_Data.xlsx): display-indexed, non-identifying source data for every main and Supplementary figure and table.
 - [LaTeX source](manuscript/source/): independently compilable main and Supplementary entry points.
 - [Validation report](manuscript/source/documentation/validation/VALIDATION_REPORT.md): build, numerical, citation, and visual-QA checks.
 - [Display map](manuscript/source/documentation/DISPLAY_MAP.md) and [figure-source manifest](manuscript/source/documentation/FIGURE_SOURCE_DATA_MANIFEST.csv): claim-to-display and display-to-source mappings.
@@ -39,8 +40,8 @@ manuscript/source/
                                propositions, proofs, complexity, and crosswalks
 ```
 
-Historical manuscript states are retained in Git history rather than duplicated
-in the current tree.
+Earlier manuscript states are retained in Git history rather than duplicated in
+the current tree.
 
 ## Reproduce and validate
 

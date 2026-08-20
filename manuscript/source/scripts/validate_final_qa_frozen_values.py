@@ -21,9 +21,9 @@ def main() -> None:
     require_text(
         main_text,
         "120 completed GA runs",
-        "24 Small/Reference",
+        "24 combinations of center, branch, and Small or Reference cap",
         "decreased from 216 to 137",
-        "deviation remained lower at 135 versus 112",
+        "deviation decreased from 135 to 112",
         "decreased from 673 to 333",
         "from 428 to 267",
         "maximum selected regret was 0.00835",

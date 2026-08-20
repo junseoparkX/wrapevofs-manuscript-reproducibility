@@ -25,7 +25,3 @@ Date: 2026-08-08
 - Approved main Figures 4 and 5 retain their archived scientific roles; the post-freeze analyses are additive Supplementary Figures S21--S23 rather than replacements.
 - The regret guarantee is stated only for configured empirical development-CV score-gap feasibility.
 - The excluded locking-layer simulation has no manuscript citation or integration.
-
-## Remaining non-computational submission items
-
-Private-radiomics ethics provenance is now documented as UBC approval H20-02354, a retrospective consent waiver, anonymization, and permission for secondary analysis. All-author declaration approval and ADNI DPC upload/review remain outside machine verification.

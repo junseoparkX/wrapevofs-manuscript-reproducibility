@@ -2,7 +2,7 @@
 
 ## Decision
 
-The checksum-frozen comparator extension is informative enough for the main manuscript because it answers a reviewer-relevant question under the completed fully nested design: whether the compact WrapEvoFS signatures occupy a useful performance--compression trade-off relative to conventional selector layers and equally sized random candidate banks. The result is branch dependent, not uniformly favorable, and is therefore reported as a trade-off rather than predictive superiority.
+The checksum-frozen comparator extension is informative enough for the main manuscript because it answers a reviewer-relevant question under the completed fully nested design: whether the compact WrapEvoFS signatures occupy a useful performance and compression trade-off relative to conventional selector layers and equally sized random candidate banks. The result is branch dependent and is reported as a trade-off.
 
 ## Integrity boundary
 
