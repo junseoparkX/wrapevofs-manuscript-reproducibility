@@ -4,7 +4,7 @@
 
 - `main.tex`: PASS under LuaLaTeX; 18 pages.
 - `supplementary_information.tex`: PASS under LuaLaTeX; 51 pages.
-- Main PDF SHA-256: `bf42cdc5b0c419a76a389ba8994298bc87dbd71912a7256a706012d3b37c251b`.
+- Main PDF SHA-256: `3ba0547aae36ca47ea409a38d7e1bb390a7436d9794700bd6033a0fec02b6152`.
 - Supplementary PDF SHA-256: `b823ef0878d88426de9497ec95aff4d6cc0672214953a6fba6021ee1e9248b31`.
 - Final logs contain no undefined references, undefined citations, duplicate labels, missing figures, missing characters, overfull boxes, or fatal LaTeX errors. The only logged font notice is a benign 0.5-point substitution for the small ORCID icon glyphs.
 - Deterministic submission counts: title 9 words; Abstract 150 words; Introduction, Results, and Discussion 2,134 words; Methods 2,928 words; five main figures and two main tables.
