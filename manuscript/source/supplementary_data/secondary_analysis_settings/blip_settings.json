@@ -1,0 +1,34 @@
+{
+  "source_notebook": "02_restricted_blip_rf_and_csv_exports_COLAB.ipynb",
+  "source_modified": "2026-07-16",
+  "candidate_groups": "singleton features",
+  "reference_class": "CN",
+  "contrasts": [
+    "MCI_vs_CN",
+    "Dementia_vs_CN",
+    "Dementia_vs_MCI"
+  ],
+  "activity_event": "max(abs(beta_MCI_CN), abs(beta_Dementia_CN), abs(beta_Dementia_CN-beta_MCI_CN)) > log(OR_threshold)",
+  "posterior_error_probability": "1 - posterior activity probability",
+  "primary_OR_threshold": 1.1,
+  "primary_q": 0.2,
+  "error": "fdr",
+  "deterministic": true,
+  "perturb": false,
+  "max_pep": 1.0,
+  "solver": "CLARABEL",
+  "sensitivity": [
+    {
+      "OR_threshold": 1.1,
+      "q": 0.1
+    },
+    {
+      "OR_threshold": 1.05,
+      "q": 0.2
+    },
+    {
+      "OR_threshold": 1.2,
+      "q": 0.2
+    }
+  ]
+}

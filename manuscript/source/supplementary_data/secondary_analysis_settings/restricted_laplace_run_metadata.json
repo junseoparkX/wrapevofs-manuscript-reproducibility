@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-07-16T01:50:57.482540+00:00",
+  "run_mode": "final",
+  "model": "Restricted reference-category 3-class multinomial logistic regression with non-centered exact Laplace priors",
+  "coefficient_prior": "beta_raw ~ Laplace(0,1); beta = beta_raw * tau_global[class] / sqrt(n_candidate_features)",
+  "candidate_rule": "Union of locked training-only WrapEvoFS signatures and selected training-only STABL signature",
+  "n_candidate_features": 81,
+  "candidate_hash": "1b0c154a557caadfce55817c9179aff09cf17d82fc359c0432a1e4efd1d30dfb",
+  "n_chains": 4,
+  "n_warmup_per_chain": 1000,
+  "n_samples_per_chain": 1000,
+  "target_accept_prob": 0.95,
+  "max_tree_depth": 10,
+  "diagnostic_status": "PASS",
+  "diagnostics": {
+    "total_divergences": 0,
+    "max_coefficient_rhat": 1.001752495765686,
+    "min_coefficient_ess": 3035.549550745026,
+    "max_global_rhat": 1.0019714832305908
+  },
+  "data": {
+    "train_sha256": "3dab92edec0492924a94b624e1b06881eed4fa50d2215388e8ac1fb3761ea7df",
+    "test_sha256": "3e1906f6d60d02bc32c8a3dc8991b2661596a48e11d15a7aef6aae192d94af69",
+    "n_train": 532,
+    "n_test": 133
+  },
+  "software": {
+    "python": "3.12.13",
+    "jax": "0.7.2",
+    "numpyro": "0.21.0",
+    "numpy": "2.0.2",
+    "pandas": "2.2.2",
+    "sklearn": "1.6.1",
+    "jax_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_x64": false
+  }
+}

@@ -151,6 +151,14 @@ Every candidate and rule within a bank received the same vector. Uniform weighti
 
 We summarized retention and Jaccard overlap relative to each rule's uniform-weight mask, candidate selection probabilities, selection entropy, perturbed score gap $\max_j L_j(\mathbf c)-L_{\widehat r}(\mathbf c)$, and eligible-pool changes. Cohort means weighted banks equally. These fixed-bank sensitivity distributions use dependent recorded fold scores without participant resampling, model refitting, or held-out outcomes; they are not generalization confidence intervals. Primary signatures and evaluation results were unchanged.
 
+\subsection{ADNI secondary Bayesian, STABL, and BLiP specifications}
+
+The archived three-class analyses used CN as the reference class and training-only standardization. For each nonreference class $c$, the multinomial-logit model used $\alpha_c\sim\mathcal{N}(0,2^2)$, $\tau_c\sim\mathrm{HalfNormal}(1)$, and $\beta_{cj}=\tau_c z_{cj}/\sqrt{p}$. The full model used $p=7{,}411$ and $z_{cj}\sim\mathcal{N}(0,1)$; the restricted model used $p=81$ and $z_{cj}\sim\mathrm{Laplace}(0,1)$, with the second parameter denoting scale. Its candidate set was the union of locked training-only WrapEvoFS signatures and the training-only STABL signature. Both models used four independently adapted NUTS chains, each with 1,000 warmup and 1,000 retained draws, target acceptance 0.95, and maximum tree depth 10. The full model used CPU/64-bit arithmetic and the restricted model GPU/32-bit arithmetic; archived diagnostics accompany the posterior summaries.
+
+STABL used class-balanced one-versus-rest L1 logistic regression (liblinear), ten equally spaced $C$ values from 0.01 to 1.00, 500 half-sample resamples without replacement, seed 42, variance threshold 0.01, and knockoff artificial features at a 1:1 ratio. The stability-threshold grid was 0.10--0.99 in increments of 0.01; archived stability paths and selected thresholds define the reported signature.
+
+For restricted-model feature $j$, the BLiP activity probability was $P(\max\{|\beta_{1j}|,|\beta_{2j}|,|\beta_{2j}-\beta_{1j}|\}>\log a\mid\mathcal{D}_{\mathrm{train}})$, covering all three pairwise class contrasts per training-standardized feature. Singleton candidate groups used one minus this probability as their posterior error probability. Deterministic BLiP used expected-FDR level $q=0.20$ and $a=1.10$; sensitivities separately used $q=0.10$, $a=1.05$, or $a=1.20$. Machine-readable settings and the recovered model definition are supplied in \path{supplementary_data/secondary_analysis_settings/}.
+
 \section{Supplementary Figures}
 
 \begin{figure}[H]

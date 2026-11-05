@@ -45,9 +45,9 @@ def main() -> None:
     require_text(
         ROOT / "tables" / "table_40.tex",
         "All 24 conditions & Absolute target deviation & 24 & 216 & 137",
-        "All 24 conditions & All-zero generations & 24 & 673 & 333",
+        "All 24 conditions & Legacy-zero diagnostic & 24 & 673 & 333",
         "Excluding Rush/SVM-L1/Small & Absolute target deviation & 23 & 135 & 112",
-        "Excluding Rush/SVM-L1/Small & All-zero generations & 23 & 428 & 267",
+        "Excluding Rush/SVM-L1/Small & Legacy-zero diagnostic & 23 & 428 & 267",
     )
     with (ROOT / "revision_outputs" / "ELIGIBLE_POOL_TIE_PATH_AUDIT.csv").open(
         newline="", encoding="utf-8-sig"

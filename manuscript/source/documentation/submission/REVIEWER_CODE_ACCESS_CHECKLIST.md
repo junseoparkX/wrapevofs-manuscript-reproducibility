@@ -53,6 +53,6 @@ Editors and reviewers can inspect the public source repositories, install the im
 
 - Fixed-bank CV-score reweighting: `supplementary_data/cv_score_sensitivity/` includes the two non-participant input CSVs, protocol, executable analysis, aggregate results and integrity checks.
 - Equal-center weighting: `supplementary_data/ampad_center_sensitivity/` includes aggregate tables and the analysis script; rerunning intervals requires separately authorized saved predictions.
-- Current manuscript: main 19 pages, five figures and two tables; Supplementary Information 54 pages, 29 figures and 30 tables.
+- Current manuscript: main 19 pages, five figures and two tables; Supplementary Information 55 pages, 29 figures and 30 tables.
 - The source-data workbook indexes 66 display items and preserves the original aggregate observations.
 - Existing 111-test software release verification above is historical; this submission refresh does not change the package release or claim to rerun its test suite.

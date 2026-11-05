@@ -2,7 +2,7 @@
 
 This directory is the authoritative, submission-facing WrapEvoFS manuscript package.
 
-This is the current v19 package, prepared on 5 November 2026. The main PDF has 19 pages, five figures and two tables. Supplementary Information has 54 pages, 29 figures and 30 tables. V19 adds fixed-bank CV-score reweighting and equal-center weighting sensitivity, with approved main figures and polished supplementary artwork. Earlier v18 documentation remains historical; see `V19_README.md` for the version history. The submission refresh updates collateral only and does not change either manuscript or any figure.
+This is the current v19 package, prepared on 5 November 2026. The main PDF has 19 pages, five figures and two tables. Supplementary Information has 55 pages, 29 figures and 30 tables. V19 adds fixed-bank CV-score reweighting and equal-center weighting sensitivity, with approved main figures and polished supplementary artwork. Earlier v18 documentation remains historical; see `V19_README.md` for the version history. The latest clarification updates four method/terminology explanations while preserving all results and figure assets; see documentation/validation/V19_MINIMAL_CLARIFICATIONS_20261105.md.
 
 ## Entry points
 

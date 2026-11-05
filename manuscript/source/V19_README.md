@@ -1,12 +1,12 @@
 # Current public v19 snapshot
 
-Prepared 5 November 2026. Use main.pdf (19 pages) and supplementary_information.pdf (54 pages); the current display inventory is 5 main figures, 2 main tables, 29 supplementary figures and 30 supplementary tables. CURRENT_MANUSCRIPT.json freezes the current sources/artwork. The Source Data workbook indexes all 66 displays.
+Prepared 5 November 2026. Use main.pdf (19 pages) and supplementary_information.pdf (55 pages). There are five main figures, two main tables, 29 supplementary figures and 30 supplementary tables. Four minimal explanation updates are documented in documentation/validation/V19_MINIMAL_CLARIFICATIONS_20261105.md; all numerical findings and artwork are preserved. CURRENT_MANUSCRIPT.json records the current source/artwork hashes.
 
-The version includes completed fixed-bank CV-score reweighting and equal-center weighting sensitivity. Common-RF-seed rescoring is a separate ongoing experiment and contributes no results to this snapshot. No new manuscript edits were made during the submission-collateral refresh.
+The separate common-RF-seed experiment contributes no results to this snapshot. Private cover letters, forms and the coauthor ZIP are distributed locally, not through this public repository. Local-package notes below are historical context; use the current PDFs and manifest above.
 
-The historical local-workspace notes below describe prior stages and local ZIP/preview artifacts, which are not necessarily published in this Git tree. They do not replace the current PDFs or display map.
+# Current coauthor/submission package (5 November 2026)
 
----
+Use `WrapEvoFS_v19_coauthor_submission_20261105.zip` for the latest PDFs, cover letter, submission documents, Source Data, and buildable source. Four minimal explanation updates clarify evaluator overrides, AMP-AD score provenance, secondary-analysis settings, and legacy-zero terminology. All figure assets, primary results, and v18 are preserved. Historical integration scripts and the earlier packages below predate these clarifications and should not be rerun over the current source.
 
 # WrapEvoFS v19 integrated revision
 

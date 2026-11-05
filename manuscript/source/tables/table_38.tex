@@ -1,6 +1,6 @@
 ﻿\begin{table}[H]
 \centering
-\caption{Development-only AMP-AD comparison of the original configuration (zero-truncated objective and top-three Jaccard-medoid locking) with the corrected-objective configuration (untruncated objective and regret-constrained medoid locking at absolute $\delta=0.01$) across 24 combinations of center, branch, and cap.}
+\caption{Development-only AMP-AD comparison of the original configuration (zero-truncated objective and top-three Jaccard-medoid locking) with the corrected-objective configuration (untruncated objective and regret-constrained medoid locking at absolute $\delta=0.01$) across 24 combinations of center, branch, and cap. The legacy-zero diagnostic counts generations in which zero truncation would flatten every candidate fitness; it does not count actual sampling fallbacks.}
 \label{tab:supp1}
 \scriptsize
 \setlength{\tabcolsep}{2.6pt}
@@ -8,7 +8,7 @@
 \supplementarytablesection{a. Aggregate target fidelity and flattening diagnostics}
 \begin{tabular}{lrrrr}
 \toprule
-Group & \multicolumn{2}{c}{Absolute target deviation} & \multicolumn{2}{c}{All-zero generations} \\
+Group & \multicolumn{2}{c}{Absolute target deviation} & \multicolumn{2}{c}{Legacy-zero diagnostic} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-5}
  & Orig. & Upd. & Orig. & Upd. \\
 \midrule
@@ -29,7 +29,7 @@ Overall & 216 & 137 & 673 & 333 \\
 \resizebox{\linewidth}{!}{%
 \begin{tabular}{lllrrrrrrrrrr}
 \toprule
-Center & Branch & Cap & $k^*$ & \multicolumn{2}{c}{Locked $n$} & \multicolumn{2}{c}{$\lvert n-k^*\rvert$} & \multicolumn{2}{c}{Zero run-best, $n/5$} & \multicolumn{2}{c}{All-zero generations} & Upd. regret \\
+Center & Branch & Cap & $k^*$ & \multicolumn{2}{c}{Locked $n$} & \multicolumn{2}{c}{$\lvert n-k^*\rvert$} & \multicolumn{2}{c}{Zero run-best, $n/5$} & \multicolumn{2}{c}{Legacy-zero diagnostic} & Upd. regret \\
 \cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
  & & & & Orig. & Upd. & Orig. & Upd. & Orig. & Upd. & Orig. & Upd. & \\
 \midrule
@@ -109,5 +109,5 @@ Rush & Boruta-RF & Reference & 0.8756 & 0.8856 & 0.0100 & 1 & 0.0000 & NA \\
 \bottomrule
 \end{tabular}}
 \vspace{0.55em}
-\parbox{0.98\linewidth}{\scriptsize\textit{Note.} Orig., original configuration; Upd., corrected-objective configuration. The original configuration used the zero-truncated objective and legacy top-three medoid. Corrected-objective values were obtained from 120 newly executed full GA runs (five seeds per condition) at the Small and Reference caps using the untruncated objective and regret-constrained medoid; High-cap conditions were not rerun. The all-zero column is the zero-truncation diagnostic evaluated along each untruncated search history. Uniform parent-sampling fallbacks were zero. Final locking used fixed development-CV scores, absolute regret tolerance 0.01, strict eligible-only pools, and no fallback expansion. Because both candidate generation and locking differ, between-column differences are configuration-level comparisons rather than isolated causal effects of either component. The two Rush singleton pools have undefined mean Jaccard (NA); all 18 newly completed pools contained two to five candidates. Held-out outcomes were not accessed or evaluated. Mean Jaccard was reduced in canonical mask-hash order. In Mount Sinai/SVM-L1/Reference, runs 3 and 5 had the same exact peer-Jaccard multiset but differed by one IEEE-754 unit in the last place under historical versus canonical reduction order; the authoritative package selected run 5 (17 features; regret 0.0037), whereas the older helper selected run 3 (17 features; regret 0). Both were eligible, and target-count summaries were unchanged.}
+\parbox{0.98\linewidth}{\scriptsize\textit{Note.} Orig., original configuration; Upd., corrected-objective configuration. The original configuration used the zero-truncated objective and legacy top-three medoid. Corrected-objective values were obtained from 120 newly executed full GA runs (five seeds per condition) at the Small and Reference caps using the untruncated objective and regret-constrained medoid; High-cap conditions were not rerun. The legacy-zero column is the zero-truncation diagnostic evaluated along each untruncated search history. Uniform parent-sampling fallbacks were zero. Final locking used fixed development-CV scores, absolute regret tolerance 0.01, strict eligible-only pools, and no fallback expansion. Because both candidate generation and locking differ, between-column differences are configuration-level comparisons rather than isolated causal effects of either component. The two Rush singleton pools have undefined mean Jaccard (NA); all 18 newly completed pools contained two to five candidates. Held-out outcomes were not accessed or evaluated. Mean Jaccard was reduced in canonical mask-hash order. In Mount Sinai/SVM-L1/Reference, runs 3 and 5 had the same exact peer-Jaccard multiset but differed by one IEEE-754 unit in the last place under historical versus canonical reduction order; the authoritative package selected run 5 (17 features; regret 0.0037), whereas the older helper selected run 3 (17 features; regret 0). Both were eligible, and target-count summaries were unchanged.}
 \end{table}

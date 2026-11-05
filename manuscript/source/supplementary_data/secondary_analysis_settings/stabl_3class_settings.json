@@ -1,0 +1,37 @@
+{
+  "C_grid": [
+    0.01,
+    0.12,
+    0.23,
+    0.34,
+    0.45,
+    0.56,
+    0.67,
+    0.78,
+    0.89,
+    1.0
+  ],
+  "artificial_proportion": 1.0,
+  "artificial_type": "knockoff",
+  "base_estimator": "LogisticRegression_L1_liblinear_OvR",
+  "class_labels": [
+    0,
+    1,
+    2
+  ],
+  "class_names": [
+    "CN",
+    "MCI",
+    "Dementia"
+  ],
+  "class_weight": "balanced",
+  "fdr_threshold_start": 0.1,
+  "fdr_threshold_step": 0.01,
+  "fdr_threshold_stop_exclusive": 1.0,
+  "n_bootstraps": 500,
+  "random_seed": 42,
+  "replace": false,
+  "sample_fraction": 0.5,
+  "task": "Diagnosis_3class_CN_MCI_Dementia",
+  "variance_threshold": 0.01
+}
