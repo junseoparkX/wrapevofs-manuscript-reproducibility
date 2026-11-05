@@ -20,12 +20,11 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "v19_work/experiments/cv_score_sensitivity/fenn10_results"
+SOURCE = ROOT / "supplementary_data/cv_score_sensitivity/results"
 WORK = ROOT / "v19_work/supplement_polish_20261105/modern/s29"
 FIGURES = ROOT / "v19_work/supplement_polish_20261105/modern/figures"
-sys.path.insert(0, str(Path(r"C:\Users\junse\.codex\skills\nature-figure\scripts")))
-from audit_panel_alignment import require_matplotlib_panel_alignment
 sys.path.insert(0, str(ROOT / "scripts"))
+from audit_panel_alignment import require_matplotlib_panel_alignment
 from v19_build_figures23 import configure, validate_text
 
 POLICIES = ["highest_score", "legacy_top3", "unrestricted_medoid", "regret_medoid"]

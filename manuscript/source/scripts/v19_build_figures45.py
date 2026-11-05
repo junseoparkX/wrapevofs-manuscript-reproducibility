@@ -21,8 +21,6 @@ import pandas as pd
 BASE = Path(__file__).resolve().parents[1]
 WORK = BASE / 'v19_work' / 'figures45'
 OUT = BASE / 'figures'
-SKILL = Path(r'C:\Users\junse\.codex\skills\nature-figure\scripts')
-sys.path.insert(0, str(SKILL))
 from audit_panel_alignment import require_matplotlib_panel_alignment
 
 COLORS = {'svm_l1':'#386A8B', 'xgboost':'#7B8794', 'boruta_rf':'#8A6B98'}
@@ -54,7 +52,7 @@ def load(folder, name):
 
 
 def load_review(name):
-    p = BASE / 'v19_work' / 'content_review' / name
+    p = BASE / 'supplementary_data' / 'ampad_center_sensitivity' / name
     SOURCE_HASHES[str(p.relative_to(BASE))] = hashlib.sha256(p.read_bytes()).hexdigest()
     return pd.read_csv(p)
 

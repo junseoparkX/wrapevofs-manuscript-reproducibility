@@ -42,8 +42,11 @@ manuscript/source/
                                propositions, proofs, complexity, and crosswalks
 ```
 
-Earlier manuscript states are retained in Git history rather than duplicated in
-the current tree.
+One-time editing utilities and duplicate working CSVs have been removed from
+the current tree. Exact historical CSV paths resolve through
+[the canonical-source alias map](manuscript/source/documentation/AGGREGATE_PATH_ALIASES.json).
+All manuscript PDFs, artwork, canonical results and scientific audit records remain preserved.
+Earlier states remain in Git history.
 
 ## Reproduce and validate
 

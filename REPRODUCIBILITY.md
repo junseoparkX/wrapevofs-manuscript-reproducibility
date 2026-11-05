@@ -1,40 +1,24 @@
-# Reproducibility guide
+# Reproduce the published v19 manuscript
 
-## Environment
+## Install
 
-Create a clean Python environment from the repository root:
+Use Python 3.10 or newer and a clean environment:
 
 ```bash
 python -m venv .venv
-python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-The associated software release can be installed independently with:
+The feature-selection implementation and its tests are maintained separately:
+`python -m pip install wrapevofs==0.2.0`.
 
-```bash
-python -m pip install wrapevofs==0.2.0
-```
+## Check the supplied manuscript
 
-## Build the manuscript
-
-The manuscript uses LuaLaTeX. From `manuscript/source/`:
-
-```bash
-latexmk -g -lualatex -interaction=nonstopmode -halt-on-error main.tex
-latexmk -g -lualatex -interaction=nonstopmode -halt-on-error supplementary_information.tex
-```
-
-The verified outputs contain 19 main-article pages and 54 Supplementary pages.
-The final logs contain no unresolved citations or references and no overfull or
-underfull boxes.
-
-## Validate frozen results and presentation
-
-Run the following commands from `manuscript/source/`:
+From `manuscript/source/`:
 
 ```bash
 python scripts/validate_current_manuscript.py
+python scripts/validate_repository_structure.py
 python scripts/validate_figure1_freeze.py
 python scripts/validate_final_qa_frozen_values.py
 python scripts/validate_main_panel_labels.py
@@ -44,50 +28,65 @@ python scripts/validate_locking_simulation_integration.py
 python scripts/validate_submission_pdfs.py main.pdf supplementary_information.pdf
 ```
 
-These checks cover frozen numerical invariants, canonical panel labels,
-figure-source provenance, VGH radiomics integration boundaries, the controlled
-locking-layer simulation, PDF page boundaries, blank pages, and Supplementary
-display numbering. Detailed outcomes are recorded in
-`manuscript/source/CURRENT_MANUSCRIPT.json`; earlier validation reports retain their historical scope.
+`CURRENT_MANUSCRIPT.json` records the exact current source and artwork hashes.
+The PDFs contain 19 main pages and 55 supplementary pages, five main figures,
+two main tables, 29 supplementary figures and 30 supplementary tables.
 
-## Rebuild presentation assets
+## Compile
 
-Deterministic builders are stored in `manuscript/source/scripts/`. Principal
-entry points include:
+Install a TeX distribution with LuaLaTeX, BibTeX and latexmk, then run from
+`manuscript/source/`:
 
-- `v19_build_figures23.py`: current development-only verification and TCGA candidate-bank geometry;
-- `v19_build_figures45.py`: current TCGA benchmark and AMP-AD center-weighting displays;
-- `supplementary_data/cv_score_sensitivity/run_cv_score_sensitivity.py`: self-contained fixed-score reweighting analysis (standard library; no refitting);
-- `build_cgga_figure5.py`: CGGA compression and agreement display;
-- `build_radiomics_s20.py`: aggregate VGH radiomics display;
-- `build_locking_simulation.py`: controlled locking-layer simulation display.
+```bash
+latexmk -lualatex -interaction=nonstopmode -halt-on-error main.tex
+latexmk -lualatex -interaction=nonstopmode -halt-on-error supplementary_information.tex
+```
 
-Each builder documents its aggregate inputs and output scope. Rebuilding a
-display from included source tables is distinct from rerunning GA, RFECV, Direct
-selection, model fitting, or held-out evaluation.
+## Regenerate figures from frozen aggregates
 
-## Controlled-input boundary
+Use a disposable checkout: renderers write output figures and local QA files.
+The checked-in PDF/SVG assets are the authoritative publication files; font and
+renderer versions can affect the bytes produced by a new rendering environment.
+From `manuscript/source/`:
 
-Participant-level and provider-controlled inputs, identifiers, imaging data,
-prediction-level records, model objects, and run checkpoints are excluded.
-Complete raw-to-aggregate reproduction requires the relevant data-use approval,
-source-specific preprocessing, and separately retained run artifacts. Missing
-controlled inputs must not be fabricated or substituted.
+```bash
+python scripts/v19_build_figures23.py
+python scripts/v19_build_figures45.py
+python v19_work/supplement_polish_20261105/modern/build_s29_vector.py
+python v19_work/supplement_polish_20261105/modern/build_modern.py
+```
 
-The maintained implementation and executable package tests are in the
-[companion software repository](https://github.com/junseoparkX/wrapevofs-package).
+These produce main Figures 2–5 and Supplementary Figures S1–S9, S28 and S29 using included
+aggregate inputs. They no longer require a private editor-plugin installation
+or the original fenn10 directory. The conceptual Figure 1 has an editable SVG.
+`documentation/FIGURE_SOURCE_DATA_MANIFEST.csv` maps the remaining displays to
+their source tables and rendering entry points. Older supplementary rendering
+routes may require archived source assets or additional SVG/font libraries;
+their supplied figures remain directly compilable.
 
-## v19 additions
+## Analytic and data boundaries
 
-The fixed-bank sensitivity package retains exact input/output/protocol checksums.
-Its two input CSVs contain feature masks and development fold scores, not participant rows.
-The equal-center package supplies 12 aggregate contrasts and 48 center-specific contrasts;
-recomputation of those intervals requires separately authorized saved predictions.
-Current polished supplementary PDF/SVG files include paths under
-`v19_work/supplement_polish_20261105/modern/figures/` as referenced by the unchanged TeX.
-The adjacent source_data folder retains aggregate CSV copies. Archived presentation
-scripts document the local rendering route and may require the original plotting
-helpers/fonts or archived SVG sources; the compiled PDFs and editable SVGs are supplied.
-This distinction does not affect compilation of the manuscript from the supplied TeX.
-Cover letters, publisher forms and administrative correspondence remain local submission
-collateral rather than public research data.
+`supplementary_data/cv_score_sensitivity/` contains the complete standard-library
+fixed-bank reweighting analysis, inputs, outputs, protocol and integrity manifest.
+`supplementary_data/ampad_center_sensitivity/` contains aggregate center-weighting
+contrasts; recomputing the bootstrap intervals requires authorized saved predictions.
+`supplementary_data/secondary_analysis_settings/` records the original Bayesian,
+STABL and BLiP configurations and code excerpts.
+
+Candidate banks, negative results, paired contrasts, locking audits and provenance
+remain included. Participant-level records, model checkpoints and controlled
+inputs are not distributed. Raw-to-result reproduction requires source access,
+the stated preprocessing and the companion software. See `DATA_BOUNDARIES.md`.
+
+## Canonical files and history
+
+Exact duplicate working CSVs were consolidated. Historical source labels,
+including those in the unchanged Source Data workbook, resolve through
+`manuscript/source/documentation/AGGREGATE_PATH_ALIASES.json`; each alias includes
+a retained canonical file with the same SHA-256. Do not remove the current
+`v19_work/supplement_polish_20261105/modern/figures/` directory: the Supplementary
+TeX directly uses its publication assets.
+
+One-time editing utilities, superseded proposal text and old presentation
+checkpoints are available in Git history at commit
+`883f5db5310cf265c19b1824622884edac191af6`. Current validation is run by GitHub Actions.

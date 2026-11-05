@@ -19,7 +19,6 @@ QA=WORK/'qa'
 DATA=WORK/'source_data'
 for p in [OUT,QA,DATA]: p.mkdir(parents=True,exist_ok=True)
 sys.path.insert(0,str(ROOT/'scripts'))
-sys.path.insert(0,r'C:\Users\junse\.codex\skills\nature-figure\scripts')
 from audit_panel_alignment import require_matplotlib_panel_alignment
 from v19_build_figures23 import configure
 BLUE,SLATE,PLUM='#386A8B','#7B8794','#8A6B98'
@@ -35,10 +34,14 @@ def frozen():
     names=['figure_2','figure_4_strengthened','figure_3_strengthened','figure_5_strengthened']
     return {str(p):sha(p) for p in (ROOT/'figures').iterdir() if p.is_file() and (p.name.startswith('figure_1') or p.stem in names)}
 def read(path):
-    path=Path(path); f=pd.read_csv(path,float_precision='round_trip')
-    target=DATA/(path.parent.name+'__'+path.name)
-    shutil.copy2(path,target)
-    SOURCES[str(path)]={'sha256':sha(path),'rows':len(f),'copy':str(target.relative_to(WORK))}
+    path=Path(path)
+    if not path.is_file():
+        historical=DATA/(path.parent.name+'__'+path.name)
+        aliases=json.loads((ROOT/'documentation/AGGREGATE_PATH_ALIASES.json').read_text())['aliases']
+        rel=historical.relative_to(ROOT).as_posix()
+        path=ROOT/aliases[rel] if rel in aliases else historical
+    f=pd.read_csv(path,float_precision='round_trip')
+    SOURCES[str(path.relative_to(ROOT))]={'sha256':sha(path),'rows':len(f)}
     return f
 def style():
     configure()
@@ -214,7 +217,11 @@ def s6s7():
 
 def s8():
     m=module('build_tcga_matched_comparator_figures');m.BRANCH_COLORS=COLORS;m.DARK='black';style();m.require_validated()
-    metrics,diffs,pred,freq,runtime=m.load_frames()
+    # This display uses aggregate summaries only; participant predictions are
+    # neither needed by make_supplement nor distributed in the public package.
+    metrics=read(m.SOURCE/'oof_metrics.csv')
+    diffs=read(m.SOURCE/'paired_regret_medoid_minus_comparator.csv')
+    runtime=read(m.SOURCE/'runtime_and_fit_counts.csv')
     # Saved final means include the parent methods; the newer fold_metrics.csv
     # only contains added selector methods and cannot supply parent counts.
     counts=read(m.SOURCE/'mean_feature_counts.csv')
@@ -229,6 +236,7 @@ def s8():
 
 def s9():
     m=module('build_postfreeze_results');m.COLORS=COLORS;m.DARK='black';style()
+    m.AMP=ROOT/'supplementary_data/postfreeze_ampad'
     read(m.AMP/'condition_metrics.csv');read(m.AMP/'paired_condition_contrasts.csv')
     def captured(fig,stem):
         fig.set_figheight(90/25.4);fig.subplots_adjust(left=.09,right=.985,bottom=.25,top=.85,wspace=.95)

@@ -1,5 +1,0 @@
-candidate_bank,locking_rule,conditions,total_target_deviation,mean_selected_count,mean_locking_score,mean_selected_regret,maximum_selected_regret,conditions_with_both_rules,selected_mask_changes_between_rules
-original_objective,original_top_three,24,216,24.125,0.8647491669423012,0.002609497840598362,0.02111030192590324,24,10
-original_objective,regret_constrained,24,227,24.583333333333332,0.8667555414567508,0.0006031233261488087,0.007293358158055319,24,10
-updated_objective,original_top_three,24,135,20.75,0.8632939890136794,0.003513337363307926,0.015246823805899479,24,8
-updated_objective,regret_constrained,24,137,20.833333333333332,0.8657243408975148,0.001082985479472461,0.00834728281765218,24,8
