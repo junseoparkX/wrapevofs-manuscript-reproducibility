@@ -1,5 +1,5 @@
 ﻿\supplementarysetup
-This Supplementary Information provides the complete algorithm, formal locking guarantees, computational complexity, archived and secondary analyses, one-time post-freeze AMP-AD evaluation details, a coherent CGGA benchmark, a reduced-budget saved-bank nested sensitivity, a controlled candidate-bank locking simulation, a fully nested TCGA GBM/LGG analysis, a VGH brain-tumour radiomics internal demonstration, and machine-readable audit correspondence. The package preserves the original algorithms as legacy-compatible modes, and archived results are not relabeled as corrected-objective results. Complete candidate- and metric-level audits are supplied as machine-readable CSV files with analysis provenance. \Crefrange{fig:supp21}{fig:supp22} provide descriptive tuned-evaluator sensitivity and computational provenance and are not used for a core claim.
+Supplementary Methods provide the algorithm, formal properties, implementation details, and evaluation protocols; figures, tables, and machine-readable audits report the complete analyses. Archived legacy-compatible results remain distinct from corrected-objective results. The tuned-evaluator sensitivity and computational provenance in \crefrange{fig:supp21}{fig:supp22} are descriptive and do not support a core claim.
 
 
 \section{Supplementary Methods}
@@ -8,7 +8,59 @@ This Supplementary Information provides the complete algorithm, formal locking g
 
 \input{tables/supplementary_algorithm_s1.tex}
 
-The algorithm makes the leakage boundary operational: held-out data are absent from search, candidate rescoring, eligibility, representative locking, and audit export. The main text gives the scientific definitions; the following sections provide the formal and engineering details. The executable v0.2.0 wrapper, RFECV, genetic-operator, evaluator, locking, and randomness specifications are consolidated in \cref{tab:supp24}; archived dataset-level metric and cap overrides remain in \cref{tab:supp27}.
+Held-out data are excluded from search, rescoring, eligibility, locking, and audit export. Executable v0.2.0 specifications are consolidated in \cref{tab:supp24}; archived dataset-level metric and cap overrides are in \cref{tab:supp27}.
+
+\subsection{Complete notation and objective definitions}
+
+This section specifies the quantities used in candidate generation, rescoring, and representative locking. For Direct branch $m$, let $\mathcal C_m$ be the pre-GA candidate set with size $p_m$. RFECV chooses the smallest count attaining the largest mean development-fold score among counts permitted by the configured cap:
+\begin{equation}
+k_m^{\ast}=\min\left(\operatorname*{arg\,max}_{k\in\mathcal K_m^{\mathrm{elig}}}\overline S_{R,m}(k)\right).
+\end{equation}
+For selected set $F$, compression relative to the Direct set is
+\begin{equation}
+C(F)=1-\frac{|F|}{p_m}.
+\end{equation}
+
+Every retained candidate is evaluated on the same $K_L$ fixed stratified folds. With $s^{L}_{r\ell}$ denoting the locking-metric score for candidate $r$ on fold $\ell$, its mean locking score, empirical regret, and strict eligible pool are
+\begin{align}
+L_r&=\frac{1}{K_L}\sum_{\ell=1}^{K_L}s^{L}_{r\ell},\\
+R_r&=L_{\mathrm{best}}-L_r,\qquad L_{\mathrm{best}}=\max_jL_j,\\
+E_\delta&=\{r:R_r\leq\delta\}.
+\end{align}
+The held-out contrast, calculated only after locking, is
+\begin{equation}
+\Delta_{\mathrm{heldout}}=M(F^{\mathrm{lock}})-M(\mathcal C_m).
+\end{equation}
+
+A nonempty binary chromosome \(\mathbf z\in\{0,1\}^{p_m}\) represents feature set \(F_m(\mathbf z)\). Using \(K_G\) fixed stratified folds and chromosome-level seed \(\xi\), the base search score and size-penalized raw objective are
+\begin{align}
+\overline S_{G,m}(\mathbf z;\xi)&=\frac{1}{K_G}\sum_{\ell=0}^{K_G-1}s^{G}_{m\ell}(\mathbf z;\xi),\\
+Q_m(\mathbf z;\xi)&=\overline S_{G,m}(\mathbf z;\xi)-\lambda\left||F_m(\mathbf z)|-k_m^{\ast}\right|.
+\end{align}
+The legacy-compatible objective truncates negative values,
+\begin{equation}
+\Phi_m^{\mathrm{legacy}}(\mathbf z;\xi)=\max\{0,Q_m(\mathbf z;\xi)\},
+\end{equation}
+whereas the corrected mode uses $Q_m$ directly for ranking, elite selection, and run-best updating. For proportional parent sampling only, it maps each finite population objective $Q_i$ to the nonnegative weight below, where $Q_{\min}$ is the minimum finite objective in the evaluated population:
+\begin{equation}
+w_i=Q_i-Q_{\min}+\epsilon,\qquad \epsilon=10^{-12},
+\end{equation}
+and samples with probability
+\begin{equation}
+\pi_i=\frac{w_i}{\sum_jw_j}.
+\end{equation}
+Here $N$ is the population size. Nonfinite objectives receive zero weight. Uniform sampling, $\pi_i=1/N$, is recorded when no objective is finite, the finite-objective range is at most $\epsilon$, or the weight total is invalid or effectively zero.
+
+For a nonsingleton eligible pool, candidate $r$'s mean Jaccard similarity is
+\begin{equation}
+\overline J_r=\frac{1}{|E_\delta|-1}\sum_{\substack{s\in E_\delta\\s\ne r}}
+\frac{|F_r\cap F_s|}{|F_r\cup F_s|}.
+\end{equation}
+Candidates are ordered by larger $\overline J_r$, larger $L_r$, smaller $|F_r|$, and lexicographically smaller canonical stable-mask hash. If $\widehat r$ is first in that ordering, the locked feature set is
+\begin{equation}
+F^{\mathrm{lock}}=F_{\widehat r}.
+\end{equation}
+These equations define the implemented quantities; the propositions below establish finite-bank feasibility and deterministic selection.
 
 \subsection{Stochastic-agreement summary}
 
@@ -34,8 +86,7 @@ All six development locks were written before held-out evaluation. A fixed 500-t
 
 \subsection{AMP-AD post-freeze evaluation and Rush source recovery}
 
-The 24 corrected-objective AMP-AD development locks were enumerated in a frozen inventory containing the held-out center, branch, cap, selected run, selected feature list, fixed locking score, empirical regret, eligible-pool size, tie path, and source paths. Before any held-out-center file was read, the evaluation protocol fixed the primary and secondary metrics, final random-forest estimator, run-derived seeds, archived comparators, 2,000-resample paired bootstrap, and reporting rule. The protocol and inventory hashes were then checked at evaluation entry, and a completion sentinel prevented a second execution. All 24 conditions were reported irrespective of direction. The protocol SHA-256 was:
-\begin{center}\scriptsize\ttfamily 7bc7b27e00f7337654b6f81c1448a831ce3979129e68d14666389445d3ec93b5\end{center}
+The 24 corrected-objective AMP-AD development locks were enumerated in a frozen inventory containing the held-out center, branch, cap, selected run, selected feature list, fixed locking score, empirical regret, eligible-pool size, tie path, and source paths. Before any held-out-center file was read, the evaluation protocol fixed the primary and secondary metrics, final random-forest estimator, run-derived seeds, archived comparators, 2,000-resample paired bootstrap, and reporting rule. The protocol and inventory hashes were then checked at evaluation entry, and a completion sentinel prevented a second execution. All 24 conditions were reported irrespective of direction.
 This temporal freeze prevents held-out-guided selection within the analysis but does not make the evaluation prospective clinical validation or create 24 independent cohorts.
 
 The authoritative Rush source was a Google Drive results folder rather than an original ZIP archive. All 30 run-best feature CSV files, the run-level summary, and the locking summary were recovered with their Drive file IDs and URLs. A local provenance ZIP was reconstructed without claiming it to be the original archive. Regret-constrained locking reproduced all six archived Rush selected runs and all six masks used by the frozen held-out evaluation; maximum selected empirical regret was zero, no exact duplicate masks occurred, and no selection reached the stable-hash tie stage. Recovery completed the corrected-objective cross-lock and duplicate audits for all 24 AMP-AD conditions.
@@ -48,8 +99,7 @@ The nested saved-bank sensitivity reused five outer-fold candidate banks from an
 
 \subsection{Fully nested TCGA GBM/LGG analysis}
 
-The TCGA analysis began from a provider-organized common-participant workbook with the following SHA-256:
-\begin{center}\scriptsize\ttfamily 31ad68d866836cc786cc7c6421d28b7e4359c7a2b1959753618f5b469aecfafe\end{center}
+The TCGA analysis began from a provider-organized common-participant workbook.
 The included sheets contained 491 participants, 20,118 processed RNA-seq predictors, 5,000 cleaned SCNV predictors, and four historical histological labels. The data provider confirmed in writing that the 5,000 SCNV predictors were selected only by unsupervised variance filtering across the common multi-omics participants and that histological class labels were not used. A separate label-blind reconstruction ranked all 24,776 features in the uncleaned \texttt{SCNV\_Common} sheet by sample variance, recovered 4,999 of the 5,000 supplied cleaned features, and found that the selected and excluded features at the cutoff had exactly equal variance. Thus, the sole reconstruction ambiguity was a deterministic tie at rank 5,000, not evidence of outcome-dependent screening. Each predictor retained an \texttt{RNA::} or \texttt{SCNV::} prefix. Clinical columns, RPPA, and the uncleaned SCNV sheet were excluded. The source values were not transformed during extraction. This provider-supplied reduction occurred before the present outer-CV experiment; the cleaned participant-by-feature matrix and labels were checksum-locked before modeling.
 
 Two shuffled stratified five-fold outer-CV repeats used random states 20260810 and 20260811. Median imputation, zero-variance filtering, branch-specific Direct screening, deterministic post-Direct capping at 100 features, RFECV, GA search, fixed candidate rescoring, and locking were fitted exclusively within each outer-training fold. The three Direct branches were SVM-L1, XGBoost, and Boruta-RF. RFECV used five-fold macro one-vs-rest AUROC and branch caps of 15, 20, and 10, respectively. Each of the 30 repeat--fold--branch banks comprised five GA runs with seeds 42--46, 50 individuals, 50 generations, the untruncated shifted-linear objective, and a target-deviation penalty of 0.015. The locking evaluator used a 500-tree random forest, five fixed outer-training folds, larger-is-better macro one-vs-rest AUROC, strict absolute eligibility at \(\delta=0.01\), and the canonical content-derived tie-break. Exact duplicates would have retained multiplicity as voting candidates with source-run provenance stored separately; no within-bank duplicate masks occurred.
@@ -58,11 +108,11 @@ The complete candidate audit in \cref{fig:supp5} plots all 150 candidates agains
 
 Candidate agreement and participant-partition sensitivity are expanded in \cref{fig:supp6}. Nogueira stability was computed separately within each outer-training bank on that bank's fixed post-Direct universe; panel a reports the unweighted mean of the five fold-level estimates for each repeat--branch combination rather than a pooled 25-mask coefficient. A small negative finite-sample value is valid. Outer-fold pairwise similarities share folds and are dependent, so their distributions are descriptive. Cross-branch Jaccard was not computed because the branch-specific candidate universes differ. Cardinality similarity was defined as \(\min(k_1,k_2)/\max(k_1,k_2)\). SCNV composition largely reflects the upstream Direct universes and is not interpreted as biological modality preference.
 
-Six signatures were evaluated within each repeat--fold--branch condition: Direct, RFECV-only, the highest-locking-score candidate, the legacy top-three medoid, the unrestricted full-bank medoid, and the regret-constrained medoid. All used the same 500-tree random forest and common deterministic seed \(50000 + 1000\times\text{repeat} + 100\times\text{fold} + 10\times\text{branch index}\). A guarded common-seed refresh reused only the already selected feature sets and reran no GA, Direct, RFECV, or adaptive selection. All 150 GA jobs remained unchanged; 180 final method fits produced 17,676 participant--method outer-prediction records, and all completion and prediction checksums passed. The current protocol SHA-256 was \texttt{25f9f196b59b017f8edd5445f8a4d4fc}\allowbreak\texttt{467d399703706662c77a69146e90dad7}. Repeated-OOF metrics and the complete comparator audit are shown in \cref{fig:supp7}. Confidence intervals and paired differences used 2,000 participant-clustered, class-stratified bootstrap resamples that retained both repeat-specific OOF predictions for each sampled participant. The analysis estimates repeated internal OOF performance and participant-partition sensitivity in one TCGA-derived cohort; it is not independent external validation. The claim boundary in Supplementary Methods S1.3 applies; modern WHO diagnostic validity and causal biology were not assessed.
+Six signatures were evaluated within each repeat--fold--branch condition: Direct, RFECV-only, the highest-locking-score candidate, the legacy top-three medoid, the unrestricted full-bank medoid, and the regret-constrained medoid. All used the same 500-tree random forest and common deterministic seed \(50000 + 1000\times\text{repeat} + 100\times\text{fold} + 10\times\text{branch index}\). A guarded common-seed refresh reused only the already selected feature sets and reran no GA, Direct, RFECV, or adaptive selection. All 150 GA jobs remained unchanged; 180 final method fits produced 17,676 participant--method outer-prediction records, and all completion and prediction checksums passed. Repeated-OOF metrics and the complete comparator audit are shown in \cref{fig:supp7}. Confidence intervals and paired differences used 2,000 participant-clustered, class-stratified bootstrap resamples that retained both repeat-specific OOF predictions for each sampled participant. The analysis estimates repeated internal OOF performance and participant-partition sensitivity in one TCGA-derived cohort; it is not independent external validation. The claim boundary in Supplementary Methods S1.4 applies; modern WHO diagnostic validity and causal biology were not assessed.
 
 A checksum-frozen selector-layer extension reused the same 30 verified post-Direct outer-training universes and existing common-seed WrapEvoFS predictions. It did not rerun Direct, RFECV, GA search, candidate rescoring, or locking. For each branch and outer fold, multinomial Elastic Net used a training-fitted standard scaler, balanced class weights, the SAGA solver, and five-fold inner-CV macro one-vs-rest AUROC. The fixed grid crossed $C\in\{0.0003,0.001,0.003,0.01,0.03,0.1,0.3\}$ with $l_1$ ratios 0.25, 0.50, 0.75, and 1.00. Exact score ties favored smaller $C$ and then larger $l_1$ ratio. Native support was the union of nonzero class coefficients. The matched-cardinality sensitivity ranked features by maximum absolute standardized coefficient, with canonical feature name resolving exact ties; any matched positions with zero coefficients were counted and were not described as native Elastic-Net support.
 
-Subsampling stability selection reused the chosen Elastic-Net configuration in 50 class-stratified half-samples without replacement. Native support required selection frequency at least 0.80; the matched-cardinality sensitivity ranked by frequency, mean absolute coefficient, and canonical feature name. This descriptive procedure did not claim formal per-family error control. Five prespecified random banks per condition contained five distinct, uniformly drawn masks with the same size as the existing regret-constrained-medoid signature. Each bank was evaluated with the fixed 25-fit locking evaluator and the same absolute $\delta=0.01$ rule. Thus, the random control matched bank size and locking-evaluation budget, not full GA compute. Feature sets and hashes were written before outer-test values or outcomes were opened; the condition-specific final random-forest seed was shared by every comparator. The extension protocol SHA-256 was \texttt{c9c808d591918779961a7f236f6beb588c640e1b8932a8b030428f3d988a4ff1}; all 30 conditions and output checksums passed validation. Extended results are shown in \cref{fig:supp8} and Supplementary Table~S6. Because the parent TCGA outcomes had already been analyzed and the new selectors were conditional on post-Direct universes, this is a retrospective nested selector-layer sensitivity rather than a prospective or standalone full-pipeline benchmark.
+Subsampling stability selection reused the chosen Elastic-Net configuration in 50 class-stratified half-samples without replacement. Native support required selection frequency at least 0.80; the matched-cardinality sensitivity ranked by frequency, mean absolute coefficient, and canonical feature name. This descriptive procedure did not claim formal per-family error control. Five prespecified random banks per condition contained five distinct, uniformly drawn masks with the same size as the existing regret-constrained-medoid signature. Each bank was evaluated with the fixed 25-fit locking evaluator and the same absolute $\delta=0.01$ rule. Thus, the random control matched bank size and locking-evaluation budget, not full GA compute. Feature sets and hashes were written before outer-test values or outcomes were opened; the condition-specific final random-forest seed was shared by every comparator. All 30 conditions and output checksums passed validation. Extended results are shown in \cref{fig:supp8} and Supplementary Table~S6. Because the parent TCGA outcomes had already been analyzed and the new selectors were conditional on post-Direct universes, this is a retrospective nested selector-layer sensitivity rather than a prospective or standalone full-pipeline benchmark.
 
 \subsection{Controlled candidate-bank locking simulation}
 
@@ -76,11 +126,11 @@ The primary grid crossed three candidate topologies (aligned, competing, and mis
 
 The four rules were highest score, legacy top-three Jaccard medoid, unrestricted full-bank Jaccard medoid, and regret-constrained medoid. Oracle regret was $\max_rT_r-T_{\widehat r}$, empirical regret was $\max_rL_r-L_{\widehat r}$, score optimism was $L_{\widehat r}-T_{\widehat r}$, and substantive failure was prespecified as oracle regret greater than 0.02. Full-bank mean Jaccard quantified representativeness. Primary results are equal-scenario means: the scenario grid is not a population prior. The regret-constrained medoid had zero configured empirical-regret violation in all 4,995,000 banks. Exact duplicate masks retained multiplicity as voting candidates, and source-run provenance remained post-selection metadata. The stable hash was evaluated only as the final deterministic ordering stage; it was not a scientific score.
 
-Randomness used counter-based SplitMix64 streams keyed to the frozen master seed, scenario stream, and replicate identifier, making candidate generation independent of chunk boundaries, execution order, restart history, and worker count. All 1,296 completed chunks passed checksum and finite-value validation, and 18 prespecified deterministic regenerations matched exactly. The frozen scientific protocol SHA-256 was \texttt{6bb91ec337c331aa4b69646f51668315}\allowbreak\texttt{03405d2721a40d16be75718179418d6f}. The protocol's engineering list named chunk sizes of 1,000 or larger; the $R=100$ sensitivity used chunks of 250 to limit peak memory. This execution-level deviation changed no scientific parameter, and all chunk-independence and integrity checks passed. Peak resident memory was 313.7 MiB. Figure and table source CSVs, their hashes, and the extraction provenance accompany the manuscript. Results characterize locking behavior under the specified utility. The claim boundary in Supplementary Methods S1.3 applies; the simulation does not establish predictive superiority or globally optimal feature selection.
+Counter-based SplitMix64 streams keyed by the frozen master seed, scenario, and replicate made candidate generation independent of chunk size, execution order, restarts, and worker count. All 1,296 chunks passed checksum and finite-value validation, and 18 prespecified regenerations matched exactly. The $R=100$ sensitivity used 250-bank chunks instead of the protocol's engineering minimum of 1,000 to limit memory; no scientific parameter changed, and chunk-independence checks passed. Peak resident memory was 313.7 MiB. Source CSVs, hashes, and extraction provenance accompany the manuscript. Results concern the specified utility, not predictive superiority or global feature-selection optimality (Supplementary Methods S1.4).
 
 \subsection{Computational complexity and implementation correspondence}
 
-Let $R$ be the total retained-candidate count, $E$ the regret-eligible count, $p$ the common canonical-universe size, $s$ the average selected-set size, and $w$ a packed machine-word width. Finding $L_{\mathrm{best}}$, calculating all regrets, and forming $E_\delta$ each require $O(R)$ time; stored regrets and eligible indices require $O(R)$ and $O(E)$ memory, respectively, although a score-only pass can use constant working memory. Dense canonical masks and their authoritative SHA-256 hashes require $O(Rp)$ time and $O(Rp)$ retained memory, or $O(p)$ mask scratch plus $O(R)$ digests if streamed. If no universe is supplied, deriving the package's sorted union adds $O(Rs+p\log p)$ time. A supplied common universe is preferred because it makes the scientific mask domain explicit.
+Let $R$ be the total retained-candidate count, $E$ the regret-eligible count, $p$ the common canonical-universe size, $s$ the average selected-set size, and $w$ a packed machine-word width. Finding $L_{\mathrm{best}}$, calculating all regrets, and forming $E_\delta$ each require $O(R)$ time; stored regrets and eligible indices require $O(R)$ and $O(E)$ memory, respectively, although a score-only pass can use constant working memory. Dense canonical masks and their stable mask identifiers require $O(Rp)$ time and $O(Rp)$ retained memory, or $O(p)$ mask scratch plus $O(R)$ digests if streamed. If no universe is supplied, deriving the package's sorted union adds $O(Rs+p\log p)$ time. A supplied common universe is preferred because it makes the scientific mask domain explicit.
 
 A dense bit-vector Jaccard comparison costs $O(p)$ time, a sparse hash-set comparison costs expected $O(s)$ time (or $O(|F_r|+|F_s|)$ for sorted-index merging), and a packed-bit comparison costs $O(\lceil p/w\rceil)$ word operations with $O(E\lceil p/w\rceil)$ packed-mask storage. Thus all eligible comparisons cost $O(E^2c_J)$, where $c_J$ is the representation-specific pair cost. Retaining the complete ordered $E\times E$ matrix requires $O(E^2)$ similarity memory. Streaming each unordered pair into $E$ running sums has the same asymptotic time but only $O(E)$ accumulator memory beyond the masks; a complete pairwise audit must then be streamed to storage or omitted.
 
@@ -88,32 +138,45 @@ After hashes exist, deterministic tie-breaking costs $O(E)$ with a best-key scan
 
 
 \clearpage
+\subsection{Paired sensitivity to development-fold scores}
+
+The protocol fixed 54 five-candidate banks (30 TCGA, 24 corrected-objective AMP-AD), masks, ordered fold scores, candidate-specific evaluator seeds, four locking rules, tie policies, and $\delta=0.01$ before reweighting outcomes were calculated. Fold alignment followed common CV construction for TCGA, explicit fold identifiers for 18 AMP-AD banks, and shared fold-identity hashes with ordered score arrays for six Rush banks. A sensitivity summary excluded Rush.
+
+For nonnegative integer fold counts $\mathbf c=(c_1,\ldots,c_5)$, the reweighted score was
+\begin{equation}
+ L_r(\mathbf c)=\frac{\sum_{\ell=1}^{5}c_\ell s^L_{r\ell}}
+ {\sum_{\ell=1}^{5}c_\ell}.
+\end{equation}
+Every candidate and rule within a bank received the same vector. Uniform weighting reproduced all 54 archived regret-constrained selections. Leave-one-fold-out weighting averaged five vectors with one zero and four ones equally. Fold bootstrap enumerated all 126 count vectors summing to five, weighted by $5!/(\prod_\ell c_\ell!)/5^5$ to represent 3,125 ordered resamples. Highest-score, legacy top-three, unrestricted-medoid, and regret-constrained-medoid selections followed their original decision rules.
+
+We summarized retention and Jaccard overlap relative to each rule's uniform-weight mask, candidate selection probabilities, selection entropy, perturbed score gap $\max_j L_j(\mathbf c)-L_{\widehat r}(\mathbf c)$, and eligible-pool changes. Cohort means weighted banks equally. These fixed-bank sensitivity distributions use dependent recorded fold scores without participant resampling, model refitting, or held-out outcomes; they are not generalization confidence intervals. Primary signatures and evaluation results were unchanged.
+
 \section{Supplementary Figures}
 
 \begin{figure}[H]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s17.png}}
-\caption{Original-configuration zero-truncation diagnostics. a) Absolute target-size deviation versus the fraction of zero run-best fitness values. Circles, squares, and triangles denote SVM-L1, XGBoost, and Boruta-RF; the star marks the AMP-AD Rush/SVM-L1/Small failure mode, and the dashed line marks a zero-fraction value of 0.5. b) Absolute target-size deviation versus all-zero generations. Filled teal circles denote AMP-AD and open orange squares denote CGGA. c) Percentage of configurations with a flattening warning in each dataset.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s17.pdf}}
+\caption{Original-configuration zero-truncation diagnostics. a) Absolute target-size deviation versus the fraction of zero run-best fitness values. Circles, squares, and triangles denote SVM-L1, XGBoost, and Boruta-RF; the star marks the AMP-AD Rush/SVM-L1/Small failure mode, and the dashed line marks a zero-fraction value of 0.5. b) Absolute target-size deviation versus all-zero generations. Filled blue circles denote AMP-AD and open plum squares denote CGGA. c) Percentage of configurations with a flattening warning in each dataset.}
 \label{fig:supp1}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s18.pdf}}
-\caption{Complete development-only original-versus-corrected-objective AMP-AD comparison across 24 combinations of center, branch, and cap and 120 full GA runs. a) Absolute target deviation. b) All-zero-generation diagnostic. c) Aggregates by center and branch. Overall values were 216 versus 137 and 673 versus 333, respectively; detailed robust summaries are in \cref{tab:supp2}. Held-out outcomes were not accessed.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s18.pdf}}
+\caption{Complete development-only original-versus-corrected-objective AMP-AD comparison across 24 combinations of center, branch, and cap, using 120 corrected-objective GA runs and matched archived original banks. a) Absolute target deviation. b) Legacy-zero diagnostic generations; corrected-run counts apply the legacy truncation rule to their recorded populations and do not count actual sampling fallbacks. c) Aggregates by center and branch. In a and b, S and R denote Small and Reference caps; Sinai abbreviates Mount Sinai in c. Overall values were 216 versus 137 and 673 versus 333, respectively; detailed robust summaries are in \cref{tab:supp2}. Held-out outcomes were not accessed.}
 \label{fig:supp2}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s15.png}}
-\caption{Development-only compression and regret. a) Compression relative to each Direct candidate set versus development-CV regret for highest-locking-score selection (open circles), the legacy top-three medoid (squares), the unrestricted full-bank medoid (triangles), and the regret-constrained medoid at absolute tolerance 0.01 (diamonds). The dashed line marks the 0.01 empirical-regret bound. b) Median development-CV regret (markers) and interquartile range (vertical bars) by locking rule. Held-out outcomes were not used to define any displayed rule.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s15.pdf}}
+\caption{Development-only compression and regret. a) Compression relative to each Direct candidate set versus development-CV regret for highest-locking-score selection (open circles), the legacy top-three medoid (squares), the unrestricted full-bank medoid (upward triangles), and the regret-constrained medoid at absolute tolerance 0.01 (downward triangles). The dashed line marks the 0.01 empirical-regret bound. b) Median development-CV regret (markers) and interquartile range (vertical bars) by locking rule. Held-out outcomes were not used to define any displayed rule.}
 \label{fig:supp3}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s16.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s16.pdf}}
 \caption{Development-only strict locking-rule sensitivity. a) Mean eligible-pool size. b) Selected-candidate mean eligible-pool Jaccard for nonsingleton pools; singleton values are undefined and shown as missing. c) Mean selected empirical development-CV regret across absolute tolerances 0, 0.005, 0.01, and 0.02. No tolerance-expanding fallback was used.}
 \label{fig:supp4}
 \end{figure}
@@ -121,188 +184,190 @@ After hashes exist, deterministic tie-breaking costs $O(E)$ with a best-key scan
 \begin{figure}[p]
 \centering
 \textit{Supplementary Figure S5. Complete candidate-level audit of fully nested TCGA locking (continued on the next page).}\par\medskip
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s25_repeat_1.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s25_repeat_1.pdf}}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s25_repeat_2.pdf}}
-\caption{Complete candidate-level audit of fully nested TCGA locking. The first and second pages show outer repeats 1 and 2, respectively. Each panel represents one branch and outer fold. Points are the five saved GA candidates, positioned by empirical development-CV regret and Jaccard distance from the highest-locking-score mask. Shading denotes the absolute regret-eligible region $R_r\leq0.01$, and dashed lines mark $\delta=0.01$. Open circles identify highest-locking-score candidates and diamonds identify selected regret-constrained medoids; markers overlap when the same candidate satisfies both roles. Selection and locking used outer-training data only.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s25_repeat_2.pdf}}
+\caption{Complete candidate-level audit of fully nested TCGA locking. The first and second pages show outer repeats 1 and 2, respectively. Each panel represents one branch and outer fold. Points are the five saved GA candidates, positioned by empirical development-CV regret and Jaccard distance from the highest-locking-score mask. Shading denotes the absolute regret-eligible region $R_r\leq0.01$, and dashed lines mark $\delta=0.01$. Open circles identify highest-locking-score candidates and open squares identify selected regret-constrained medoids; markers overlap when the same candidate satisfies both roles. Selection and locking used outer-training data only.}
 \label{fig:supp5}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s26.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm,trim=0mm 10mm 0mm 3mm,clip]{v19_work/supplement_polish_20261105/modern/figures/figure_s26.pdf}}
 \caption{Candidate agreement, partition sensitivity, and locked-signature composition in TCGA GBM/LGG. a) Mean pairwise Jaccard and chance-corrected Nogueira stability among five saved candidates. Each point is the unweighted mean of five fold-level bank statistics for one repeat--branch combination and is conditional on each bank's fixed post-Direct universe. Filled circles and open squares denote repeats 1 and 2. The coefficients are shown side by side and are not connected as an effect estimate; a small negative finite-sample Nogueira estimate is valid. b) Jaccard similarity for the 20 dependent outer-fold locked-signature pairs per branch, summarized descriptively. c) Selected feature count and SCNV fraction for each of 30 locked signatures. Eleven of 526 selected-feature occurrences were SCNV features; composition largely reflects upstream Direct screening and is not evidence of biological modality preference. These summaries characterize conditional algorithmic agreement and participant-partition sensitivity, not biomarker stability.}
 \label{fig:supp6}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s27.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm,trim=0mm 2mm 0mm 4mm,clip]{v19_work/supplement_polish_20261105/modern/figures/figure_s27.pdf}}
 \caption{Repeated internal out-of-fold comparator audit in TCGA GBM/LGG. a) Mean repeated-OOF macro one-vs-rest AUROC for Direct, RFECV-only, highest-locking-score selection, the legacy top-three medoid, the unrestricted full-bank medoid, and the regret-constrained medoid. b) Paired regret-constrained-medoid-minus-comparator AUROC differences. Points in a) and b) have 95\% participant-clustered, class-stratified bootstrap intervals from 2,000 resamples retaining both repeat-specific predictions for each sampled participant. c) Mean feature count across ten outer folds. The protocol capped each post-Direct universe at 100 features. Colors identify branches. All three regret-constrained-medoid-versus-RFECV-only intervals included zero; equivalence was not tested.}
 \label{fig:supp7}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s_matched_comparator_strengthened.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm,trim=0mm 1mm 0mm 3mm,clip]{v19_work/supplement_polish_20261105/modern/figures/figure_s_matched_comparator_strengthened.pdf}}
 \caption{Extended fully nested TCGA selector-layer sensitivity. a) Repeated-OOF macro AUPRC for regret-constrained-medoid WrapEvoFS, native and cardinality-matched Elastic Net, and native and cardinality-matched subsampling stability selection. b) Balanced accuracy for the same selectors. Points in a) and b) have 95\% participant-clustered, class-stratified bootstrap intervals from 2,000 resamples retaining both repeat-specific predictions for each sampled participant. c) Mean selected-feature counts across ten outer folds. Colors identify Direct branches. Native and matched signatures answer different questions; the matched sets are prespecified cardinality sensitivities, not native nonzero supports. The analysis is conditional on verified post-Direct universes.}
 \label{fig:supp8}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s21.pdf}}
-\caption{AMP-AD one-time post-freeze held-out evaluation of the corrected objective with regret-constrained medoid locking. a) Macro one-vs-rest AUROC for 24 frozen signatures across combinations of center, branch, and cap; colors identify branches, open circles denote the Small cap, and filled squares denote the Reference cap. b) Pooled regret-constrained-medoid-minus-RFECV-only and c) regret-constrained-medoid-minus-legacy-top-three-medoid macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). All masks, parameters, and the protocol hash were frozen before held-out outcomes were loaded; evaluation triggered no reselection or parameter changes. Four of six intervals in b) and five of six in c) include zero.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm,trim=0mm 0mm 0mm 2mm,clip]{v19_work/supplement_polish_20261105/modern/figures/figure_s21.pdf}}
+\caption{AMP-AD one-time post-freeze held-out evaluation of the corrected objective with regret-constrained medoid locking. a) Macro one-vs-rest AUROC for 24 frozen signatures across combinations of center, branch, and cap; colors identify branches, open circles denote the Small cap, and filled squares denote the Reference cap. Sinai abbreviates Mount Sinai. b) Pooled regret-constrained-medoid-minus-RFECV-only and c) regret-constrained-medoid-minus-legacy-top-three-medoid macro-AUROC differences with 95\% intervals from 2,000 common resamples stratified by held-out center and true class (seed 42). All masks, parameters, and the protocol hash were frozen before held-out outcomes were loaded; evaluation triggered no reselection or parameter changes. Four of six intervals in b) and five of six in c) include zero.}
 \label{fig:supp9}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s1.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s10.pdf}}
 \caption{ADNI held-out performance and paired differences. a) Balanced accuracy, b) macro F1, and c) macro one-vs-rest AUROC for the first-stage Direct signatures (open symbols) and archived legacy-top-three-medoid signatures (filled symbols), shown by branch with 95\% bootstrap confidence intervals. d) Paired legacy-top-three-medoid-minus-first-stage differences from 5,000 class-stratified paired bootstrap resamples. All nine paired 95\% confidence intervals include zero; equivalence and non-inferiority were not tested.}
 \label{fig:supp10}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s2.png}}
-\caption{ADNI multiclass held-out diagnostics. a) Row-normalized confusion matrices for the first-stage Direct and WrapEvoFS locked signatures in the SVM-L1, XGBoost, and Boruta-RF branches. b) Class-specific recall for CN, MCI, and dementia, with open and filled symbols denoting first-stage and WrapEvoFS signatures. c) Macro one-vs-rest ROC curves and AUROC values for the same six models.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s11.pdf}}
+\caption{ADNI multiclass held-out diagnostics. a) Row-normalized confusion matrices for the first-stage Direct and archived legacy-top-three-medoid signatures in the SVM-L1, XGBoost, and Boruta-RF branches. b) Class-specific recall for CN, MCI, and dementia, with open and filled symbols denoting first-stage and archived legacy-top-three-medoid signatures, respectively. c) Macro one-vs-rest ROC curves and AUROC values for the same six models.}
 \label{fig:supp11}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s3.png}}
-\caption{ADNI signature composition and cross-branch overlap. a) Proteomic and metabolomic feature counts for first-stage and WrapEvoFS signatures in each branch. b) Pairwise Jaccard similarity among the three locked signatures. c) Exclusive and shared locked-signature feature counts shown with an intersection-membership matrix. The displayed sets are descriptive and are not stable biomarker claims.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s12.pdf}}
+\caption{ADNI signature composition and cross-branch overlap. a) Proteomic and metabolomic feature counts for first-stage and archived legacy-top-three-medoid signatures in each branch. b) Pairwise Jaccard similarity among the three locked signatures. c) Exclusive and shared locked-signature feature counts shown with an intersection-membership matrix. The displayed sets are descriptive and are not stable biomarker claims.}
 \label{fig:supp12}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s12.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s13.pdf}}
 \caption{AMP-AD paired pooled held-out differences across RFECV cap settings. a) Macro one-vs-rest AUROC, b) balanced accuracy, and c) macro F1. Filled circles show locked-minus-Direct differences and open triangles show locked-minus-RFECV-only differences; horizontal intervals are 95\% paired confidence intervals. Forty of 54 exported intervals include zero; directions vary by branch, cap, metric, and comparator, and resampling conditions on four fitted center-specific models.}
 \label{fig:supp13}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s13.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s14.pdf}}
 \caption{AMP-AD cross-center recurrence and modality composition. a) Mean pairwise Jaccard similarity across centers for RFECV-only and archived legacy-top-three-medoid signatures in each branch and cap condition. b) Mean locked-signature composition split between frontal proteomics and metabolomics for the same conditions. Cross-center overlap quantifies recurrence across center-specific training sets, not biological replication.}
 \label{fig:supp14}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s7.png}}
-\caption{Complete CGGA held-out comparison. a) AUROC, b) AUPRC, and c) balanced accuracy for the Direct signatures (open symbols) and unrestricted-full-bank-medoid signatures (filled symbols) in the SVM-L1, XGBoost, and Boruta-RF branches; horizontal intervals are the corresponding held-out uncertainty intervals.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s15.pdf}}
+\caption{Complete CGGA held-out comparison. a) AUROC, b) AUPRC, and c) balanced accuracy for the Direct signatures (open symbols) and legacy-top-three-medoid signatures (filled symbols) in the SVM-L1, XGBoost, and Boruta-RF branches; horizontal intervals are the corresponding held-out uncertainty intervals.}
 \label{fig:supp15}
 \end{figure}
 
 \begin{figure}[p]
 \centering
 \textit{Supplementary Figure S16. CGGA run-level stochastic agreement (continued on the next page).}\par\medskip
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s8_a.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s16_a.pdf}}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s8_bc.png}}
-\caption{CGGA run-level stochastic agreement. a) Five-run Jaccard matrices without and with target-size guidance; gold outlines mark the selected legacy top-three medoid run. b) Run-level feature counts without and with guidance. c) Target-guided selection frequencies; filled dots mark the locked signature.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s16_bc.pdf}}
+\caption{CGGA run-level stochastic agreement. a) Five-run Jaccard matrices without and with target-size guidance; black outlines mark the selected legacy top-three medoid run in a and b. b) Run-level feature counts without and with guidance. c) Target-guided selection frequencies; filled dots mark the legacy top-three medoid signature.}
 \label{fig:supp16}
 \end{figure}
 
 \begin{figure}[p]
 \centering
 \textit{Supplementary Figure S17. CGGA original-configuration mechanism and seed-agreement analysis (continued on the next page).}\par\medskip
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s19_ab.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s17_ab.pdf}}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s19_cd.png}}
-\caption{CGGA original-configuration mechanism and seed-agreement ablation. a) Held-out AUROC relative to Direct for RFECV-only and selected-run variants. b) Five-run feature counts and mean pairwise Jaccard with and without target-size guidance. c) Paired legacy-top-three-medoid-minus-RFECV-only differences. d) Raw Jaccard and chance-corrected Nogueira agreement.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s17_cd.pdf}}
+\caption{CGGA original-configuration mechanism and seed-agreement ablation. a) Held-out AUROC relative to Direct for RFECV-only and selected-run variants. Cells show the AUROC/Direct ratio, feature count, and feature reduction. The single GA run is prespecified run 1; no guidance sets $\lambda=0$, with the stored target inactive in GA fitness. b) Five-run feature counts and mean pairwise Jaccard with and without target-size guidance. c) Paired legacy-top-three-medoid-minus-RFECV-only differences. d) Raw Jaccard and chance-corrected Nogueira agreement.}
 \label{fig:supp17}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s22.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s18.pdf}}
 \caption{CGGA coherent same-split, same-estimator benchmark. a) Feature counts and b) held-out AUROC with 95\% class-stratified bootstrap intervals for six development-derived signatures in each branch. c) Paired regret-constrained-medoid-minus-comparator AUROC differences from 2,000 common resamples (seed 42); all 15 intervals include zero. All signatures were evaluated with the same fixed 500-tree random forest on the same 92-sample held-out partition. Held-out outcomes did not determine any feature set, locking rule, or comparator.}
 \label{fig:supp18}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s23.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s19.pdf}}
 \caption{CGGA post hoc saved-bank nested sensitivity. a) Selected run IDs under the legacy top-three medoid and regret-constrained medoid across five outer folds. b) Corresponding outer-fold AUROC. c) Overall OOF AUROC, AUPRC, and balanced accuracy with 95\% class-stratified bootstrap intervals. The regret-constrained medoid changed all five selected runs; OOF AUROC was 0.692 under the legacy top-three medoid and 0.667 under the regret-constrained medoid. The source banks used a reduced historical search budget (20 individuals, 12 generations, five runs), no GA was rerun, and the original 92-sample held-out partition was not accessed.}
 \label{fig:supp19}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s20.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s20.pdf}}
 \caption{VGH brain-tumour radiomics internal demonstration (UBC REB H20-02354) using regret-constrained locking. a) Cohort reduction, validated MGMT linkage, fixed development/held-out split, and the full and perturbation-filtered feature spaces. b) Feature counts through Direct screening, RFECV target estimation, five completed GA runs, and strict regret-constrained locking. c) Mean pairwise Jaccard and chance-corrected Nogueira agreement across five seeds. d) Paired held-out AUROC differences for locked-minus-Direct and perturbation-filtered-minus-full locked signatures, with 95\% class-stratified bootstrap intervals. Both feature spaces use the same 197 participants and split; the filtered-space contrast is a label-independent feature-definition sensitivity analysis, not external validation. All paired intervals include zero. Five-seed summaries do not estimate participant-resampling or biomarker stability, and automatic tumor-core regions were not manually adjudicated.}
 \label{fig:supp20}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s9.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s21.pdf}}
 \caption{Secondary tuned-random-forest sensitivity. a) Nested development-CV AUROC for the three branches, with the prespecified primary branch identified. b) Held-out tuned-random-forest AUROC, AUPRC, and balanced accuracy with uncertainty intervals. c) Random-forest importance values for the primary SVM-L1 signature. This analysis is descriptive and is not used to support a core claim.}
 \label{fig:supp21}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s10.png}}
-\caption{CGGA computational characterization. a) Elapsed time for preprocessing, initial selection, RFECV, and GA search by branch on a logarithmic scale. b) Total runtime by branch. Complete runtime and peak-memory values are retained in the machine-readable computational audit.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s22.pdf}}
+\caption{CGGA computational characterization. a) Elapsed time for preprocessing, initial selection, RFECV, and GA search by branch on a logarithmic scale. b) Total runtime by branch. Secondary-analysis peak memory was 178.0 MB; complete runtime and peak-memory values are retained in the machine-readable computational audit.}
 \label{fig:supp22}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s11.png}}
-\caption{Exploratory CGGA comparators. a) Size-matched random-subset null distributions with the unrestricted full-bank medoid and Elastic Net estimates overlaid. b) Matched-size held-out AUROC, AUPRC, and balanced accuracy for the unrestricted full-bank medoid and Elastic Net. c) Unrestricted-full-bank-medoid-minus-Elastic Net differences for the same three metrics. One-sided empirical random-subset tail probabilities were not multiplicity adjusted, and all paired intervals include zero.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s23.pdf}}
+\caption{Exploratory CGGA comparators. a) Size-matched random-subset null distributions with the legacy top-three medoid and Elastic Net estimates overlaid (filled and open symbols). The labels p(L) and p(EN) give the respective empirical upper-tail probabilities. b) Matched-size held-out AUROC, AUPRC, and balanced accuracy for the legacy top-three medoid and Elastic Net. c) Legacy-top-three-medoid-minus-Elastic Net differences for the same three metrics. One-sided empirical random-subset tail probabilities were not multiplicity adjusted, and all paired intervals include zero.}
 \label{fig:supp23}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{figures/figure_s4.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm,height=0.78\textheight,keepaspectratio]{figures/figure_s4.png}}
 \caption{Full-feature Bayesian predictive reference. a) One-vs-rest ROC and precision-recall curves together with the row-normalized confusion matrix. b) Exploratory posterior coefficient rankings for the three dementia contrasts; points show posterior means and intervals show 95\% credible intervals. c) One-vs-rest calibration, confidence and prediction-margin distributions, and posterior probability assigned to the true class. d) A representative four-chain coefficient trace, the empirical distribution of split R-hat values, and bulk effective sample sizes. Posterior probability rankings retained discrimination while coefficient-level intervals reflected diffuse high-dimensional uncertainty.}
 \label{fig:supp24}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s6.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s6.png}}
 \caption{Restricted Bayesian sampling diagnostics for the development-derived 81-candidate model. a) Representative four-chain trace for the PPP3CA|PPP3R1 dementia-versus-MCI coefficient. b) Rank-normalized R-hat distributions for the three contrasts, with the dashed line at 1.01. c) Bulk effective-sample-size distributions for the three contrasts.}
 \label{fig:supp25}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s5.png}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s5.png}}
 \caption{Training-only STABL analysis. a) Proteomic and b) metabolomic stability paths across inverse regularization strength; colored paths are selected features and dashed lines are selection thresholds. c) Maximum selection-frequency distributions for selected and background features in each omic block. d) Maximum stability for the eight STABL-selected features; asterisks identify features shared with the WrapEvoFS locked-signature union.}
 \label{fig:supp26}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=\linewidth]{figures/figure_s14.png}}
-\caption{Integrated candidate-restricted Bayesian/STABL/BLiP analysis. a) Training-derived construction of the 81-candidate restricted set from the 78-feature WrapEvoFS union and eight STABL selections with five shared candidates. b) Restricted-model posterior coefficient summaries for the five shared candidates across three dementia contrasts. c) Held-out balanced accuracy, macro F1, and macro one-vs-rest AUROC for the full Bayesian reference, restricted Laplace Bayesian model, candidate-union random forest, and STABL random forest. d) BLiP selection counts under the primary and sensitivity settings. Primary BLiP retained 81 candidates; stricter-FDR and larger-effect settings retained 47 and 32.}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/supp_polished/supp_s27.pdf}}
+\caption{Integrated candidate-restricted Bayesian/STABL/BLiP analysis. a) Training-derived construction of the 81-candidate restricted set from the 78-feature WrapEvoFS union and eight STABL selections with five shared candidates. b) Restricted-model posterior coefficient summaries for the five shared candidates across three dementia contrasts. c) Held-out balanced accuracy, macro F1, and macro one-vs-rest AUROC for the full Bayesian reference (triangles), restricted Laplace Bayesian model (blue circles), candidate-union random forest (blue squares), and STABL random forest (slate circles). d) BLiP selection counts under the primary and sensitivity settings. Primary BLiP retained 81 candidates; stricter-FDR and larger-effect settings retained 47 and 32.}
 \label{fig:supp27}
 \end{figure}
 
 \begin{figure}[p]
 \centering
-\makebox[\linewidth][c]{\includegraphics[width=170mm]{figures/figure_s24.pdf}}
+\makebox[\linewidth][c]{\includegraphics[width=170mm]{v19_work/supplement_polish_20261105/modern/figures/figure_s24.pdf}}
 \caption{Controlled synthetic candidate-bank locking simulation. a) Primary equal-scenario mean regret-constrained-medoid-minus-highest-score hidden-oracle regret across locking-score noise ratios and candidate topologies; shaded bands show the interquartile range across nine heterogeneity--proxy combinations. Negative differences favor the regret-constrained medoid. b) Matched 27-scenario tolerance sensitivity showing mean empirical regret against mean full-bank Jaccard; labels identify $\delta$, and increasing tolerance enlarged the eligible pool from 1.00 to 3.69 candidates on average. c) Matched 27-scenario regret-constrained-medoid-minus-comparator hidden-oracle regret across candidate-bank sizes; negative differences favor the regret-constrained medoid. The primary $R=5$, $\delta=0.01$ grid comprised 1,620,000 banks, and the complete sensitivity workload comprised 4,995,000. The regret-constrained medoid had no configured empirical-regret violation. Hidden utility is not AUROC; no GA or classifier was fitted.}
 \label{fig:supp28}
 \end{figure}
+
+\input{sections/v19_cv_supplement_figure}
 
 \section{Supplementary Tables}
 
@@ -459,3 +524,10 @@ After hashes exist, deterministic tie-breaking costs $O(E)$ with a best-key scan
 \input{tables/table_06.tex}
 
 \input{tables/table_49.tex}
+
+
+\clearpage
+\input{tables/table_v19_cv_score_sensitivity.tex}
+\clearpage
+
+\input{tables/table_v19_center_sensitivity.tex}

@@ -14,13 +14,15 @@ The maintained Python implementation is available from the
 [GitHub Release v0.2.0](https://github.com/junseoparkX/wrapevofs-package/releases/tag/v0.2.0),
 and [PyPI](https://pypi.org/project/wrapevofs/0.2.0/).
 
+Current manuscript: **v19, 5 November 2026**. The source and compiled PDFs match the approved local manuscript. The public update includes the completed CV-score reweighting and equal-center weighting analyses; the separate common-RF-seed experiment is not part of this version.
+
 ## Submission files
 
-- [Main article](manuscript/source/main.pdf): 18 pages, five main figures, and two main tables.
-- [Supplementary Information](manuscript/source/supplementary_information.pdf): 51 pages, Supplementary Figures S1--S28, and Supplementary Tables S1--S28.
+- [Main article](manuscript/source/main.pdf): 19 pages, five main figures, and two main tables.
+- [Supplementary Information](manuscript/source/supplementary_information.pdf): 54 pages, Supplementary Figures S1--S29, and Supplementary Tables S1--S30.
 - [Source Data](manuscript/source/documentation/submission/WrapEvoFS_Source_Data.xlsx): display-indexed, non-identifying source data for every main and Supplementary figure and table.
 - [LaTeX source](manuscript/source/): independently compilable main and Supplementary entry points.
-- [Validation report](manuscript/source/documentation/validation/VALIDATION_REPORT.md): build, numerical, citation, and visual-QA checks.
+- [Current version manifest](manuscript/source/CURRENT_MANUSCRIPT.json): frozen source/artwork hashes and version-specific page/display counts.
 - [Display map](manuscript/source/documentation/DISPLAY_MAP.md) and [figure-source manifest](manuscript/source/documentation/FIGURE_SOURCE_DATA_MANIFEST.csv): claim-to-display and display-to-source mappings.
 
 ## Repository structure

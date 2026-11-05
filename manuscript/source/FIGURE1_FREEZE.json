@@ -1,5 +1,6 @@
 {
   "authority": "figures/figure_1.png",
-  "sha256": "db0cfa30cc67377e1fed49d224f2b839eb19900addeeff00dd5945bf9ccc6bb1",
-  "policy": "Figure 1, its placement, caption, and manuscript callouts are frozen unless the author separately approves a change."
+  "sha256": "dd25dff9fb85e28576a895b5855ee9da2f6334d4f8b653d53fe16f88f2f9ff82",
+  "policy": "Figure 1, its placement, caption, and manuscript callouts are frozen unless the author separately approves a change.",
+  "revision": "v18: author-requested no reselection / retuning label; estimator fitting clarified in caption"
 }

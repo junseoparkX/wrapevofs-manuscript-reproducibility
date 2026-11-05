@@ -38,7 +38,8 @@ def prose_slice(start_heading: str, end_heading: str | None) -> str:
     start = body.index(start_heading)
     end = body.index(end_heading, start) if end_heading else len(body)
     value = body[start:end]
-    value = re.sub(r"(?m)%.*$", " ", value)
+    # Escaped percentage signs belong to prose, not LaTeX comments.
+    value = re.sub(r"(?m)(?<!\\)%.*$", " ", value)
     value = re.sub(r"\\begin\{figure\}.*?\\end\{figure\}", " ", value, flags=re.S)
     value = re.sub(
         r"\\begin\{(?:equation|equation\*|align|align\*|gather|gather\*)\}.*?"

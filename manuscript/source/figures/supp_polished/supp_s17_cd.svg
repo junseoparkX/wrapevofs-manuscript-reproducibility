@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="110mm" viewBox="0 118.5 170 110">
+<rect x="0" y="0" width="170.000" height="228.500" fill="#FFFFFF" />
+<text x="5.500" y="123.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">c</text>
+<text x="12.500" y="123.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Paired differences: legacy top-three medoid − RFECV only</text>
+<line x1="55.000" y1="162.000" x2="163.500" y2="162.000" stroke="#263746" stroke-width="0.300" opacity="1.000" />
+
+<line x1="55.000" y1="162.000" x2="55.000" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="55.000" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">-0.14</text>
+
+<line x1="82.125" y1="162.000" x2="82.125" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="82.125" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">-0.07</text>
+
+<line x1="109.250" y1="162.000" x2="109.250" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="109.250" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">+0.00</text>
+
+<line x1="136.375" y1="162.000" x2="136.375" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="136.375" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">+0.07</text>
+
+<line x1="163.500" y1="162.000" x2="163.500" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="163.500" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">+0.14</text>
+<line x1="109.250" y1="128.000" x2="109.250" y2="162.000" stroke="#788591" stroke-width="0.420" opacity="1.000" stroke-dasharray="1.1 0.9" />
+<text x="109.250" y="168.000" text-anchor="middle" font-family="Arial" font-size="2.700" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Legacy top-three − RFECV only</text>
+<text x="51.500" y="131.300" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1 · AUROC</text>
+<line x1="84.136" y1="130.500" x2="148.829" y2="130.500" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+<line x1="84.136" y1="129.700" x2="84.136" y2="131.300" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<line x1="148.829" y1="129.700" x2="148.829" y2="131.300" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="116.579" cy="130.500" r="1.050" fill="#386A8B" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="134.863" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">AUPRC</text>
+<line x1="80.938" y1="134.062" x2="158.464" y2="134.062" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+<line x1="80.938" y1="133.262" x2="80.938" y2="134.863" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<line x1="158.464" y1="133.262" x2="158.464" y2="134.863" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<rect x="118.110" y="133.012" width="2.100" height="2.100" rx="0.000" fill="#386A8B" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="138.425" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Balanced accuracy</text>
+<line x1="75.900" y1="137.625" x2="147.634" y2="137.625" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+<line x1="75.900" y1="136.825" x2="75.900" y2="138.425" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<line x1="147.634" y1="136.825" x2="147.634" y2="138.425" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<polygon points="113.739,136.575 114.78900000000002,138.675 112.689,138.675" fill="#386A8B" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
+
+<text x="51.500" y="141.988" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost · AUROC</text>
+<line x1="89.637" y1="141.188" x2="150.661" y2="141.188" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+<line x1="89.637" y1="140.387" x2="89.637" y2="141.988" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<line x1="150.661" y1="140.387" x2="150.661" y2="141.988" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<circle cx="119.876" cy="141.188" r="1.050" fill="#7B8794" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="145.550" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">AUPRC</text>
+<line x1="80.264" y1="144.750" x2="149.431" y2="144.750" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+<line x1="80.264" y1="143.950" x2="80.264" y2="145.550" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<line x1="149.431" y1="143.950" x2="149.431" y2="145.550" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="109.616" y="143.700" width="2.100" height="2.100" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="149.113" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Balanced accuracy</text>
+<line x1="100.456" y1="148.312" x2="162.845" y2="148.312" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+<line x1="100.456" y1="147.512" x2="100.456" y2="149.113" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<line x1="162.845" y1="147.512" x2="162.845" y2="149.113" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<polygon points="129.678,147.262 130.728,149.363 128.628,149.363" fill="#7B8794" stroke="#7B8794" stroke-width="0.380" opacity="1.000" />
+
+<text x="51.500" y="152.675" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta-RF · AUROC</text>
+<line x1="88.721" y1="151.875" x2="139.664" y2="151.875" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<line x1="88.721" y1="151.075" x2="88.721" y2="152.675" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<line x1="139.664" y1="151.075" x2="139.664" y2="152.675" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<circle cx="114.197" cy="151.875" r="1.050" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="156.238" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">AUPRC</text>
+<line x1="87.622" y1="155.438" x2="159.432" y2="155.438" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<line x1="87.622" y1="154.637" x2="87.622" y2="156.238" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<line x1="159.432" y1="154.637" x2="159.432" y2="156.238" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<rect x="121.908" y="154.387" width="2.100" height="2.100" rx="0.000" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<text x="51.500" y="159.800" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Balanced accuracy</text>
+<line x1="84.516" y1="159.000" x2="134.717" y2="159.000" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<line x1="84.516" y1="158.200" x2="84.516" y2="159.800" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<line x1="134.717" y1="158.200" x2="134.717" y2="159.800" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="109.616,157.95 110.666,160.05 108.566,160.05" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.380" opacity="1.000" />
+<text x="5.500" y="175.200" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">d</text>
+<text x="12.500" y="175.200" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Stability across five saved GA runs</text>
+<rect x="106.000" y="172.600" width="3.200" height="2.500" fill="#E4EAEE" stroke="#AAB5BD" stroke-width="0.250" />
+<text x="110.500" y="174.800" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">No guidance (tint)</text>
+<rect x="140.000" y="172.600" width="3.200" height="2.500" fill="#526675" stroke="#526675" stroke-width="0.250" />
+<text x="144.500" y="174.800" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Guided (solid)</text>
+<text x="50.250" y="182.700" text-anchor="middle" font-family="Arial" font-size="2.550" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Raw overlap</text>
+
+<text x="16.300" y="220.150" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.0</text>
+
+<text x="16.300" y="214.205" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.1</text>
+
+<text x="16.300" y="208.259" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.2</text>
+
+<text x="16.300" y="202.314" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.3</text>
+
+<text x="16.300" y="196.368" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.4</text>
+
+<text x="16.300" y="190.423" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.5</text>
+<line x1="18.500" y1="186.800" x2="18.500" y2="219.500" stroke="#263746" stroke-width="0.350" />
+<line x1="18.500" y1="219.500" x2="82.000" y2="219.500" stroke="#263746" stroke-width="0.350" />
+<text x="8.100" y="203.150" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" transform="rotate(-90.0 8.100 203.150)" style="fill: #111111; font-weight: normal; font-family: Arial">Mean pairwise Jaccard</text>
+<rect x="23.725" y="191.758" width="4.250" height="27.742" fill="#D6E2EB" stroke="#386A8B" stroke-width="0.250" />
+<text x="25.850" y="190.708" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=19.0</text>
+<rect x="30.025" y="193.830" width="4.250" height="25.670" fill="#386A8B" stroke="#386A8B" stroke-width="0.250" />
+<text x="32.150" y="192.780" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=15.2</text>
+<text x="29.000" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
+<rect x="44.975" y="197.543" width="4.250" height="21.957" fill="#DDE1E6" stroke="#7B8794" stroke-width="0.250" />
+<text x="47.100" y="196.493" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=35.6</text>
+<rect x="51.275" y="206.566" width="4.250" height="12.934" fill="#7B8794" stroke="#7B8794" stroke-width="0.250" />
+<text x="53.400" y="205.516" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=20.0</text>
+<text x="50.250" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost</text>
+<rect x="66.225" y="191.349" width="4.250" height="28.151" fill="#E4DAE9" stroke="#8A6B98" stroke-width="0.250" />
+<text x="68.350" y="190.299" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=11.6</text>
+<rect x="72.525" y="196.038" width="4.250" height="23.462" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.250" />
+<text x="74.650" y="194.988" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=9.0</text>
+<text x="71.500" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta-RF</text>
+<text x="134.250" y="182.700" text-anchor="middle" font-family="Arial" font-size="2.550" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Chance-corrected agreement</text>
+
+<text x="100.300" y="220.150" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.0</text>
+
+<text x="100.300" y="211.975" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.1</text>
+
+<text x="100.300" y="203.800" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.2</text>
+
+<text x="100.300" y="195.625" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.3</text>
+
+<text x="100.300" y="187.450" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.4</text>
+<line x1="102.500" y1="186.800" x2="102.500" y2="219.500" stroke="#263746" stroke-width="0.350" />
+<line x1="102.500" y1="219.500" x2="166.000" y2="219.500" stroke="#263746" stroke-width="0.350" />
+<text x="92.100" y="203.150" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" transform="rotate(-90.0 92.100 203.150)" style="fill: #111111; font-weight: normal; font-family: Arial">Nogueira stability</text>
+<rect x="107.725" y="202.693" width="4.250" height="16.807" fill="#D6E2EB" stroke="#386A8B" stroke-width="0.250" />
+<text x="109.850" y="201.643" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=19.0</text>
+<rect x="114.025" y="195.743" width="4.250" height="23.757" fill="#386A8B" stroke="#386A8B" stroke-width="0.250" />
+<text x="116.150" y="194.693" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=15.2</text>
+<text x="113.000" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
+<rect x="128.975" y="214.384" width="4.250" height="5.116" fill="#DDE1E6" stroke="#7B8794" stroke-width="0.250" />
+<text x="131.100" y="213.334" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=35.6</text>
+<rect x="135.275" y="211.570" width="4.250" height="7.930" fill="#7B8794" stroke="#7B8794" stroke-width="0.250" />
+<text x="137.400" y="210.520" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=20.0</text>
+<text x="134.250" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost</text>
+<rect x="150.225" y="191.193" width="4.250" height="28.307" fill="#E4DAE9" stroke="#8A6B98" stroke-width="0.250" />
+<text x="152.350" y="190.143" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=11.6</text>
+<rect x="156.525" y="193.319" width="4.250" height="26.181" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.250" />
+<text x="158.650" y="192.269" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">k̄=9.0</text>
+<text x="155.500" y="223.800" text-anchor="middle" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta-RF</text>
+</svg>

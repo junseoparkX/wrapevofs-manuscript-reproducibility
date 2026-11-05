@@ -28,7 +28,7 @@ REPO = ROOT.parents[1]
 OUT = ROOT / "documentation" / "submission"
 TMP = REPO / "tmp" / "nature_forms"
 TITLE = "WrapEvoFS enables auditable feature compression with regret-constrained representative locking"
-DATE = "19 August 2026"
+DATE = "5 November 2026"
 PACKAGE_URL = "https://github.com/junseoparkX/wrapevofs-package"
 REPRO_URL = "https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility"
 
@@ -264,7 +264,7 @@ def build_ml_checklist():
         "Yes-8": "RFECV-only, highest-score, medoid, Elastic Net, stability, and random-bank controls",
         "Yes-9": "Elastic Net, stability selection, RFECV, and random-bank comparisons",
         "Yes-10": "Objective, locking-rule, tolerance, and candidate-bank analyses",
-        "DD-MM-YYYY": "19-08-2026",
+        "DD-MM-YYYY": "05-11-2026",
     }
     yes = [
         "A All data sources are listed in the paper",

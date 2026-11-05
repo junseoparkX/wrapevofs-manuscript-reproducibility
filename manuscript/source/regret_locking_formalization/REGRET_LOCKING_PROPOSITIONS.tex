@@ -6,9 +6,9 @@ $r\in\mathcal R$. Candidate $r$ has a nonempty feature set $F_r$ and finite
 larger-is-better locking score $L_r$. All candidates use one common ordered
 canonical universe $U=(u_1,\ldots,u_p)$ with unique feature names. The
 canonical mask is $z_{rj}=\mathbf 1\{u_j\in F_r\}$, and its stable identifier is
-$H_r=\operatorname{SHA256}(\operatorname{uint8}(z_r).\operatorname{tobytes}())$.
+$H_r=\operatorname{hash}(\operatorname{uint8}(z_r).\operatorname{tobytes}())$.
 We assume $\delta\geq0$, well-defined Jaccard similarity, deterministic
-canonical encoding, and engineering-level SHA-256 collision resistance. Define
+canonical encoding, and collision resistance of the stable identifier. Define
 \[
 L_{\mathrm{best}}=\max_{r\in\mathcal R}L_r,\qquad
 R_r=L_{\mathrm{best}}-L_r,\qquad
@@ -61,7 +61,7 @@ Given identical canonical masks, scores, source provenance, tolerance,
 larger-is-better orientation, and configuration, the selected feature set and
 canonical audit are deterministic.
 \emph{Proof.} Maxima, regrets, exact eligibility, Jaccard values, and means are
-deterministic functions of the inputs. Canonical masks and SHA-256 digests are
+deterministic functions of the inputs. Canonical masks and stable identifiers are
 deterministic byte transformations. The tie key totally orders distinct masks
 under the collision-resistance assumption; exact duplicates have the same
 scientific output and a deterministic post-selection provenance label. Audit

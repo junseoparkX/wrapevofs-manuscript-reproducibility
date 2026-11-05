@@ -20,7 +20,7 @@ def main() -> None:
     main_text = ROOT / "sections" / "main_text.tex"
     require_text(
         main_text,
-        "120 completed GA runs",
+        "120 corrected-objective GA runs",
         "24 combinations of center, branch, and Small or Reference cap",
         "decreased from 216 to 137",
         "deviation decreased from 135 to 112",
@@ -34,7 +34,8 @@ def main() -> None:
         "Unique Jaccard medoids determined 13 selections",
         "higher locking score resolved 9",
         "singleton selection resolved 2",
-        "feature count and stable hash were not reached",
+        "neither feature count nor the stable mask hash",
+        "identifier used as the final tie-breaker, was needed",
     )
     require_text(
         ROOT / "tables" / "table_04.tex",

@@ -1,0 +1,7 @@
+{
+  "highest_baseline_archive_matches": 54,
+  "TCGA_four_policy_archive_feature_set_matches": 120,
+  "all_matched": true,
+  "held_out_inputs_accessed": false,
+  "source": "Only feature_sets from locking_results.json; no outer labels/predictions read"
+}

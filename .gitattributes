@@ -8,3 +8,9 @@
 *.py text eol=lf
 *.tex text eol=lf
 *.yml text eol=lf
+
+# Preserve published CV protocol/input/result checksums byte for byte.
+manuscript/source/supplementary_data/cv_score_sensitivity/** -text
+manuscript/source/supplementary_data/ampad_center_sensitivity/** -text
+# Table S29 is also covered by the fixed-bank source-integrity manifest.
+manuscript/source/tables/table_v19_cv_score_sensitivity.tex -text

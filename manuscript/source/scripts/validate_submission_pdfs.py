@@ -84,10 +84,10 @@ def main() -> None:
     supplementary_text = str(supplementary_report.pop("text"))
     main_report.pop("text")
     supplementary_report["figure_captions"] = exact_numbered_labels(
-        supplementary_text, "Supplementary Figure", 28
+        supplementary_text, "Supplementary Figure", 29
     )
     supplementary_report["table_captions"] = exact_numbered_labels(
-        supplementary_text, "Supplementary Table", 28
+        supplementary_text, "Supplementary Table", 30
     )
     report = {"main": main_report, "supplementary": supplementary_report}
 

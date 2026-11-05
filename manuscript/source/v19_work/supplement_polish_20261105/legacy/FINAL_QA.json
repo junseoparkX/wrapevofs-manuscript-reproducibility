@@ -1,0 +1,495 @@
+{
+  "final_outputs": [
+    {
+      "old_asset": "figures/figure_s1.png",
+      "new_asset": "figures/supp_polished/supp_s10.pdf",
+      "sha256": "28b3d1b05efe0a44b1bc66808804ccad4f8d6f850b44abc3bdb61c8cfb7b1ee0",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 147.99999940660263,
+      "font_floor_pt": 6.0,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 49
+    },
+    {
+      "old_asset": "figures/figure_s2.png",
+      "new_asset": "figures/supp_polished/supp_s11.pdf",
+      "sha256": "b23332996ee81c0904edbbf89bbeb70409c67500b9d4999fc1b3e262fbae6d30",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 123.19000430636935,
+      "font_floor_pt": 5.5,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "b",
+        "c",
+        "a"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 114,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 119
+    },
+    {
+      "old_asset": "figures/figure_s3.png",
+      "new_asset": "figures/supp_polished/supp_s12.pdf",
+      "sha256": "3a0e2e567921a8cb353538bcaad947cf558b386b33fa7a47bf9d502cf8707a0d",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 109.22000215318468,
+      "font_floor_pt": 6.0,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "REVIEW REQUIRED",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 1,
+        "contained_fill_overlays": 32,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 68
+    },
+    {
+      "old_asset": "figures/figure_s12.png",
+      "new_asset": "figures/supp_polished/supp_s13.pdf",
+      "sha256": "b8f300f9b66c829831e0d4ffa5b21c0adc05c94d9f75c4f84b06ec20303c33f5",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 195.00000525580512,
+      "font_floor_pt": 6.199999809265137,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 61
+    },
+    {
+      "old_asset": "figures/figure_s13.png",
+      "new_asset": "figures/supp_polished/supp_s14.pdf",
+      "sha256": "ed07c093f9a5bce9d43643c9eb2d7cf029e8b6e7ed21e6ac3acc412c8d5e73af",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 104.99999703301324,
+      "font_floor_pt": 6.199999809265137,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 33
+    },
+    {
+      "old_asset": "figures/figure_s7.png",
+      "new_asset": "figures/supp_polished/supp_s15.pdf",
+      "sha256": "bb2aaa177c426919fb005349ef0ef7e863b5a6eedcfd52e9424ad1c941e1f048",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 100.00001152886284,
+      "font_floor_pt": 6.37795352935791,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 32
+    },
+    {
+      "old_asset": "figures/figure_s22.pdf",
+      "new_asset": "figures/supp_polished/supp_s18.pdf",
+      "sha256": "74aab24c93855d27c9e2460b6558abe9c24c15bd6dff330ae0f0d86ef248ae5a",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 87.62999784681531,
+      "font_floor_pt": 6.199999809265137,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 35
+    },
+    {
+      "old_asset": "figures/figure_s23.pdf",
+      "new_asset": "figures/supp_polished/supp_s19.pdf",
+      "sha256": "745c18f2cf6f8455b865078b2fe4a021c8223567ee83939eb6da4e05b837c355",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 68.57999784681532,
+      "font_floor_pt": 6.400000095367432,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 45
+    },
+    {
+      "old_asset": "figures/figure_s20.pdf",
+      "new_asset": "figures/supp_polished/supp_s20.pdf",
+      "sha256": "209f19a41363a918c62ef6efa1fc29a72c15e1b59fb69cb6621b00182b8f477b",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 184.00000915527343,
+      "font_floor_pt": 6.0,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 7,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 76
+    },
+    {
+      "old_asset": "figures/figure_s9.pdf",
+      "new_asset": "figures/supp_polished/supp_s21.pdf",
+      "sha256": "5d62e53a4827de62f8c2a200c5094ce776556f7430ca9cecdbea0f2aa7a1ecad",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 128.2700021531847,
+      "font_floor_pt": 6.199999809265137,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 62
+    },
+    {
+      "old_asset": "figures/figure_s10.png",
+      "new_asset": "figures/supp_polished/supp_s22.pdf",
+      "sha256": "2c5c4ccc9e67ab0a70074abb3ee979ed0ddaea49a140cbdee02ae06479165a5e",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 103.99998270670572,
+      "font_floor_pt": 5.527559757232666,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 25
+    },
+    {
+      "old_asset": "figures/figure_s11.png",
+      "new_asset": "figures/supp_polished/supp_s23.pdf",
+      "sha256": "3fb53859a3746d4525e5f56f0f73514ecb7490225c7e76dd1285874aa3dba2ff",
+      "native_width_mm": 170.00000237358938,
+      "height_mm": 180.99999847412107,
+      "font_floor_pt": 6.0,
+      "text_colors": [
+        0
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 12,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 49
+    },
+    {
+      "old_asset": "figures/figure_s14.png",
+      "new_asset": "figures/supp_polished/supp_s27.pdf",
+      "sha256": "a4259623f0d3547511593dd5fe72f85b0b105636853f70b1bc3dfdd3e7660948",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 190.00000898573134,
+      "font_floor_pt": 5.500001430511475,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 9,
+        "contained_image_overlays": 0
+      },
+      "alignment": "NOT_APPLICABLE: heterogeneous roles",
+      "svg_text_objects": 55
+    },
+    {
+      "old_asset": "figures/figure_s8_a.png",
+      "new_asset": "figures/supp_polished/supp_s16_a.pdf",
+      "sha256": "6b733a431a90f886c4d44a2b35c54ad6e010a419814a6c59489b973abba29d4e",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 91.00001178317599,
+      "font_floor_pt": 5.500001430511475,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 150,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 223
+    },
+    {
+      "old_asset": "figures/figure_s8_bc.png",
+      "new_asset": "figures/supp_polished/supp_s16_bc.pdf",
+      "sha256": "610aafc1be66ad15179401b119ce055f5afce903dddd0ef9252e2419eb7554de",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 118.99999304877386,
+      "font_floor_pt": 5.500001430511475,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "b",
+        "c"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 60
+    },
+    {
+      "old_asset": "figures/figure_s19_ab.png",
+      "new_asset": "figures/supp_polished/supp_s17_ab.pdf",
+      "sha256": "2c591248de4bb2ce9b63d3f5787223fcce8ef7a49bb1b6db074b90d200ea92ff",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 118.49999126858181,
+      "font_floor_pt": 5.669291973114014,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "a",
+        "b"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 30,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 63
+    },
+    {
+      "old_asset": "figures/figure_s19_cd.png",
+      "new_asset": "figures/supp_polished/supp_s17_cd.pdf",
+      "sha256": "97d867dc9bee9b1d8409c5fa9c7f12b2f3175650a20fcbcffaa20c3e3bd47a06",
+      "native_width_mm": 170.00001313951282,
+      "height_mm": 109.99999330308702,
+      "font_floor_pt": 5.500001430511475,
+      "text_colors": [
+        1118481
+      ],
+      "bold_text": [
+        "c",
+        "d"
+      ],
+      "raster_images": 0,
+      "collision": "PASS",
+      "collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "alignment": "PASS",
+      "svg_text_objects": 54
+    }
+  ],
+  "source_files_checked_unchanged": 29,
+  "numeric_svg_labels_preserved": {
+    "11": 72,
+    "12": 35,
+    "13": 23,
+    "14": 14,
+    "15": 12,
+    "16": 154,
+    "17": 40,
+    "22": 12,
+    "27": 12
+  },
+  "diamond_markers_replaced_svg": 43,
+  "retained_archival_rasters": [
+    {
+      "supp": 24,
+      "asset": "figure_s4.png",
+      "pixels": [
+        4016,
+        4758
+      ],
+      "native_ppi_at170mm": 600.0376470588235,
+      "sha256": "26e4c54b2482a83bb34ca6e97b3ac068ae1cef02c0f4dd9ccd4e153d3f63688c"
+    },
+    {
+      "supp": 25,
+      "asset": "figure_s6.png",
+      "pixels": [
+        4061,
+        3374
+      ],
+      "native_ppi_at170mm": 606.7611764705881,
+      "sha256": "6b55de96bc04e26000c8d6319e8147f86e9f90731e85af35e170a120bfb3ff56"
+    },
+    {
+      "supp": 26,
+      "asset": "figure_s5.png",
+      "pixels": [
+        4080,
+        3194
+      ],
+      "native_ppi_at170mm": 609.5999999999999,
+      "sha256": "6e04582690b9b37538eac3bb68d2461fdb06a3577b61244214b25c6e81df4bec"
+    }
+  ],
+  "qa_warning_resolution": {
+    "S12 text-fill-edge count 100": "Inspected native 170 mm PDF: numerical count sits immediately beyond its 100-feature bar, is readable, and does not obscure the bar or adjacent labels. Intentional endpoint annotation; one WARN accepted."
+  },
+  "static_preflight_resolution": {
+    "aggregate_builder": "17 PASS, 4 WARN, 0 FAIL. Actual PDF font floor supersedes warning about source replacement string $p_W$; source text is converted to plain p(L) before export. 170 mm is the project contract; 600 dpi PNG is a convenience export, PDF/SVG are submission masters.",
+    "svg_adapter": "The static EDITABLE-TEXT check only searches Matplotlib svg.fonttype/pdf.fonttype rcParams. This adapter uses editable SVG text and embedded Arial TrueType via ReportLab instead. All 11 output PDFs have selectable text; all final SVGs contain text objects and zero embedded raster images. This backend-specific static false positive is explicitly overridden by the final PDF text audit, not called a static pass."
+  },
+  "read_only_originals": "Original sources were read only; this task writes only new assets and isolated v19 work files. Main and v18 were not edited. Parent owns protected-file hash guard and supplementary TeX integration."
+}

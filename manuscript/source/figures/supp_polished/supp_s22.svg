@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="104.0000000000mm" viewBox="0 0 170.000 104.000">
+<rect x="0" y="0" width="170.000" height="104.000" fill="#FFFFFF" />
+<text x="5.500" y="7.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">a</text>
+<text x="12.500" y="7.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Stage runtime</text>
+<text x="43.000" y="87.300" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">1</text>
+<text x="60.000" y="87.300" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">10</text>
+<text x="77.000" y="87.300" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">100</text>
+<text x="94.000" y="87.300" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">1000</text>
+<text x="111.000" y="87.300" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">10000</text>
+<line x1="43.000" y1="84.000" x2="111.000" y2="84.000" stroke="#263746" stroke-width="0.300" opacity="1.000" />
+<text x="41.000" y="23.800" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Preprocessing</text>
+<circle cx="71.658" cy="20.600" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<rect x="70.646" y="22.050" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<polygon points="71.535,24.449999999999996 72.485,26.35 70.585,26.35" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<text x="41.000" y="40.800" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Initial selection</text>
+<circle cx="57.575" cy="37.600" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<rect x="88.727" y="39.050" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<polygon points="80.697,41.45 81.647,43.35000000000001 79.747,43.35000000000001" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<text x="41.000" y="57.800" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">RFECV</text>
+<circle cx="72.285" cy="54.600" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<rect x="77.209" y="56.050" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<polygon points="70.27199999999999,58.45 71.22199999999998,60.35000000000001 69.322,60.35000000000001" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<text x="41.000" y="74.800" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">GA search</text>
+<circle cx="107.692" cy="71.600" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<rect x="106.847" y="73.050" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<polygon points="107.682,75.45000000000002 108.632,77.35 106.732,77.35" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<text x="77.000" y="93.000" text-anchor="middle" font-family="Arial" font-size="2.550" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Elapsed time (s, log scale)</text>
+<text x="119.000" y="7.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">b</text>
+<text x="126.000" y="7.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Total runtime</text>
+<text x="127.500" y="84.800" text-anchor="end" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">0</text>
+<text x="127.500" y="61.467" text-anchor="end" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">47</text>
+<text x="127.500" y="38.133" text-anchor="end" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">93</text>
+<text x="127.500" y="14.800" text-anchor="end" font-family="Arial" font-size="2.000" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">140</text>
+<line x1="129.000" y1="84.000" x2="166.000" y2="84.000" stroke="#263746" stroke-width="0.300" opacity="1.000" />
+<rect x="132.800" y="29.856" width="6.400" height="54.144" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.820" />
+<text x="136.000" y="28.356" text-anchor="middle" font-family="Arial" font-size="2.050" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">108.3</text>
+<text x="136.000" y="87.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
+<rect x="144.800" y="23.979" width="6.400" height="60.021" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.820" />
+<text x="148.000" y="22.479" text-anchor="middle" font-family="Arial" font-size="2.050" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">120.0</text>
+<text x="148.000" y="87.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost</text>
+<rect x="156.800" y="28.727" width="6.400" height="55.273" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.820" />
+<text x="160.000" y="27.227" text-anchor="middle" font-family="Arial" font-size="2.050" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">110.5</text>
+<text x="160.000" y="87.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta</text>
+<text x="120.500" y="49.000" text-anchor="middle" font-family="Arial" font-size="2.450" font-weight="normal" font-style="normal" fill="#111111" transform="rotate(-90.0 120.500 49.000)" style="fill: #111111; font-weight: normal; font-family: Arial">Minutes</text>
+</svg>

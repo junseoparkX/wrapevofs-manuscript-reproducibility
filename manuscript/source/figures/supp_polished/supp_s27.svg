@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="190.0000000000mm" viewBox="0 0 170.000 190.000">
+<rect x="0" y="0" width="170.000" height="190.000" fill="#FFFFFF" />
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#6F7B86" /></marker><marker id="arrow-blue" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#5F7F98" /></marker><marker id="arrow-purple" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 z" fill="#7652A8" /></marker></defs>
+<text x="4.000" y="7.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">a</text>
+<text x="11.000" y="7.000" text-anchor="start" font-family="Arial" font-size="3.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Training-derived candidate-set construction</text>
+<rect x="4.000" y="12.000" width="34.000" height="18.000" rx="1.200" fill="#EDF6F1" stroke="#386A8B" stroke-width="0.35" />
+<text x="21.000" y="18.200" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Locked WrapEvoFS union</text>
+<text x="21.000" y="24.800" text-anchor="middle" font-family="Arial" font-size="2.750" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">78 unique features</text>
+<text x="41.500" y="22.000" text-anchor="middle" font-family="Arial" font-size="4.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">+</text>
+<rect x="45.000" y="12.000" width="32.000" height="18.000" rx="1.200" fill="#FFF6E7" stroke="#7B8794" stroke-width="0.35" />
+<text x="61.000" y="18.200" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Training-only STABL</text>
+<text x="61.000" y="24.800" text-anchor="middle" font-family="Arial" font-size="2.750" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">8 selected features</text>
+<text x="81.000" y="22.000" text-anchor="middle" font-family="Arial" font-size="4.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">−</text>
+<rect x="85.000" y="12.000" width="24.000" height="18.000" rx="1.200" fill="#F4F6F8" stroke="#AAB4BD" stroke-width="0.35" />
+<text x="97.000" y="18.200" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Shared candidates</text>
+<text x="97.000" y="24.800" text-anchor="middle" font-family="Arial" font-size="2.900" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">5</text>
+<text x="113.000" y="22.000" text-anchor="middle" font-family="Arial" font-size="4.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">=</text>
+<rect x="117.000" y="10.500" width="49.000" height="21.000" rx="1.200" fill="#F4F0F8" stroke="#7B5AA6" stroke-width="0.35" />
+<text x="141.500" y="16.700" text-anchor="middle" font-family="Arial" font-size="2.300" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Restricted candidate set</text>
+<text x="141.500" y="22.400" text-anchor="middle" font-family="Arial" font-size="2.550" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">81 unique screened features</text>
+<text x="141.500" y="28.000" text-anchor="middle" font-family="Arial" font-size="2.450" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">78 + 8 − 5 = 81</text>
+<text x="4.000" y="40.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">b</text>
+<text x="11.000" y="40.000" text-anchor="start" font-family="Arial" font-size="3.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Restricted-model posterior coefficients</text>
+<text x="58.000" y="92.000" text-anchor="middle" font-family="Arial" font-size="2.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">-2</text>
+<text x="84.250" y="92.000" text-anchor="middle" font-family="Arial" font-size="2.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">-1</text>
+<text x="110.500" y="92.000" text-anchor="middle" font-family="Arial" font-size="2.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">0</text>
+<text x="136.750" y="92.000" text-anchor="middle" font-family="Arial" font-size="2.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">1</text>
+<text x="163.000" y="92.000" text-anchor="middle" font-family="Arial" font-size="2.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">2</text>
+<line x1="110.50" y1="46" x2="110.50" y2="88" stroke="#263746" stroke-width="0.45" />
+<text x="54.500" y="52.000" text-anchor="end" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">YWHAG</text>
+<line x1="106.04" y1="48.80" x2="123.89" y2="48.80" stroke="#386A8B" stroke-width="0.65" />
+<circle cx="113.12" cy="48.80" r="0.75" fill="#386A8B" />
+<line x1="111.29" y1="51.00" x2="153.03" y2="51.00" stroke="#7B8794" stroke-width="0.65" />
+<circle cx="130.71" cy="51.00" r="0.75" fill="#7B8794" />
+<line x1="107.35" y1="53.20" x2="150.66" y2="53.20" stroke="#8A6B98" stroke-width="0.65" />
+<circle cx="127.83" cy="53.20" r="0.75" fill="#8A6B98" />
+<text x="54.500" y="60.000" text-anchor="end" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">ACHE.1</text>
+<line x1="98.16" y1="56.80" x2="113.39" y2="56.80" stroke="#386A8B" stroke-width="0.65" />
+<circle cx="107.35" cy="56.80" r="0.75" fill="#386A8B" />
+<line x1="85.04" y1="59.00" x2="105.25" y2="59.00" stroke="#7B8794" stroke-width="0.65" />
+<circle cx="95.54" cy="59.00" r="0.75" fill="#7B8794" />
+<line x1="89.50" y1="61.20" x2="107.35" y2="61.20" stroke="#8A6B98" stroke-width="0.65" />
+<circle cx="98.69" cy="61.20" r="0.75" fill="#8A6B98" />
+<text x="54.500" y="68.000" text-anchor="end" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">PPP3CA|PPP3R1</text>
+<line x1="99.21" y1="64.80" x2="116.01" y2="64.80" stroke="#386A8B" stroke-width="0.65" />
+<circle cx="108.92" cy="64.80" r="0.75" fill="#386A8B" />
+<line x1="122.05" y1="67.00" x2="161.43" y2="67.00" stroke="#7B8794" stroke-width="0.65" />
+<circle cx="141.47" cy="67.00" r="0.75" fill="#7B8794" />
+<line x1="124.15" y1="69.20" x2="162.21" y2="69.20" stroke="#8A6B98" stroke-width="0.65" />
+<circle cx="143.05" cy="69.20" r="0.75" fill="#8A6B98" />
+<text x="54.500" y="76.000" text-anchor="end" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">NEFH</text>
+<line x1="106.04" y1="72.80" x2="118.90" y2="72.80" stroke="#386A8B" stroke-width="0.65" />
+<circle cx="111.81" cy="72.80" r="0.75" fill="#386A8B" />
+<line x1="108.66" y1="75.00" x2="128.61" y2="75.00" stroke="#7B8794" stroke-width="0.65" />
+<circle cx="117.32" cy="75.00" r="0.75" fill="#7B8794" />
+<line x1="106.04" y1="77.20" x2="126.51" y2="77.20" stroke="#8A6B98" stroke-width="0.65" />
+<circle cx="115.75" cy="77.20" r="0.75" fill="#8A6B98" />
+<text x="54.500" y="84.000" text-anchor="end" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">S-methylcysteine sulfoxide</text>
+<line x1="101.84" y1="80.80" x2="112.60" y2="80.80" stroke="#386A8B" stroke-width="0.65" />
+<circle cx="107.88" cy="80.80" r="0.75" fill="#386A8B" />
+<line x1="106.56" y1="83.00" x2="119.95" y2="83.00" stroke="#7B8794" stroke-width="0.65" />
+<circle cx="112.86" cy="83.00" r="0.75" fill="#7B8794" />
+<line x1="108.66" y1="85.20" x2="122.58" y2="85.20" stroke="#8A6B98" stroke-width="0.65" />
+<circle cx="115.49" cy="85.20" r="0.75" fill="#8A6B98" />
+<circle cx="61.00" cy="98" r="0.8" fill="#386A8B" />
+<text x="64.000" y="99.000" text-anchor="start" font-family="Arial" font-size="2.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">MCI vs CN</text>
+<circle cx="97.00" cy="98" r="0.8" fill="#7B8794" />
+<text x="100.000" y="99.000" text-anchor="start" font-family="Arial" font-size="2.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Dementia vs CN</text>
+<circle cx="133.00" cy="98" r="0.8" fill="#8A6B98" />
+<text x="136.000" y="99.000" text-anchor="start" font-family="Arial" font-size="2.000" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Dementia vs MCI</text>
+<text x="4.000" y="109.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">c</text>
+<text x="11.000" y="109.000" text-anchor="start" font-family="Arial" font-size="3.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Held-out performance (95% CI where available)</text>
+<text x="67.545" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.40</text>
+<text x="86.636" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.50</text>
+<text x="105.727" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.60</text>
+<text x="124.818" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.70</text>
+<text x="143.909" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.80</text>
+<text x="163.000" y="145.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0.90</text>
+<line x1="58.00" y1="141" x2="163.00" y2="141" stroke="#263746" stroke-width="0.35" />
+<text x="110.500" y="149.000" text-anchor="middle" font-family="Arial" font-size="2.150" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Held-out metric value</text>
+<text x="4.000" y="119.700" text-anchor="start" font-family="Arial" font-size="2.200" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Balanced accuracy</text>
+<polygon points="83.77,115.65 84.72,117.54999999999998 82.82,117.54999999999998" fill="#7B5AA6" />
+<line x1="80.53" y1="118.20" x2="111.07" y2="118.20" stroke="#386A8B" stroke-width="0.55" />
+<circle cx="95.78" cy="118.20" r="0.72" fill="#386A8B" />
+<line x1="85.68" y1="119.80" x2="115.08" y2="119.80" stroke="#386A8B" stroke-width="0.55" />
+<rect fill="#386A8B" x="99.68" y="119.08" width="1.44" height="1.44" />
+<line x1="66.59" y1="121.40" x2="95.23" y2="121.40" stroke="#7B8794" stroke-width="0.55" />
+<circle cx="80.46" cy="121.40" r="0.72" fill="#7B8794" />
+<text x="4.000" y="127.200" text-anchor="start" font-family="Arial" font-size="2.200" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Macro F1</text>
+<polygon points="73.85,123.15 74.79999999999998,125.04999999999998 72.9,125.04999999999998" fill="#7B5AA6" />
+<line x1="79.19" y1="125.70" x2="112.98" y2="125.70" stroke="#386A8B" stroke-width="0.55" />
+<circle cx="96.41" cy="125.70" r="0.72" fill="#386A8B" />
+<line x1="82.44" y1="127.30" x2="116.99" y2="127.30" stroke="#386A8B" stroke-width="0.55" />
+<rect fill="#386A8B" x="100.09" y="126.58" width="1.44" height="1.44" />
+<line x1="64.30" y1="128.90" x2="95.23" y2="128.90" stroke="#7B8794" stroke-width="0.55" />
+<circle cx="80.04" cy="128.90" r="0.72" fill="#7B8794" />
+<text x="4.000" y="134.700" text-anchor="start" font-family="Arial" font-size="2.200" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Macro OvR AUROC</text>
+<polygon points="140.08999999999997,130.65000000000003 141.03999999999996,132.55 139.14,132.55" fill="#7B5AA6" />
+<line x1="133.22" y1="133.20" x2="154.60" y2="133.20" stroke="#386A8B" stroke-width="0.55" />
+<circle cx="144.47" cy="133.20" r="0.72" fill="#386A8B" />
+<line x1="131.31" y1="134.80" x2="151.55" y2="134.80" stroke="#386A8B" stroke-width="0.55" />
+<rect fill="#386A8B" x="140.88" y="134.08" width="1.44" height="1.44" />
+<line x1="113.17" y1="136.40" x2="137.80" y2="136.40" stroke="#7B8794" stroke-width="0.55" />
+<circle cx="125.94" cy="136.40" r="0.72" fill="#7B8794" />
+<polygon points="6.0,153.2 6.8,154.8 5.2,154.8" fill="#7B5AA6" />
+<text x="9.000" y="154.700" text-anchor="start" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Full Bayesian reference — point only</text>
+<circle cx="88.00" cy="154.00" r="0.75" fill="#386A8B" />
+<text x="91.000" y="154.700" text-anchor="start" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Restricted Laplace Bayesian</text>
+<rect fill="#386A8B" x="5.25" y="159.25" width="1.5" height="1.5" />
+<text x="9.000" y="160.700" text-anchor="start" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Candidate-union RF</text>
+<circle cx="88.00" cy="160.00" r="0.75" fill="#7B8794" />
+<text x="91.000" y="160.700" text-anchor="start" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">STABL RF</text>
+<text x="4.000" y="168.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">d</text>
+<text x="11.000" y="168.000" text-anchor="start" font-family="Arial" font-size="3.100" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">BLiP primary and sensitivity selection counts</text>
+<text x="56.000" y="175.000" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Primary: OR≥1.10, q=0.20</text>
+<rect x="59" y="173.00" width="91.00" height="2.5" fill="#68458E" />
+<text x="153.000" y="175.000" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">81/81</text>
+<text x="56.000" y="179.000" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Stricter FDR: q=0.10</text>
+<rect x="59" y="177.00" width="52.80" height="2.5" fill="#A38ABE" />
+<text x="153.000" y="179.000" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">47/81</text>
+<text x="56.000" y="183.000" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Lower effect threshold: OR≥1.05</text>
+<rect x="59" y="181.00" width="91.00" height="2.5" fill="#A38ABE" />
+<text x="153.000" y="183.000" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">81/81</text>
+<text x="56.000" y="187.000" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">Higher effect threshold: OR≥1.20</text>
+<rect x="59" y="185.00" width="35.95" height="2.5" fill="#A38ABE" />
+<text x="153.000" y="187.000" text-anchor="start" font-family="Arial" font-size="1.950" font-weight="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">32/81</text>
+</svg>

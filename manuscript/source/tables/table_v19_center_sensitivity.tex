@@ -1,0 +1,41 @@
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{@{}p{0.15\linewidth}p{0.10\linewidth}p{0.18\linewidth}p{0.255\linewidth}p{0.255\linewidth}@{}}
+\caption{Paired AMP-AD AUROC differences under pooled and equal-center aggregation.}\label{tab:supp30}\\
+\toprule
+Branch & RFECV cap & Comparator & Pooled difference [95\% CI] & Equal-center difference [95\% CI] \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\footnotesize\itshape \tablename~\thetable\ (continued)}\\
+\toprule
+Branch & RFECV cap & Comparator & Pooled difference [95\% CI] & Equal-center difference [95\% CI] \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+SVM-L1 & Small & RFECV-only & $-0.0098$ [$-0.0350$, $+0.0142$] & $-0.0182$ [$-0.0531$, $+0.0185$] \\
+SVM-L1 & Small & Legacy top-three & $-0.0311$ [$-0.0548$, $-0.0055$] & $-0.0159$ [$-0.0462$, $+0.0153$] \\
+SVM-L1 & Reference & RFECV-only & $-0.0084$ [$-0.0287$, $+0.0119$] & $-0.0100$ [$-0.0372$, $+0.0176$] \\
+SVM-L1 & Reference & Legacy top-three & $+0.0125$ [$-0.0093$, $+0.0351$] & $-0.0008$ [$-0.0295$, $+0.0288$] \\
+XGBoost & Small & RFECV-only & $+0.0480$ [$+0.0253$, $+0.0704$] & $+0.0098$ [$-0.0198$, $+0.0412$] \\
+XGBoost & Small & Legacy top-three & $+0.0176$ [$-0.0026$, $+0.0384$] & $-0.0012$ [$-0.0313$, $+0.0316$] \\
+XGBoost & Reference & RFECV-only & $-0.0207$ [$-0.0436$, $+0.0013$] & $-0.0061$ [$-0.0325$, $+0.0220$] \\
+XGBoost & Reference & Legacy top-three & $+0.0151$ [$-0.0073$, $+0.0372$] & $+0.0259$ [$-0.0127$, $+0.0636$] \\
+Boruta-RF & Small & RFECV-only & $-0.0404$ [$-0.0621$, $-0.0195$] & $-0.0227$ [$-0.0508$, $+0.0044$] \\
+Boruta-RF & Small & Legacy top-three & $-0.0116$ [$-0.0334$, $+0.0130$] & $-0.0204$ [$-0.0557$, $+0.0122$] \\
+Boruta-RF & Reference & RFECV-only & $+0.0025$ [$-0.0145$, $+0.0191$] & $+0.0041$ [$-0.0213$, $+0.0300$] \\
+Boruta-RF & Reference & Legacy top-three & $+0.0146$ [$-0.0033$, $+0.0328$] & $+0.0327$ [$+0.0067$, $+0.0597$] \\
+\end{longtable}
+All differences are regret-constrained WrapEvoFS minus comparator. Pooled macro
+one-vs-rest AUROC concatenates predictions from the four leave-one-center-out
+models (527 participants). Equal-center aggregation averages the four
+within-center macro-AUROC differences with equal weights. Both summaries use
+the same 2,000 paired resamples within each comparison, stratified by fixed
+center and true class (seed 42). The equal-center analysis is post hoc and does
+not replace the original pooled evaluation. Intervals are nominal and
+conditional on the four observed centers and fitted models. All twelve
+comparisons are retained. Center-specific paired differences and
+participant-count-weighted center summaries are supplied as source data.
+\endgroup

@@ -29,7 +29,7 @@
 19 & \textbf{End for} run. \\
 \addlinespace[2pt]
 20 & Construct one fixed stratified locking-fold partition and re-score every retained run-best candidate with the same locking metric, fold partition, and random-forest hyperparameters, using its recorded run-specific estimator seed, to obtain $L_r$ and fold scores. \\
-21 & Encode every candidate in the common ordered feature universe, compute its stable SHA-256 mask hash, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
+21 & Encode every candidate in the common ordered feature universe, compute its stable mask identifier, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
 22 & For the primary absolute rule, form $E_\delta=\{r:R_r\leq\delta\}$. Prespecified relative and best-run-SE-scaled modes form their corresponding sensitivity pools under their own declared thresholds. Never add a candidate outside the active threshold. \\
 23 & \textbf{If} $|E_\delta|=1$, select its sole candidate. \\
 24 & \textbf{Otherwise,} compute pairwise Jaccard similarity and each candidate's mean Jaccard within $E_\delta$. \\

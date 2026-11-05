@@ -1,0 +1,103 @@
+{
+  "schema": "v19-cv-score-sensitivity-source-integrity-v1",
+  "created_utc": "2026-11-05T21:10:03.287161+00:00",
+  "model_fits": 0,
+  "held_out_accesses": 0,
+  "scope": "Only this new experiment source bundle and new Table S29",
+  "files": {
+    "inputs/ampad_complete_candidate_audit.csv": {
+      "sha256": "f8ada80b76aaaa29e6a0ea6c4d6218c1488ce81f9c60698f2fff9ed537ba2098",
+      "bytes": 169996
+    },
+    "inputs/candidate_level_geometry.csv": {
+      "sha256": "25f08e3c712844754035e3ea34a98808ce2fbe45536e809d917f11b11cc5691e",
+      "bytes": 224829
+    },
+    "protocol.json": {
+      "sha256": "c4d33f82ebdc5ebb376b74279b9b629acdaa431718d52018f678af21cec13344",
+      "bytes": 6318
+    },
+    "README.txt": {
+      "sha256": "65fcacb8f8d99b713d48818d54ae12df7e54407271666efda5ba0bb83fab4ac0",
+      "bytes": 1857
+    },
+    "results/bank_policy_summary.csv": {
+      "sha256": "90a7175ce4d3790a6045e57afa4cd9de2d696064b3d49ef0c2c16af472a30e66",
+      "bytes": 100487
+    },
+    "results/candidate_selection_probabilities.csv": {
+      "sha256": "53721097a926a1404228a215372d804ada6718abecc37127962539a3413900e2",
+      "bytes": 347169
+    },
+    "results/group_policy_summary.csv": {
+      "sha256": "42d702756b1d0ab82c4c0b50e06dd2518787b34431af0ba8ee287738c8bbcb6b",
+      "bytes": 23865
+    },
+    "results/paired_bank_comparison.csv": {
+      "sha256": "887e0e23b89cd55b49fe58821c47cf649465386083b35669f113446bfb947783",
+      "bytes": 21032
+    },
+    "results/paired_group_summary.csv": {
+      "sha256": "1e4c325e6abf9afa677adbf21a7b04f672558ec831187af4aacb8f52d60649b9",
+      "bytes": 79870
+    },
+    "results/run_manifest.json": {
+      "sha256": "13ee85bc8685067282e1e117a42c640dc45872e2ed039bbd019a3329dea41d93",
+      "bytes": 1777
+    },
+    "results/summary.json": {
+      "sha256": "436e23906388293a8e6dee627ff38d936a05388845333268825639e7cd6fc4c0",
+      "bytes": 69577
+    },
+    "results/uniform_policy_baselines.csv": {
+      "sha256": "fbfd38b147fa94a385d3853a996b79ffd4278ace9b2f315813f83217992ddbbe",
+      "bytes": 40923
+    },
+    "results/weight_vectors.csv": {
+      "sha256": "5acb38669a40163f0265d48e1e13cf90b0c6897e2c543bf1c0389089192e6574",
+      "bytes": 6500
+    },
+    "results/weighted_case_results.csv": {
+      "sha256": "42e6217024dc11a49f4b99a7dbbc5a225e3f9e74f305db16c67030e573538788",
+      "bytes": 9884027
+    },
+    "run_cv_score_sensitivity.py": {
+      "sha256": "470d4544e5418e5dde82ecbebfabd606575f94470f17f221ccd2f5476932356a",
+      "bytes": 21082
+    },
+    "validation/archived_policy_baseline_verification.json": {
+      "sha256": "c98b9f173a01f01db376958cd06b16368f41f6c96b6a967bda2ea62dc5e17110",
+      "bytes": 258
+    },
+    "validation/fenn10_stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "validation/fenn10_stdout.json": {
+      "sha256": "faef193ce98d51c96d944a3f4ea4096b3980e78d4110356de8e0033502c6cdb7",
+      "bytes": 14867
+    },
+    "validation/fold_provenance_check.csv": {
+      "sha256": "a9577b70c5ff869ea7c6efb9afca24912da33ac9eafa4906da1e0f910e2c2137",
+      "bytes": 3095
+    },
+    "validation/local_numpy_validation_manifest.json": {
+      "sha256": "9c550cd7101c685a17cea89e99a36c84ed95d7f2ebb019da2152ab81f1fcd06f",
+      "bytes": 1808
+    },
+    "validation/local_numpy_validation_summary.json": {
+      "sha256": "c254a390d4c3ac42d99b637804eba18497e557450d2ca4bbf94cdeaa0339d56e",
+      "bytes": 71728
+    },
+    "validation/remote_reproduction_verification.json": {
+      "sha256": "a5b68ca81d232258facedf7dbeef712d9d327e219eada402216d463343ce5293",
+      "bytes": 921
+    }
+  },
+  "new_table": {
+    "path": "tables/table_v19_cv_score_sensitivity.tex",
+    "sha256": "85a148df625325432dd0945f4a875f7338b72497daf78f1cf93ebcb3998a815b",
+    "data_source": "results/group_policy_summary.csv",
+    "rows": 32
+  }
+}

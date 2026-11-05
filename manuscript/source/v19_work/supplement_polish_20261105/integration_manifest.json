@@ -1,0 +1,125 @@
+{
+  "scope": "v19 supplement only; main sources, main PDF, and main figure assets unchanged",
+  "asset_mapping": {
+    "figures/figure_s17.png": "v19_work/supplement_polish_20261105/modern/figures/figure_s17.pdf",
+    "figures/figure_s18.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s18.pdf",
+    "figures/figure_s15.png": "v19_work/supplement_polish_20261105/modern/figures/figure_s15.pdf",
+    "figures/figure_s16.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s16.pdf",
+    "figures/figure_s25_repeat_1.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s25_repeat_1.pdf",
+    "figures/figure_s25_repeat_2.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s25_repeat_2.pdf",
+    "figures/figure_s26.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s26.pdf",
+    "figures/figure_s27.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s27.pdf",
+    "figures/figure_s_matched_comparator_strengthened.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s_matched_comparator_strengthened.pdf",
+    "figures/figure_s21.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s21.pdf",
+    "figures/figure_s24.pdf": "v19_work/supplement_polish_20261105/modern/figures/figure_s24.pdf",
+    "figures/supp_figure_s29_cv_score_sensitivity.pdf": "v19_work/supplement_polish_20261105/modern/figures/supp_figure_s29_cv_score_sensitivity.pdf",
+    "figures/figure_s1.png": "figures/supp_polished/supp_s10.pdf",
+    "figures/figure_s2.png": "figures/supp_polished/supp_s11.pdf",
+    "figures/figure_s3.png": "figures/supp_polished/supp_s12.pdf",
+    "figures/figure_s12.png": "figures/supp_polished/supp_s13.pdf",
+    "figures/figure_s13.png": "figures/supp_polished/supp_s14.pdf",
+    "figures/figure_s7.png": "figures/supp_polished/supp_s15.pdf",
+    "figures/figure_s22.pdf": "figures/supp_polished/supp_s18.pdf",
+    "figures/figure_s23.pdf": "figures/supp_polished/supp_s19.pdf",
+    "figures/figure_s20.pdf": "figures/supp_polished/supp_s20.pdf",
+    "figures/figure_s9.pdf": "figures/supp_polished/supp_s21.pdf",
+    "figures/figure_s10.png": "figures/supp_polished/supp_s22.pdf",
+    "figures/figure_s11.png": "figures/supp_polished/supp_s23.pdf",
+    "figures/figure_s14.png": "figures/supp_polished/supp_s27.pdf",
+    "figures/figure_s8_a.png": "figures/supp_polished/supp_s16_a.pdf",
+    "figures/figure_s8_bc.png": "figures/supp_polished/supp_s16_bc.pdf",
+    "figures/figure_s19_ab.png": "figures/supp_polished/supp_s17_ab.pdf",
+    "figures/figure_s19_cd.png": "figures/supp_polished/supp_s17_cd.pdf"
+  },
+  "changes": [
+    {
+      "kind": "wording",
+      "id": "supp_intro",
+      "reason": "Replace a long inventory of every analysis with a navigational opening; preserve the archived/corrected distinction and status of S21--S22.",
+      "old_words_approx": 104,
+      "new_words_approx": 50
+    },
+    {
+      "kind": "wording",
+      "id": "algorithm_bridge",
+      "reason": "Remove the generic main-text/following-sections explanation while retaining the operational leakage boundary and specification references.",
+      "old_words_approx": 67,
+      "new_words_approx": 34
+    },
+    {
+      "kind": "wording",
+      "id": "figure_s29_caption",
+      "reason": "Keep every denominator, panel encoding, multiplicity weighting, negative comparison, bound-by-construction caveat, and fixed-bank limitation. Remove repeated scope wording and visually explicit color-scale description.",
+      "old_words_approx": 249,
+      "new_words_approx": 186
+    },
+    {
+      "kind": "wording",
+      "id": "cv_weighting_methods",
+      "reason": "Consolidate repeated fixed-input and no-refitting statements. Retain all 54/30/24/18/6 denominators, three provenance routes, unchanged candidate-specific seeds, formula, exact bootstrap probabilities, tie policies, uniform reproduction, all summary metrics, equal-bank weighting, and inferential limits.",
+      "old_words_approx": 341,
+      "new_words_approx": 242
+    },
+    {
+      "kind": "wording",
+      "id": "simulation_execution",
+      "reason": "Shorten execution bookkeeping while retaining the prespecified regeneration count, all chunk counts, explicit chunk-size deviation, memory, reproducibility source, and limits of synthetic utility claims.",
+      "old_words_approx": 135,
+      "new_words_approx": 99
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    },
+    {
+      "kind": "caption",
+      "reason": "Match final figure encoding"
+    }
+  ],
+  "approx_words_removed": 285,
+  "layout": "Four measured blank figure margins trimmed vertically; 4-pt caption gap in supplement only. No figure width or font scaling changed."
+}

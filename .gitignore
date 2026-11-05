@@ -49,3 +49,9 @@ manuscript/source/documentation/submission/*
 Thumbs.db
 .vscode/
 .idea/
+
+# Reviewed, non-participant candidate-bank inputs and reviewer access metadata
+!manuscript/source/supplementary_data/cv_score_sensitivity/inputs/
+!manuscript/source/supplementary_data/cv_score_sensitivity/inputs/*.csv
+!manuscript/source/documentation/submission/REVIEWER_CODE_ACCESS_CHECKLIST.md
+!manuscript/source/supplementary_data/cv_score_sensitivity/validation/fenn10_stderr.log

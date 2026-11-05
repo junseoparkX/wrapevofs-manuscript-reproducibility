@@ -1,0 +1,690 @@
+<svg width="170mm" height="92.65mm" viewBox="0 0 1000 545" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Figure 1 &#194;&#183; v19">
+<rect width="1000" height="545" fill="white"/>
+<text id="Panel a" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="6" y="22.9869">a</tspan></text>
+<text id="Panel a title" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="24" y="21.5819">Locked split&#10;</tspan><tspan x="24" y="38.6919">&#38; safeguards</tspan></text>
+<text id="Panel b" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="16" font-weight="bold" letter-spacing="0em"><tspan x="175" y="22.9869">b</tspan></text>
+<text id="Panel b title" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="194" y="21.5819">WrapEvoFS workflow</tspan></text>
+<path id="Panel divider" d="M165 8V492" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text id="Supplied matrices" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="31.3892" y="71.8022">Supplied matrices</tspan></text>
+<g id="Input matrix 1">
+<rect id="cell 1,1" x="24" y="86" width="6.3" height="6.3" fill="#7B8794"/>
+<rect id="cell 1,2" x="32" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 1,3" x="40" y="86" width="6.3" height="6.3" fill="#D7DBDF"/>
+<rect id="cell 1,4" x="48" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 1,5" x="56" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,1" x="24" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,2" x="32" y="94" width="6.3" height="6.3" fill="#BDC3CA"/>
+<rect id="cell 2,3" x="40" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,4" x="48" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,5" x="56" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,1" x="24" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,2" x="32" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,3" x="40" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,4" x="48" y="102" width="6.3" height="6.3" fill="#A3ABB4"/>
+<rect id="cell 3,5" x="56" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,1" x="24" y="110" width="6.3" height="6.3" fill="#D7DBDF"/>
+<rect id="cell 4,2" x="32" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,3" x="40" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,4" x="48" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,5" x="56" y="110" width="6.3" height="6.3" fill="#7B8794"/>
+</g>
+<g id="Input matrix 2">
+<rect id="cell 1,1_2" x="92" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_2" x="100" y="86" width="6.3" height="6.3" fill="#BDC3CA"/>
+<rect id="cell 1,3_2" x="108" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 1,4_2" x="116" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 1,5_2" x="124" y="86" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,1_2" x="92" y="94" width="6.3" height="6.3" fill="#A3ABB4"/>
+<rect id="cell 2,2_2" x="100" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_2" x="108" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,4_2" x="116" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 2,5_2" x="124" y="94" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,1_2" x="92" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,2_2" x="100" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,3_2" x="108" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 3,4_2" x="116" y="102" width="6.3" height="6.3" fill="#7B8794"/>
+<rect id="cell 3,5_2" x="124" y="102" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,1_2" x="92" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,2_2" x="100" y="110" width="6.3" height="6.3" fill="#D7DBDF"/>
+<rect id="cell 4,3_2" x="108" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,4_2" x="116" y="110" width="6.3" height="6.3" fill="#F5F7F9"/>
+<rect id="cell 4,5_2" x="124" y="110" width="6.3" height="6.3" fill="#7B8794"/>
+</g>
+<text id="Input ellipsis" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="68.75" y="103.582">&#x2026;</tspan></text>
+<path id="Input to split" d="M81 123V136" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Input to split arrowhead" d="M83.5 132L81 136L78.5 132" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Predefined split">
+<rect x="15" y="142" width="132" height="42" rx="3" fill="white"/>
+<rect x="15" y="142" width="132" height="42" rx="3" stroke="#AEB9C3" stroke-width="2"/>
+<text id="Predefined split label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="50.5028" y="159.802">Predefined&#10;</tspan><tspan x="51.2042" y="174.67">split / folds</tspan></text>
+</g>
+<path id="Split to development" d="M81 184V218" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Split to development arrowhead" d="M83.5 214L81 218L78.5 214" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Split to held-out" d="M81 196H6V363H15" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Split to held-out arrowhead" d="M11 360.5L15 363L11 365.5" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Partition junction" x="78.5" y="193.5" width="5" height="5" fill="#657482"/>
+<g id="Development selection">
+<rect x="15" y="224" width="132" height="52" rx="3" fill="#F5F7F9"/>
+<rect x="15" y="224" width="132" height="52" rx="3" stroke="#AEB9C3" stroke-width="2"/>
+<text id="Development selection label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="43.8521" y="246.802">Development&#10;</tspan><tspan x="37.1892" y="261.67">model selection</tspan></text>
+</g>
+<g id="Held-out partition">
+<rect x="15" y="337" width="132" height="52" rx="3" fill="#F1F3F5"/>
+<rect x="15" y="337" width="132" height="52" rx="3" stroke="#53677E" stroke-width="2"/>
+<text id="Held-out partition label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="57.1658" y="359.802">Held-out&#10;</tspan><tspan x="38.9241" y="374.67">final evaluation</tspan></text>
+</g>
+<text id="Blocked feedback" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="30.331" y="306.802">Feedback blocked</tspan></text>
+<path id="Blocked feedback stem" d="M81 337V317" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Blocked feedback stop" d="M75 317H87" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text id="Held-out access label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="48.3192" y="427.802">Access after&#10;</tspan><tspan x="63.374" y="442.67">locking</tspan></text>
+<g id="Stage 1 title" clip-path="url(#clip0_3_2)">
+<text id="Stage 1 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="204.964" y="86.5819">1</tspan></text>
+<text id="Stage 1 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="178.152" y="109.802">Configured&#10;</tspan><tspan x="169.404" y="124.67">preprocessing</tspan></text>
+</g>
+<g id="Stage 2 title" clip-path="url(#clip1_3_2)">
+<text id="Stage 2 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="285.964" y="86.5819">2</tspan></text>
+<text id="Stage 2 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="273.536" y="109.802">Direct&#10;</tspan><tspan x="259.503" y="124.67">candidates</tspan></text>
+</g>
+<g id="Stage 3 title" clip-path="url(#clip2_3_2)">
+<text id="Stage 3 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="371.964" y="86.5819">3</tspan></text>
+<text id="Stage 3 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="354.639" y="109.802">RFECV&#10;</tspan><tspan x="347.958" y="124.67">soft target</tspan></text>
+</g>
+<g id="Stage 4 title" clip-path="url(#clip3_3_2)">
+<text id="Stage 4 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="460.964" y="86.5819">4</tspan></text>
+<text id="Stage 4 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="426.437" y="109.802">Target-guided&#10;</tspan><tspan x="432.768" y="124.67">GA (5 runs)</tspan></text>
+</g>
+<g id="Stage 5 title" clip-path="url(#clip4_3_2)">
+<text id="Stage 5 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="553.964" y="86.5819">5</tspan></text>
+<text id="Stage 5 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="518.767" y="109.802">Fixed Dev-CV&#10;</tspan><tspan x="532.074" y="124.67">rescoring</tspan></text>
+</g>
+<g id="Stage 6 title" clip-path="url(#clip5_3_2)">
+<text id="Stage 6 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="699.964" y="86.5819">6</tspan></text>
+<text id="Stage 6 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="659.5" y="109.802">Jaccard medoid</tspan></text>
+</g>
+<g id="Stage 7 title" clip-path="url(#clip6_3_2)">
+<text id="Stage 7 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="832.964" y="86.5819">7</tspan></text>
+<text id="Stage 7 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="816.673" y="109.802">Locked&#10;</tspan><tspan x="819.466" y="124.67">output</tspan></text>
+</g>
+<g id="Stage 8 title" clip-path="url(#clip7_3_2)">
+<text id="Stage 8 number" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="14.5" letter-spacing="0em"><tspan x="938.964" y="86.5819">8</tspan></text>
+<text id="Stage 8 name" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="919.166" y="109.802">Held-out&#10;</tspan><tspan x="914.25" y="124.67">evaluation</tspan></text>
+</g>
+<text id="Development-only span" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="474.032" y="50.8022">Development only</tspan></text>
+<path id="Development bracket" d="M178 65V57H871V65" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Configured preprocessor" x="179" y="160" width="60" height="296" rx="3" fill="white" stroke="#AEB9C3" stroke-width="2"/>
+<path id="Development to preprocessing" d="M147 250H170V194H179" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Development to preprocessing arrowhead" d="M175 191.5L179 194L175 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Preprocessing input matrix">
+<rect id="cell 1,1_3" x="191" y="185" width="7.3" height="7.3" fill="#7B8794"/>
+<rect id="cell 1,2_3" x="200" y="185" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 1,3_3" x="209" y="185" width="7.3" height="7.3" fill="#CACFD4"/>
+<rect id="cell 1,4_3" x="218" y="185" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,1_3" x="191" y="194" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,2_3" x="200" y="194" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_3" x="209" y="194" width="7.3" height="7.3" fill="#7B8794"/>
+<rect id="cell 2,4_3" x="218" y="194" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 3,1_3" x="191" y="203" width="7.3" height="7.3" fill="#D7DBDF"/>
+<rect id="cell 3,2_3" x="200" y="203" width="7.3" height="7.3" fill="#7B8794"/>
+<rect id="cell 3,3_3" x="209" y="203" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 3,4_3" x="218" y="203" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,1_3" x="191" y="212" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,2_3" x="200" y="212" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,3_3" x="209" y="212" width="7.3" height="7.3" fill="#CACFD4"/>
+<rect id="cell 4,4_3" x="218" y="212" width="7.3" height="7.3" fill="#F5F7F9"/>
+</g>
+<path id="Preprocessing funnel" d="M226 238H192L203 251V258L215 264V251L226 238Z" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Preprocessing connector 1" d="M209 221V232" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Preprocessing connector 1 arrowhead" d="M211.5 228L209 232L206.5 228" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Preprocessing connector 2" d="M209 270V282" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Preprocessing connector 2 arrowhead" d="M211.5 278L209 282L206.5 278" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Preprocessed feature matrix">
+<rect id="cell 1,1_4" x="191" y="289" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_4" x="200" y="289" width="7.3" height="7.3" fill="#BDC3CA"/>
+<rect id="cell 1,3_4" x="209" y="289" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 1,4_4" x="218" y="289" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,1_4" x="191" y="298" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,2_4" x="200" y="298" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_4" x="209" y="298" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 2,4_4" x="218" y="298" width="7.3" height="7.3" fill="#959FA9"/>
+<rect id="cell 3,1_4" x="191" y="307" width="7.3" height="7.3" fill="#D7DBDF"/>
+<rect id="cell 3,2_4" x="200" y="307" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 3,3_4" x="209" y="307" width="7.3" height="7.3" fill="#BDC3CA"/>
+<rect id="cell 3,4_4" x="218" y="307" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,1_4" x="191" y="316" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,2_4" x="200" y="316" width="7.3" height="7.3" fill="#7B8794"/>
+<rect id="cell 4,3_4" x="209" y="316" width="7.3" height="7.3" fill="#F5F7F9"/>
+<rect id="cell 4,4_4" x="218" y="316" width="7.3" height="7.3" fill="#F5F7F9"/>
+</g>
+<text id="Configured operations" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="194.985" y="362.802">Filter&#10;</tspan><tspan x="190.075" y="377.67">impute&#10;</tspan><tspan x="182.379" y="392.538">transform&#10;</tspan><tspan x="194.284" y="407.406">scale</tspan></text>
+<text id="Eligible-pool criterion" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="523.49" y="143.802">Eligible pool&#10;</tspan><tspan x="515.147" y="158.67">(score gap &#x2264; &#x3b4;)</tspan></text>
+<text id="Eligible-pool Jaccard label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="621.145" y="143.802">Eligible-pool&#10;</tspan><tspan x="633.432" y="158.67">Jaccard</tspan></text>
+<text id="Mean J label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="697.828" y="159.802">Mean J</tspan></text>
+<text id="Selected medoid label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="751.322" y="159.802">Medoid</tspan></text>
+<g id="SVM-L1 Direct screen">
+<rect x="254" y="175" width="74" height="38" rx="3" fill="#F3F6F8"/>
+<rect x="254" y="175" width="74" height="38" rx="3" stroke="#7E9EB4" stroke-width="2"/>
+<text id="SVM-L1 Direct screen label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="268.236" y="198.242">SVM-L1</tspan></text>
+</g>
+<rect id="SVM-L1 identity stripe" x="254" y="175" width="3" height="38" fill="#386A8B"/>
+<path id="SVM-L1 preprocessor edge" d="M239 194H249" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 preprocessor edge arrowhead" d="M245 191.5L249 194L245 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 Direct to RFECV" d="M328 194H336" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 Direct to RFECV arrowhead" d="M332 191.5L336 194L332 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 RFECV axes" d="M341 168V223H414" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 RFECV profile" d="M344 217L353 204L362 199L371 190L380 183L389 194L398 191L407 187" stroke="#386A8B" stroke-width="2.6"/>
+<path id="SVM-L1 soft target guide" d="M380 169V221" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="SVM-L1 soft-target marker" x="377" y="180" width="6" height="6" fill="#386A8B"/>
+<text id="SVM-L1 soft-target label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="370.784" y="157.802">k&#x2098;*</tspan></text>
+<path id="SVM-L1 RFECV to GA" d="M416 194H428" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 RFECV to GA arrowhead" d="M424 191.5L428 194L424 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVM-L1 GA candidate 1">
+<rect id="Feature 1" x="434" y="166" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 2" x="442" y="166" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3" x="450" y="166" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 4" x="458" y="166" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 5" x="466" y="166" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6" x="474" y="166" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 7" x="482" y="166" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8" x="490" y="166" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 GA candidate 2">
+<rect id="Feature 1_2" x="434" y="178" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 2_2" x="442" y="178" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_2" x="450" y="178" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 4_2" x="458" y="178" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_2" x="466" y="178" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_2" x="474" y="178" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 7_2" x="482" y="178" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 8_2" x="490" y="178" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 GA candidate 3">
+<rect id="Feature 1_3" x="434" y="190" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 2_3" x="442" y="190" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 3_3" x="450" y="190" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 4_3" x="458" y="190" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 5_3" x="466" y="190" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_3" x="474" y="190" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_3" x="482" y="190" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_3" x="490" y="190" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 GA candidate 4">
+<rect id="Feature 1_4" x="434" y="202" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_4" x="442" y="202" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 3_4" x="450" y="202" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_4" x="458" y="202" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 5_4" x="466" y="202" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 6_4" x="474" y="202" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_4" x="482" y="202" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 8_4" x="490" y="202" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 GA candidate 5">
+<rect id="Feature 1_5" x="434" y="214" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 2_5" x="442" y="214" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_5" x="450" y="214" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_5" x="458" y="214" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_5" x="466" y="214" width="6.5" height="10" fill="#386A8B"/>
+<rect id="Feature 6_5" x="474" y="214" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_5" x="482" y="214" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_5" x="490" y="214" width="6.5" height="10" fill="#386A8B"/>
+</g>
+<path id="SVM-L1 GA to rescore" d="M500 194H511" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 GA to rescore arrowhead" d="M507 191.5L511 194L507 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="SVM-L1 development score 1" x="517" y="166" width="66" height="8" fill="#386A8B"/>
+<rect id="SVM-L1 development score 2" x="517" y="178" width="74" height="8" fill="#386A8B"/>
+<rect id="SVM-L1 development score 3" x="517" y="190" width="70" height="8" fill="#386A8B"/>
+<rect id="SVM-L1 development score 4" x="517" y="202" width="43" height="8" fill="#D8E0E6"/>
+<rect id="SVM-L1 development score 5" x="517" y="214" width="38" height="8" fill="#D8E0E6"/>
+<path id="SVM-L1 eligible bracket" d="M599 165H604V199H599" stroke="#386A8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 rescore to medoid" d="M606 194H615" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 rescore to medoid arrowhead" d="M611 191.5L615 194L611 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVM-L1 eligible candidate 1">
+<rect id="Feature 1_6" x="619" y="177" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 2_6" x="623.5" y="177" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 3_6" x="628" y="177" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 4_6" x="632.5" y="177" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 5_6" x="637" y="177" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_6" x="641.5" y="177" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 7_6" x="646" y="177" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_6" x="650.5" y="177" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 eligible candidate 2">
+<rect id="Feature 1_7" x="619" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 2_7" x="623.5" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 3_7" x="628" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 4_7" x="632.5" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_7" x="637" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_7" x="641.5" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 7_7" x="646" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 8_7" x="650.5" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 eligible candidate 3">
+<rect id="Feature 1_8" x="619" y="205" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 2_8" x="623.5" y="205" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 3_8" x="628" y="205" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 4_8" x="632.5" y="205" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 5_8" x="637" y="205" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_8" x="641.5" y="205" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_8" x="646" y="205" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_8" x="650.5" y="205" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<g id="SVM-L1 within-pool Jaccard">
+<rect id="cell 1,1_5" x="662" y="175" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_5" x="674" y="175" width="10.3" height="10.3" fill="#88A6B9"/>
+<rect id="cell 1,3_5" x="686" y="175" width="10.3" height="10.3" fill="#88A6B9"/>
+<rect id="cell 2,1_5" x="662" y="187" width="10.3" height="10.3" fill="#88A6B9"/>
+<rect id="cell 2,2_5" x="674" y="187" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_5" x="686" y="187" width="10.3" height="10.3" fill="#BDCDD8"/>
+<rect id="cell 3,1_5" x="662" y="199" width="10.3" height="10.3" fill="#88A6B9"/>
+<rect id="cell 3,2_5" x="674" y="199" width="10.3" height="10.3" fill="#BDCDD8"/>
+<rect id="cell 3,3_5" x="686" y="199" width="10.3" height="10.3" fill="#F5F7F9"/>
+</g>
+<path id="SVM-L1 Jaccard to mean" d="M699 194H704" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 Jaccard to mean arrowhead" d="M700 191.5L704 194L700 196.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="SVM-L1 mean J 1" x="709" y="177" width="30" height="7" fill="#386A8B"/>
+<rect id="SVM-L1 mean J 2" x="709" y="191" width="23" height="7" fill="#92ADBF"/>
+<rect id="SVM-L1 mean J 3" x="709" y="205" width="23" height="7" fill="#92ADBF"/>
+<rect id="SVM-L1 maximum mean J outline" x="706" y="174" width="36" height="13" rx="1" stroke="#386A8B" stroke-width="2"/>
+<path id="SVM-L1 mean to existing candidate" d="M744 194H750" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 mean to existing candidate arrowhead" d="M746 191.5L750 194L746 196.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVM-L1 selected medoid">
+<rect id="Feature 1_9" x="754" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 2_9" x="758.5" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 3_9" x="763" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 4_9" x="767.5" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 5_9" x="772" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_9" x="776.5" y="191" width="3.65625" height="5.625" fill="#386A8B"/>
+<rect id="Feature 7_9" x="781" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_9" x="785.5" y="191" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<rect id="SVM-L1 selected outline" x="751" y="187" width="42" height="14" rx="1" stroke="#386A8B" stroke-width="2"/>
+<path id="SVM-L1 medoid to lock" d="M795 194H807" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 medoid to lock arrowhead" d="M803 191.5L807 194L803 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="SVM-L1 locked artifact" x="812" y="164" width="56" height="60" rx="3" fill="white" stroke="#6088A2" stroke-width="2"/>
+<g id="SVM-L1 locked feature mask">
+<rect id="Feature 1_10" x="820" y="176" width="4.0625" height="6.25" fill="#386A8B"/>
+<rect id="Feature 2_10" x="825" y="176" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 3_10" x="830" y="176" width="4.0625" height="6.25" fill="#386A8B"/>
+<rect id="Feature 4_10" x="835" y="176" width="4.0625" height="6.25" fill="#386A8B"/>
+<rect id="Feature 5_10" x="840" y="176" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 6_10" x="845" y="176" width="4.0625" height="6.25" fill="#386A8B"/>
+<rect id="Feature 7_10" x="850" y="176" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 8_10" x="855" y="176" width="4.0625" height="6.25" fill="#E8EDF1"/>
+</g>
+<path id="SVM-L1 artifact record 1" d="M821 197H858" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 artifact record 2" d="M821 209H851" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 locked to held-out" d="M870 194H897" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="SVM-L1 locked to held-out arrowhead" d="M893 191.5L897 194L893 196.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost row separator" d="M251 250H874" stroke="#DCE2E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="XGBoost Direct screen">
+<rect x="254" y="287" width="74" height="38" rx="3" fill="#F7F8F9"/>
+<rect x="254" y="287" width="74" height="38" rx="3" stroke="#A9B1B9" stroke-width="2"/>
+<text id="XGBoost Direct screen label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="265.775" y="310.242">XGBoost</tspan></text>
+</g>
+<rect id="XGBoost identity stripe" x="254" y="287" width="3" height="38" fill="#7B8794"/>
+<path id="XGBoost preprocessor edge" d="M239 306H249" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost preprocessor edge arrowhead" d="M245 303.5L249 306L245 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost Direct to RFECV" d="M328 306H336" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost Direct to RFECV arrowhead" d="M332 303.5L336 306L332 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost RFECV axes" d="M341 280V335H414" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost RFECV profile" d="M344 329L353 320L362 310L371 315L380 293L389 301L398 299L407 302" stroke="#7B8794" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost soft target guide" d="M380 281V333" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="XGBoost soft-target marker" x="377" y="290" width="6" height="6" fill="#7B8794"/>
+<text id="XGBoost soft-target label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="370.784" y="269.802">k&#x2098;*</tspan></text>
+<path id="XGBoost RFECV to GA" d="M416 306H428" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost RFECV to GA arrowhead" d="M424 303.5L428 306L424 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="XGBoost GA candidate 1">
+<rect id="Feature 1_11" x="434" y="278" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_11" x="442" y="278" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 3_11" x="450" y="278" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 4_11" x="458" y="278" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_11" x="466" y="278" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 6_11" x="474" y="278" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_11" x="482" y="278" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_11" x="490" y="278" width="6.5" height="10" fill="#7B8794"/>
+</g>
+<g id="XGBoost GA candidate 2">
+<rect id="Feature 1_12" x="434" y="290" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_12" x="442" y="290" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 3_12" x="450" y="290" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_12" x="458" y="290" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_12" x="466" y="290" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 6_12" x="474" y="290" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 7_12" x="482" y="290" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_12" x="490" y="290" width="6.5" height="10" fill="#7B8794"/>
+</g>
+<g id="XGBoost GA candidate 3">
+<rect id="Feature 1_13" x="434" y="302" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 2_13" x="442" y="302" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 3_13" x="450" y="302" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 4_13" x="458" y="302" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_13" x="466" y="302" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_13" x="474" y="302" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_13" x="482" y="302" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_13" x="490" y="302" width="6.5" height="10" fill="#7B8794"/>
+</g>
+<g id="XGBoost GA candidate 4">
+<rect id="Feature 1_14" x="434" y="314" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 2_14" x="442" y="314" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_14" x="450" y="314" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 4_14" x="458" y="314" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 5_14" x="466" y="314" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_14" x="474" y="314" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 7_14" x="482" y="314" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_14" x="490" y="314" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="XGBoost GA candidate 5">
+<rect id="Feature 1_15" x="434" y="326" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_15" x="442" y="326" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_15" x="450" y="326" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_15" x="458" y="326" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 5_15" x="466" y="326" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_15" x="474" y="326" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_15" x="482" y="326" width="6.5" height="10" fill="#7B8794"/>
+<rect id="Feature 8_15" x="490" y="326" width="6.5" height="10" fill="#7B8794"/>
+</g>
+<path id="XGBoost GA to rescore" d="M500 306H511" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost GA to rescore arrowhead" d="M507 303.5L511 306L507 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="XGBoost development score 1" x="517" y="278" width="66" height="8" fill="#7B8794"/>
+<rect id="XGBoost development score 2" x="517" y="290" width="74" height="8" fill="#7B8794"/>
+<rect id="XGBoost development score 3" x="517" y="302" width="70" height="8" fill="#7B8794"/>
+<rect id="XGBoost development score 4" x="517" y="314" width="43" height="8" fill="#D8E0E6"/>
+<rect id="XGBoost development score 5" x="517" y="326" width="38" height="8" fill="#D8E0E6"/>
+<path id="XGBoost eligible bracket" d="M599 277H604V311H599" stroke="#7B8794" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost rescore to medoid" d="M606 306H615" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost rescore to medoid arrowhead" d="M611 303.5L615 306L611 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="XGBoost eligible candidate 1">
+<rect id="Feature 1_16" x="619" y="289" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 2_16" x="623.5" y="289" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 3_16" x="628" y="289" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 4_16" x="632.5" y="289" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_16" x="637" y="289" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 6_16" x="641.5" y="289" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_16" x="646" y="289" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_16" x="650.5" y="289" width="3.65625" height="5.625" fill="#7B8794"/>
+</g>
+<g id="XGBoost eligible candidate 2">
+<rect id="Feature 1_17" x="619" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 2_17" x="623.5" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 3_17" x="628" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 4_17" x="632.5" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_17" x="637" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 6_17" x="641.5" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 7_17" x="646" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_17" x="650.5" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+</g>
+<g id="XGBoost eligible candidate 3">
+<rect id="Feature 1_18" x="619" y="317" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 2_18" x="623.5" y="317" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 3_18" x="628" y="317" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 4_18" x="632.5" y="317" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_18" x="637" y="317" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_18" x="641.5" y="317" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_18" x="646" y="317" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_18" x="650.5" y="317" width="3.65625" height="5.625" fill="#7B8794"/>
+</g>
+<g id="XGBoost within-pool Jaccard">
+<rect id="cell 1,1_6" x="662" y="287" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_6" x="674" y="287" width="10.3" height="10.3" fill="#B0B7BF"/>
+<rect id="cell 1,3_6" x="686" y="287" width="10.3" height="10.3" fill="#B0B7BF"/>
+<rect id="cell 2,1_6" x="662" y="299" width="10.3" height="10.3" fill="#B0B7BF"/>
+<rect id="cell 2,2_6" x="674" y="299" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_6" x="686" y="299" width="10.3" height="10.3" fill="#D3D7DB"/>
+<rect id="cell 3,1_6" x="662" y="311" width="10.3" height="10.3" fill="#B0B7BF"/>
+<rect id="cell 3,2_6" x="674" y="311" width="10.3" height="10.3" fill="#D3D7DB"/>
+<rect id="cell 3,3_6" x="686" y="311" width="10.3" height="10.3" fill="#F5F7F9"/>
+</g>
+<path id="XGBoost Jaccard to mean" d="M699 306H704" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost Jaccard to mean arrowhead" d="M700 303.5L704 306L700 308.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="XGBoost mean J 1" x="709" y="289" width="30" height="7" fill="#7B8794"/>
+<rect id="XGBoost mean J 2" x="709" y="303" width="23" height="7" fill="#B6BDC4"/>
+<rect id="XGBoost mean J 3" x="709" y="317" width="23" height="7" fill="#B6BDC4"/>
+<rect id="XGBoost maximum mean J outline" x="706" y="286" width="36" height="13" rx="1" stroke="#7B8794" stroke-width="2"/>
+<path id="XGBoost mean to existing candidate" d="M744 306H750" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost mean to existing candidate arrowhead" d="M746 303.5L750 306L746 308.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="XGBoost selected medoid">
+<rect id="Feature 1_19" x="754" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 2_19" x="758.5" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 3_19" x="763" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 4_19" x="767.5" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_19" x="772" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+<rect id="Feature 6_19" x="776.5" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_19" x="781" y="303" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 8_19" x="785.5" y="303" width="3.65625" height="5.625" fill="#7B8794"/>
+</g>
+<rect id="XGBoost selected outline" x="751" y="299" width="42" height="14" rx="1" stroke="#7B8794" stroke-width="2"/>
+<path id="XGBoost medoid to lock" d="M795 306H807" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost medoid to lock arrowhead" d="M803 303.5L807 306L803 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="XGBoost locked artifact" x="812" y="276" width="56" height="60" rx="3" fill="white" stroke="#959FA9" stroke-width="2"/>
+<g id="XGBoost locked feature mask">
+<rect id="Feature 1_20" x="820" y="288" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 2_20" x="825" y="288" width="4.0625" height="6.25" fill="#7B8794"/>
+<rect id="Feature 3_20" x="830" y="288" width="4.0625" height="6.25" fill="#7B8794"/>
+<rect id="Feature 4_20" x="835" y="288" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 5_20" x="840" y="288" width="4.0625" height="6.25" fill="#7B8794"/>
+<rect id="Feature 6_20" x="845" y="288" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 7_20" x="850" y="288" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 8_20" x="855" y="288" width="4.0625" height="6.25" fill="#7B8794"/>
+</g>
+<path id="XGBoost artifact record 1" d="M821 309H858" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost artifact record 2" d="M821 321H851" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost locked to held-out" d="M870 306H897" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="XGBoost locked to held-out arrowhead" d="M893 303.5L897 306L893 308.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF row separator" d="M251 362H874" stroke="#DCE2E7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Boruta-RF Direct screen">
+<rect x="254" y="399" width="74" height="38" rx="3" fill="#F8F6F9"/>
+<rect x="254" y="399" width="74" height="38" rx="3" stroke="#B39FBC" stroke-width="2"/>
+<text id="Boruta-RF Direct screen label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="261.924" y="422.242">Boruta-RF</tspan></text>
+</g>
+<rect id="Boruta-RF identity stripe" x="254" y="399" width="3" height="38" fill="#8A6B98"/>
+<path id="Boruta-RF preprocessor edge" d="M239 418H249" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF preprocessor edge arrowhead" d="M245 415.5L249 418L245 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF Direct to RFECV" d="M328 418H336" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF Direct to RFECV arrowhead" d="M332 415.5L336 418L332 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF RFECV axes" d="M341 392V447H414" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF RFECV profile" d="M344 442L353 436L362 430L371 419L380 402L389 412L398 408L407 411" stroke="#8A6B98" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF soft target guide" d="M380 393V445" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Boruta-RF soft-target marker" x="377" y="399" width="6" height="6" fill="#8A6B98"/>
+<text id="Boruta-RF soft-target label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="370.784" y="381.802">k&#x2098;*</tspan></text>
+<path id="Boruta-RF RFECV to GA" d="M416 418H428" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF RFECV to GA arrowhead" d="M424 415.5L428 418L424 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Boruta-RF GA candidate 1">
+<rect id="Feature 1_21" x="434" y="390" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 2_21" x="442" y="390" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 3_21" x="450" y="390" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_21" x="458" y="390" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 5_21" x="466" y="390" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_21" x="474" y="390" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_21" x="482" y="390" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 8_21" x="490" y="390" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="Boruta-RF GA candidate 2">
+<rect id="Feature 1_22" x="434" y="402" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 2_22" x="442" y="402" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_22" x="450" y="402" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_22" x="458" y="402" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 5_22" x="466" y="402" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 6_22" x="474" y="402" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_22" x="482" y="402" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 8_22" x="490" y="402" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<g id="Boruta-RF GA candidate 3">
+<rect id="Feature 1_23" x="434" y="414" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 2_23" x="442" y="414" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 3_23" x="450" y="414" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 4_23" x="458" y="414" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_23" x="466" y="414" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_23" x="474" y="414" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_23" x="482" y="414" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 8_23" x="490" y="414" width="6.5" height="10" fill="#8A6B98"/>
+</g>
+<g id="Boruta-RF GA candidate 4">
+<rect id="Feature 1_24" x="434" y="426" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_24" x="442" y="426" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 3_24" x="450" y="426" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 4_24" x="458" y="426" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_24" x="466" y="426" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 6_24" x="474" y="426" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 7_24" x="482" y="426" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 8_24" x="490" y="426" width="6.5" height="10" fill="#8A6B98"/>
+</g>
+<g id="Boruta-RF GA candidate 5">
+<rect id="Feature 1_25" x="434" y="438" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 2_25" x="442" y="438" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 3_25" x="450" y="438" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 4_25" x="458" y="438" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 5_25" x="466" y="438" width="6.5" height="10" fill="#E8EDF1"/>
+<rect id="Feature 6_25" x="474" y="438" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 7_25" x="482" y="438" width="6.5" height="10" fill="#8A6B98"/>
+<rect id="Feature 8_25" x="490" y="438" width="6.5" height="10" fill="#E8EDF1"/>
+</g>
+<path id="Boruta-RF GA to rescore" d="M500 418H511" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF GA to rescore arrowhead" d="M507 415.5L511 418L507 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Boruta-RF development score 1" x="517" y="390" width="66" height="8" fill="#8A6B98"/>
+<rect id="Boruta-RF development score 2" x="517" y="402" width="74" height="8" fill="#8A6B98"/>
+<rect id="Boruta-RF development score 3" x="517" y="414" width="70" height="8" fill="#8A6B98"/>
+<rect id="Boruta-RF development score 4" x="517" y="426" width="43" height="8" fill="#D8E0E6"/>
+<rect id="Boruta-RF development score 5" x="517" y="438" width="38" height="8" fill="#D8E0E6"/>
+<path id="Boruta-RF eligible bracket" d="M599 389H604V423H599" stroke="#8A6B98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF rescore to medoid" d="M606 418H615" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF rescore to medoid arrowhead" d="M611 415.5L615 418L611 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Boruta-RF eligible candidate 1">
+<rect id="Feature 1_26" x="619" y="401" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 2_26" x="623.5" y="401" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 3_26" x="628" y="401" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 4_26" x="632.5" y="401" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 5_26" x="637" y="401" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_26" x="641.5" y="401" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_26" x="646" y="401" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 8_26" x="650.5" y="401" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<g id="Boruta-RF eligible candidate 2">
+<rect id="Feature 1_27" x="619" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 2_27" x="623.5" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 3_27" x="628" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 4_27" x="632.5" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 5_27" x="637" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 6_27" x="641.5" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_27" x="646" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 8_27" x="650.5" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<g id="Boruta-RF eligible candidate 3">
+<rect id="Feature 1_28" x="619" y="429" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 2_28" x="623.5" y="429" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 3_28" x="628" y="429" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 4_28" x="632.5" y="429" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 5_28" x="637" y="429" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_28" x="641.5" y="429" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_28" x="646" y="429" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 8_28" x="650.5" y="429" width="3.65625" height="5.625" fill="#8A6B98"/>
+</g>
+<g id="Boruta-RF within-pool Jaccard">
+<rect id="cell 1,1_7" x="662" y="399" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_7" x="674" y="399" width="10.3" height="10.3" fill="#B9A6C1"/>
+<rect id="cell 1,3_7" x="686" y="399" width="10.3" height="10.3" fill="#B9A6C1"/>
+<rect id="cell 2,1_7" x="662" y="411" width="10.3" height="10.3" fill="#B9A6C1"/>
+<rect id="cell 2,2_7" x="674" y="411" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_7" x="686" y="411" width="10.3" height="10.3" fill="#D8CEDD"/>
+<rect id="cell 3,1_7" x="662" y="423" width="10.3" height="10.3" fill="#B9A6C1"/>
+<rect id="cell 3,2_7" x="674" y="423" width="10.3" height="10.3" fill="#D8CEDD"/>
+<rect id="cell 3,3_7" x="686" y="423" width="10.3" height="10.3" fill="#F5F7F9"/>
+</g>
+<path id="Boruta-RF Jaccard to mean" d="M699 418H704" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF Jaccard to mean arrowhead" d="M700 415.5L704 418L700 420.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Boruta-RF mean J 1" x="709" y="401" width="30" height="7" fill="#8A6B98"/>
+<rect id="Boruta-RF mean J 2" x="709" y="415" width="23" height="7" fill="#BFAEC6"/>
+<rect id="Boruta-RF mean J 3" x="709" y="429" width="23" height="7" fill="#BFAEC6"/>
+<rect id="Boruta-RF maximum mean J outline" x="706" y="398" width="36" height="13" rx="1" stroke="#8A6B98" stroke-width="2"/>
+<path id="Boruta-RF mean to existing candidate" d="M744 418H750" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF mean to existing candidate arrowhead" d="M746 415.5L750 418L746 420.5" stroke="#657482" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="Boruta-RF selected medoid">
+<rect id="Feature 1_29" x="754" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 2_29" x="758.5" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 3_29" x="763" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 4_29" x="767.5" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 5_29" x="772" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 6_29" x="776.5" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+<rect id="Feature 7_29" x="781" y="415" width="3.65625" height="5.625" fill="#8A6B98"/>
+<rect id="Feature 8_29" x="785.5" y="415" width="3.65625" height="5.625" fill="#E8EDF1"/>
+</g>
+<rect id="Boruta-RF selected outline" x="751" y="411" width="42" height="14" rx="1" stroke="#8A6B98" stroke-width="2"/>
+<path id="Boruta-RF medoid to lock" d="M795 418H807" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF medoid to lock arrowhead" d="M803 415.5L807 418L803 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Boruta-RF locked artifact" x="812" y="388" width="56" height="60" rx="3" fill="white" stroke="#A189AD" stroke-width="2"/>
+<g id="Boruta-RF locked feature mask">
+<rect id="Feature 1_30" x="820" y="400" width="4.0625" height="6.25" fill="#8A6B98"/>
+<rect id="Feature 2_30" x="825" y="400" width="4.0625" height="6.25" fill="#8A6B98"/>
+<rect id="Feature 3_30" x="830" y="400" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 4_30" x="835" y="400" width="4.0625" height="6.25" fill="#8A6B98"/>
+<rect id="Feature 5_30" x="840" y="400" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 6_30" x="845" y="400" width="4.0625" height="6.25" fill="#E8EDF1"/>
+<rect id="Feature 7_30" x="850" y="400" width="4.0625" height="6.25" fill="#8A6B98"/>
+<rect id="Feature 8_30" x="855" y="400" width="4.0625" height="6.25" fill="#E8EDF1"/>
+</g>
+<path id="Boruta-RF artifact record 1" d="M821 421H858" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF artifact record 2" d="M821 433H851" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF locked to held-out" d="M870 418H897" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Boruta-RF locked to held-out arrowhead" d="M893 415.5L897 418L893 420.5" stroke="#657482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect id="Final held-out evaluation" x="902" y="165" width="87" height="291" rx="3" fill="#F9FAFA" stroke="#53677E" stroke-width="2"/>
+<text id="Final evaluation label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="907.288" y="218.802">Final held-out&#10;</tspan><tspan x="916.75" y="233.67">evaluation</tspan></text>
+<g id="Held-out evaluation matrix">
+<rect id="cell 1,1_8" x="923" y="273" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 1,2_8" x="935" y="273" width="10.3" height="10.3" fill="#BAC2CB"/>
+<rect id="cell 1,3_8" x="947" y="273" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 1,4_5" x="959" y="273" width="10.3" height="10.3" fill="#98A4B2"/>
+<rect id="cell 2,1_8" x="923" y="285" width="10.3" height="10.3" fill="#CBD1D8"/>
+<rect id="cell 2,2_8" x="935" y="285" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 2,3_8" x="947" y="285" width="10.3" height="10.3" fill="#98A4B2"/>
+<rect id="cell 2,4_5" x="959" y="285" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 3,1_8" x="923" y="297" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 3,2_8" x="935" y="297" width="10.3" height="10.3" fill="#A9B3BF"/>
+<rect id="cell 3,3_8" x="947" y="297" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 3,4_5" x="959" y="297" width="10.3" height="10.3" fill="#758598"/>
+<rect id="cell 4,1_5" x="923" y="309" width="10.3" height="10.3" fill="#8795A5"/>
+<rect id="cell 4,2_5" x="935" y="309" width="10.3" height="10.3" fill="#F5F7F9"/>
+<rect id="cell 4,3_5" x="947" y="309" width="10.3" height="10.3" fill="#BAC2CB"/>
+<rect id="cell 4,4_5" x="959" y="309" width="10.3" height="10.3" fill="#F5F7F9"/>
+</g>
+<text id="No reselection or retuning" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="905.196" y="378.802">No reselection&#10;</tspan><tspan x="915.354" y="393.67">or retuning</tspan></text>
+<path id="Audit artifact trace" d="M180 479H870" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 209" d="M209 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 291" d="M291 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 377" d="M377 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 466" d="M466 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 557" d="M557 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 705" d="M705 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Audit tick 840" d="M840 475V483" stroke="#AEB9C3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text id="Audit artifacts label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="435.274" y="497.802">Machine-readable audit artifacts</tspan></text>
+<path id="Held-out data route" d="M147 363H155V527H945V459" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+<path id="Held-out data route arrowhead" d="M942.5 463L945 459L947.5 463" stroke="#53677E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text id="Held-out route label" fill="#202830" style="white-space: pre" xml:space="preserve" font-family="Arimo" font-size="12.6" letter-spacing="0em"><tspan x="178" y="518.802">Held-out data</tspan></text>
+</g>
+<defs>
+<clipPath id="clip0_3_2">
+<rect width="84" height="55" fill="white" transform="translate(167 73)"/>
+</clipPath>
+<clipPath id="clip1_3_2">
+<rect width="74" height="55" fill="white" transform="translate(253 73)"/>
+</clipPath>
+<clipPath id="clip2_3_2">
+<rect width="76" height="55" fill="white" transform="translate(338 73)"/>
+</clipPath>
+<clipPath id="clip3_3_2">
+<rect width="78" height="55" fill="white" transform="translate(426 73)"/>
+</clipPath>
+<clipPath id="clip4_3_2">
+<rect width="96" height="55" fill="white" transform="translate(510 73)"/>
+</clipPath>
+<clipPath id="clip5_3_2">
+<rect width="178" height="40.12" fill="white" transform="translate(615 73)"/>
+</clipPath>
+<clipPath id="clip6_3_2">
+<rect width="72" height="55" fill="white" transform="translate(801 73)"/>
+</clipPath>
+<clipPath id="clip7_3_2">
+<rect width="98" height="55" fill="white" transform="translate(894 73)"/>
+</clipPath>
+</defs>
+</svg>
+
+

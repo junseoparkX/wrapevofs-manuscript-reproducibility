@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="119mm" viewBox="0 91 170 119">
+<rect x="0" y="0" width="170.000" height="210.000" fill="#FFFFFF" />
+<text x="5.500" y="97.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">b</text>
+<text x="12.500" y="97.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Run-level feature counts</text>
+<line x1="22.000" y1="103.000" x2="22.000" y2="137.000" stroke="#263746" stroke-width="0.300" opacity="1.000" />
+<line x1="21.200" y1="132.405" x2="22.000" y2="132.405" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="20.600" y="133.305" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">10.00</text>
+<line x1="21.200" y1="123.216" x2="22.000" y2="123.216" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="20.600" y="124.116" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">20.00</text>
+<line x1="21.200" y1="114.027" x2="22.000" y2="114.027" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="20.600" y="114.927" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">30.00</text>
+<line x1="21.200" y1="104.838" x2="22.000" y2="104.838" stroke="#263746" stroke-width="0.250" opacity="1.000" />
+<text x="20.600" y="105.738" text-anchor="end" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">40.00</text>
+<text x="12.000" y="120.000" text-anchor="middle" font-family="Arial" font-size="2.700" font-weight="normal" font-style="normal" fill="#111111" transform="rotate(-90.0 12.000 120.000)" style="fill: #111111; font-weight: normal; font-family: Arial">Features</text>
+<circle cx="36.700" cy="126.892" r="0.950" fill="#FFFFFF" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="37.350" cy="125.973" r="0.950" fill="#FFFFFF" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="38.000" cy="124.135" r="0.950" fill="#FFFFFF" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="38.650" cy="120.459" r="0.950" fill="#FFFFFF" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<circle cx="39.300" cy="123.216" r="0.950" fill="#FFFFFF" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<line x1="34.400" y1="124.135" x2="41.600" y2="124.135" stroke="#386A8B" stroke-width="0.550" opacity="1.000" />
+<text x="38.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">No</text>
+<circle cx="50.700" cy="127.811" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="51.350" cy="127.811" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="52.000" cy="127.811" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<circle cx="52.650" cy="126.892" r="0.950" fill="#386A8B" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<circle cx="53.300" cy="127.811" r="0.950" fill="#386A8B" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />
+<line x1="48.400" y1="127.627" x2="55.600" y2="127.627" stroke="#386A8B" stroke-width="0.550" opacity="1.000" />
+<text x="52.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Guided</text>
+<rect x="81.750" y="110.320" width="1.900" height="1.900" rx="0.000" fill="#FFFFFF" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="82.400" y="106.645" width="1.900" height="1.900" rx="0.000" fill="#FFFFFF" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="83.050" y="108.482" width="1.900" height="1.900" rx="0.000" fill="#FFFFFF" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<rect x="83.700" y="109.401" width="1.900" height="1.900" rx="0.000" fill="#FFFFFF" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="84.350" y="104.807" width="1.900" height="1.900" rx="0.000" fill="#FFFFFF" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<line x1="80.400" y1="108.881" x2="87.600" y2="108.881" stroke="#7B8794" stroke-width="0.550" opacity="1.000" />
+<text x="84.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">No</text>
+<rect x="95.750" y="123.185" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<rect x="96.400" y="122.266" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="97.050" y="122.266" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="97.700" y="122.266" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<rect x="98.350" y="121.347" width="1.900" height="1.900" rx="0.000" fill="#7B8794" stroke="#7B8794" stroke-width="0.300" opacity="1.000" />
+<line x1="94.400" y1="123.216" x2="101.600" y2="123.216" stroke="#7B8794" stroke-width="0.550" opacity="1.000" />
+<text x="98.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Guided</text>
+<polygon points="128.7,130.536 129.64999999999998,132.43599999999998 127.74999999999999,132.43599999999998" fill="#FFFFFF" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="129.35000000000002,127.78000000000002 130.3,129.68 128.40000000000003,129.68" fill="#FFFFFF" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<polygon points="130.0,130.536 130.95,132.43599999999998 129.05,132.43599999999998" fill="#FFFFFF" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="130.64999999999998,131.455 131.59999999999997,133.355 129.7,133.355" fill="#FFFFFF" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="131.3,129.618 132.25,131.51799999999997 130.35000000000002,131.51799999999997" fill="#FFFFFF" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<line x1="126.400" y1="130.935" x2="133.600" y2="130.935" stroke="#8A6B98" stroke-width="0.550" opacity="1.000" />
+<text x="130.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">No</text>
+<polygon points="142.7,132.37400000000002 143.64999999999998,134.274 141.75,134.274" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="143.35000000000002,132.37400000000002 144.3,134.274 142.40000000000003,134.274" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="144.0,132.37400000000002 144.95,134.274 143.05,134.274" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="144.64999999999998,132.37400000000002 145.59999999999997,134.274 143.7,134.274" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.300" opacity="1.000" />
+<polygon points="145.3,132.37400000000002 146.25,134.274 144.35000000000002,134.274" fill="#8A6B98" stroke="#111111" stroke-width="0.700" opacity="1.000" />
+<line x1="140.400" y1="133.324" x2="147.600" y2="133.324" stroke="#8A6B98" stroke-width="0.550" opacity="1.000" />
+<text x="144.000" y="140.200" text-anchor="middle" font-family="Arial" font-size="1.950" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Guided</text>
+<text x="45.000" y="142.500" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
+<text x="91.000" y="142.500" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost</text>
+<text x="137.000" y="142.500" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta-RF</text>
+<text x="5.500" y="151.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">c</text>
+<text x="12.500" y="151.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Target-guided feature-selection frequency</text>
+<text x="32.500" y="157.000" text-anchor="middle" font-family="Arial" font-size="2.450" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
+<text x="25.000" y="161.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-849F2.8</text>
+<rect x="27.000" y="159.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="159.650" width="16.200" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="160.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="165.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-26J3.3</text>
+<rect x="27.000" y="163.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="163.650" width="16.200" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="164.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="169.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">PTPRG-AS1</text>
+<rect x="27.000" y="167.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="167.650" width="16.200" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="25.000" y="173.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">PDCD4-AS1</text>
+<rect x="27.000" y="171.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="171.650" width="16.200" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="172.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="177.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">NKAPP1</text>
+<rect x="27.000" y="175.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="175.650" width="16.200" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="176.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="181.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-847H18.3</text>
+<rect x="27.000" y="179.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="179.650" width="21.600" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="180.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="185.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">FAM127C</text>
+<rect x="27.000" y="183.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="183.650" width="21.600" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="25.000" y="189.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">ECHS1</text>
+<rect x="27.000" y="187.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="187.650" width="21.600" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="188.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="193.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-536L3.4</text>
+<rect x="27.000" y="191.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="191.650" width="27.000" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="192.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="197.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">MGMT</text>
+<rect x="27.000" y="195.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="195.650" width="27.000" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="196.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="201.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">F12</text>
+<rect x="27.000" y="199.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="199.650" width="27.000" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="200.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="25.000" y="205.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">C11orf52</text>
+<rect x="27.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="27.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#386A8B" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="55.500" cy="204.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="40.500" y="209.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0–5 runs</text>
+<text x="87.500" y="157.000" text-anchor="middle" font-family="Arial" font-size="2.450" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">XGBoost</text>
+<text x="80.000" y="161.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">THAP1</text>
+<rect x="82.000" y="159.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="159.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="160.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="165.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">TCP10L</text>
+<rect x="82.000" y="163.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="163.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="80.000" y="169.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-638I8.1</text>
+<rect x="82.000" y="167.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="167.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="168.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="173.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-455F5.5</text>
+<rect x="82.000" y="171.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="171.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="172.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="177.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-446E9.1</text>
+<rect x="82.000" y="175.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="175.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="176.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="181.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">JAM3</text>
+<rect x="82.000" y="179.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="179.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="180.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="185.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">CORO7</text>
+<rect x="82.000" y="183.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="183.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="184.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="189.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">CLTCL1</text>
+<rect x="82.000" y="187.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="187.650" width="16.200" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="80.000" y="193.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-286N22.8</text>
+<rect x="82.000" y="191.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="191.650" width="21.600" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="192.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="197.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">ECHS1</text>
+<rect x="82.000" y="195.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="195.650" width="21.600" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="196.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="201.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">C17orf104</text>
+<rect x="82.000" y="199.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="199.650" width="21.600" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="200.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="80.000" y="205.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">MGMT</text>
+<rect x="82.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="82.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#7B8794" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="110.500" cy="204.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="95.500" y="209.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0–5 runs</text>
+<text x="142.500" y="157.000" text-anchor="middle" font-family="Arial" font-size="2.450" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Boruta-RF</text>
+<text x="135.000" y="161.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">CRYAB</text>
+<rect x="137.000" y="159.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="159.650" width="5.400" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="135.000" y="165.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">YEATS2</text>
+<rect x="137.000" y="163.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="163.650" width="10.800" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="164.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="169.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">LINC00925</text>
+<rect x="137.000" y="167.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="167.650" width="10.800" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="135.000" y="173.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">EID3</text>
+<rect x="137.000" y="171.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="171.650" width="10.800" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="135.000" y="177.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">CTC-564N23.2</text>
+<rect x="137.000" y="175.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="175.650" width="10.800" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="176.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="181.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">BCAR1</text>
+<rect x="137.000" y="179.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="179.650" width="10.800" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="135.000" y="185.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">TTC39B</text>
+<rect x="137.000" y="183.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="183.650" width="16.200" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<text x="135.000" y="189.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">MARCH8</text>
+<rect x="137.000" y="187.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="187.650" width="21.600" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="188.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="193.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">LA16c-380H5.5</text>
+<rect x="137.000" y="191.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="191.650" width="21.600" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="192.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="197.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">ZNF488</text>
+<rect x="137.000" y="195.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="195.650" width="27.000" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="196.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="201.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">RP11-286N22.8</text>
+<rect x="137.000" y="199.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="199.650" width="27.000" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="200.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="135.000" y="205.700" text-anchor="end" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">MGMT</text>
+<rect x="137.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#EEF2F4" stroke="none" stroke-width="0.250" opacity="1.000" />
+<rect x="137.000" y="203.650" width="27.000" height="2.200" rx="0.000" fill="#8A6B98" stroke="none" stroke-width="0.250" opacity="0.750" />
+<circle cx="165.500" cy="204.750" r="0.650" fill="#8A6B98" stroke="#8A6B98" stroke-width="0.200" opacity="1.000" />
+<text x="150.500" y="209.000" text-anchor="middle" font-family="Arial" font-size="1.9402777777777775" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial; font-size: 1.9402777777777775">0–5 runs</text>
+</svg>

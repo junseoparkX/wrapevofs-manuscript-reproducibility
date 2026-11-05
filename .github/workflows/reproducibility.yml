@@ -31,6 +31,7 @@ jobs:
       - name: Run manuscript validators
         working-directory: manuscript/source
         run: |
+          python scripts/validate_current_manuscript.py
           python scripts/validate_figure1_freeze.py
           python scripts/validate_final_qa_frozen_values.py
           python scripts/validate_main_panel_labels.py

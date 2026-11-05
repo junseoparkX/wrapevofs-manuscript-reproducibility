@@ -2,12 +2,16 @@
 
 ## Current manuscript status
 
-- The title is nine words and contains no punctuation.
+- The title contains nine words under the configured hyphenated-word counting rule.
 - The Abstract is 150 words.
 - Introduction, Results, and Discussion together are below the journal's suggested 5,000-word main-text limit. Abstract, Methods, References, and figure legends are excluded from that count.
-- The main Methods are maintained at approximately 3,000 words; full executable detail remains in the Supplementary Methods.
+- The main Methods contain approximately 3,051 words and three numbered equation groups; full executable detail remains in the Supplementary Methods.
 - The main article contains five figures and two tables, within the ten-display-item guideline.
 - The initial-submission PDFs are each below 30 MB and may retain inline figures and tables under the journal's format-flexible first-submission policy.
+- Current v19 (5 November 2026): main PDF 19 pages; Supplementary PDF 54 pages, 29 Supplementary Figures and 30 Supplementary Tables. The cover letter, reporting-summary date and interactive Machine Learning Checklist date are updated to 5 November 2026.
+- The corrected source-token count is approximately 3,094 words for Introduction, Results and Discussion (TeXcount gives 2,972 under its counting convention). Both exclude Methods and figure legends. The previous counter incorrectly treated escaped percentage signs as comments; that counter is corrected without changing the manuscript.
+- Main figure legends contain 218, 248, 266, 169 and 173 source-counted words, below the 350-word figure-legend guidance.
+- The main and Supplementary manuscripts and all figure assets remain unchanged during the submission-metadata refresh. Read-only editorial findings are recorded separately; this file is a format inventory, not an acceptance assessment.
 
 ## Scientific scope retained
 
@@ -22,3 +26,11 @@ The submission directory contains a display-indexed Source Data workbook, the Bi
 ## Revision-stage production note
 
 The current split-source LaTeX package is suitable for initial PDF submission. If the journal requests a source-formatted revision, flatten textual sources as required, paste the bibliography output into the main TeX file, remove BibTeX commands, and provide individual figure files and end-positioned legends and tables.
+
+## Guidance checked on 5 November 2026
+
+- https://www.nature.com/ncomms/submit/how-to-submit (initial-submission PDF and figure-legend guidance).
+- https://www.nature.com/ncomms/editorial-policies/reporting-standards (reporting and code availability).
+- https://www.nature.com/ncomms/submit/resources (journal forms).
+
+The locally typeset Bio and Life Sciences summary and code checklist contain prepared responses. They are not represented as publisher-issued PDF templates; transfer the responses to any specific form requested by the submission portal. The Machine Learning Checklist is the interactive Nature Portfolio form. Portal declarations, author approval and any source-provider publication review remain author responsibilities.

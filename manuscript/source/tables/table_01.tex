@@ -26,7 +26,7 @@
 15 & \textbf{End for} run. \\
 \addlinespace[2pt]
 16 & Re-score every retained run-best candidate with the fixed development-CV locking evaluator to obtain $L_r$ and fold scores. \\
-17 & Encode every candidate in the common ordered feature universe, compute its stable SHA-256 mask hash, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
+17 & Encode every candidate in the common ordered feature universe, compute its stable mask identifier, and compute $R_r=L_{\mathrm{best}}-L_r$ (plus configured sensitivity quantities). \\
 18 & Form $E_\delta=\{r:R_r\leq\delta\}$ (or the prespecified relative or best-run-SE-scaled analogue); never add a candidate outside the threshold. \\
 19 & \textbf{If} $|E_\delta|=1$, select its sole candidate. \\
 20 & \textbf{Otherwise,} compute pairwise Jaccard similarity and each candidate's mean Jaccard within $E_\delta$. \\

@@ -1,0 +1,11 @@
+{
+  "source_sha256": {
+    "ampad_center_equal_weight_sensitivity.csv": "0c3222bec6680f47a71887a91f470ecdf15268adbeaee4b94867096fddeeb242",
+    "ampad_center_paired_auroc_ci.csv": "04ed7185614e7803b4ef39990f8c7f8c72c2f78c0673f7e44745676a99f5b704",
+    "ampad_center_sensitivity_manifest.json": "3eceb584cf12eaa4d0332cbfef6cd066023e6fc5adcaa56412548e9d901aa847",
+    "ampad_center_sensitivity.py": "3fe073dd8535691081bb139c64b213e8a59604ecb1e3c3ebb521a0894cd9813f"
+  },
+  "model_fits": 0,
+  "participant_level_outputs": false,
+  "rows": 12
+}

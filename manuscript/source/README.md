@@ -2,6 +2,8 @@
 
 This directory is the authoritative, submission-facing WrapEvoFS manuscript package.
 
+This is the current v19 package, prepared on 5 November 2026. The main PDF has 19 pages, five figures and two tables. Supplementary Information has 54 pages, 29 figures and 30 tables. V19 adds fixed-bank CV-score reweighting and equal-center weighting sensitivity, with approved main figures and polished supplementary artwork. Earlier v18 documentation remains historical; see `V19_README.md` for the version history. The submission refresh updates collateral only and does not change either manuscript or any figure.
+
 ## Entry points
 
 - `main.tex` and `main.pdf`: main article.
@@ -17,7 +19,7 @@ This directory is the authoritative, submission-facing WrapEvoFS manuscript pack
 - `supplementary_data/`: non-identifying aggregate inputs and provenance records.
 - `revision_outputs/`: aggregate audit outputs used by manuscript displays.
 - `regret_locking_formalization/`: mathematical propositions, proofs, complexity analysis, implementation correspondence, and property-test documentation.
-- `documentation/`: analysis reports, validation records, source-data materials, and journal-alignment documentation, separated from the build source.
+- `documentation/`: analysis reports, validation records, and submission checklists, separated from the build source.
 
 ## Navigation
 
@@ -25,6 +27,7 @@ This directory is the authoritative, submission-facing WrapEvoFS manuscript pack
 - `documentation/analyses/TCGA_MATCHED_COMPARATOR_RESULTS.md`: exact interpretation of the checksum-frozen selector-layer benchmark.
 - `documentation/submission/NATURE_COMMUNICATIONS_ALIGNMENT.md`: journal-format alignment summary.
 - `documentation/submission/WrapEvoFS_Source_Data.xlsx`: display-indexed, non-identifying source data for all main and Supplementary figures and tables.
+- `documentation/submission/`: completed Nature Communications reporting forms and cover letter.
 - `documentation/validation/TCGA_SCNV_PROVENANCE_AUDIT.md`: label-blind audit of the supplied 5,000-feature cleaned SCNV boundary.
 - `documentation/validation/PRIVATE_RADIOMICS_UPSTREAM_PROVENANCE.md`: mapping from the DICOM-to-radiomics handoff to the manuscript's upstream construction boundary.
 - `documentation/DISPLAY_MAP.md`: main and Supplementary display roles.

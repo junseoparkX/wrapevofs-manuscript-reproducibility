@@ -1,0 +1,195 @@
+{
+  "schema": "fixed-bank-paired-CV-score-sensitivity-v1",
+  "frozen_utc": "2026-11-05T20:58:22.905471+00:00",
+  "outcomes_at_freeze": "No weighted selection outcomes have been calculated or inspected.",
+  "scope": {
+    "primary_banks": 54,
+    "TCGA": 30,
+    "AMPAD": 24,
+    "Rush": 6,
+    "secondary_without_Rush": 48,
+    "candidates_per_bank": 5
+  },
+  "inputs": [
+    {
+      "cohort": "TCGA",
+      "filename": "candidate_level_geometry.csv",
+      "sha256": "25f08e3c712844754035e3ea34a98808ce2fbe45536e809d917f11b11cc5691e"
+    },
+    {
+      "cohort": "AMPAD",
+      "filename": "ampad_complete_candidate_audit.csv",
+      "sha256": "f8ada80b76aaaa29e6a0ea6c4d6218c1488ce81f9c60698f2fff9ed537ba2098"
+    }
+  ],
+  "delta": 0.01,
+  "fixed": [
+    "all original masks",
+    "ordered original fold-score arrays",
+    "candidate scoring seeds",
+    "all policies and tie rules",
+    "no parameter tuning"
+  ],
+  "arithmetic": "Float64 count_i * score_i, accumulated in original fold order 1..5, divided by total count. Uniform counts must equal np.mean(original five scores) exactly. Peer Jaccard is accumulated in stable_mask_hash then numeric run_id order, matching the archived NumPy <=4-peer mean. No score rounding or tolerant comparator.",
+  "source_array_choice": "Use authoritative merged candidate-audit arrays. Raw AMP-AD fold CSV differs in the last bit for 17/90 candidates (maximum1.1102230246251565e-16); this is recorded, not silently substituted.",
+  "policies": {
+    "highest_score": {
+      "order": [
+        "higher score",
+        "smaller feature count",
+        "stable mask hash"
+      ]
+    },
+    "legacy_top3": {
+      "pool_order": [
+        "higher score",
+        "stable mask hash",
+        "lower numeric run id"
+      ],
+      "pool_size": 3,
+      "selection": [
+        "higher mean Jaccard",
+        "higher score",
+        "lower numeric run id"
+      ]
+    },
+    "unrestricted_medoid": {
+      "pool": "all five",
+      "selection": [
+        "higher mean Jaccard",
+        "higher score",
+        "smaller feature count",
+        "stable mask hash"
+      ]
+    },
+    "regret_medoid": {
+      "pool": "best score - candidate score <= 0.01",
+      "selection": [
+        "higher mean Jaccard",
+        "higher score",
+        "smaller feature count",
+        "stable mask hash"
+      ]
+    }
+  },
+  "uniform": {
+    "counts": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "must_reproduce_archived_regret_choice": 54
+  },
+  "schemes": {
+    "leave_one_fold_out": {
+      "vectors": 5,
+      "counts": "one zero and four ones",
+      "probability": "1/5"
+    },
+    "fold_bootstrap": {
+      "vectors": 126,
+      "count_sum": 5,
+      "multiplicity": "5! / product(count_i!)",
+      "probability": "multiplicity/3125; NOT equal weights for126 vectors"
+    }
+  },
+  "pairing": "Each bank uses identical fold counts for all five candidates and all four policies.",
+  "metrics": [
+    "policy-original selection retention/change",
+    "Jaccard to policy-original selection",
+    "selection probability by candidate",
+    "Shannon selection entropy bits",
+    "perturbed development score gap",
+    "uniform-score gap of selected candidate",
+    "eligible-pool membership change",
+    "eligible-pool size",
+    "eligible-pool Jaccard"
+  ],
+  "aggregation": "Equal bank weights; primary proposed-minus-highest comparison; all54, TCGA30, AMP-AD24, nonRush48, AMP-AD-nonRush18, Rush6 and cohort-by-branch; initial-equal/different policy strata secondary.",
+  "reporting_sign_tolerance_only": 1e-12,
+  "independent_check_vectors": [
+    [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      5
+    ],
+    [
+      3,
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      1,
+      1,
+      2
+    ]
+  ],
+  "validation": [
+    "source hashes",
+    "feature-set/binary-mask overlaps",
+    "uniform choices all54",
+    "independent NumPy scores and four-policy choices at eight specified vectors",
+    "enumerate all3125 ordered bootstrap samples to check multiplicities",
+    "local and fenn10 output comparison"
+  ],
+  "fold_provenance": {
+    "TCGA": "150 five-value arrays; locking_cv_seed342 shared within all30 banks; source scorer constructs one deterministic StratifiedKFold on the same X/y. Outer-fold ID is not inner-fold ID.",
+    "AMPAD_nonrush": "Explicit center/branch/cap/run_id/fold/locking_score CSV,450 rows, folds1..5 for all90 candidates; source scorer shares StratifiedKFold(seed42).",
+    "Rush": "Recovered run-level records all30 share development fold identity hash d80910ff2bc4a718f5b1baa0927a0691f6eca5ea01a9646d4e5e3e2ca1b3c077. run_id_one_based and seeds42..46 match fixed_development_CV_fold_scores arrays. No participant fold indices accessed; secondary48-bank result excludes these six banks because explicit fold-index provenance is weaker.",
+    "source_hashes": {
+      "analysis\\ampad_updated_one_time_heldout_20260808\\rush_recovery\\recommended_run_level.csv": "e7d88da43b5ea9eb9bf9df3abe6bb7adf52f4637d6cb314d675803fbcd19a992",
+      "analysis\\ampad_updated_one_time_heldout_20260808\\rush_recovery\\recommended_locking_summary.csv": "e706cef4a914ae630b90658b96edb44ab57fd4c15c2ee48006b18048111f1e3b",
+      "analysis\\remaining90_completed_20260806\\development_freeze_bundle_rule_diagnostic\\fold_locking_scores.csv": "4541d11dc946e1551420fad5cb0c8d412d4d4c5b3093faba4709cee7745b7244"
+    }
+  },
+  "limits": [
+    "Descriptive fold-score sensitivity distribution, NOT generalization confidence intervals or posterior probabilities.",
+    "Folds share training data; cases and banks are dependent.",
+    "Fixed masks cannot assess fresh candidate generation/new seed bank stability.",
+    "Development-score gaps are not true predictive regret.",
+    "No new model fits, GA, participant data, held-out outcomes, figures or manuscript edits."
+  ]
+}
