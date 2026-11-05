@@ -5,8 +5,10 @@ import hashlib,json,py_compile,tempfile
 ROOT=Path(__file__).resolve().parents[1]
 def main():
     data=json.loads((ROOT/'documentation/AGGREGATE_PATH_ALIASES.json').read_text())
+    assert data['hash_policy']=='sha256_after_crlf_to_lf'
     for old,new in data['aliases'].items():
-        assert hashlib.sha256((ROOT/new).read_bytes()).hexdigest()==data['sha256'][old],(old,new)
+        content=(ROOT/new).read_bytes().replace(b'\r\n',b'\n')
+        assert hashlib.sha256(content).hexdigest()==data['sha256'][old],(old,new)
     renderers=['scripts/v19_build_figures23.py','scripts/v19_build_figures45.py',
                'v19_work/supplement_polish_20261105/modern/build_s29_vector.py',
                'v19_work/supplement_polish_20261105/modern/build_modern.py']
