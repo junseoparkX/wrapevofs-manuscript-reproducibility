@@ -35,7 +35,7 @@
     "tables/table_34.tex": "f91b3b4e70ca5d1f650d2aac017d49271f646bd6e1b7a7c75c5f44cc24ded569",
     "tables/table_14.tex": "f3fb3b574b4f8a68bd80d2e0b82bbf13205dfdbf95554199e0f014eb377ffede",
     "figures/figure_s23.svg": "bdb9d5f29032ca8341b830d4f7f164d870bd511a0b0e6d3100364a6462c2d0e4",
-    "supplementary_information.pdf": "d2a9a5da4b72d6a14b691795cdf78667d239de13bae4b602de29541d077e5747",
+    "supplementary_information.pdf": "3bd672f449bb88109f36e67df240b0436ee6ec2bb7b79bb5b6cfca6d93b50eb1",
     "v19_work/supplement_polish_20261105/modern/figures/figure_s25_repeat_2.pdf": "16a3f78a39bf865a45000083488edeb31df0fe52f7eb63f3feb747cbc0208db7",
     "figures/figure_s18.pdf": "12d9a312b3fe8f6ea038750b1f59be63da8bb694d6c413c37d0a9aadbc2daf7e",
     "tables/table_49.tex": "e4e588d47b0ac298dfd7662739ba0f3ab43d3e0993351a3f395c145b4c72173c",
@@ -44,7 +44,7 @@
     "figures/figure_s3.png": "9574d91d92290b0dde3745344bfe6d2192440fac66648766e93b760a2e281bdf",
     "figures/figure_s21.svg": "2963dd44263eaa19006b5368aca734be4779d8e29ea74529c589f644ff2998fa",
     "figures/figure_s16.png": "7ebfc941e1978139d79ed821147e8b37187659193f66b48a136984db8eb1e23e",
-    "main.pdf": "58192485151b10a9f9fac3aaa7174898fcec6176e5c8a661520c655b5152854e",
+    "main.pdf": "724782678e9c815fced0936c364c9d1e9ce345c40171b1f555dff123623e4949",
     "figures/figure_6.pdf": "b9245148ce4db7cdad797becd8e7b38fcc1b9a7df2601b21d35d50846d40f9c9",
     "figures/figure_s26.svg": "c303478bf09359b4be278d92db9683d371dc92737270f87594edf6b5e260a4df",
     "v19_work/supplement_polish_20261105/modern/figures/figure_s17.pdf": "7ee415e768c840f6a569ffaf3875ced108838201017e7385b102cd056a9596a3",
@@ -143,7 +143,7 @@
     "tables/table_46.tex": "69ab70a66e5a3a8ea657f1b6ae26f429670cc9070f255267948a81cb81aac745",
     "tables/table_05.tex": "0c6f3325b3997babee3b2e567f496a925e8dcce85c7df27a28b2c3b569ede1de",
     "tables/table_45.tex": "33f8bdf87b2a5a33273085a4938d8b00eeb4de2f49d60ac41b74e8f637abaa22",
-    "main.tex": "7f1c6f8aecfbc2126a7c4987ace99758a3f3e5ffb0bfc1a3f65d147c12f962c4",
+    "main.tex": "18e80e1880b27690587988971ddda9cc2bf5e890e7ae9d23d10daba094e9fa93",
     "figures/figure_3_strengthened.svg": "849ca2845456bb7b4f58fc773e6027cab0605662c4970f46ed2d5ef2a6fa053c",
     "v19_work/supplement_polish_20261105/modern/figures/figure_s26.pdf": "360a75adff090b7b51d9e841c6e8f70c6b033c4d4ffa4cb3a22c47db5fe6f763",
     "figures/figure_s26.png": "ea9a48060dfb13e862e0610816f43707a58ef3f4127dc158e70259360c68d256",
@@ -161,7 +161,7 @@
     "figures/figure_s9.png": "1eafca0e63b44809e931a22c82c58984685fd43838232ff67425e119c1a814e1",
     "tables/table_18.tex": "1077bd467ac49d1fa9fcae91a54488a69ef74f46a211825078b1cdd6ebecdf9e",
     "tables/table_20.tex": "85fa7b08526b5cfd3c035ac5f5ba25b679d058598cf1b35693c7375db4e8d167",
-    "sections/main_text.tex": "c531c7c4b2c4b7396d749797eeb5f54de084cd22bfb3f2e3a521978e15e33b97",
+    "sections/main_text.tex": "db54d8518143a8939d9a6d6a562baf0fb9d0d394dcf5a4dbc19e5aeab6dca0bb",
     "figures/figure_1_v19_figma.pdf": "66c3eca05e1f973e6e61514eccb04badcdc017c4c5489a491733848bad2a5c75",
     "figures/figure_s1.png": "9f943de1f0338b88780e88a51293703fb6d3bc8666215d06603fc0f4a31158ec",
     "figures/figure_s27.pdf": "3eccc30ae37667f623f1bd1445c89acac6af09103a88f3a6008eac5c78d586ae",
@@ -225,5 +225,5 @@
     "supplementary_data/secondary_analysis_settings/restricted_model_excerpt.py": "384acb5be6aa76f43113689e0ee5fc335ac7ac77a8c642a1335325129b3e077b",
     "supplementary_data/secondary_analysis_settings/stabl_3class_settings.json": "406b4605d71acbdeaa0633eead3c04b821f66c95efe12abe8db979ebda815c91"
   },
-  "clarification": "Four minimal explanation updates; all figures and numerical results preserved."
+  "clarification": "Minimal GA/RFECV role clarification using existing S17; previous method clarifications retained. Figures, Methods and numerical source data unchanged."
 }

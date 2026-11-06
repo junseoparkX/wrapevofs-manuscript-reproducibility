@@ -3,15 +3,15 @@
 ## Current manuscript status
 
 - The title contains nine words under the configured hyphenated-word counting rule.
-- The Abstract is 150 words.
+- The Abstract is 130 whitespace-delimited words after the GA/RFECV clarification.
 - Introduction, Results, and Discussion together are below the journal's suggested 5,000-word main-text limit. Abstract, Methods, References, and figure legends are excluded from that count.
 - The main Methods contain approximately 3,060 words and three numbered equation groups; full executable detail remains in the Supplementary Methods.
 - The main article contains five figures and two tables, within the ten-display-item guideline.
 - The initial-submission PDFs are each below 30 MB and may retain inline figures and tables under the journal's format-flexible first-submission policy.
 - Current v19 (5 November 2026): main PDF 19 pages; Supplementary PDF 55 pages, 29 Supplementary Figures and 30 Supplementary Tables. The cover letter, reporting-summary date and interactive Machine Learning Checklist date are updated to 5 November 2026.
-- The corrected source-token count is approximately 3,094 words for Introduction, Results and Discussion (TeXcount gives 2,972 under its counting convention). Both exclude Methods and figure legends. The previous counter incorrectly treated escaped percentage signs as comments; that counter is corrected without changing the manuscript.
+- Introduction, Results and Discussion remain approximately 3,100 words, excluding Methods and figure legends. The GA/RFECV update adds only 17 whitespace-delimited body tokens and shortens the abstract by 20.
 - Main figure legends contain 218, 248, 266, 169 and 173 source-counted words, below the 350-word figure-legend guidance.
-- The subsequent four-item clarification updates method explanations only. All figure assets and result values remain unchanged; see V19_MINIMAL_CLARIFICATIONS_20261105.md for the exact scope.
+- The earlier four-item method clarification is retained. The latest update explains GA/RFECV roles and connects existing S17 size-control evidence; see documentation/validation/V19_GA_RFECV_CLARIFICATION_20261105.md. Figures, Methods and numerical source data are unchanged.
 
 ## Scientific scope retained
 

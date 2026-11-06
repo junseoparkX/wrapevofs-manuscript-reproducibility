@@ -14,7 +14,7 @@ The maintained Python implementation is available from the
 [GitHub Release v0.2.0](https://github.com/junseoparkX/wrapevofs-package/releases/tag/v0.2.0),
 and [PyPI](https://pypi.org/project/wrapevofs/0.2.0/).
 
-Current manuscript: **v19, 5 November 2026**. The source and compiled PDFs include four minimal method/terminology clarifications, with all figures and numerical findings preserved. The public update includes the completed CV-score reweighting and equal-center weighting analyses; the separate common-RF-seed experiment is not part of this version.
+Current manuscript: **v19, 5 November 2026**. The source and compiled PDFs retain the four method/terminology clarifications and now clarify GA exploration and RFECV target guidance using existing Supplementary Figure S17. All figures and numerical source data are preserved. The public update includes the completed CV-score reweighting and equal-center weighting analyses; the separate common-RF-seed experiment is not part of this version.
 
 ## Submission files
 
