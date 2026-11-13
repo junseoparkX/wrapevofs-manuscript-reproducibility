@@ -259,7 +259,7 @@ def make_figure5():
         ax.set_title(title,pad=15,loc='left',fontsize=7)
         panel(ax,letter,-68)
     comphandles=[Line2D([],[],ls='',marker='o',ms=4.2,mfc='white',mec=BLACK,label='RFECV-only'),
-                Line2D([],[],ls='',marker='^',ms=4.2,mfc='white',mec=BLACK,label='Legacy top-three')]
+                Line2D([],[],ls='',marker='^',ms=4.2,mfc='white',mec=BLACK,label='Top-three medoid')]
     fig.legend(handles=comphandles,loc='center',bbox_to_anchor=(.56,.035),ncol=2,
         frameon=False,handletextpad=.5,labelspacing=.65)
     metrics.to_csv(WORK/'figure5_plotted_condition_source.csv',index=False)

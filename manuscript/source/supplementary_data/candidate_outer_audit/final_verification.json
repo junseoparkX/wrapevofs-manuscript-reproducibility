@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-12T22:00:32.383911+00:00",
+  "protocol_sha256": "13cebe575c5c125f745960366626325fba13f5be454aad8813d36a8fa735afd0",
+  "all_frozen_code_hashes_unchanged": true,
+  "reference_correction_is_recorded": true,
+  "all_7_output_hashes_match": true,
+  "original_OOF_point_estimates_reproduced": 12,
+  "independent_sklearn_array_slicing_selection_checks": 6,
+  "original_policy_prediction_checks": 120,
+  "trained_candidates_on_fenn10": 150,
+  "tracked_manuscript_files_unchanged": true
+}

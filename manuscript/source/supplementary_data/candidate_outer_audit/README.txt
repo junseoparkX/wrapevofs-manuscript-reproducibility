@@ -1,0 +1,9 @@
+TCGA all-candidate fixed-bank diagnostic, 12 November 2026
+
+Supplementary Table S31 contains score-gap controls (panel a), original compression/OOF results (panel b), and the new symmetric half-split diagnostic (panel c).
+Original selections, scores, candidate masks, delta=0.01, RF settings and original primary bootstrap intervals were retained. The 150 500-tree models were fitted on fenn10; no outer data were uploaded.
+All-candidate metrics contain 150 rows; bank_diagnostics contains 30 rows; independent_half_selection_diagnostics contains 6,000 rows (200 complementary stratified half-splits per bank). Summary means give equal weight to banks and splits.
+The selection-half minus opposite-half difference is a retrospective fixed-bank, fixed-model diagnostic on halves of approximately 49 participants. Its direction is expected under selection; its magnitude here is empirical. Split quantiles are not confidence intervals. It does not establish an advantage unique to medoid locking.
+The optional paired_original_policy_contrasts file uses an additional exploratory 2,000-resample participant-cluster bootstrap with seed 20261112; it does not replace the original seed-42 primary intervals.
+candidate_inventory.json contains feature names, development scores, bank identifiers and hashes, but no participant rows. local_sources.json and reference_amendment.json preserve the exact original source/hash audit. The reference amendment fixes a pre-refresh versus common-seed prediction-reference mismatch before new metrics were examined; no model or selection changed.
+code/ retains exact execution scripts corresponding to the frozen hashes. Training/prediction reruns require the corresponding authorized local source arrays and environment. Private models, matrices, participant identifiers and prediction arrays are not included.

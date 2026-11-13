@@ -1,0 +1,17 @@
+{
+  "source_csv_sha256": "02a9d415e13d63b17a2d551d9ba5394c7f824128d3b3539ffa59949446a7b6f4",
+  "independent_mask_reconstructions": 42,
+  "normalization": "observed union of all five saved masks; not the full Direct universe",
+  "summary": {
+    "AMP-AD": {
+      "banks": 36,
+      "median_union_normalized_nogueira": -0.06299059139784946,
+      "median_locked_full_bank_mean_jaccard": 0.20355184062661597
+    },
+    "CGGA": {
+      "banks": 6,
+      "median_union_normalized_nogueira": 0.07604926244956697,
+      "median_locked_full_bank_mean_jaccard": 0.42407592407592404
+    }
+  }
+}

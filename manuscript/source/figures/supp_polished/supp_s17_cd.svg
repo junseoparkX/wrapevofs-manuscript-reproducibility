@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="170mm" height="110mm" viewBox="0 118.5 170 110">
 <rect x="0" y="0" width="170.000" height="228.500" fill="#FFFFFF" />
 <text x="5.500" y="123.000" text-anchor="start" font-family="Arial-Bold" font-size="2.822222222222222" font-weight="bold" font-style="normal" fill="#111111" style="fill: #111111; font-weight: bold; font-family: Arial-Bold; font-size: 2.822222222222222">c</text>
-<text x="12.500" y="123.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Paired differences: legacy top-three medoid − RFECV only</text>
+<text x="12.500" y="123.000" text-anchor="start" font-family="Arial" font-size="3.150" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Paired differences: top-three medoid − RFECV only</text>
 <line x1="55.000" y1="162.000" x2="163.500" y2="162.000" stroke="#263746" stroke-width="0.300" opacity="1.000" />
 
 <line x1="55.000" y1="162.000" x2="55.000" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
@@ -20,7 +20,7 @@
 <line x1="163.500" y1="162.000" x2="163.500" y2="162.800" stroke="#263746" stroke-width="0.250" opacity="1.000" />
 <text x="163.500" y="165.300" text-anchor="middle" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">+0.14</text>
 <line x1="109.250" y1="128.000" x2="109.250" y2="162.000" stroke="#788591" stroke-width="0.420" opacity="1.000" stroke-dasharray="1.1 0.9" />
-<text x="109.250" y="168.000" text-anchor="middle" font-family="Arial" font-size="2.700" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Legacy top-three − RFECV only</text>
+<text x="109.250" y="168.000" text-anchor="middle" font-family="Arial" font-size="2.700" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Top-three medoid − RFECV only</text>
 <text x="51.500" y="131.300" text-anchor="end" font-family="Arial" font-size="2.300" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1 · AUROC</text>
 <line x1="84.136" y1="130.500" x2="148.829" y2="130.500" stroke="#386A8B" stroke-width="0.380" opacity="1.000" />
 <line x1="84.136" y1="129.700" x2="84.136" y2="131.300" stroke="#386A8B" stroke-width="0.300" opacity="1.000" />

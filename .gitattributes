@@ -14,3 +14,7 @@ manuscript/source/supplementary_data/cv_score_sensitivity/** -text
 manuscript/source/supplementary_data/ampad_center_sensitivity/** -text
 # Table S29 is also covered by the fixed-bank source-integrity manifest.
 manuscript/source/tables/table_v19_cv_score_sensitivity.tex -text
+
+# Preserve new calibration and fixed-bank audit protocol checksums byte for byte.
+manuscript/source/supplementary_data/tolerance_calibration/** -text
+manuscript/source/supplementary_data/candidate_outer_audit/** -text

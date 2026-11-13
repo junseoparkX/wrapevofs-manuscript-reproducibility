@@ -1,4 +1,4 @@
-# Reproduce the published v19 manuscript
+# Reproduce the v20 manuscript
 
 ## Install
 
@@ -18,6 +18,7 @@ From `manuscript/source/`:
 
 ```bash
 python scripts/validate_current_manuscript.py
+python scripts/validate_tolerance_calibration.py
 python scripts/validate_repository_structure.py
 python scripts/validate_figure1_freeze.py
 python scripts/validate_final_qa_frozen_values.py
@@ -29,8 +30,8 @@ python scripts/validate_submission_pdfs.py main.pdf supplementary_information.pd
 ```
 
 `CURRENT_MANUSCRIPT.json` records the exact current source and artwork hashes.
-The PDFs contain 19 main pages and 55 supplementary pages, five main figures,
-two main tables, 29 supplementary figures and 30 supplementary tables.
+The PDFs contain 21 main pages and 60 supplementary pages, five main figures,
+two main tables, 29 supplementary figures and 32 supplementary tables.
 
 ## Compile
 
@@ -90,3 +91,15 @@ TeX directly uses its publication assets.
 One-time editing utilities, superseded proposal text and old presentation
 checkpoints are available in Git history at commit
 `883f5db5310cf265c19b1824622884edac191af6`. Current validation is run by GitHub Actions.
+
+## Development-only allowance calibration
+
+From `manuscript/source/`, reproduce all six branch/scorer choices using the non-participant audit inputs:
+
+```bash
+python supplementary_data/tolerance_calibration/calibrate_allowance.py --input supplementary_data/tolerance_calibration/candidate_development_audit.csv --output /tmp/wrapevofs-calibration --search breakpoints
+```
+
+Use `--search grid` for the earlier seven-point calibration. Full precision is retained for eligibility; displayed decimal allowances are rounded. Calibration uses development scores and feature masks only. The paired AUROC bootstrap additionally requires authorized held-out predictions; aggregate signature-level scores and reported contrasts are included. The all-240 overlap is a fitted objective, and the earlier reserved-seed check remains distinct.
+
+The opt-in library calibration API requires `pip install wrapevofs==0.3.0`. To verify both library search modes and their canonical selected masks, run `python scripts/validate_tolerance_calibration.py --package` from `manuscript/source/`. The v0.2.0 pin above is retained for the recorded reference benchmark.

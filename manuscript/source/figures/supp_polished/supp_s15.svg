@@ -121,5 +121,5 @@
 <circle cx="67.000" cy="96.000" r="0.950" fill="#FFFFFF" stroke="#5A6875" stroke-width="0.300" opacity="1.000" />
 <text x="69.000" y="96.800" text-anchor="start" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Direct</text>
 <circle cx="85.000" cy="96.000" r="0.950" fill="#5A6875" stroke="#5A6875" stroke-width="0.300" opacity="1.000" />
-<text x="87.000" y="96.800" text-anchor="start" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Legacy top-three medoid</text>
+<text x="87.000" y="96.800" text-anchor="start" font-family="Arial" font-size="2.250" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Top-three medoid</text>
 </svg>

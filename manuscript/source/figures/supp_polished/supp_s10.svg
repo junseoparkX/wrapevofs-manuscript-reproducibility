@@ -880,7 +880,7 @@ z
      </g>
     </g>
     <g id="text_36">
-     <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="319.251969" y="407.720001" transform="rotate(-0 319.251969 407.720001)">Legacy top-3 medoid minus first stage</text>
+     <text style="font-size: 7px; font-family: 'Arial'; text-anchor: middle" x="319.251969" y="407.720001" transform="rotate(-0 319.251969 407.720001)">Top-three medoid minus first stage</text>
     </g>
    </g>
    <g id="matplotlib.axis_8">
@@ -1261,7 +1261,7 @@ z
     </g>
    </g>
    <g id="text_49">
-    <text style="font-size: 6.5px; font-family: 'Arial'; text-anchor: start" x="274.558823" y="13.86962" transform="rotate(-0 274.558823 13.86962)">Legacy top-3 medoid</text>
+    <text style="font-size: 6.5px; font-family: 'Arial'; text-anchor: start" x="274.558823" y="13.86962" transform="rotate(-0 274.558823 13.86962)">Top-three medoid</text>
    </g>
   </g>
  </g>

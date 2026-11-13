@@ -1,0 +1,82 @@
+{
+  "version": "v20",
+  "date": "2026-11-12",
+  "physical_pages": {
+    "main": 20,
+    "supplement": 57,
+    "cover": 1
+  },
+  "abstract_source_words": 147,
+  "body_words_excluding_figures_v19": 3193,
+  "body_words_excluding_figures_v20": 3448,
+  "preserved_v19_files_verified": 612,
+  "original_aggregate_CSVs_preserved": 108,
+  "original_primary_intervals_preserved": true,
+  "excluded_sections_text_identical": true,
+  "title_authors_affiliations_references_preserved": true,
+  "main_figure_numbers": {
+    "fig:workflow": 1,
+    "fig:tcga-nested": 2,
+    "fig:tcga-benchmark": 3,
+    "fig:ampad-postfreeze": 4,
+    "fig:updated-verification": 5
+  },
+  "supplementary_figures": 29,
+  "supplementary_tables": 31,
+  "resolved_tex_sources": 60,
+  "unresolved_citations_references_or_overfull_boxes": 0,
+  "new_experiment_verification": {
+    "verified_utc": "2026-11-12T22:00:32.383911+00:00",
+    "protocol_sha256": "13cebe575c5c125f745960366626325fba13f5be454aad8813d36a8fa735afd0",
+    "all_frozen_code_hashes_unchanged": true,
+    "reference_correction_is_recorded": true,
+    "all_7_output_hashes_match": true,
+    "original_OOF_point_estimates_reproduced": 12,
+    "independent_sklearn_array_slicing_selection_checks": 6,
+    "original_policy_prediction_checks": 120,
+    "trained_candidates_on_fenn10": 150,
+    "tracked_manuscript_files_unchanged": true
+  },
+  "source_data_preservation": {
+    "original_numeric_cells_and_formulas_unchanged": 42750,
+    "original_sheet_count": 67,
+    "new_sheet_count": 68,
+    "new_sheet": "TableS31",
+    "main_figure_mapping_v19_to_v20": {
+      "Fig2": "Fig5",
+      "Fig3": "Fig2",
+      "Fig4": "Fig3",
+      "Fig5": "Fig4"
+    },
+    "unchanged_OOXML_parts": 66,
+    "modified_original_parts": [
+      "xl/workbook.xml",
+      "xl/styles.xml",
+      "xl/worksheets/sheet1.xml",
+      "xl/worksheets/sheet3.xml",
+      "xl/worksheets/sheet4.xml",
+      "xl/worksheets/sheet5.xml",
+      "xl/worksheets/sheet6.xml",
+      "xl/_rels/workbook.xml.rels",
+      "[Content_Types].xml"
+    ],
+    "new_tab_authored_with": "@oai/artifact-tool",
+    "rendering_limitation": "Artifact Tool renderer terminated natively on the source README; original layout/values preserved at OOXML part level. New S31 also reviewed in the publication PDF."
+  },
+  "visual_QA": "Every revised label, all page contact sheets, changed text pages, Supplementary Methods S1.3 and cover inspected.",
+  "generated_utc": "2026-11-12T23:56:02.546029+00:00",
+  "revision": "v20 corrected review follow-up",
+  "original_table_numeric_sources_preserved": 55,
+  "existing_v20_CSV_files_preserved": 126,
+  "all_main_figure_data_geometry_preserved": true,
+  "figure_display_names_corrected_PDFs": 13,
+  "figure_labels_corrected": 24,
+  "two_unedited_main_figure_PDFs_hash_identical": true,
+  "all_corrected_figure_collision_and_text_audits_pass": true,
+  "alignment_scope": "No plot layout/data geometry changed. Text anchor adjustment only; vector geometry and pixels outside label regions preserved.",
+  "workbook_numeric_and_formula_cells_including_empty_cells_preserved": 145810,
+  "original_agreement_banks_independently_reconstructed": 42,
+  "original_agreement_normalization_explicit": "observed union of five masks",
+  "delta_rationale": "prespecified one-percentage-point mean development-CV AUROC budget; no optimality/paired-SE/held-out guarantee",
+  "new_experiments_in_followup": 0
+}

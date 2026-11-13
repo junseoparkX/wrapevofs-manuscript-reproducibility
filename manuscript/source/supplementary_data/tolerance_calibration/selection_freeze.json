@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-11-13T04:05:19.277218+00:00",
+  "protocol_sha256": "4ad197d4fa26fba77502f9a5202437737075fe5efc0e7368b6140c2d47d38eba",
+  "decisions_sha256": "359d04ebea6109c15488d8144fc0c7faca2d61a488af8afe89929a3d3d4d4c48",
+  "selections_sha256": "4161f66b179e7af59c881cca0ebbd503ee4128a507ba06d1af13ac5ce5de7fe7",
+  "candidate_source_sha256": "5dcc622157e134e7786828a34831abe2c88680c46ae5775d866deef335a10f07",
+  "heldout_values_used_to_fit": false,
+  "matches_prior_development_only_diagnostic": true
+}

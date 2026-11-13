@@ -87,7 +87,7 @@ def main() -> None:
         supplementary_text, "Supplementary Figure", 29
     )
     supplementary_report["table_captions"] = exact_numbered_labels(
-        supplementary_text, "Supplementary Table", 30
+        supplementary_text, "Supplementary Table", 32
     )
     report = {"main": main_report, "supplementary": supplementary_report}
 

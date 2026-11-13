@@ -1,0 +1,57 @@
+{
+  "revision": "v20 in place",
+  "original_csv_files_preserved": 127,
+  "original_table_sources_preserved": 55,
+  "original_figure_assets_preserved": 45,
+  "original_source_workbook_byte_identical": true,
+  "preserved_v19_files_verified": 612,
+  "user_excluded_sections_unchanged": true,
+  "portable_choices_and_masks_reproduced": 12,
+  "abstract_words": 131,
+  "PDF_pages": {
+    "main": 21,
+    "supplement": 60,
+    "cover": 1
+  },
+  "changed_text_pages_rendered": {
+    "main": [
+      2,
+      7,
+      8,
+      12,
+      13,
+      15
+    ],
+    "supplement": [
+      11,
+      12,
+      58,
+      59
+    ],
+    "cover": [
+      1
+    ]
+  },
+  "latex_errors_undefined_references_and_overfull_boxes": 0,
+  "evaluation_validation_sha256": "f51bcf59a5387c4de8b375cadd6b15534ba69bd01c16ed9c3d23ef5facf9865b",
+  "visual_inspection_status": "PASS: all manuscript contact sheets, changed text pages, new S32 tables and cover inspected",
+  "verified_utc": "2026-11-13T04:49:24.643398+00:00",
+  "public_PDF_layout": "PASS; no blank pages, out-of-bounds text, or missing displays",
+  "public_checkout_main_and_supplement_independently_compiled": true,
+  "new_candidate_models_fitted": 0,
+  "cached_predictions_reused": 83,
+  "independent_weighted_AUROC_checks": 249,
+  "maximum_weighted_AUROC_error": 2.220446049250313e-16,
+  "calibration_software_version": "0.3.0",
+  "reference_software_version": "0.2.0",
+  "new_API_selected_masks_and_allowances_reproduced": true,
+  "full_240_canonical_mask_hashes_reconstructed": true,
+  "files_sha256": {
+    "main.pdf": "31f42e201654199b3351be85ad05772527210e84569f4a0e827136ec3cfde49f",
+    "supplementary_information.pdf": "c1b34d9831859ee3ff340e7ee63e3873c995e8867b7565321ebc56cdb606ddff",
+    "Cover_Letter_Nature_Communications.pdf": "ec01d56f72836db2b5a759b4df784f889b61b75838fc95c26013d3e682aecffb",
+    "main.tex": "8a805f6b6d2c21eb670737423d81f8b8d7c2d68eeb5e9917ea9e616773c958e5",
+    "sections/main_text.tex": "2a36853344557ced316960b7657e28ea6fc9b41b9ceef2982eaf3d097f51669c",
+    "sections/supplementary.tex": "6a78aff4213ed430c3823470e8ec38f6009a9cc52c73846b3c588da4fb060dd2"
+  }
+}

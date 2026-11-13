@@ -1,0 +1,134 @@
+{
+  "recorded_utc": "2026-11-12T21:55:56.513190+00:00",
+  "original_protocol_sha256": "13cebe575c5c125f745960366626325fba13f5be454aad8813d36a8fa735afd0",
+  "reason": "Original local_sources pointed to pre-refresh raw predictions. Canonical common_seed_results matches manuscript OOF metrics exactly. Correction changes only the reproduction-reference path, not models, seeds, masks, scores, data, analyses, or protocol.",
+  "failed_initial_check": {
+    "bank": "TCGA__1__1__boruta_rf",
+    "policy": "highest_locking_score",
+    "max_probability_difference": 0.07246321711315923
+  },
+  "results_examined": "No new performance or optimism metrics computed before reference correction.",
+  "predictor_sha256": "d1eaa7342adb4eb0a7b675a2088d2c0a17566fcb56d28be54b431c75a494b97a",
+  "sources": {
+    "TCGA__1__1__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_01\\boruta_rf\\outer_predictions.csv",
+      "sha256": "609dea89ca5c430b3a4cbdd9094388b884895d830d65ed086e588bf22d5f5e65"
+    },
+    "TCGA__1__1__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_01\\svm_l1\\outer_predictions.csv",
+      "sha256": "c70af466f34d971bd43c4719d85ebc2efb9fce8825923804457817d102161510"
+    },
+    "TCGA__1__1__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_01\\xgboost\\outer_predictions.csv",
+      "sha256": "82acc650b97970f19c13e89e859f6373188ca50ea72c89e21039ca038d9d3c77"
+    },
+    "TCGA__1__2__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_02\\boruta_rf\\outer_predictions.csv",
+      "sha256": "3b59c34eb8c8af853cf646e257e11c487d1a4a10bfc586676fc3dc46ad9fd045"
+    },
+    "TCGA__1__2__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_02\\svm_l1\\outer_predictions.csv",
+      "sha256": "cc8006cef23b3f7d9b95f299c52d3a165db787a74c597719a75acf907bb41778"
+    },
+    "TCGA__1__2__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_02\\xgboost\\outer_predictions.csv",
+      "sha256": "94344b522b74bdcc71320b8939986a5084d01b1c2cb319b2ece1297ecab7e9e8"
+    },
+    "TCGA__1__3__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_03\\boruta_rf\\outer_predictions.csv",
+      "sha256": "08ec26e47d954f2d888398908a13cf1e1c0453f1ae2f84e6c44e585d1efa267a"
+    },
+    "TCGA__1__3__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_03\\svm_l1\\outer_predictions.csv",
+      "sha256": "d6f4a571a49051f1073ad7371cb8766a3edad25137824c0d9fc9d869f0e50cf5"
+    },
+    "TCGA__1__3__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_03\\xgboost\\outer_predictions.csv",
+      "sha256": "102730abe871ea2432866fbf20d219689b2956e3224d2746dd9788f0ac44f92a"
+    },
+    "TCGA__1__4__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_04\\boruta_rf\\outer_predictions.csv",
+      "sha256": "39a9dbbc6d256bafbe9340a13f9e5417939668ab0184bb2a14012a29e477f6a9"
+    },
+    "TCGA__1__4__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_04\\svm_l1\\outer_predictions.csv",
+      "sha256": "e049b8dc2c89ae29f0097e4dd03b03e0d2723e4c89a7b184534db2a8ceff7c9a"
+    },
+    "TCGA__1__4__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_04\\xgboost\\outer_predictions.csv",
+      "sha256": "c6cd279799361c976e0ff8b27336d570ee0716f8ff6a4be1f870e951095edbdd"
+    },
+    "TCGA__1__5__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_05\\boruta_rf\\outer_predictions.csv",
+      "sha256": "7dad3e76d76d799e6f4214773f5b43a7c91da3b37f59b29ad03a82176b8885cc"
+    },
+    "TCGA__1__5__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_05\\svm_l1\\outer_predictions.csv",
+      "sha256": "7533c0c2b041a822b0c3b2d291f2c387e8ea557630c6bac7b5222a68b5986c71"
+    },
+    "TCGA__1__5__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_01\\fold_05\\xgboost\\outer_predictions.csv",
+      "sha256": "778e8fd5724bdda6cda712c78fb6c97233faf0b0969bfb5a61e16d91969ffda0"
+    },
+    "TCGA__2__1__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_01\\boruta_rf\\outer_predictions.csv",
+      "sha256": "cab39770b53f2837ab9b4ec1de8a93a64d185cee0d786efe0414e9a455e686fe"
+    },
+    "TCGA__2__1__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_01\\svm_l1\\outer_predictions.csv",
+      "sha256": "c3143d1bb3557e94a8c57e61c9f8a6eb9a799b1dbafe9fea4447b23991298066"
+    },
+    "TCGA__2__1__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_01\\xgboost\\outer_predictions.csv",
+      "sha256": "7c74e43f0e898528c0afa76562803de0784bdbaa47fadef48efbb94a5974a897"
+    },
+    "TCGA__2__2__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_02\\boruta_rf\\outer_predictions.csv",
+      "sha256": "6aa037d93652ed098da45738a85f5559fa7a8880ec9957e803e9cd26b039d3f7"
+    },
+    "TCGA__2__2__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_02\\svm_l1\\outer_predictions.csv",
+      "sha256": "7615aed648872764866060aabe8acc7a09214dc92bb30117db8dd3e1f0ab1b0f"
+    },
+    "TCGA__2__2__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_02\\xgboost\\outer_predictions.csv",
+      "sha256": "e463a70c4a13a8447d0519da350b8460ff43e4f201847fba9c5a8d4ebc87c0a4"
+    },
+    "TCGA__2__3__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_03\\boruta_rf\\outer_predictions.csv",
+      "sha256": "dded2a322fdd681ca3239cfd4d9b3269a99016fc2a05c95b6acb29d5b6e5a253"
+    },
+    "TCGA__2__3__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_03\\svm_l1\\outer_predictions.csv",
+      "sha256": "00e9514deae4eb03b166506e462d98ed5da89c3db22c6642ad5a608f21871ed7"
+    },
+    "TCGA__2__3__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_03\\xgboost\\outer_predictions.csv",
+      "sha256": "54b6e4bb754d5ce395c7e95651665360bced982c7731e2852f28a891f88de716"
+    },
+    "TCGA__2__4__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_04\\boruta_rf\\outer_predictions.csv",
+      "sha256": "3bfaf522796d1952a88c7cad38cb791d80332754ad648f0c888063a6efa2ba58"
+    },
+    "TCGA__2__4__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_04\\svm_l1\\outer_predictions.csv",
+      "sha256": "da97a175e29809e41b0e70c38f293af3352c9f1a9cde725bb78f5b9888db1396"
+    },
+    "TCGA__2__4__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_04\\xgboost\\outer_predictions.csv",
+      "sha256": "edcd5998d3d2d2dc11af44f0498867d29ecaee574e6bc87932cf77600726dc7f"
+    },
+    "TCGA__2__5__boruta_rf": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_05\\boruta_rf\\outer_predictions.csv",
+      "sha256": "3d09152eebe39ac06485e3cb02cff2328ae861140843b9cf680519184848c9ba"
+    },
+    "TCGA__2__5__svm_l1": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_05\\svm_l1\\outer_predictions.csv",
+      "sha256": "1558a8a1c8a7e031e865752d8540024e6f9b45c0f4a36181e10d349f8cb4f233"
+    },
+    "TCGA__2__5__xgboost": {
+      "path": "C:\\Users\\junse\\Documents\\research\\WrapEvoFS_manuscript_reproducibility\\analysis\\tcga_nested_v1_v2_complete_20260812\\common_seed_results\\repeat_02\\fold_05\\xgboost\\outer_predictions.csv",
+      "sha256": "a7be5513a80272c7e7d812c731923428e8fac20cdd512e6dc912225865dd0483"
+    }
+  }
+}

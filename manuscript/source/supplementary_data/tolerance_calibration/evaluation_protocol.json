@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-13T04:05:19.272346+00:00",
+  "classification": "Retrospective exploratory extension designed after previous held-out comparisons.",
+  "authorization": "User requested all240 development-only breakpoint calibration, heldout comparison against three policies, and direct v20 revision.",
+  "candidate_source_sha256": "5dcc622157e134e7786828a34831abe2c88680c46ae5775d866deef335a10f07",
+  "candidate_count": 240,
+  "development_participants": 392,
+  "banks_per_branch": 16,
+  "candidates_per_bank": 5,
+  "selection": "All distinct observed within-bank development score gaps including zero. Same frozen one-SE score filter, cross-bank Jaccard maximization, and tie-breakers as existing calibration. No heldout selection.",
+  "comparators": [
+    "grid_calibrated",
+    "fixed_0.01",
+    "highest_score"
+  ],
+  "bootstrap": {
+    "replicates": 5000,
+    "seed": 20261116,
+    "unit": "Class-stratified paired99 participant resampling shared across all models and branches. Fixed fitted banks/deltas; no refit.",
+    "primary_family": "12 AUROC contrasts: breakpoint vs3 comparators x3 branches and equal-branch mean. Standardized maximum centered bootstrap error simultaneous95% intervals.",
+    "secondary": "Common RF scorer contrasts: nominal exploratory intervals."
+  },
+  "final_RF_params": {
+    "n_estimators": 500,
+    "max_depth": 12,
+    "min_samples_leaf": 2,
+    "bootstrap": true,
+    "class_weight": "balanced"
+  },
+  "code_sha256": "adf8f642ce93a1d67a524d6c5c804642e0b0d9f27bd6aa5e8ccbc56246b36e3e",
+  "original_grid_decisions_sha256": "3f115f381ec6d2900e60ff032428fb982ad48744d38479eb98e758d12181e077",
+  "claim_boundary": "Calibration Jaccard is fitted overlap. Historical99 participant internal fold; not unseen-seed or external validation. No outcome-based rule changes."
+}

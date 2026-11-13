@@ -1,0 +1,17 @@
+WrapEvoFS v20 후속 점검 반영 (2026-11-12)
+
+[x] Nogueira 참조: Fig. S4라는 잘못된 참조를 제거하고 Methods S1.3으로 연결했습니다. 42개 bank의 원래 다섯 mask에서 값을 독립 재계산했습니다. AMP-AD -0.063, CGGA 0.076을 복원하고, 원래 분석이 전체 Direct universe가 아니라 관측된 다섯 mask의 합집합으로 정규화했음을 본문과 보충 Methods에 명시했습니다. 은폐하거나 TCGA의 고정-universe 계수와 혼용하지 않았습니다.
+[x] 설명 순서: 최초 TCGA 실험의 "A separate"를 제거했습니다. 원래 AMP-AD 36 / CGGA 6 bank의 구성, 54 bank = TCGA 30 + 추가 AMP-AD 24의 구성, corrected objective의 뜻을 처음 등장할 때 소개했습니다. Fig. 4 caption의 updated configuration도 구체적 workflow로 바꿨습니다.
+[x] 명칭: 본문, Table 2 및 보충표, 그림 라벨, Source Data의 표시명을 top-three medoid로 통일했습니다. 검색 objective 자체를 뜻하는 legacy-compatible/legacy-zero와 보존된 CSV의 기계 식별자는 유지했습니다. 그림 13개에서 24개 label을 교정했습니다.
+[x] significance 범위: 0.0253 진단은 사전 reporting rule의 필요성을 뒷받침하는 것으로 유지했습니다. medoid 고유 기여는 사전 점수 예산을 충족한 후보들 사이에서 feature overlap을 명시적이고 결정적인 선택 선호로 바꾸는 데 있음을 설명했습니다. 새로운 예측 우월성 주장을 추가하지 않았습니다.
+[x] 잘못된 simulation 요약: bank size에 따른 단조 개선 주장을 넣지 않았습니다. R=5 전체 평균과 조건부 이점을 함께 유지했습니다.
+
+delta=0.01을 쓰는 이유와 표현
+0.01은 통계적으로 최적이라고 입증한 임계값이 아니라, 대표성을 고려하면서 허용할 개발 CV AUROC 손실을 1 percentage point로 제한하는 사전 점수 예산입니다. 최고 score가 0.85이면 score >= 0.84인 후보만 비교합니다. 실제로 TCGA 30 bank 중 11개 선택이 바뀌었고 최대 선택 gap은 0.00978이었습니다. 이는 이 설정에서 작동하는 선택 지점이라는 증거이지, 0.01을 결과를 보고 정당화하거나 최적이라고 입증하는 증거는 아닙니다.
+
+Suggested concise wording:
+We used a prespecified absolute tolerance of delta=0.01 to cap the development-CV AUROC loss at one percentage point while allowing feature overlap to influence the final choice.
+
+원고 Methods는 mean development-CV AUROC와 eligible-pool overlap임을 명확히 하고, held-out 손실 보장이나 임상 noninferiority margin으로 해석하지 않도록 했습니다. fold SE 0.0109는 사후 척도 확인이며 delta 선택 근거나 paired one-SE threshold가 아닙니다. 0, 0.005, 0.01, 0.02 및 SE-scaled sensitivity는 기존대로 유지했습니다.
+
+검증: 기존 CSV, 표의 수치와 CI, 기존 workbook의 수치와 수식, v19 원본을 보존했습니다. 수정된 그림에서 label 밖 pixel과 vector data geometry는 그대로입니다. 모든 수정 그림의 글자 크기 및 충돌 점검을 통과했습니다. 본문 20 / 보충 57 / 커버레터 1쪽이며 unresolved reference/citation, overfull box가 없습니다. 별도의 실험은 추가하지 않았습니다. 사용자가 제외한 두 문구는 원문 그대로입니다.

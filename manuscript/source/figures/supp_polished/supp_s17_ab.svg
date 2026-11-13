@@ -6,7 +6,7 @@
 <text x="58.650" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">RFECV only</text>
 <text x="81.950" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Single GA run</text>
 <text x="105.250" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Highest dev-CV</text>
-<text x="128.550" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Legacy top-three</text>
+<text x="128.550" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">Top-three medoid</text>
 <text x="151.850" y="12.200" text-anchor="middle" font-family="Arial" font-size="2.350" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">No target-size guidance</text>
 <text x="44.000" y="21.050" text-anchor="end" font-family="Arial" font-size="2.550" font-weight="normal" font-style="normal" fill="#111111" style="fill: #111111; font-weight: normal; font-family: Arial">SVM-L1</text>
 <rect x="47.000" y="15.000" width="22.500" height="9.500" rx="0.700" fill="#F9F9F8" stroke="#FFFFFF" stroke-width="0.350" opacity="1.000" />

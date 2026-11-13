@@ -1,0 +1,288 @@
+{
+  "pdfs": [
+    {
+      "file": "figures/figure_2.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/figure_3_strengthened.pdf",
+      "changes": [
+        {
+          "old": "Legacy",
+          "new": "Top-three"
+        },
+        {
+          "old": "top-three",
+          "new": "medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/figure_5_strengthened.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s10.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-3 medoid minus first stage",
+          "new": "Top-three medoid minus first stage"
+        },
+        {
+          "old": "Legacy top-3 medoid",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s15.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-three medoid",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s17_ab.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s17_cd.pdf",
+      "changes": [
+        {
+          "old": "Paired differences: legacy top-three medoid \u2212 RFECV only",
+          "new": "Paired differences: top-three medoid \u2212 RFECV only"
+        },
+        {
+          "old": "Legacy top-three \u2212 RFECV only",
+          "new": "Top-three medoid \u2212 RFECV only"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s19.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-3 lock",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "figures/supp_polished/supp_s23.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-3 medoid",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "v19_work/supplement_polish_20261105/modern/figures/figure_s15.pdf",
+      "changes": [
+        {
+          "old": "Legacy",
+          "new": "Top-three"
+        },
+        {
+          "old": "top-three",
+          "new": "medoid"
+        },
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "v19_work/supplement_polish_20261105/modern/figures/figure_s24.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "v19_work/supplement_polish_20261105/modern/figures/figure_s27.pdf",
+      "changes": [
+        {
+          "old": "Legacy top-3",
+          "new": "Top-three medoid"
+        },
+        {
+          "old": "Legacy top-3",
+          "new": "Top-three medoid"
+        },
+        {
+          "old": "Legacy top-3",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    },
+    {
+      "file": "v19_work/supplement_polish_20261105/modern/figures/supp_figure_s29_cv_score_sensitivity.pdf",
+      "changes": [
+        {
+          "old": "Legacy",
+          "new": "Top-three"
+        },
+        {
+          "old": "top-three",
+          "new": "medoid"
+        },
+        {
+          "old": "Legacy",
+          "new": "Top-three"
+        },
+        {
+          "old": "top-three",
+          "new": "medoid"
+        },
+        {
+          "old": "Legacy top-three",
+          "new": "Top-three medoid"
+        }
+      ],
+      "verification": [
+        {
+          "numeric_tokens_preserved": true,
+          "vector_drawings_preserved": true,
+          "changed_pixels_outside_label_regions": 0
+        }
+      ]
+    }
+  ],
+  "svg_companions": [
+    "figures/figure_2.svg",
+    "figures/figure_3_strengthened.svg",
+    "figures/figure_5_strengthened.svg",
+    "figures/supp_polished/supp_s10.svg",
+    "figures/supp_polished/supp_s15.svg",
+    "figures/supp_polished/supp_s17_ab.svg",
+    "figures/supp_polished/supp_s17_cd.svg",
+    "figures/supp_polished/supp_s19.svg",
+    "figures/supp_polished/supp_s23.svg",
+    "v19_work/supplement_polish_20261105/modern/figures/figure_s15.svg",
+    "v19_work/supplement_polish_20261105/modern/figures/figure_s24.svg",
+    "v19_work/supplement_polish_20261105/modern/figures/figure_s27.svg",
+    "v19_work/supplement_polish_20261105/modern/figures/supp_figure_s29_cv_score_sensitivity.svg"
+  ],
+  "workbook_label_parts_changed": [
+    "xl/worksheets/sheet3.xml",
+    "xl/worksheets/sheet21.xml",
+    "xl/worksheets/sheet23.xml",
+    "xl/worksheets/sheet29.xml",
+    "xl/worksheets/sheet36.xml",
+    "xl/worksheets/sheet39.xml",
+    "xl/worksheets/sheet41.xml",
+    "xl/worksheets/sheet43.xml",
+    "xl/worksheets/sheet44.xml",
+    "xl/worksheets/sheet45.xml",
+    "xl/worksheets/sheet53.xml",
+    "xl/worksheets/sheet59.xml",
+    "xl/worksheets/sheet63.xml",
+    "xl/worksheets/sheet65.xml"
+  ],
+  "preserved_numeric_formula_cells": 42338
+}

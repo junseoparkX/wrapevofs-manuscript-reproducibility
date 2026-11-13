@@ -440,8 +440,8 @@ L 381.460743 65.480315
       </g>
      </g>
      <g id="text_18">
-      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(277.356001 112.547076)">Legacy</text>
-      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(271.912407 120.165865)">top-three</text>
+      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(269.577850 112.547076)">Top-three</text>
+      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(276.967499 120.165865)">medoid</text>
      </g>
     </g>
     <g id="ytick_8">
@@ -452,7 +452,7 @@ L 381.460743 65.480315
      </g>
      <g id="text_19">
       <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(271.139126 141.677891)">Full-bank</text>
-      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(276.969907 149.296543)">medoid</text>
+      <text style="font-size: 7px; font-family: 'Arial', 'DejaVu Sans', sans-serif; fill: #111111" transform="translate(276.973511 149.296543)">medoid</text>
      </g>
     </g>
    </g>

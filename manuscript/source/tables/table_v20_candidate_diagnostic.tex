@@ -1,0 +1,48 @@
+\begin{table}[p]
+\centering
+\caption{TCGA fixed-bank score control, compression, and outcome-informed run-selection diagnostic.}
+\label{tab:supp31}
+\small
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.18}
+\supplementarytablesection{a. Development-score gap across the same 30 banks}
+\begin{tabular}{lrrr}
+\toprule
+Rule & Banks above $\delta=0.01$ & Mean gap & Maximum gap \\
+\midrule
+Highest score & 0/30 & 0 & 0 \\
+Top-three medoid & 5/30 & 0.00435 & 0.02361 \\
+Unrestricted medoid & 14/30 & 0.01197 & 0.03869 \\
+Regret-constrained medoid & 0/30 & 0.00161 & 0.00978 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\supplementarytablesection{b. Compression and original repeated OOF AUROC}
+\begin{tabular}{lrrrrrr}
+\toprule
+Branch & Direct $k$ & Locked $k$ & Reduction & Direct AUROC & Locked AUROC & Difference \\
+\midrule
+SVM-L1 & 81.0 & 14.6 & 82.0\% & 0.8397 & 0.8265 & $-0.0132$ \\
+XGBoost & 100.0 & 20.0 & 80.0\% & 0.8314 & 0.8270 & $-0.0043$ \\
+Boruta-RF & 100.0 & 18.0 & 82.0\% & 0.8433 & 0.8277 & $-0.0156$ \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\supplementarytablesection{c. All-candidate evaluation and symmetric half-split selection diagnostic}
+\begin{tabular}{lrrrr}
+\toprule
+Branch & Candidate range & Selection half & Opposite half & Difference \\
+\midrule
+SVM-L1 & 0.0318 & 0.8506 & 0.8251 & 0.0256 \\
+XGBoost & 0.0319 & 0.8468 & 0.8219 & 0.0249 \\
+Boruta-RF & 0.0291 & 0.8504 & 0.8249 & 0.0256 \\
+All branches & 0.0309 & 0.8493 & 0.8239 & 0.0253 \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\parbox{0.98\linewidth}{\footnotesize
+\textit{Note.} a) Each rule uses the same five saved candidates and original development scores. The highest-score and regret-constrained bounds follow by construction; the observed exceedances characterize the alternative medoids. b) Feature counts average the ten outer conditions per branch; compression is measured relative to Direct and reflects the complete pipeline. Original participant-clustered, class-stratified 95\% paired CIs for locked-minus-Direct AUROC were $[-0.0242,-0.0031]$, $[-0.0144,0.0063]$, and $[-0.0249,-0.0062]$, respectively. c) Candidate range is the mean within-bank maximum-minus-minimum outer-test macro OvR AUROC. For each of 200 stratified half-splits per bank, the run selected on one half is scored on both halves, then the roles are swapped. Entries average both directions, splits, and banks equally. Selection halves contain approximately 49 participants. These are retrospective fixed-model diagnostics, not independent-cohort estimates, confidence intervals, or evidence of a unique medoid advantage. Original development-only selections were retained. Aggregate source data: \texttt{supplementary\_data/candidate\_outer\_audit/}.}
+\end{table}

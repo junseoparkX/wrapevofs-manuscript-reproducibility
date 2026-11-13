@@ -1,5 +1,8 @@
-cff-version: "v19"
-date-released: "2026-11-05"
+message: "Please cite the associated WrapEvoFS manuscript when using these materials."
+title: "WrapEvoFS enables auditable feature compression with regret-constrained representative locking"
+cff-version: 1.2.0
+version: "v20"
+date-released: "2026-11-12"
 authors:
   - family-names: "Park"
     given-names: "Junseo"

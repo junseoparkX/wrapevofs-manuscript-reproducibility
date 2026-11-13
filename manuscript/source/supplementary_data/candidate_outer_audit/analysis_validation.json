@@ -1,0 +1,22 @@
+{
+  "completed_utc": "2026-11-12T21:57:17.557700+00:00",
+  "protocol_sha256": "13cebe575c5c125f745960366626325fba13f5be454aad8813d36a8fa735afd0",
+  "candidate_rows": 150,
+  "banks": 30,
+  "split_diagnostic_rows": 6000,
+  "original_policy_rows": 120,
+  "independent_sklearn_weighted_AUC_checks": 600,
+  "maximum_weighted_AUC_error": 2.220446049250313e-16,
+  "all_original_policies_and_branches_retained": true,
+  "split_dispersion_is_not_inferential_CI": true,
+  "elapsed_seconds": 10.038740299991332,
+  "output_sha256": {
+    "all_candidate_outer_metrics.csv": "9133e46b024f16911920641a3a6d3b218dbd5b6ba4e9eb36fee410265713d5dd",
+    "bank_diagnostics.csv": "cc732dafab9ab84c0b7d13d2e47b481bfac802a133284e3ebdce642c6a21aa8c",
+    "independent_half_selection_diagnostics.csv": "5caa2868706ddec7fced28d01d5a8edfdfc22d54f2cf3f61de45a797bd922cc2",
+    "summary_by_branch.csv": "361439fe134c73d24398634b6d667cbba89f20d82b352218de75837f5d040d56",
+    "original_policy_geometry.csv": "ea1f15c79f5ab4bea1192f715184ef3c8c5989c22d6f2a56fcbed345611382d5",
+    "repeated_oof_AUROC.csv": "5faf140de58a6e8d334aecca9201515ab63119c1afb8922286403c347969e341",
+    "paired_original_policy_contrasts.csv": "a0e1b15ad90c43b07a74e4703e4371a9d02fd7f783dbe3e0efc3e67215349fd3"
+  }
+}

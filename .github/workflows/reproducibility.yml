@@ -26,12 +26,13 @@ jobs:
           cache: pip
 
       - name: Install validation dependencies
-        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt && python -m pip install wrapevofs==0.3.0
 
       - name: Run manuscript validators
         working-directory: manuscript/source
         run: |
           python scripts/validate_current_manuscript.py
+          python scripts/validate_tolerance_calibration.py --package
           python scripts/validate_repository_structure.py
           python scripts/validate_figure1_freeze.py
           python scripts/validate_final_qa_frozen_values.py

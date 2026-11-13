@@ -1,0 +1,81 @@
+{
+  "schema": "TCGA-all-five-candidates-retrospective-audit-v1",
+  "frozen_utc": "2026-11-12T21:49:10.397114+00:00",
+  "status": "Retrospective conditional diagnostic; parent outer outcomes were previously analyzed.",
+  "authorization": "User requested immediately running useful strengthening experiments on fenn; original selections remain fixed.",
+  "remote_directory": "/data2/junseo/wrapevofs/v19_candidate_outer_audit_20261112",
+  "remote_development_directory": "/data2/junseo/wrapevofs/v19_common_rf_seed_20261105/private_development",
+  "banks": 30,
+  "candidates": 150,
+  "participants": 491,
+  "branches": [
+    "svm_l1",
+    "xgboost",
+    "boruta_rf"
+  ],
+  "policies": [
+    "highest_locking_score",
+    "legacy_top3_medoid",
+    "unrestricted_medoid",
+    "regret_constrained_medoid"
+  ],
+  "RF_params": {
+    "n_estimators": 500,
+    "max_depth": 12,
+    "min_samples_leaf": 2,
+    "bootstrap": true,
+    "class_weight": "balanced"
+  },
+  "workers": 4,
+  "hard_timeout_seconds": 1800,
+  "final_seed": "Original common condition seed: 50000 + repeat*1000 + fold*100 + branch_index*10.",
+  "candidate_feature_order": "Original saved order, identical to original evaluated policy masks.",
+  "versions": {
+    "sklearn": "1.6.1",
+    "numpy": "2.0.2",
+    "joblib": "1.4.2"
+  },
+  "synthetic_probe_seed": 20261112,
+  "reproduction_gate": "Every existing candidate-based policy prediction must reproduce to absolute 1e-12 before interpreting new metrics.",
+  "fixed_bank_diagnostics": [
+    "All five outer-test AUROCs and within-bank spread",
+    "Original four policies: full OOF AUROC and development gap violations",
+    "Exact fixed-cardinality uniform-null Jaccard reference",
+    "Hindsight fold-winner apparent advantage, explicitly not an unbiased gain"
+  ],
+  "selection_optimism": {
+    "splits_per_bank": 200,
+    "seed": 20261112,
+    "split": "Per-class random approximately half/half, all participants retained; complementary halves used symmetrically.",
+    "selection": "Select max-AUROC run on half A; evaluate same run on A and B; repeat swapping A/B.",
+    "tie": "Higher original development score, fewer features, smaller stable mask hash.",
+    "estimand": "Mean across two directions of selection-half AUROC minus independent-evaluation-half AUROC, conditional on fixed bank/models/outer partition.",
+    "uncertainty": "Repeated-split dispersion is descriptive Monte Carlo variability, not a confidence interval or 6000 independent cohorts.",
+    "fixed_rule_comparison": "Report symmetric half-evaluation AUROC for all four fixed development-only policies."
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261112,
+    "unit": "Class-stratified participant clusters; preserve repeats and branches jointly.",
+    "scope": "Paired conditional OOF differences for all four original policies; nominal exploratory 95% percentile intervals."
+  },
+  "interpretation": [
+    "No new GA, Direct, RFECV, tolerance, seed, or selected-mask tuning.",
+    "AUC ratio is not a clinical retention measure; report absolute AUROC differences.",
+    "This experiment cannot establish equivalence, external validity, or biomarker stability."
+  ],
+  "data_boundary": "Train using existing server development arrays; only code/aggregate inventory uploaded. Predict and analyze outer data locally; no outer values, labels, IDs, or predictions uploaded.",
+  "input_sha256": {
+    "original_bank_inventory": "055ab286b662811a5bc35b0141253e491ba5dcfcfa8a4ee7aebda6a01aab0190",
+    "original_local_sources": "0292ccfe9fda74fa14c234e57a3270b6c24d9bed9f0b239f82ab5d78ff840a01",
+    "candidate_geometry": "25f08e3c712844754035e3ea34a98808ce2fbe45536e809d917f11b11cc5691e",
+    "candidate_inventory": "390aad329f3ccbe1cb83d2f8672f365b90c547281415ec19c934dcc5580321ff",
+    "local_sources": "366085452d542e82edd484ca1678ae94734278250b1d1ad5c55e57f4a6030ad1"
+  },
+  "code_sha256": {
+    "freeze_experiment.py": "6bcdeb75900bc23ece99ea111c3a300873005f40dc6aba011cdd11c866a6efea",
+    "train_candidates.py": "3a198813d2a9b0f9f4cd6cbba2d3aa1222087097cc58028eabc520741c7ab9a4",
+    "predict_candidates.py": "dc054cbfe2ccfee2729876915df433af84fc6d30c8f4645704736134e4b35556",
+    "analyze_candidates.py": "4666015af23066e75f4e0549349a6e1448c61b6b08027f54ccccfdc8fea3040c"
+  }
+}

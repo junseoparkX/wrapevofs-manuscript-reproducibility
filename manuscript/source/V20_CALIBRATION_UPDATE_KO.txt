@@ -1,0 +1,13 @@
+v20 직접 수정: 개발자료 기반 허용폭 보정 (2026-11-12)
+
+v21은 만들지 않았습니다. 기존 v20에서 초록, 서론, Results 2.3, Discussion, Methods, 보조자료 및 커버레터를 수정했습니다.
+
+[x] 고정0.01을 보편적 최적값으로 제시하지 않고 일반 score-constrained representative locking을 방법의 중심으로 정리했습니다.
+[x] 기존 nested TCGA/AMP-AD reference protocol과 수치·그림·원래 표·CSV를 보존했습니다. 새로운 calibration 결과로 바꾸어 부르지 않았습니다.
+[x] 전체240개 개발자료에서 delta를 선택한 기존 격자 방식과 새 점수 경계 전수탐색을 별도로 평가했습니다. 새 방식은 branch별0.009519/0.007563/0.008453을 선택했습니다.
+[x] 새 방식 AUROC0.8461, 기존 학습delta0.8474, 고정0.01은0.8463, 최고점0.8466을 함께 보고했습니다. 모든 primary AUROC 차이 구간이0을 포함하여 우월성을 주장하지 않았습니다.
+[x] 학습bank Jaccard 증가를 독립 seed 재현성 개선으로 부르지 않았습니다. 앞120/뒤120의 기존 seed 검증은 보조표에 별도로 보존했습니다.
+[x] Supplementary Methods S1.15, Table S32와 portable calibration script/aggregate CSV를 추가했습니다. 기존 package v0.2.0의 공개 기능을 소급 변경한 것처럼 쓰지 않았습니다.
+[x] 사용자가 제외한 generative AI 및 processed TCGA redistribution 관련 문구는 그대로 유지했습니다.
+
+새 경계 방식은 기존 결과 확인 후 설계된 탐색적 확장입니다. 현재 결과는 개발자료에서 허용폭을 선택할 수 있음을 보여주며 예측 우월성, 일반적 최적성 또는 미래 biomarker 재현성을 입증하지 않습니다.

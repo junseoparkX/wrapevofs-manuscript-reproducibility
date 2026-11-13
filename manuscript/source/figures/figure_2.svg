@@ -2179,7 +2179,7 @@ z
 " style="fill: #ffffff; stroke: #7b8794; stroke-linejoin: miter"/>
     </g>
     <g id="text_132">
-     <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="406.837395" y="300.892035" transform="rotate(-0 406.837395 300.892035)">Legacy top-three</text>
+     <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="406.837395" y="300.892035" transform="rotate(-0 406.837395 300.892035)">Top-three medoid</text>
     </g>
     <g id="patch_127">
      <path d="M 396.117395 310.529959 

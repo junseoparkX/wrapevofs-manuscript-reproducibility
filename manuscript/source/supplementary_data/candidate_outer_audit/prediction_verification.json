@@ -1,0 +1,856 @@
+{
+  "completed_utc": "2026-11-12T21:56:47.041381+00:00",
+  "protocol_sha256": "13cebe575c5c125f745960366626325fba13f5be454aad8813d36a8fa735afd0",
+  "participants": 491,
+  "candidate_model_fits": 150,
+  "original_policy_checks": 120,
+  "reference_amendment_sha256": "e5f360ae12e9cf94ac597fad8c7300f9e96bb742c8713c6b2ccd6ae59a2b1e07",
+  "maximum_original_probability_difference": 3.3306690738754696e-16,
+  "all_synthetic_probes_exact": true,
+  "OOF_coverage_exactly_once_per_repeat": true,
+  "outer_data_uploaded": false,
+  "payload_sha256": "63cb2df22338d96b6298086fc4832e6cd1ec3e4293752723db66e77922abdb7c",
+  "elapsed_seconds": 47.1602983000048,
+  "checks": [
+    {
+      "bank_id": "TCGA__1__1__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__1__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__1__2__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__2__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__3__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 1.6653345369377348e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.6653345369377348e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__4__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__1__5__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__1__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.6653345369377348e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__1__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 99
+    },
+    {
+      "bank_id": "TCGA__2__2__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.6653345369377348e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__2__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 1.6653345369377348e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__3__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 1,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 1,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__4__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__boruta_rf",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__boruta_rf",
+      "policy": "legacy_top3_medoid",
+      "run_id": 4,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__boruta_rf",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__boruta_rf",
+      "policy": "regret_constrained_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__svm_l1",
+      "policy": "highest_locking_score",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__svm_l1",
+      "policy": "legacy_top3_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 1.1102230246251565e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__svm_l1",
+      "policy": "unrestricted_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__svm_l1",
+      "policy": "regret_constrained_medoid",
+      "run_id": 3,
+      "maximum_original_probability_difference": 3.3306690738754696e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__xgboost",
+      "policy": "highest_locking_score",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__xgboost",
+      "policy": "legacy_top3_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__xgboost",
+      "policy": "unrestricted_medoid",
+      "run_id": 0,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    },
+    {
+      "bank_id": "TCGA__2__5__xgboost",
+      "policy": "regret_constrained_medoid",
+      "run_id": 2,
+      "maximum_original_probability_difference": 2.220446049250313e-16,
+      "outer_rows": 98
+    }
+  ]
+}

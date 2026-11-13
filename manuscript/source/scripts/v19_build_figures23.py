@@ -215,7 +215,7 @@ def figure2() -> dict:
     d.set_xticks([0, 1], ["Original banks", "Updated banks"])
     d.tick_params(axis="x", length=0, labelsize=6.7, pad=4)
     d.set_yticks([0, .01, .02], ["0", "0.01", "0.02"])
-    d.legend(handles=[Patch(facecolor="white", edgecolor=COLORS["xgboost"], label="Legacy top-three"),
+    d.legend(handles=[Patch(facecolor="white", edgecolor=COLORS["xgboost"], label="Top-three medoid"),
                       Patch(facecolor=COLORS["xgboost"], edgecolor=COLORS["xgboost"], label="Regret-constrained")],
              loc="upper right", fontsize=6.7, handlelength=1.1, handletextpad=.5)
     fig.legend(handles=branch_handles(), loc="lower center", bbox_to_anchor=(.51, .012),

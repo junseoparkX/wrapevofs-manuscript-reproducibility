@@ -194,22 +194,22 @@ L 191.551181 120.566929
     <g id="xtick_2">
      <g id="line2d_2"/>
      <g id="text_2">
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(128.666451 146.912274)">Legacy</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(126.139068 153.986864)">top-three</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(125.056839 146.912274)">Top-three</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(128.487747 153.986864)">medoid</text>
      </g>
     </g>
     <g id="xtick_3">
      <g id="line2d_3"/>
      <g id="text_3">
       <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(160.717052 146.912274)">Full-bank</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(163.424201 153.986737)">medoid</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(163.434235 153.986737)">medoid</text>
      </g>
     </g>
     <g id="xtick_4">
      <g id="line2d_4"/>
      <g id="text_4">
       <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(199.265623 146.912274)">Regret</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(198.361208 153.986864)">medoid</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(198.371246 153.986864)">medoid</text>
      </g>
     </g>
    </g>
@@ -426,22 +426,22 @@ L 432.496063 120.566929
     <g id="xtick_6">
      <g id="line2d_13"/>
      <g id="text_13">
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(369.611332 146.912274)">Legacy</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(367.08395 153.986864)">top-three</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(366.001709 146.912274)">Top-three</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(369.432617 153.986864)">medoid</text>
      </g>
     </g>
     <g id="xtick_7">
      <g id="line2d_14"/>
      <g id="text_14">
       <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(401.661934 146.912274)">Full-bank</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(404.369082 153.986737)">medoid</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(404.379120 153.986737)">medoid</text>
      </g>
     </g>
     <g id="xtick_8">
      <g id="line2d_15"/>
      <g id="text_15">
       <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(440.210504 146.912274)">Regret</text>
-      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(439.30609 153.986864)">medoid</text>
+      <text style="font-size: 6.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif" transform="translate(439.316132 153.986864)">medoid</text>
      </g>
     </g>
    </g>
@@ -3341,7 +3341,7 @@ z
     </g>
    </g>
    <g id="text_62">
-    <text style="font-size: 6.3px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="336.972963" y="394.386848" transform="rotate(-0 336.972963 394.386848)">Legacy top-three</text>
+    <text style="font-size: 6.3px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="336.972963" y="394.386848" transform="rotate(-0 336.972963 394.386848)">Top-three medoid</text>
    </g>
    <g id="line2d_55">
     <defs>

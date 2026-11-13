@@ -1,0 +1,25 @@
+{
+  "pypi_files": [
+    {
+      "sha256": "63620119a61ff34d68626f8f1321187d92946c089102d1a38a94e8902ea54883",
+      "filename": "wrapevofs-0.3.0-py3-none-any.whl"
+    },
+    {
+      "sha256": "6c9406d0fcdebba102330a4457af70eb062231391d0177ea0d0e2c11718ab689",
+      "filename": "wrapevofs-0.3.0.tar.gz"
+    }
+  ],
+  "github_assets": [
+    "SHA256SUMS.txt",
+    "wrapevofs-0.3.0-py3-none-any.whl",
+    "wrapevofs-0.3.0.tar.gz"
+  ],
+  "pypi_version": "0.3.0",
+  "github_release_url": "https://github.com/junseoparkX/wrapevofs-package/releases/tag/v0.3.0",
+  "github_tag": "v0.3.0",
+  "verified_utc": "2026-11-13T04:48:26.290191+00:00",
+  "reference_analysis_software": "0.2.0",
+  "calibration_API_software": "0.3.0",
+  "package_commit": "40de63e4e0c49f6180e7ca004008b5ecbaf024fa",
+  "public_PyPI_digests_match_tested_artifacts": true
+}
