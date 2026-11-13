@@ -1,36 +1,18 @@
-# Nature Communications submission alignment
+# Nature Communications submission alignment: v20
 
-## Current manuscript status
+Prepared 12 November 2026. The preserved v19 is unchanged.
 
-- The title contains nine words under the configured hyphenated-word counting rule.
-- The Abstract is 130 whitespace-delimited words after the GA/RFECV clarification.
-- Introduction, Results, and Discussion together are below the journal's suggested 5,000-word main-text limit. Abstract, Methods, References, and figure legends are excluded from that count.
-- The main Methods contain approximately 3,060 words and three numbered equation groups; full executable detail remains in the Supplementary Methods.
-- The main article contains five figures and two tables, within the ten-display-item guideline.
-- The initial-submission PDFs are each below 30 MB and may retain inline figures and tables under the journal's format-flexible first-submission policy.
-- Current v19 (5 November 2026): main PDF 19 pages; Supplementary PDF 55 pages, 29 Supplementary Figures and 30 Supplementary Tables. The cover letter, reporting-summary date and interactive Machine Learning Checklist date are updated to 5 November 2026.
-- Introduction, Results and Discussion remain approximately 3,100 words, excluding Methods and figure legends. The GA/RFECV update adds only 17 whitespace-delimited body tokens and shortens the abstract by 20.
-- Main figure legends contain 218, 248, 266, 169 and 173 source-counted words, below the 350-word figure-legend guidance.
-- The earlier four-item method clarification is retained. The latest update explains GA/RFECV roles and connects existing S17 size-control evidence; see documentation/validation/V19_GA_RFECV_CLARIFICATION_20261105.md. Figures, Methods and numerical source data are unchanged.
+- Abstract: 121 whitespace-delimited source words; calibration study omitted.
+- Introduction--Discussion: TeXcount 3,485 excluding figure blocks and table inputs.
+- Methods: TeXcount 2,766 including subsection headings and math (previous same-rule count 3,677). Detailed calibration, cohort and ethics descriptions are preserved in Supplementary Methods S1.15--S1.18.
+- Main PDF: 19 physical pages, five figures and two tables.
+- Supplement: 63 physical pages, 29 numbered figures and 33 numbered tables.
+- Cover letter: one page; calibration study narrative removed, concrete compression/decision results retained.
+- Table S33 restores the original protocol-defined four-bank R=5/10/20 analysis of the same 240 runs later regrouped for exploratory calibration. All branches, both scorers, and all 108 pairs are public.
+- Calibration is a short exploratory follow-up in Results and Discussion; S1.15 and S32 contain complete definitions, original intervals and a single detailed chronology disclosure.
+- Reporting Summary, Code and Software Checklist, and Reviewer Code Access Checklist distinguish reference v0.2.0 from opt-in calibration API v0.3.0 and identify S32/S33.
+- Fig. 5 uses corrected-objective terminology. All 24 conditions and every numerical label are retained; strict panel-alignment, text-size and collision checks passed.
+- Boruta-RF target metadata was corrected from 18 to the executed protocol value of 8; the original CSV and explicit correction record are retained. No mask, score, prediction, selected tolerance, or confidence interval changed.
+- The two user-excluded disclosure/data-access sections were not edited.
 
-## Scientific scope retained
-
-- The formal guarantee is empirical regret feasibility within a finite supplied candidate bank.
-- It does not establish predictive superiority, unbiased generalization, external validity, biomarker stability, clinical utility, or globally optimal feature selection.
-- The fully nested analysis evaluates the complete pipeline internally. The new matched-selector extension is conditional on post-Direct universes and is not a standalone external benchmark or clinical validation.
-
-## Submission materials
-
-The submission directory contains a display-indexed Source Data workbook, the Bio and Life Sciences Reporting Summary, the Machine Learning Checklist, the Code and Software Submission Checklist, and a Nature Communications cover letter. The manuscript identifies the public software release, Python package, and public reproducibility repository in its Code availability statement.
-
-## Revision-stage production note
-
-The current split-source LaTeX package is suitable for initial PDF submission. If the journal requests a source-formatted revision, flatten textual sources as required, paste the bibliography output into the main TeX file, remove BibTeX commands, and provide individual figure files and end-positioned legends and tables.
-
-## Guidance checked on 5 November 2026
-
-- https://www.nature.com/ncomms/submit/how-to-submit (initial-submission PDF and figure-legend guidance).
-- https://www.nature.com/ncomms/editorial-policies/reporting-standards (reporting and code availability).
-- https://www.nature.com/ncomms/submit/resources (journal forms).
-
-The locally typeset Bio and Life Sciences summary and code checklist contain prepared responses. They are not represented as publisher-issued PDF templates; transfer the responses to any specific form requested by the submission portal. The Machine Learning Checklist is the interactive Nature Portfolio form. Portal declarations, author approval and any source-provider publication review remain author responsibilities.
+Validation and visual review: `documentation/V20_REVIEW_CORRECTIONS_VALIDATION.json`. The main and Supplementary sources remain independently buildable with LuaLaTeX and latexmk.

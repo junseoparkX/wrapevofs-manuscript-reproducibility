@@ -182,7 +182,7 @@ def figure2() -> dict:
     for ax, letter in [(top[0], "a"), (middle[0], "b"), (c, "c"), (d, "d")]:
         panel(ax, letter, x=-29, y=10)
     fig.legend(handles=[Patch(facecolor="white", edgecolor=INK, linewidth=.7, label="Original"),
-                        Patch(facecolor=INK, edgecolor=INK, label="Updated")],
+                        Patch(facecolor=INK, edgecolor=INK, label="Corrected objective")],
                loc="center left", bbox_to_anchor=(.14, .378), ncol=2,
                handlelength=1.2, handletextpad=.5, columnspacing=1.5)
     fig.text(.69, .378, "R: reference cap   S: small cap", ha="center", va="center", fontsize=6.7)
@@ -193,7 +193,7 @@ def figure2() -> dict:
                   edgecolors="white", linewidths=.5, zorder=4)
     c.axhline(.01, color=INK, linestyle=(0, (4, 3)), linewidth=.7)
     c.axvline(0, color=NEUTRAL, linestyle=(0, (2, 2)), linewidth=.6)
-    c.set(xlabel="Updated − original locking score", ylabel="Selected score gap",
+    c.set(xlabel="Corrected − original locking score", ylabel="Selected score gap",
           xlim=(-.016, .026), ylim=(-.0005, .0125))
     c.set_xticks([-.01, 0, .01, .02])
     c.set_yticks([0, .005, .01], ["0", "0.005", "0.010"])
@@ -212,7 +212,7 @@ def figure2() -> dict:
     d.axhline(.01, color=INK, linestyle=(0, (4, 3)), linewidth=.7, zorder=2)
     d.text(1.48, .0108, "δ = 0.01", ha="right", va="bottom", fontsize=6.7)
     d.set(xlim=(-.5, 1.5), ylim=(0, .029), ylabel="Maximum selected score gap")
-    d.set_xticks([0, 1], ["Original banks", "Updated banks"])
+    d.set_xticks([0, 1], ["Original banks", "Corrected banks"])
     d.tick_params(axis="x", length=0, labelsize=6.7, pad=4)
     d.set_yticks([0, .01, .02], ["0", "0.01", "0.02"])
     d.legend(handles=[Patch(facecolor="white", edgecolor=COLORS["xgboost"], label="Top-three medoid"),

@@ -6,11 +6,11 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-11-05T14:11:00.127214</dc:date>
+    <dc:date>2026-11-12T22:46:00.742573</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
-      <dc:title>Matplotlib v3.11.0, https://matplotlib.org/</dc:title>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
      </cc:Agent>
     </dc:creator>
    </cc:Work>
@@ -1845,7 +1845,7 @@ L 0 2.8
      </g>
     </g>
     <g id="text_117">
-     <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="137.338583" y="408.97521" transform="rotate(-0 137.338583 408.97521)">Updated − original locking score</text>
+     <text style="font-size: 7.5px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="137.338583" y="408.97521" transform="rotate(-0 137.338583 408.97521)">Corrected − original locking score</text>
     </g>
    </g>
    <g id="matplotlib.axis_14">
@@ -2077,7 +2077,7 @@ z
     <g id="xtick_54">
      <g id="line2d_120"/>
      <g id="text_125">
-      <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="426.472441" y="395.523452" transform="rotate(-0 426.472441 395.523452)">Updated banks</text>
+      <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: middle" x="426.472441" y="395.523452" transform="rotate(-0 426.472441 395.523452)">Corrected banks</text>
      </g>
     </g>
    </g>
@@ -2182,15 +2182,15 @@ z
      <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="406.837395" y="300.892035" transform="rotate(-0 406.837395 300.892035)">Top-three medoid</text>
     </g>
     <g id="patch_127">
-     <path d="M 396.117395 310.529959 
-L 403.487395 310.529959 
-L 403.487395 305.839959 
-L 396.117395 305.839959 
+     <path d="M 396.117395 310.529828 
+L 403.487395 310.529828 
+L 403.487395 305.839828 
+L 396.117395 305.839828 
 z
 " style="fill: #7b8794; stroke: #7b8794; stroke-linejoin: miter"/>
     </g>
     <g id="text_133">
-     <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="406.837395" y="310.529959" transform="rotate(-0 406.837395 310.529959)">Regret-constrained</text>
+     <text style="font-size: 6.7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="406.837395" y="310.529828" transform="rotate(-0 406.837395 310.529828)">Regret-constrained</text>
     </g>
    </g>
   </g>
@@ -2218,7 +2218,7 @@ z
 " style="stroke: #000000; stroke-linejoin: miter"/>
    </g>
    <g id="text_136">
-    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="132.183942" y="275.101626" transform="rotate(-0 132.183942 275.101626)">Updated</text>
+    <text style="font-size: 7px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif; text-anchor: start" x="132.183942" y="275.101626" transform="rotate(-0 132.183942 275.101626)">Corrected objective</text>
    </g>
   </g>
   <g id="legend_3">

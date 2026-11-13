@@ -14,16 +14,17 @@ The maintained Python implementation is available from the
 [GitHub Release v0.3.0](https://github.com/junseoparkX/wrapevofs-package/releases/tag/v0.3.0),
 and [PyPI](https://pypi.org/project/wrapevofs/0.3.0/).
 
-Current manuscript: **v20, 12 November 2026**. The main calibration example now uses the earlier seven-point development-only grid rule; exact breakpoint enumeration is retained as a supplementary sensitivity. The grid rule gave mean signature-level held-out AUROC 0.8474, compared with 0.8463 for fixed 0.01 and 0.8466 for highest-score selection. The original paired intervals include zero. This is an exploratory, post hoc presentation hierarchy, not a prespecified confirmatory analysis or a demonstration of predictive superiority. All fitted allowances, rules, predictions, original comparison families and intervals are preserved.
+Current manuscript: **v20, 12 November 2026**. The article foregrounds compact, auditable signature selection and its predictive trade-offs. The original protocol-defined comparison of independent seed banks is now reported in full (Table S33): it did not demonstrate improved agreement over highest-score selection. Exploratory tolerance calibration of the same 240 runs is a short follow-up in the article, with complete methods, unchanged AUROC contrasts, and breakpoint sensitivity in S1.15 and S32. Learned grid tolerances were 0.0075--0.01, near the fixed reference of 0.01, at a cost of 80 GA searches per branch. No predictive or reproducibility superiority is established.
 
-The updated main and supplementary PDFs have been rebuilt and visually checked. Supplementary Methods S1.15 and Table S32 document calibration; the original nested benchmark, numerical tables, and source data remain preserved.
+The main and Supplementary PDFs and reporting forms have been rebuilt and visually checked. The correction preserves all feature masks, scores, predictions and confidence intervals; one descriptive target-count export is explicitly corrected with its original retained.
 
 ## Submission files
 
-- [Main article](manuscript/source/main.pdf): 21 pages, five main figures, and two main tables.
-- [Supplementary Information](manuscript/source/supplementary_information.pdf): 60 pages, Supplementary Figures S1--S29, and Supplementary Tables S1--S32.
-- [Source Data](manuscript/source/documentation/submission/WrapEvoFS_Source_Data.xlsx): display-indexed reference source data; the new Table S32 data are supplied separately in the calibration CSVs.
+- [Main article](manuscript/source/main.pdf): 19 pages, five main figures, and two main tables.
+- [Supplementary Information](manuscript/source/supplementary_information.pdf): 63 pages, Supplementary Figures S1--S29, and Supplementary Tables S1--S33.
+- [Source Data](manuscript/source/documentation/submission/WrapEvoFS_Source_Data.xlsx): display-indexed reference source data; new S32 and S33 observations are supplied in their separate CSV folders.
 - [Calibration inputs, results, and portable script](manuscript/source/supplementary_data/tolerance_calibration/): candidate masks/development scores and all-policy results without participant records.
+- [Protocol-defined seed-bank comparison](manuscript/source/supplementary_data/seed_bank_reproducibility/): frozen protocol/code, all 108 pairs, both scorers, and independent reconstruction for S33.
 - [LaTeX source](manuscript/source/): independently compilable main and Supplementary entry points.
 - [Current version manifest](manuscript/source/CURRENT_MANUSCRIPT.json): frozen source/artwork hashes and version-specific page/display counts.
 - [Display map](manuscript/source/documentation/DISPLAY_MAP.md) and [figure-source manifest](manuscript/source/documentation/FIGURE_SOURCE_DATA_MANIFEST.csv): claim-to-display and display-to-source mappings.

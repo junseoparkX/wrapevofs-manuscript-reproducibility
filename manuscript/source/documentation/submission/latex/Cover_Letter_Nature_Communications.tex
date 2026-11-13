@@ -1,0 +1,52 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6.2pt}
+\pagestyle{empty}
+\hypersetup{
+  pdftitle={Cover letter to Nature Communications},
+  pdfauthor={Huan Zhong}
+}
+
+\begin{document}
+{\sffamily\bfseries\Large Nature Communications}\par
+\vspace{2pt}\hrule height 0.7pt\vspace{15pt}
+\begin{flushright}12 November 2026\end{flushright}
+Editors\\
+\textit{Nature Communications}
+
+\textbf{Re: WrapEvoFS enables auditable feature compression with regret-constrained representative locking}
+
+Dear Editors,
+
+We submit the Article entitled ``WrapEvoFS enables auditable feature compression with regret-constrained representative locking'' for consideration in \textit{Nature Communications}.
+
+Repeated stochastic searches can produce different near-scoring feature signatures, yet one must often be retained for a model or follow-up analysis. WrapEvoFS makes that decision explicit: it restricts candidates to an explicit empirical development-score tolerance, selects the feature-overlap medoid within that pool, and records the chosen signature before held-out evaluation.
+
+In a fully nested four-class TCGA analysis of 491 participants, the workflow reduced screened feature counts by 80--82\%, retaining means of 15--20 features with macro AUROC estimates of 0.827--0.828. Absolute AUROC costs relative to Direct screening were 0.004--0.016. Under the fixed reference protocol, the rule changed 11 of 30 highest-score selections and increased eligible-pool overlap. Top-three and unrestricted medoids exceeded that score gap in 5 and 14 banks, respectively. Native and size-matched selector controls quantify the performance--compression trade-offs across branches.
+
+A retrospective evaluation of all 150 saved candidates further illustrates why the reporting rule should precede outcome inspection. Across repeated half-splits of the outer-test data, selecting the best run on one half gave an average selection-minus-opposite-half AUROC difference of 0.0253. This conditional diagnostic complements a one-time evaluation of 24 frozen signatures across four held-out AMP-AD centers and controlled simulations identifying when informative overlap can help resolve noisy score rankings.
+
+WrapEvoFS is available under the BSD 3-Clause License with tagged releases and PyPI distributions. Reference analyses retain v0.2.0, while v0.3.0 adds the opt-in calibration API. Source, analysis code, aggregate source data, checksums, and provenance records are available from the \href{https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility}{manuscript reproducibility repository}. Participant-level access routes and restrictions are stated in the manuscript.
+
+The manuscript is original, is not under consideration elsewhere, and has not been discussed previously with a \textit{Nature Communications} editor. Authorship, contributions, funding, and competing-interest declarations are provided in the manuscript. Reviewer suggestions and exclusions will be entered in the submission system.
+
+The submission includes five main figures and two main tables, with 29 Supplementary Figures and 33 Supplementary Tables.
+
+Thank you for considering our work.
+
+Sincerely,\\[3pt]
+\textbf{Huan Zhong}\\
+Michael Smith Laboratories\\
+Department of Biochemistry and Molecular Biology\\
+University of British Columbia\\
+Vancouver, BC, Canada\\
+\href{mailto:huan.zhong@ubc.ca}{huan.zhong@ubc.ca}
+\end{document}

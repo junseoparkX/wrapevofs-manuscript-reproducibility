@@ -1,0 +1,14 @@
+v20 리뷰 반영 점검 — 2026-11-12
+
+[x] 누락된 protocol-defined seed-bank 주 분석 복원: Results 2.3, Methods S1.16, Table S33. R=5/10/20의 primary Jaccard 차이 -0.008654/-0.010513/-0.018120, 두 규칙 exact agreement 모두0. 18조건/108쌍/72선택/두scorer 전수 공개 및 독립 재구성 일치.
+[x] calibration 비중 축소: 초록·Introduction의 홍보 문장과 커버레터 실험 문단 삭제. Results3문장, Discussion2문장으로 축소. 학습delta0.0075–0.01이 고정0.01 근처라는 점과 branch당80GA 비용 명시. 전체240학습Jaccard를 독립 재현성으로 표현하지 않음. 원래8/12개 대비군 구간은 S32에 보존.
+[x] chronology 고지 집중: S1.15에 한 번 상세 설명하고 본문·S32 중복 문구 삭제. local protocol freeze를 외부 preregistration이라고 부르지 않음.
+[x] 용어 정리: regret-constrained 제목/초록 통일, delta는 development-score tolerance. score gap은 관측량으로 구별. earlier grid rule 작업이력 명칭 삭제.
+[x] Reporting Summary/Code and Software Checklist/Reviewer Code Access Checklist 갱신: v0.2.0 reference 대 v0.3.0 opt-in calibration API, S32/S33 연결.
+[x] one-SE 발상의 출처(Hastie, Tibshirani & Friedman, 2009, 2nd ed.) 인용. overlap을 선택하는 휴리스틱이며 고전적 parsimony rule과 같거나 성능보장이라는 주장 없음.
+[x] Fig.5 Updated 범례를 Corrected objective/Corrected banks로 통일. 24개 조건, 숫자 전수, 원자료 불변. Python native rebuild 및 alignment/font/collision 검증.
+[x] Methods3,677→2,766단어(동일 TeXcount, 수식·소제목 포함). 상세 cohort/ethics 내용을 SI S1.17/S1.18에 보존. 본문19쪽, SI63쪽(S32두쪽,S33한쪽), cover1쪽.
+[x] 추가 검산에서 찾은 Boruta-RF target_k metadata18→8 정정. 동결 protocol·실행 코드값이며 선택 입력이 아님. 원본 CSV와 정정 기록 보존, 모든 mask/score/결과/interval 불변.
+[x] 사용자가 제외한 두 본문 절은 그대로 보존. v21 생성 없음. 새 GA/모델학습/participant arrays 접근 없음.
+
+해석: 0.8474는 탐색적 비교의 점추정치이며 우월성 증거가 아니다. 원래 독립 seed-bank 결과는 medoid의 재현성 향상을 보여주지 않는다. 이 수정은 결과를 강하게 바꾸는 작업이 아니라 누락과 과도한 비중을 바로잡아, 압축·추적가능한 결정 규칙이라는 논문의 기여를 정확하게 드러내는 작업이다.

@@ -33,6 +33,7 @@ jobs:
         run: |
           python scripts/validate_current_manuscript.py
           python scripts/validate_tolerance_calibration.py --package
+          python supplementary_data/seed_bank_reproducibility/verify_registered_seed_banks.py --output "${RUNNER_TEMP}/seed-bank-verification"
           python scripts/validate_repository_structure.py
           python scripts/validate_figure1_freeze.py
           python scripts/validate_final_qa_frozen_values.py

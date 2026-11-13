@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "revision": "v20 review corrections, 12 November 2026",
+  "primary_seed_analysis_restored": true,
+  "seed_bank_pairs_verified": 108,
+  "selected_masks_verified": 72,
+  "primary_equal_branch_Jaccard_differences": [
+    -0.008653928210379825,
+    -0.010513153332942587,
+    -0.01811957424702523
+  ],
+  "all_exact_agreements_zero": true,
+  "calibration_scope": "Exploratory follow-up of same 240 runs; no superiority or optimality established",
+  "calibration_removed_from_abstract_and_cover_study_narrative": true,
+  "original_CSVs_byte_preserved": 137,
+  "only_original_CSV_change": "80 descriptive target_k metadata cells, original preserved",
+  "all_masks_scores_predictions_intervals_unchanged": true,
+  "S32_numeric_table_cells_unchanged": true,
+  "source_workbook_unchanged": true,
+  "excluded_text_sections_unchanged": true,
+  "original_other_vector_figure_assets_unchanged": 43,
+  "figure5_numeric_labels_and_all_conditions_unchanged": true,
+  "latex_errors_undefined_references_overfull_boxes": 0,
+  "PDF_pages": {
+    "main": 19,
+    "supplement": 63,
+    "cover": 1,
+    "reporting_summary": 2,
+    "code_checklist": 1
+  },
+  "rendered_for_visual_review": {
+    "main": [
+      1,
+      2,
+      7,
+      8,
+      12,
+      14,
+      16,
+      17
+    ],
+    "supplement": [
+      12,
+      60,
+      61,
+      62
+    ],
+    "cover": [
+      1
+    ],
+    "reporting_summary": [
+      1,
+      2
+    ],
+    "code_checklist": [
+      1
+    ]
+  },
+  "abstract_words": 121,
+  "Methods_TeXcount_including_headings_and_math": 2766,
+  "previous_Methods_same_TeXcount": 3677,
+  "Introduction_Discussion_TeXcount_excluding_figures_and_tables": 3485,
+  "new_GA_or_model_fits": 0,
+  "new_participant_arrays_or_predictions_read": false,
+  "verified_utc": "2026-11-13T06:04:43.381137+00:00",
+  "visual_review": "PASS: all main pages in contact sheet; detailed abstract/results/discussion/methods, S1.15/S1.16, S32 both pages, S33, cover, Reporting Summary both pages, Code Checklist and final native Fig5 inspected.",
+  "public_main_and_supplementary_fresh_build": "PASS; extracted page text exactly matches local PDFs",
+  "PDF_layout": "PASS; no blank pages or out-of-bounds text; S1-S29 figures and S1-S33 tables present",
+  "public_validators_passed": [
+    "validate_current_manuscript",
+    "validate_repository_structure",
+    "validate_figure1_freeze",
+    "validate_final_qa_frozen_values",
+    "validate_main_panel_labels",
+    "validate_cgga_figure5_provenance",
+    "validate_radiomics_integration",
+    "validate_locking_simulation_integration"
+  ],
+  "calibration_choices_and_masks_reproduced": 12,
+  "package_v030_API_choices_and_masks_reproduced": 12,
+  "original_grid_contrasts_verified": 8,
+  "original_breakpoint_contrasts_verified": 12,
+  "figure5_alignment_text_size_and_collision": "PASS; measured Matplotlib alignment; minimum glyph6.7pt; 0collision FAIL/0WARN",
+  "package_or_PyPI_changes_required": false,
+  "files_sha256": {
+    "main.pdf": "e3dc34cae6ab1f4ff6b98faf50bca0a60ec495b52ba95737e3a18adf909e0656",
+    "supplementary_information.pdf": "73997eddd9e71816bc88a854e05f11d3dcfc7d09d5bbe743b917be9fc33496b5",
+    "Cover_Letter_Nature_Communications.pdf": "751e32c9714edb27e17b8dcfe9165327ea1876a27c2337abe8b42b4087d5cfe0",
+    "sections/main_text.tex": "485096febba8913633d6d9d1bb174a376a968845b21e8504fdb02630dee52872",
+    "sections/supplementary.tex": "a382b2878053c892282e38f03b12fdd2fa8196bb2816f10696c121cbb39c0af7",
+    "tables/table_v20_seed_bank_reproducibility.tex": "19640d58c5a41898e57566b0ee94d3efe6552baf3cd7335296a210cebefd301c"
+  }
+}

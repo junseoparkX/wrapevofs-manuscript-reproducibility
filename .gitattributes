@@ -18,3 +18,6 @@ manuscript/source/tables/table_v19_cv_score_sensitivity.tex -text
 # Preserve new calibration and fixed-bank audit protocol checksums byte for byte.
 manuscript/source/supplementary_data/tolerance_calibration/** -text
 manuscript/source/supplementary_data/candidate_outer_audit/** -text
+
+# Preserve the original seed-bank protocol, code and result hashes.
+manuscript/source/supplementary_data/seed_bank_reproducibility/** -text

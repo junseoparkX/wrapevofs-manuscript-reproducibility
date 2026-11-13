@@ -1,0 +1,66 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.72in,top=0.66in,bottom=0.68in]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\definecolor{RuleGray}{HTML}{A8B0B8}
+\definecolor{BandGray}{HTML}{EEF1F3}
+\definecolor{TextGray}{HTML}{28323C}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{5.5pt}
+\renewcommand{\arraystretch}{1.12}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\sffamily\footnotesize\thepage}
+\hypersetup{
+  pdftitle={Code and Software Submission Checklist for WrapEvoFS},
+  pdfauthor={Junseo Park and colleagues}
+}
+\newcommand{\topic}[1]{\sffamily\bfseries\color{TextGray}#1}
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.235\textwidth}}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{0.705\textwidth}}
+
+\begin{document}
+
+{\sffamily\bfseries\LARGE Code and Software Submission Checklist}\par
+\vspace{4pt}
+{\large WrapEvoFS enables auditable feature compression with regret-constrained representative locking}\par
+\vspace{7pt}
+\begin{tabular}{@{}ll@{}}
+\sffamily\bfseries Corresponding author: & Huan Zhong\\
+\sffamily\bfseries Software release: & v0.2.0 reference; v0.3.0 calibration API
+\end{tabular}
+\vspace{8pt}
+
+\begin{tabular}{@{}LR@{}}
+\toprule
+\sffamily\bfseries Item & \sffamily\bfseries Availability and documentation\\
+\midrule
+\rowcolor{BandGray}\multicolumn{2}{l}{\sffamily\bfseries\color{TextGray}Software access and execution}\\
+\topic{Source code} & Installable package and tagged release: \url{https://github.com/junseoparkX/wrapevofs-package}. Manuscript analysis code and aggregate source data: \url{https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility}.\\
+\topic{Version and license} & Reference v0.2.0 and the opt-in calibration extension v0.3.0 are distributed under the OSI-approved BSD 3-Clause License and is available from GitHub and PyPI.\\
+\topic{Installation} & Install from PyPI with \texttt{pip install wrapevofs==0.3.0}. Use v0.2.0 for its frozen reference environment. Source and development installation are documented in the README.\\
+\topic{System requirements} & Python 3.10--3.12, dependencies, optional selector extras, and CPU execution are documented in the README and package metadata.\\
+\topic{Tested versions} & Continuous integration tests Python 3.10, 3.11, and 3.12. The v0.3.0 release passed 157 tests, distribution checks, clean-wheel installation, and API/CLI smoke checks.\\
+\topic{Non-standard hardware} & Not required for installation, API or CLI use, property tests, or reviewer examples. Hardware used for archived analyses is documented in the computational audit.\\
+\midrule
+\rowcolor{BandGray}\multicolumn{2}{l}{\sffamily\bfseries\color{TextGray}Examples and reproduction}\\
+\topic{Demonstration data} & Synthetic regret-locking and tolerance-calibration examples require no restricted data.\\
+\topic{Usage instructions} & The README documents the Python API, command-line interface, configuration files, checkpoint and resume operation, deterministic locking, and artifact validation.\\
+\topic{Expected outputs} & Example audit artifacts, schemas, and integrity checks are documented with the reviewer examples.\\
+\topic{Reproduction instructions} & \texttt{REPRODUCIBILITY.md}, manuscript-source documentation, the figure-source manifest, Source Data workbook, and analysis provenance records describe the reproducible boundary. Table S32 has a portable calibration script; Table S33 has an independent verifier covering every protocol-defined bank pair.\\
+\midrule
+\rowcolor{BandGray}\multicolumn{2}{l}{\sffamily\bfseries\color{TextGray}Scientific and data boundaries}\\
+\topic{Functionality} & Main Methods define the objective, candidate rescoring, regret-constrained eligible pool, Jaccard medoid, deterministic tie-breaking, and evaluation boundaries. Supplementary Algorithm 1, propositions, complexity analysis, and the implementation correspondence provide technical detail. The v0.3.0 calibration API is opt-in; the reference locking settings are unchanged.\\
+\topic{Restricted data} & No participant-level ADNI, AMP-AD, CGGA, provider-organized TCGA workbook, or VGH DICOM-derived records are distributed with the software. Reviewer examples are synthetic.\\
+\bottomrule
+\end{tabular}
+
+\end{document}

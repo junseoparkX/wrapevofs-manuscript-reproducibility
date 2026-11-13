@@ -1,0 +1,23 @@
+WrapEvoFS v20 -- review and initial-submission package
+Prepared 12 November 2026
+
+OPEN FIRST
+main.pdf -- main article, 19 physical pages, five figures and two tables
+supplementary_information.pdf -- 63 physical pages, 29 Supplementary Figures and 33 Supplementary Tables
+Cover_Letter_Nature_Communications.pdf -- one page, dated 12 November 2026
+WrapEvoFS_Source_Data.xlsx -- v20 display index, preserved original data, new Table S31
+V20_CHANGES_KO.txt -- Korean change summary
+V20_REVIEW_FIXES_KO.txt -- follow-up review checklist and delta rationale
+
+manuscript_source/ contains independently buildable LuaLaTeX sources and aggregate CSVs.
+submission_documents/ contains updated reporting forms and their editable sources, with reference v0.2.0 and opt-in v0.3.0 roles distinguished.
+The separate Overleaf ZIP contains the source tree at its root; choose LuaLaTeX and main.tex (or supplementary_information.tex).
+The preserved v19 is unchanged. The two user-excluded text sections are unchanged.
+The new diagnostic is retrospective, fixed-bank and internal. It does not replace primary selections/intervals or assert a unique medoid advantage against outcome-informed reporting.
+
+V20_CALIBRATION_UPDATE_KO.txt -- current development-only calibration revision
+Supplementary Methods S1.15 and Table S32 -- exact breakpoint/grid calibration and all-policy held-out comparisons
+Supplementary Table S32 source data are separate aggregate CSVs under supplementary_data/tolerance_calibration/; the existing workbook is preserved.
+
+
+Current review correction: see V20_REVIEW_RESPONSE_KO.txt. S33 restores the protocol-defined four-bank seed comparison; S32 is a separate exploratory calibration of the same240 runs. Detailed provenance and original-result preservation are in documentation/V20_REVIEW_CORRECTIONS_VALIDATION.json.

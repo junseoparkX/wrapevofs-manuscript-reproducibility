@@ -4,11 +4,11 @@ Printed Supplementary figure numbers follow first citation order in the main tex
 
 | Printed item | Role | Asset |
 |---|---|---|
-| Figure 1 | Updated workflow and leakage boundary | `figures/figure_1_v19_figma.pdf` |
-| Figure 2 | Development-only updated-configuration target fidelity, flattening, regret, and decision-path verification | `figures/figure_2.pdf` |
-| Figure 4 | Fully nested TCGA selector-layer performance and compression benchmark | `figures/figure_3_strengthened.pdf` |
-| Figure 3 | Fully nested TCGA locking geometry and participant-partition sensitivity | `figures/figure_4_strengthened.pdf` |
-| Figure 5 | One-time post-freeze AMP-AD held-out evaluation | `figures/figure_5_strengthened.pdf` |
+| Figure 1 | Development-only workflow and leakage boundary | `figures/figure_1_v19_figma.pdf` |
+| Figure 2 | Fully nested TCGA locking geometry and participant-partition sensitivity | `figures/figure_4_strengthened.pdf` |
+| Figure 3 | Fully nested TCGA selector-layer performance and compression benchmark | `figures/figure_3_strengthened.pdf` |
+| Figure 4 | One-time post-freeze AMP-AD held-out evaluation | `figures/figure_5_strengthened.pdf` |
+| Figure 5 | Corrected-objective target fidelity, flattening diagnostics and cross-lock verification | `figures/figure_2.pdf` |
 | Supplementary Figure S1 | Original-objective flattening diagnostics | `v19_work/supplement_polish_20261105/modern/figures/figure_s17.pdf` |
 | Supplementary Figure S2 | Complete 24-condition, 120-run updated-configuration comparison | `v19_work/supplement_polish_20261105/modern/figures/figure_s18.pdf` |
 | Supplementary Figure S3 | Retrospective compression-regret comparison | `v19_work/supplement_polish_20261105/modern/figures/figure_s15.pdf` |
@@ -40,6 +40,8 @@ Printed Supplementary figure numbers follow first citation order in the main tex
 
 | Supplementary Figure S29 | Fixed-bank development-CV score reweighting sensitivity | `v19_work/supplement_polish_20261105/modern/figures/supp_figure_s29_cv_score_sensitivity.pdf` |
 
-Current v19: five main figures, two main tables, Supplementary Figures S1--S29 and Supplementary Tables S1--S30. Figure 1 uses the approved Figma artwork. Main figures and revised supplementary artwork use muted blue, slate and plum encodings; S24--S26 retain archived raster artwork. Historical asset filenames do not equal printed figure numbers.
+Current v20: five main figures, two main tables, Supplementary Figures S1--S29 and Supplementary Tables S1--S33. Figure 1 uses the approved Figma artwork. Main figures and revised supplementary artwork use muted blue, slate and plum encodings; S24--S26 retain archived raster artwork. Historical asset filenames do not equal printed figure numbers.
 
 Table S29: `tables/table_v19_cv_score_sensitivity.tex`. Table S30: `tables/table_v19_center_sensitivity.tex`.
+
+Table S31: `tables/table_v20_candidate_diagnostic.tex` (all-candidate diagnostic). Table S32: `tables/table_v20_tolerance_calibration.tex` (exploratory calibration). Table S33: `tables/table_v20_seed_bank_reproducibility.tex` (original protocol-defined four-bank comparison of the same240 new runs).

@@ -55,3 +55,13 @@ Thumbs.db
 !manuscript/source/supplementary_data/cv_score_sensitivity/inputs/*.csv
 !manuscript/source/documentation/submission/REVIEWER_CODE_ACCESS_CHECKLIST.md
 !manuscript/source/supplementary_data/cv_score_sensitivity/validation/fenn10_stderr.log
+
+# Reviewed v20 submission PDFs and editable sources.
+!manuscript/source/documentation/submission/Cover_Letter_Nature_Communications.pdf
+!manuscript/source/documentation/submission/Bio_and_Life_Sciences_Reporting_Summary.pdf
+!manuscript/source/documentation/submission/Code_and_Software_Submission_Checklist.pdf
+!manuscript/source/documentation/submission/latex/
+manuscript/source/documentation/submission/latex/*
+!manuscript/source/documentation/submission/latex/Cover_Letter_Nature_Communications.tex
+!manuscript/source/documentation/submission/latex/Bio_and_Life_Sciences_Reporting_Summary.tex
+!manuscript/source/documentation/submission/latex/Code_and_Software_Submission_Checklist.tex

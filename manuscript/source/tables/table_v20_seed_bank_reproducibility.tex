@@ -1,0 +1,49 @@
+% Independently verified protocol-defined results; complete pair data accompany this table.
+\begin{table}[p]
+\centering
+\footnotesize
+\caption{\textbf{Protocol-defined independent seed-bank comparison at fixed tolerance $\delta=0.01$.} For each screening branch, four independent 20-seed CPU collections supplied nested prefixes $R=5,10,20$. $J_{\mathrm{high}}$ and $J_{\mathrm{lock}}$ are mean Jaccard similarities across the six pairs of selected bank signatures. $\Delta J$ is the mean paired difference (locked minus highest). $A_{\mathrm{high}}$ and $A_{\mathrm{lock}}$ are the corresponding fractions of pairs with exactly identical feature sets. All branches, prefix sizes, and both scorer schemes are reported; equal-branch means weight the three branches equally.}
+\label{tab:supp33}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Branch & $R$ & $J_{\mathrm{high}}$ & $J_{\mathrm{lock}}$ & $\Delta J$ & $A_{\mathrm{high}}$ & $A_{\mathrm{lock}}$ \\
+\midrule
+\multicolumn{7}{@{}l}{\textbf{A. Primary: candidate-specific RF seeds}} \\
+\addlinespace[2pt]
+SVM-L1 & 5 & 0.106936 & 0.106936 & 0.000000 & 0.000000 & 0.000000 \\
+SVM-L1 & 10 & 0.128478 & 0.125309 & -0.003169 & 0.000000 & 0.000000 \\
+SVM-L1 & 20 & 0.149074 & 0.149074 & 0.000000 & 0.000000 & 0.000000 \\
+XGBoost & 5 & 0.183785 & 0.183785 & 0.000000 & 0.000000 & 0.000000 \\
+XGBoost & 10 & 0.153877 & 0.124194 & -0.029684 & 0.000000 & 0.000000 \\
+XGBoost & 20 & 0.170689 & 0.158733 & -0.011955 & 0.000000 & 0.000000 \\
+Boruta-RF & 5 & 0.100358 & 0.074397 & -0.025962 & 0.000000 & 0.000000 \\
+Boruta-RF & 10 & 0.111163 & 0.112476 & +0.001314 & 0.000000 & 0.000000 \\
+Boruta-RF & 20 & 0.107091 & 0.064688 & -0.042403 & 0.000000 & 0.000000 \\
+\addlinespace[2pt]
+\emph{Equal-branch mean} & 5 & 0.130360 & 0.121706 & -0.008654 & 0.000000 & 0.000000 \\
+\emph{Equal-branch mean} & 10 & 0.131173 & 0.120660 & -0.010513 & 0.000000 & 0.000000 \\
+\emph{Equal-branch mean} & 20 & 0.142285 & 0.124165 & -0.018120 & 0.000000 & 0.000000 \\
+\midrule
+\multicolumn{7}{@{}l}{\textbf{B. Secondary: common RF seed 342}} \\
+\addlinespace[2pt]
+SVM-L1 & 5 & 0.106936 & 0.106936 & 0.000000 & 0.000000 & 0.000000 \\
+SVM-L1 & 10 & 0.115198 & 0.129630 & +0.014432 & 0.000000 & 0.000000 \\
+SVM-L1 & 20 & 0.136811 & 0.147863 & +0.011052 & 0.000000 & 0.000000 \\
+XGBoost & 5 & 0.183785 & 0.143480 & -0.040306 & 0.000000 & 0.000000 \\
+XGBoost & 10 & 0.139475 & 0.091018 & -0.048457 & 0.000000 & 0.000000 \\
+XGBoost & 20 & 0.156306 & 0.163403 & +0.007097 & 0.000000 & 0.000000 \\
+Boruta-RF & 5 & 0.102657 & 0.075954 & -0.026703 & 0.000000 & 0.000000 \\
+Boruta-RF & 10 & 0.089801 & 0.131177 & +0.041376 & 0.000000 & 0.000000 \\
+Boruta-RF & 20 & 0.151996 & 0.134849 & -0.017147 & 0.000000 & 0.000000 \\
+\addlinespace[2pt]
+\emph{Equal-branch mean} & 5 & 0.131126 & 0.108790 & -0.022336 & 0.000000 & 0.000000 \\
+\emph{Equal-branch mean} & 10 & 0.114825 & 0.117275 & +0.002450 & 0.000000 & 0.000000 \\
+\emph{Equal-branch mean} & 20 & 0.148371 & 0.148705 & +0.000334 & 0.000000 & 0.000000 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{0.98\textwidth}\footnotesize
+\textit{Design and interpretation.} The local protocol was frozen before candidate generation; this does not denote registration in an external preregistry. The analysis conditions on one fixed TCGA development partition of 392 participants, with the original preprocessing, screening universes and RFECV targets held fixed. The primary scorer uses candidate-specific RF seeds and common development folds; the secondary scorer fixes the RF seed at 342. The same 240 candidates were reused across scorers and nested $R$ prefixes. Six pairs share four banks, prefixes are correlated, and branches share participants; no confidence intervals or $p$-values are reported. Exact agreement is zero for both policies in every condition. This is a new CPU-backend extension, not reproduction of GPU trajectories or participant-level or external validation. The later 16-bank, five-candidate calibration analysis is a separate post hoc reblocking of these same runs. Full-precision source files contain all 108 pairs, 72 bank selections, 18 condition summaries and six equal-branch means. Displayed values are rounded to six decimals.
+\end{minipage}
+\end{table}

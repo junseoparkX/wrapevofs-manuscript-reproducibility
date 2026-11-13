@@ -1,0 +1,7 @@
+condition,scheme,R,highest_Jaccard,locked_Jaccard,difference_locked_minus_highest,highest_exact_agreement,locked_exact_agreement,branch,branches,banks_per_branch,pairs_per_branch
+equal_branch_mean,original_candidate_seed,5,0.13035989559142722,0.12170596738104739,-0.008653928210379825,0.0,0.0,equal_branch_mean,3,4,6
+equal_branch_mean,original_candidate_seed,10,0.13117276568621716,0.12065961235327459,-0.010513153332942587,0.0,0.0,equal_branch_mean,3,4,6
+equal_branch_mean,original_candidate_seed,20,0.1422846452258217,0.12416507097879648,-0.01811957424702523,0.0,0.0,equal_branch_mean,3,4,6
+equal_branch_mean,common_RF_seed342,5,0.13112611353398307,0.10878978986230507,-0.022336323671677993,0.0,0.0,equal_branch_mean,3,4,6
+equal_branch_mean,common_RF_seed342,10,0.11482479474693046,0.117274964198963,0.0024501694520325406,0.0,0.0,equal_branch_mean,3,4,6
+equal_branch_mean,common_RF_seed342,20,0.148371080267632,0.14870510444930365,0.0003340241816716649,0.0,0.0,equal_branch_mean,3,4,6

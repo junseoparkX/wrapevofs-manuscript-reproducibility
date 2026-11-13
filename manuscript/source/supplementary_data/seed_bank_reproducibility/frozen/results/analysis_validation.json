@@ -1,0 +1,15 @@
+{
+  "completed_utc": "2026-11-13T03:01:17.706568+00:00",
+  "protocol_sha256": "55dc666b9f991057664db3e9531d7cadeaa1830270f9a7ef1ac3592c8efe3b70",
+  "registered_GA_runs": 240,
+  "package_reference_checks": 72,
+  "all_checks_passed": true,
+  "pair_rows": 108,
+  "independent_participant_inferences": 0,
+  "output_sha256": {
+    "selections.csv": "5e67c06fd7abcbd34999513d710d7c47894094d49bcee15915fbe65050f0c928",
+    "all_candidates.csv": "5cb19622f8aea7645093440d578e6ffb9a3aba4ecdfd7547afdbbbcc0419c1ec",
+    "condition_summary.csv": "e6f82dd5c25e2aba74cbe026e44cecde50304bb62d5507e0253e7705ac99f6e0",
+    "bank_pairs.csv": "362f98f053d24f72b688d21dcc22c66f7533a3c5bd7ec7c565babcee73f8005d"
+  }
+}

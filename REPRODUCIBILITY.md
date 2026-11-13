@@ -30,8 +30,8 @@ python scripts/validate_submission_pdfs.py main.pdf supplementary_information.pd
 ```
 
 `CURRENT_MANUSCRIPT.json` records the exact current source and artwork hashes.
-The PDFs contain 21 main pages and 60 supplementary pages, five main figures,
-two main tables, 29 supplementary figures and 32 supplementary tables.
+The PDFs contain 19 main pages and 63 supplementary pages, five main figures,
+two main tables, 29 supplementary figures and 33 supplementary tables.
 
 ## Compile
 
@@ -92,7 +92,7 @@ One-time editing utilities, superseded proposal text and old presentation
 checkpoints are available in Git history at commit
 `883f5db5310cf265c19b1824622884edac191af6`. Current validation is run by GitHub Actions.
 
-## Development-only allowance calibration
+## Exploratory development-only tolerance calibration
 
 From `manuscript/source/`, reproduce all six branch/scorer choices using the non-participant audit inputs:
 
@@ -100,8 +100,20 @@ From `manuscript/source/`, reproduce all six branch/scorer choices using the non
 python supplementary_data/tolerance_calibration/calibrate_allowance.py --input supplementary_data/tolerance_calibration/candidate_development_audit.csv --output /tmp/wrapevofs-calibration --search grid
 ```
 
-The main calibration example uses the earlier seven-point grid. Use `--search breakpoints` for the supplementary sensitivity. Full precision is retained for eligibility; displayed decimal allowances are rounded. Calibration uses development scores and feature masks only. The paired AUROC bootstrap additionally requires authorized held-out predictions; aggregate signature-level scores and reported contrasts are included. The all-240 overlap is a fitted objective, and the earlier reserved-seed check remains distinct.
+The main calibration example uses the seven-point grid. Use `--search breakpoints` for the supplementary sensitivity. Full precision is retained for eligibility; displayed decimal tolerances are rounded. Calibration uses development scores and feature masks only. The paired AUROC bootstrap additionally requires authorized held-out predictions; aggregate signature-level scores and reported contrasts are included. The all-240 overlap is a fitted objective, and the earlier reserved-seed check remains distinct.
 
 The opt-in library calibration API requires `pip install wrapevofs==0.3.0`. To verify both library search modes and their canonical selected masks, run `python scripts/validate_tolerance_calibration.py --package` from `manuscript/source/`. The v0.2.0 pin above is retained for the recorded reference benchmark.
 
-To reproduce the main analysis with the v0.3.0 API, pass `delta_grid=[0,0.0025,0.005,0.0075,0.01,0.015,0.02]` to `calibrate_tolerance`. The unchanged API default searches observed breakpoints. `analysis_hierarchy.json` records the post hoc presentation order; the original eight- and twelve-contrast families remain separate and unchanged.
+To reproduce the grid-calibration example with the v0.3.0 API, pass `delta_grid=[0,0.0025,0.005,0.0075,0.01,0.015,0.02]` to `calibrate_tolerance`. The unchanged API default searches observed breakpoints. `analysis_hierarchy.json` records the post hoc presentation order; the original eight- and twelve-contrast families remain separate and unchanged.
+
+## Protocol-defined independent seed-bank analysis (S33)
+
+From `manuscript/source/`:
+
+```bash
+python supplementary_data/seed_bank_reproducibility/verify_registered_seed_banks.py --output /tmp/wrapevofs-seed-bank-verification
+```
+
+The independent verifier reproduces every protocol-defined selection, pair, and summary from released development masks and scores. Four original banks per branch supply nested R=5/10/20 prefixes, with six pairs at every condition and both scorer schemes. It verifies the immutable protocol, launch/amendment records, original code and result hashes. The later S32 analysis regroups these same 240 candidates; it does not replace S33 or provide independent participant validation.
+
+`TARGET_METADATA_CORRECTION.json` in the calibration folder records the Boruta-RF descriptive target_k correction from 18 to the executed protocol value of 8, preserving the original export. Masks, scores, and all computed results are unchanged. No held-out outcomes are read by either reconstruction script.

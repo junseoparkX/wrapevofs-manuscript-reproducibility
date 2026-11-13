@@ -1,0 +1,12 @@
+{
+  "amended_utc": "2026-11-12T22:04:52.580020+00:00",
+  "exact_user_request": "worker \ucd5c\ub300\ub85c \uc368\uc918",
+  "old_workers": 8,
+  "new_workers": 32,
+  "reason": "Fenn nproc reports32; one CPU thread per worker, no nested RF parallelism.",
+  "initial_protocol_sha256": "9475a6cbbbbf4746f095adf32ed4182a3a3a46c0bdc68494271a22a0f6884e97",
+  "pre_candidate_reference_correction": "Use the package strict delta without epsilon expansion and canonical mask-hash summation order in independent reference.",
+  "scientific_design_changed": false,
+  "registered_candidates_generated_before_amendment": 0,
+  "amended_protocol_sha256": "55dc666b9f991057664db3e9531d7cadeaa1830270f9a7ef1ac3592c8efe3b70"
+}

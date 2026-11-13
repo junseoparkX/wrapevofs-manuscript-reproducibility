@@ -1,0 +1,86 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.72in,top=0.66in,bottom=0.68in]{geometry}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Heros}
+\definecolor{RuleGray}{HTML}{A8B0B8}
+\definecolor{BandGray}{HTML}{EEF1F3}
+\definecolor{TextGray}{HTML}{28323C}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{5.5pt}
+\renewcommand{\arraystretch}{1.16}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\sffamily\footnotesize\thepage}
+\hypersetup{
+  pdftitle={Bio and Life Sciences Reporting Summary for WrapEvoFS},
+  pdfauthor={Junseo Park and colleagues}
+}
+
+\newcommand{\sectionrow}[1]{%
+  \rowcolor{BandGray}\multicolumn{2}{l}{\sffamily\bfseries\color{TextGray}#1}\\[1pt]
+}
+\newcommand{\topic}[1]{\sffamily\bfseries\color{TextGray}#1}
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{0.235\textwidth}}
+\newcolumntype{R}{>{\raggedright\arraybackslash}p{0.705\textwidth}}
+
+\begin{document}
+
+{\sffamily\bfseries\LARGE Bio and Life Sciences Reporting Summary}\par
+\vspace{4pt}
+{\large WrapEvoFS enables auditable feature compression with regret-constrained representative locking}\par
+\vspace{7pt}
+\begin{tabular}{@{}ll@{}}
+\sffamily\bfseries Corresponding author: & Huan Zhong\\
+\sffamily\bfseries Date: & 12 November 2026
+\end{tabular}
+\vspace{8pt}
+
+\begin{longtable}{@{}LR@{}}
+\toprule
+\sffamily\bfseries Reporting item & \sffamily\bfseries Information reported in the manuscript and Supplementary Information\\
+\midrule
+\endfirsthead
+\toprule
+\sffamily\bfseries Reporting item & \sffamily\bfseries Information reported in the manuscript and Supplementary Information\\
+\midrule
+\endhead
+
+\sectionrow{Statistics and reproducibility}
+\topic{Sample sizes} & Exact cohort, partition, branch, and condition sizes are reported in Table 1, Methods, figure legends, and Supplementary Tables. Sample sizes were fixed by eligible source data and prespecified cohort boundaries; no prospective power calculation was used.\\
+\topic{Repeated measurements} & Repeated outer-CV predictions, common bootstrap resamples, paired feature-space analyses, and five-seed candidate banks are identified explicitly. Participant-clustered resampling retains repeat-specific predictions. The 240-run study reports all four-bank pairs at nested prefixes of 5, 10, and 20 (Table S33); Table S32 reuses these same runs for exploratory calibration.\\
+\topic{Statistical procedures} & Metrics, resampling units, bootstrap stratification, random seeds, confidence intervals, credible intervals, and dependent-fold summaries are specified in Methods and figure legends. Primary empirical analyses emphasize estimates and confidence intervals; no principal claim depends on a null-hypothesis P value.\\
+\topic{Covariates and assumptions} & No clinical covariates were added to the predictive feature matrices. Cohort composition and unavailable scanner or site covariates are reported where relevant. The manuscript distinguishes descriptive comparisons from inferential analyses and does not claim equivalence or non-inferiority.\\
+\topic{Bayesian analysis} & Priors, sampling settings, chain diagnostics, credible intervals, $\hat{R}$, and effective sample sizes are reported for secondary Bayesian analyses.\\
+\topic{Effect estimates} & Paired AUROC differences, empirical regret, feature counts, compression, and Jaccard agreement are reported with definitions and uncertainty where applicable.\\
+
+\sectionrow{Software, code, and data}
+\topic{Data collection} & Secondary analyses used provider-supplied ADNI, AMP-AD, CGGA, and TCGA data. The VGH cohort used de-identified clinical DICOM data processed with dcm2niix, RaidionicsRADS, RaidionicsSeg, and PyRadiomics; versions and settings are reported.\\
+\topic{Data analysis} & Reference analyses retain WrapEvoFS v0.2.0 and their documented dependencies. The opt-in calibration API in v0.3.0 independently reproduces the exploratory manuscript-script choices (Supplementary Table S32). The software is available at \url{https://github.com/junseoparkX/wrapevofs-package}; nonrestricted manuscript reproducibility materials are available at \url{https://github.com/junseoparkX/wrapevofs-manuscript-reproducibility}.\\
+\topic{Data availability} & Participant-level data are not redistributed. ADNI, AMP-AD, CGGA, and TCGA access routes and identifiers are given in the Data availability statement. The provider-organized TCGA workbook is not redistributed. VGH participant-level data remain restricted; non-identifying aggregate and audit materials are public.\\
+
+\pagebreak
+\sectionrow{Research involving human data}
+\topic{Sex and gender} & The study did not test sex- or gender-specific effects and makes no sex- or gender-specific inference. Available cohort composition is reported in source publications and cohort tables.\\
+\topic{Race and ethnicity} & Race and ethnicity were not used as predictive labels or proxies. Center-specific heterogeneity is reported without attributing it to race or ethnicity.\\
+\topic{Population characteristics} & The analyses cover ADNI-derived diagnostic classes, AMP-AD post-mortem multi-omics cohorts, CGGA MGMT methylation, TCGA histological classes, and a VGH MGMT radiomics cohort. Counts and outcome compositions are reported in Table 1.\\
+\topic{Recruitment} & No participants were newly recruited. Recruitment, consent, and source-study inclusion followed the originating cohort protocols; this work is a secondary methodological analysis.\\
+\topic{Ethics oversight} & ADNI used participating-site IRB or REB approval and written consent. CGGA reports Beijing Tiantan Hospital approval KY2013-017-01 and written consent. AMP-AD source institutions reported IRB approval and participant or next-of-kin consent. TCGA followed NCI and NHGRI human-subject protection and informed-consent policies. VGH data were analyzed under UBC REB H20-02354; consent was waived for the retrospective study and secondary analysis was permitted.\\
+
+\sectionrow{Study design}
+\topic{Data exclusions} & Exclusions were based on source availability, participant matching, finite-value or geometry checks, and validated outcome linkage. VGH flow and exclusions are reported in Methods and Supplementary Table S28.\\
+\topic{Replication} & Algorithmic assessments include repeated outer CV, a one-time post-freeze center evaluation, simulation, and four independent 20-seed banks per branch (Table S33). No improvement in independent-bank agreement was found. Exploratory calibration and its reserved-seed check are separate (Table S32). These are not presented as independent biological replication.\\
+\topic{Randomization} & No intervention allocation occurred. Stratified splits, CV folds, bootstrap resamples, genetic operators, and model seeds were recorded. The independent-bank protocol was frozen before candidate generation; exploratory calibration chronology is disclosed in Supplementary Methods S1.15.\\
+\topic{Blinding and outcome isolation} & Held-out outcomes were unavailable to Direct selection, RFECV, GA, rescoring, and locking. Feature masks, parameters, and protocol hashes were frozen before the one-time post-freeze evaluations.\\
+\bottomrule
+\end{longtable}
+
+\end{document}

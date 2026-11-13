@@ -1,0 +1,415 @@
+{
+  "scope": "Exported descriptive metadata only; no scores, masks, seeds, predictions, models, selected tolerances, intervals, or protocol changed.",
+  "field": "target_k",
+  "branch": "boruta_rf",
+  "rows_corrected": 80,
+  "previous_export_value": 18,
+  "correct_value": 8,
+  "basis": "Frozen protocol conditions and run_experiment.py pass target_k=8 to run_genetic_rf. The exported target field is not read by locking or calibration.",
+  "frozen_protocol_sha256": "55dc666b9f991057664db3e9531d7cadeaa1830270f9a7ef1ac3592c8efe3b70",
+  "original_export_sha256": "5246470fd521588333cc8a595136662f6e8bbf359e213625941e732521d9634a",
+  "corrected_export_sha256": "82b36c8e5079819d9e9c349dbe1a224d3cf43d2c43975c4b9a62e419e829eb57",
+  "original_export_preserved": "metadata_history/candidate_development_audit_before_target_metadata_correction.csv",
+  "identities": [
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 0
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 1
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 2
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 3
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 4
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 5
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 6
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 7
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 8
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 9
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 10
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 11
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 12
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 13
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 14
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 15
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 16
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 17
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 18
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 0,
+      "run": 19
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 0
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 1
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 2
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 3
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 4
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 5
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 6
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 7
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 8
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 9
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 10
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 11
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 12
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 13
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 14
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 15
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 16
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 17
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 18
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 1,
+      "run": 19
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 0
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 1
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 2
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 3
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 4
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 5
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 6
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 7
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 8
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 9
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 10
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 11
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 12
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 13
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 14
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 15
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 16
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 17
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 18
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 2,
+      "run": 19
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 0
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 1
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 2
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 3
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 4
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 5
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 6
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 7
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 8
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 9
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 10
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 11
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 12
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 13
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 14
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 15
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 16
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 17
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 18
+    },
+    {
+      "branch": "boruta_rf",
+      "original_bank": 3,
+      "run": 19
+    }
+  ]
+}
