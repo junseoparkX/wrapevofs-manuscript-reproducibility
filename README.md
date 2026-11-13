@@ -14,7 +14,7 @@ The maintained Python implementation is available from the
 [GitHub Release v0.3.0](https://github.com/junseoparkX/wrapevofs-package/releases/tag/v0.3.0),
 and [PyPI](https://pypi.org/project/wrapevofs/0.3.0/).
 
-Current manuscript: **v20, 12 November 2026**. The narrative foregrounds the decision problem, compression, and explicit predictive trade-offs. Fixed 0.01 reference benchmarks are retained. A separate exploratory 240-run study evaluates development-only allowance calibration, including complete enumeration of observed score-gap breakpoints. Its fitted overlap gains do not establish predictive superiority or unseen-seed reproducibility. All four policies and paired AUROC contrasts are reported.
+Current manuscript: **v20, 12 November 2026**. The main calibration example now uses the earlier seven-point development-only grid rule; exact breakpoint enumeration is retained as a supplementary sensitivity. The grid rule gave mean signature-level held-out AUROC 0.8474, compared with 0.8463 for fixed 0.01 and 0.8466 for highest-score selection. The original paired intervals include zero. This is an exploratory, post hoc presentation hierarchy, not a prespecified confirmatory analysis or a demonstration of predictive superiority. All fitted allowances, rules, predictions, original comparison families and intervals are preserved.
 
 The updated main and supplementary PDFs have been rebuilt and visually checked. Supplementary Methods S1.15 and Table S32 document calibration; the original nested benchmark, numerical tables, and source data remain preserved.
 

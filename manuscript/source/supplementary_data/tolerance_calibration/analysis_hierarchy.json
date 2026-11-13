@@ -1,0 +1,33 @@
+{
+  "version": "v20",
+  "updated_utc": "2026-11-13T05:07:06.227896+00:00",
+  "main_calibration_analysis": "grid_calibrated",
+  "supplementary_calibration_analysis": "breakpoint_calibrated",
+  "presentation_hierarchy_chosen_after_results": true,
+  "prespecified_confirmatory_primary_analysis": false,
+  "numerical_allowance_selection_development_only": true,
+  "allowances_rules_predictions_or_existing_intervals_changed": false,
+  "new_model_fits": 0,
+  "grid_allowances": [
+    0.0,
+    0.0025,
+    0.005,
+    0.0075,
+    0.01,
+    0.015,
+    0.02
+  ],
+  "main_grid_original_simultaneous_family": {
+    "contrasts": 8,
+    "bootstrap_seed": 20261115,
+    "replicates": 5000
+  },
+  "breakpoint_original_simultaneous_family": {
+    "contrasts": 12,
+    "bootstrap_seed": 20261116,
+    "replicates": 5000
+  },
+  "grid_contrast_source_sha256": "0a07d433e8dfa6e5e4dddd3195ad1bbb03409f7b3125164c23911d956a4bd328",
+  "grid_curve_source_sha256": "52c18a1377e198f592264aefead66edbb3d7f6e7209e633ffab42b8334ee99e5",
+  "claim_boundary": "Exploratory reporting hierarchy. Fitted overlap and conditional99-participant evaluation do not establish predictive superiority, equivalence, or future reproducibility."
+}

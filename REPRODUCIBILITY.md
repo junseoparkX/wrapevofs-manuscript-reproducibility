@@ -97,9 +97,11 @@ checkpoints are available in Git history at commit
 From `manuscript/source/`, reproduce all six branch/scorer choices using the non-participant audit inputs:
 
 ```bash
-python supplementary_data/tolerance_calibration/calibrate_allowance.py --input supplementary_data/tolerance_calibration/candidate_development_audit.csv --output /tmp/wrapevofs-calibration --search breakpoints
+python supplementary_data/tolerance_calibration/calibrate_allowance.py --input supplementary_data/tolerance_calibration/candidate_development_audit.csv --output /tmp/wrapevofs-calibration --search grid
 ```
 
-Use `--search grid` for the earlier seven-point calibration. Full precision is retained for eligibility; displayed decimal allowances are rounded. Calibration uses development scores and feature masks only. The paired AUROC bootstrap additionally requires authorized held-out predictions; aggregate signature-level scores and reported contrasts are included. The all-240 overlap is a fitted objective, and the earlier reserved-seed check remains distinct.
+The main calibration example uses the earlier seven-point grid. Use `--search breakpoints` for the supplementary sensitivity. Full precision is retained for eligibility; displayed decimal allowances are rounded. Calibration uses development scores and feature masks only. The paired AUROC bootstrap additionally requires authorized held-out predictions; aggregate signature-level scores and reported contrasts are included. The all-240 overlap is a fitted objective, and the earlier reserved-seed check remains distinct.
 
 The opt-in library calibration API requires `pip install wrapevofs==0.3.0`. To verify both library search modes and their canonical selected masks, run `python scripts/validate_tolerance_calibration.py --package` from `manuscript/source/`. The v0.2.0 pin above is retained for the recorded reference benchmark.
+
+To reproduce the main analysis with the v0.3.0 API, pass `delta_grid=[0,0.0025,0.005,0.0075,0.01,0.015,0.02]` to `calibrate_tolerance`. The unchanged API default searches observed breakpoints. `analysis_hierarchy.json` records the post hoc presentation order; the original eight- and twelve-contrast families remain separate and unchanged.

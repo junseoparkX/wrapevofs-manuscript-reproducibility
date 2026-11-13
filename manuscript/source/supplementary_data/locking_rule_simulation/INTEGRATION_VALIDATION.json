@@ -12,8 +12,8 @@
     "source-data manifest includes Supplementary Figure S28"
   ],
   "manuscript_outputs": {
-    "main_pdf_sha256": "31f42e201654199b3351be85ad05772527210e84569f4a0e827136ec3cfde49f",
-    "supplementary_pdf_sha256": "c1b34d9831859ee3ff340e7ee63e3873c995e8867b7565321ebc56cdb606ddff"
+    "main_pdf_sha256": "d648ef4c525587fe777dc8a80e8a701f6fcfc5a97cc0569f824ca0dc78f8ffc4",
+    "supplementary_pdf_sha256": "533a80f9cb9b69cc27e4474ba041aff612670268fa242f1efd670fd08f042bbc"
   },
   "claim_boundary": "Hidden synthetic utility is not AUROC. The simulation evaluates candidate-bank locking only and does not establish predictive superiority, unbiased generalization, external validity, participant-resampling stability, biomarker stability, or clinical utility."
 }

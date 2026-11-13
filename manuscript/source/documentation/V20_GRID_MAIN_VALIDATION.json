@@ -1,0 +1,58 @@
+{
+  "verified_utc": "2026-11-13T05:18:25.149283+00:00",
+  "revision": "v20; grid main / breakpoint supplementary",
+  "existing_CSV_files_byte_preserved": 136,
+  "original_table_sources_byte_preserved": 55,
+  "original_figure_assets_byte_preserved": 45,
+  "source_workbook_and_excluded_text_unchanged": true,
+  "main_grid_original_contrasts_verified": 8,
+  "all_original_intervals_and_decisions_unchanged": true,
+  "posthoc_presentation_hierarchy_explicit": true,
+  "new_model_fits": 0,
+  "abstract_words": 135,
+  "PDF_pages": {
+    "main": 21,
+    "supplement": 60,
+    "cover": 1
+  },
+  "rendered_changed_pages": {
+    "main": [
+      2,
+      8,
+      13,
+      15
+    ],
+    "supplement": [
+      11,
+      12,
+      58,
+      59
+    ],
+    "cover": [
+      1
+    ]
+  },
+  "latex_errors_or_overfull_boxes": 0,
+  "visual_inspection": "PASS: main abstract/results/discussion/methods, S1.15, S32a-e, and cover inspected",
+  "main_calibration_AUROC": 0.847382848695461,
+  "main_calibration_deltas": [
+    0.01,
+    0.0075,
+    0.0075
+  ],
+  "supplementary_breakpoint_AUROC": 0.8460782521649781,
+  "reporting_order_posthoc_not_confirmatory": true,
+  "main_original_contrast_family": 8,
+  "breakpoint_original_contrast_family": 12,
+  "public_PDF_layout": "PASS",
+  "public_main_and_supplementary_compile": "PASS",
+  "package_API_choices_reproduced": 12,
+  "files_sha256": {
+    "main.pdf": "d648ef4c525587fe777dc8a80e8a701f6fcfc5a97cc0569f824ca0dc78f8ffc4",
+    "supplementary_information.pdf": "533a80f9cb9b69cc27e4474ba041aff612670268fa242f1efd670fd08f042bbc",
+    "Cover_Letter_Nature_Communications.pdf": "a8b92ab76e904fc4047867c6fe9fe98b740f1be77911a8ce0929fd7232a151dd",
+    "sections/main_text.tex": "906c4fa03757ad07491b53d884983771a7aa1b87fd1405ac5e656a403057cdb2",
+    "sections/supplementary.tex": "3355e9c6c1fe76c429f4c764b14998fcb142374cfcd2fb166c7079119594f034",
+    "tables/table_v20_tolerance_calibration.tex": "4bca51f104377f573f26cccb52775800afc280b53ca51625fe688aa06a632c22"
+  }
+}

@@ -42,6 +42,19 @@ def main():
         old=next(q for q in summary if q['branch']==r['branch'] and q['scheme']==r['scheme'] and q['policy']==r['comparator'])
         assert abs(float(new['mean_heldout_AUROC'])-float(old['mean_heldout_AUROC'])-float(r['AUROC_difference']))<1e-13
         assert float(r['simultaneous_CI95_low'])<=0<=float(r['simultaneous_CI95_high'])
+    hierarchy=json.loads((DATA/'analysis_hierarchy.json').read_text())
+    assert hierarchy['main_calibration_analysis']=='grid_calibrated'
+    assert hierarchy['supplementary_calibration_analysis']=='breakpoint_calibrated'
+    assert hierarchy['presentation_hierarchy_chosen_after_results']
+    assert not hierarchy['prespecified_confirmatory_primary_analysis']
+    main_grid=[r for r in rows('grid_calibration_AUROC_contrasts.csv') if r['scheme']=='original_candidate_seed']
+    assert len(main_grid)==8
+    for r in main_grid:
+        a=next(q for q in summary if q['branch']==r['branch'] and q['scheme']==r['scheme'] and q['policy']=='grid_calibrated')
+        comparator='highest_score' if r['comparator']=='fixed_0' else r['comparator']
+        b=next(q for q in summary if q['branch']==r['branch'] and q['scheme']==r['scheme'] and q['policy']==comparator)
+        assert abs(float(a['mean_heldout_AUROC'])-float(b['mean_heldout_AUROC'])-float(r['heldout_AUROC_difference']))<1e-13
+        assert float(r['simultaneous_CI95_low'])<=0<=float(r['simultaneous_CI95_high'])
     package_checks=0
     if args.package:
         from wrapevofs import LockingCandidate,calibrate_tolerance
@@ -66,6 +79,6 @@ def main():
                     assert [fitted.bank_results[f'bank_{b:02d}'].metadata['selected_stable_mask_hash'] for b in range(16)]==[r['mask_hash'] for r in rr]
                     package_checks+=1
     print(json.dumps({'status':'PASS','candidates':240,'calibration_choices_and_masks_reproduced':12,
-        'aggregate_policy_rows_reproduced':32,'primary_AUROC_contrasts_checked':12,'heldout_rows_used_for_calibration':False,
+        'aggregate_policy_rows_reproduced':32,'main_grid_original_AUROC_contrasts_checked':8,'breakpoint_original_AUROC_contrasts_checked':12,'heldout_rows_used_for_calibration':False,
         'package_API_choices_and_masks_reproduced':package_checks}))
 if __name__=='__main__':main()

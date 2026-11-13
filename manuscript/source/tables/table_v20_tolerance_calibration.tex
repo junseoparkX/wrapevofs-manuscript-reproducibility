@@ -1,18 +1,18 @@
 \begin{table}[p]
 \centering
-\caption{Exploratory development-only allowance calibration on 240 additional TCGA candidates.}
+\caption{Grid-based allowance calibration and breakpoint sensitivity on 240 additional TCGA candidates.}
 \label{tab:supp32}
 \small
-\renewcommand{\arraystretch}{1.14}
-\setlength{\tabcolsep}{5pt}
-\supplementarytablesection{a. All-candidate calibration: selected allowances and primary results}
-\begin{tabular}{lrr}
+\renewcommand{\arraystretch}{1.10}
+\setlength{\tabcolsep}{4pt}
+\supplementarytablesection{a. Main calibration analysis: grid-based allowance selection}
+\begin{tabular}{lr}
 \toprule
-Branch & Grid allowance & Breakpoint allowance \\
+Branch & Grid allowance \\
 \midrule
-SVM-L1 & 0.0100 & 0.009519 \\
-XGBoost & 0.0075 & 0.007563 \\
-Boruta-RF & 0.0075 & 0.008453 \\
+SVM-L1 & 0.0100 \\
+XGBoost & 0.0075 \\
+Boruta-RF & 0.0075 \\
 \bottomrule
 \end{tabular}
 \par\medskip
@@ -20,37 +20,72 @@ Boruta-RF & 0.0075 & 0.008453 \\
 \toprule
 Branch & Policy & Fitted Jaccard & Held-out AUROC \\
 \midrule
-SVM-L1 & Breakpoint calibration & 0.1314 & 0.8538 \\
 SVM-L1 & Grid calibration & 0.1314 & 0.8538 \\
 SVM-L1 & Fixed 0.01 & 0.1314 & 0.8538 \\
 SVM-L1 & Highest score & 0.1265 & 0.8556 \\
-XGBoost & Breakpoint calibration & 0.1435 & 0.8466 \\
 XGBoost & Grid calibration & 0.1419 & 0.8481 \\
 XGBoost & Fixed 0.01 & 0.1401 & 0.8468 \\
 XGBoost & Highest score & 0.1348 & 0.8457 \\
-Boruta-RF & Breakpoint calibration & 0.1204 & 0.8378 \\
 Boruta-RF & Grid calibration & 0.1161 & 0.8403 \\
 Boruta-RF & Fixed 0.01 & 0.1068 & 0.8382 \\
 Boruta-RF & Highest score & 0.1046 & 0.8385 \\
-Equal-branch mean & Breakpoint calibration & 0.1318 & 0.8461 \\
 Equal-branch mean & Grid calibration & 0.1298 & 0.8474 \\
 Equal-branch mean & Fixed 0.01 & 0.1261 & 0.8463 \\
 Equal-branch mean & Highest score & 0.1220 & 0.8466 \\
 \bottomrule
 \end{tabular}
 \par\medskip
+\supplementarytablesection{b. Grid-calibration-minus-comparator AUROC contrasts}
+\begin{tabular}{llrrr}
+\toprule
+Branch & Comparator & Difference & Simultaneous low & Simultaneous high \\
+\midrule
+SVM-L1 & Fixed 0.01 & +0.00000 & +0.00000 & +0.00000 \\
+SVM-L1 & Highest score & -0.00180 & -0.00681 & +0.00321 \\
+XGBoost & Fixed 0.01 & +0.00127 & -0.00338 & +0.00592 \\
+XGBoost & Highest score & +0.00240 & -0.00477 & +0.00957 \\
+Boruta-RF & Fixed 0.01 & +0.00211 & -0.00505 & +0.00927 \\
+Boruta-RF & Highest score & +0.00180 & -0.00481 & +0.00842 \\
+Equal-branch mean & Fixed 0.01 & +0.00113 & -0.00156 & +0.00382 \\
+Equal-branch mean & Highest score & +0.00080 & -0.00313 & +0.00473 \\
+\bottomrule
+\end{tabular}
+\par\medskip
 \parbox{0.98\linewidth}{\footnotesize
-\textit{Note.} Each branch has 80 candidates in 16 disjoint five-candidate banks on the same 392 development participants. The exact search has 65 observed score-gap breakpoints per branch and scorer. All 16 banks are used for fitting, so Jaccard is the calibration objective, not an unseen-seed reproducibility endpoint. AUROC averages signature-level scores on one historical 99-participant outer fold; it is not an ensemble AUROC. Grid calibration uses seven allowances. The secondary common-RF-seed scorer and full numerical results are in \texttt{supplementary\_data/tolerance\_calibration/}. Displayed allowances are rounded; eligibility uses the full-precision audit values. Original nested reference benchmarks are unchanged.}
+\textit{Note.} The earlier seven-point rule is the main calibration example in this exploratory report; the later breakpoint extension is a supplementary sensitivity. This presentation hierarchy was chosen after the results were available and is not a prespecified confirmatory hierarchy. Numerical allowance selection used development scores and feature masks only. Each branch has 80 candidates in 16 disjoint five-candidate banks on the same 392 development participants. All 16 banks are used for fitting, so Jaccard is the fitted objective. AUROC averages signature-level scores on one historical 99-participant outer fold, not an ensemble. Mean development-score gaps across branches were 0.000995 for grid calibration and 0.001879 for fixed 0.01. Panel b retains simultaneous 95\% intervals for the original eight-contrast family from the grid-calibration analysis (5,000 paired participant resamples, seed 20261115), conditional on fitted signatures and allowances. Exact zero SVM-L1 contrasts reflect identical selections. No predictive superiority, equivalence, or unseen-bank reproducibility improvement is established.}
 \end{table}
 
 \begin{table}[p]
 \ContinuedFloat
 \centering
-\caption{Exploratory development-only allowance calibration (continued).}
+\caption{Grid-based allowance calibration and breakpoint sensitivity on 240 additional TCGA candidates (continued).}
 \small
-\renewcommand{\arraystretch}{1.14}
+\renewcommand{\arraystretch}{1.10}
 \setlength{\tabcolsep}{4pt}
-\supplementarytablesection{b. Breakpoint-minus-comparator AUROC contrasts}
+\supplementarytablesection{c. Separate reserved-seed check of the earlier grid rule}
+\begin{tabular}{lrr}
+\toprule
+Policy & Reserved-bank Jaccard & Held-out AUROC \\
+\midrule
+Grid calibration & 0.1279 & 0.8488 \\
+Fixed 0.01 & 0.1294 & 0.8456 \\
+Highest score & 0.1228 & 0.8454 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\supplementarytablesection{d. Supplementary breakpoint sensitivity: fitted results}
+\begin{tabular}{lrrr}
+\toprule
+Branch & Breakpoint allowance & Fitted Jaccard & Held-out AUROC \\
+\midrule
+SVM-L1 & 0.009519 & 0.1314 & 0.8538 \\
+XGBoost & 0.007563 & 0.1435 & 0.8466 \\
+Boruta-RF & 0.008453 & 0.1204 & 0.8378 \\
+Equal-branch mean & --- & 0.1318 & 0.8461 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\supplementarytablesection{e. Supplementary breakpoint-minus-comparator AUROC contrasts}
 \begin{tabular}{llrrr}
 \toprule
 Branch & Comparator & Difference & Simultaneous low & Simultaneous high \\
@@ -70,17 +105,6 @@ Equal-branch mean & Highest score & -0.00050 & -0.00500 & +0.00399 \\
 \bottomrule
 \end{tabular}
 \par\medskip
-\supplementarytablesection{c. Earlier grid-calibration check on reserved seed banks}
-\begin{tabular}{lrr}
-\toprule
-Policy & Reserved-bank Jaccard & Held-out AUROC \\
-\midrule
-Grid calibration & 0.1279 & 0.8488 \\
-Fixed 0.01 & 0.1294 & 0.8456 \\
-Highest score & 0.1228 & 0.8454 \\
-\bottomrule
-\end{tabular}
-\par\medskip
 \parbox{0.98\linewidth}{\footnotesize
-\textit{Note.} b) Paired, class-stratified bootstrap intervals use 5,000 common participant resamples and simultaneous coverage over the 12 primary contrasts. They condition on fitted signatures and allowances; training banks and calibration are not resampled. Exact zero contrasts in SVM-L1 reflect identical selected signatures. No predictive superiority or equivalence is established. c) The earlier seven-point rule was fitted on eight banks per branch (120 candidates total) and applied to eight reserved banks per branch (120 candidates). Selected allowances were 0.01, 0.0025, and 0.0075. Grid-minus-fixed-0.01 differences were $-0.00147$ in Jaccard (simultaneous 95\% CI $-0.03340$ to 0.03046) and 0.00321 in AUROC ($-0.00870$ to 0.01511). Against highest-score selection, the differences were 0.00510 ($-0.01439$ to 0.02459) and 0.00339 ($-0.00947$ to 0.01625). Those intervals jointly resample reserved banks and participants within the original 16-contrast family. This seed check reuses the same development participants and is distinct from all-240 fitting and the later breakpoint extension. All extensions are exploratory; breakpoint calibration was designed after earlier outcomes were available.}
+\textit{Note.} c) The earlier grid rule was fitted on eight banks per branch (120 candidates total) and applied to eight reserved banks per branch (120 candidates). Its allowances were 0.01, 0.0025, and 0.0075. Grid-minus-fixed-0.01 differences were $-0.00147$ in Jaccard (simultaneous 95\% CI $-0.03340$ to 0.03046) and 0.00321 in AUROC ($-0.00870$ to 0.01511); against highest-score selection, 0.00510 ($-0.01439$ to 0.02459) and 0.00339 ($-0.00947$ to 0.01625). These earlier intervals jointly resample reserved banks and participants within the original 16-contrast family. This check shares the development participants and is separate from all-240 fitting. d,e) Breakpoint enumeration examines the richer search space of 65 observed score-gap boundaries per branch and scorer. It was designed after earlier results were available. Displayed allowances are rounded; eligibility uses full-precision audit values. Panel e retains simultaneous 95\% intervals for its original 12-contrast family (5,000 paired participant resamples, seed 20261116), conditional on fitted signatures and allowances. Its fitted overlap gain does not establish predictive or reproducibility superiority. All scorer sensitivities and aggregate results remain in \texttt{supplementary\_data/tolerance\_calibration/}.}
 \end{table}
